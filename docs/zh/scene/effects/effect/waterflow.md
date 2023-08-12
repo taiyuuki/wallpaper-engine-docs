@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Water Flow** simulates a continuous flow on the image in-place. The section that this effect is applied to will be repeated on a small scale which can be used to animate water and cloud movements. 
 
-![Water Flow](/img/effects/Water_flow.gif)
+![Water Flow](/wallpaper-engine-docs/img/effects/Water_flow.gif)
 
 ### Effect Settings
 

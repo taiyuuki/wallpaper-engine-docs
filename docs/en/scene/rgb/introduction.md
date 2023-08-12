@@ -29,7 +29,7 @@ If you want to take full control over the lighting of your wallpaper, you can en
 
 Layers with this option do not need to be directly visible and they could be below other layers, however, they need to be in the viewable area of the wallpaper. For this reason, you should make sure that these extra layers are in the center of your wallpaper and as small as possible so that they are fully rendered on all resolutions and aspect ratios that users might use. Unnecessary large layers that are only used for LED lighting purposes also introduce an unnecessary increase in video RAM, so try to keep them as small as possible. 
 
-**Solid layers** with a very small resolution (for example *32 x 32 px* are a good way to keep video RAM usage to a minimum), they can also be combined well with the [Pulse effect](/scene/effects/effect/pulse) or the [Tint effect](/scene/effects/effect/tint) for example.
+**Solid layers** with a very small resolution (for example *32 x 32 px* are a good way to keep video RAM usage to a minimum), they can also be combined well with the [Pulse effect](/wallpaper-engine-docs/scene/effects/effect/pulse) or the [Tint effect](/wallpaper-engine-docs/scene/effects/effect/tint) for example.
 
 ### Extra Notes on Composition Layers
 

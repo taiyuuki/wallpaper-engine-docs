@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Local Contrast** effect can be used for high quality contrast enhancement. Instead of just boosting the contrast of the entire image, this effect uses a method to specifically increase the contrast in areas where it matters.
 
-![Local Contrast](/img/effects/Local_contrast.gif)
+![Local Contrast](/wallpaper-engine-docs/img/effects/Local_contrast.gif)
 
 ### Effect Settings
 

@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Fire** effect allows you to animate existing flames on an image. You can use this effect to colorize and add motion to existing, static flames. If you want to add fire to an image that doesn't include any flames yet, then you may instead want to use the fire particle presets.
 
-![Fire](/img/effects/Fire.gif)
+![Fire](/wallpaper-engine-docs/img/effects/Fire.gif)
 
 ### Effect Settings
 

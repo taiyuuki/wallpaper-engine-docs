@@ -2,7 +2,7 @@
 
 The bloom effects add a glow around bright parts of the wallpaper. This is especially useful for images with a lot of contrast or dark images where you've added some bright particle effects like fire or lighting. Bloom can be enabled in the **Scene options** and unlike other effects, is applied to all layers where it can be further tweaked.
 
-Bloom is only visible if the **post-processing** option is at least set to **enabled**. You can also choose to support **HDR bloom** on your wallpaper, which will only be visible to users who set **post-processing** to **ultra** in their settings and it requires notably more performance, so care should be taken that the wallpaper is otherwise [optimized well](/scene/performance/texture.md). Should you enable **HDR bloom**, make sure to also configure the standard bloom settings for users who do not wish to use HDR.
+Bloom is only visible if the **post-processing** option is at least set to **enabled**. You can also choose to support **HDR bloom** on your wallpaper, which will only be visible to users who set **post-processing** to **ultra** in their settings and it requires notably more performance, so care should be taken that the wallpaper is otherwise [optimized well](/wallpaper-engine-docs/scene/performance/texture). Should you enable **HDR bloom**, make sure to also configure the standard bloom settings for users who do not wish to use HDR.
 
 ::: tip
 If you are adding bloom just to make the source image you imported glow, but without really taking advantage of any animations or particles, then you should consider to add the glow into your image directly. Especially **HDR bloom** requires a lot of processing power so it should be used appropriately.

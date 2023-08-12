@@ -7,7 +7,7 @@ The **Blur** effect applies a coarse gaussian blur to the image. This effect is 
 
 If you just want to add a static blur to your image, you should rather do this in an image editor before importing your image into Wallpaper Engine.
 
-![Blur](/img/effects/Blur.png)
+![Blur](/wallpaper-engine-docs/img/effects/Blur.png)
 
 ### Effect Settings
 
@@ -18,7 +18,7 @@ If you just want to add a static blur to your image, you should rather do this i
 
 The effect has four different **Composite** modes:
 
-![Composite mode](/img/effects/blur_composite_blend.png)
+![Composite mode](/wallpaper-engine-docs/img/effects/blur_composite_blend.png)
 
 #### Composite: Normal
 

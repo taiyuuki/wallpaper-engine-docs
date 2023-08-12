@@ -7,7 +7,7 @@ The **Refraction** effect allows you to distort the image based on a normal map.
 
 You can also fine-tune the effect by painting an opacity mask. For example: Frozen windows tend to have more ice towards the outer parts of the window, so you could paint a reduced **value** with the opacity mask in the center of the window to make the effect appear less strong towards the middle.
 
-![Refraction Effect](/img/effects/Refract.gif)
+![Refraction Effect](/wallpaper-engine-docs/img/effects/Refract.gif)
 
 ### Effect Settings
 

@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Shake** effect can be used to continuously shake parts of an image back and forth. This effect can be used to shake natural objects but also to create **breathing** animations of any characters that are part of your scene.
 
-![Shake](/img/effects/Shake.gif)
+![Shake](/wallpaper-engine-docs/img/effects/Shake.gif)
 
 ### Effect Settings
 

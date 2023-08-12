@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class CameraTransforms
 
-Objects of this class describe the camera orientation and position. You can generate an object of this class through the [thisScene](/scene/scenescript/reference/class/IScene) object.
+Objects of this class describe the camera orientation and position. You can generate an object of this class through the [thisScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) object.
 
 ## Properties
 

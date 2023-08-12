@@ -12,10 +12,10 @@ Once you open the Wallpaper Engine editor, you are presented with the welcome sc
 
 If you would like to follow along this tutorial, you can use the example image we will be using in the following sections by downloading it from this link (1920 x 1080 resolution): 
 
-<a href="/img/tutorials/mountain.png" download="mountain.png">Click here to download the sample image</a>
+<a href="/wallpaper-engine-docs/img/tutorials/mountain.png" download="mountain.png">Click here to download the sample image</a>
 
 ## A foreword on wallpaper resolutions
 
 Before you get started with any image you import, first make sure that your main background image represents a real screen resolution. The example image we use for this guide is 1920 x 1080 which is the most commonly used resolution on computer screens.
 
-If you would like, you can read the [Project Resolution](/scene/performance/resolution) guide for a lengthier explanation before you get started with your first wallpaper and the rest of this guide.
+If you would like, you can read the [Project Resolution](/wallpaper-engine-docs/scene/performance/resolution) guide for a lengthier explanation before you get started with your first wallpaper and the rest of this guide.

@@ -8,16 +8,16 @@ SceneScript 文档不会详细教你编程的基础知识。但是，SceneScript
 
 ## 在Wallpaper Engine中可以用SceneScript做什么？
 
-SceneScript可以让你为壁纸组件各个属性的特定行为编程。这可以让你创建壁纸的动态行为，包括音频可视化工具、与当前时间交互、鼠标单击等。在某些情况下，改用[时间轴动画](/scene/timeline/introduction)可能更容易，特别是那些无限循环的简单动画/移动。
+SceneScript可以让你为壁纸组件各个属性的特定行为编程。这可以让你创建壁纸的动态行为，包括音频可视化工具、与当前时间交互、鼠标单击等。在某些情况下，改用[时间轴动画](/wallpaper-engine-docs/scene/timeline/introduction)可能更容易，特别是那些无限循环的简单动画/移动。
 
 ## SceneScript入门
 
 如果你以前从未使用过 SceneScript，我们建议你从查看我们的**SceneScript基础知识**教程开始：
 
-* [**SceneScript基础知识**](/scene/scenescript/tutorial/basics)
+* [**SceneScript基础知识**](/wallpaper-engine-docs/scene/scenescript/tutorial/basics)
 
 如果你已经了解了 SceneScript 的基础知识，请务必查看我们的其他教程和SceneScript语言参考：
 
-* [**SceneScript教程**](/scene/scenescript/tutorials)
+* [**SceneScript教程**](/wallpaper-engine-docs/scene/scenescript/tutorials)
 
-* [**SceneScript语言参考**](/scene/scenescript/reference)
+* [**SceneScript语言参考**](/wallpaper-engine-docs/scene/scenescript/reference)

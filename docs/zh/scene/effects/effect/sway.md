@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Foliage Sway** effect can be used to simulate wind movements, especially for trees and plants. The effect has two different modes which have slightly different use-cases.
 
-![Foliage Sway](/img/effects/Sway.gif)
+![Foliage Sway](/wallpaper-engine-docs/img/effects/Sway.gif)
 
 ## Effect settings
 
@@ -38,4 +38,4 @@ In **Vertex** mode, the complete image layer is swayed, making it only useful in
 
 The effect is used in the introductory tutorial of the Wallpaper Engine to effects, read relevant sections on the following page to see it in use:
 
-* [Adding your first effects](/scene/first/effects.html)
+* [Adding your first effects](/wallpaper-engine-docs/scene/first/effects)

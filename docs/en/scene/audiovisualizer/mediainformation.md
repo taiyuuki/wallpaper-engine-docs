@@ -1,6 +1,6 @@
 # Working with Media Playback Data
 
-This guide builds on top of the [Album Cover Integration](/en/scene/audiovisualizer/albumcover.md) feature. While you do not need to incorporate album covers into your wallpaper for any of the topics discussed here, we still recommend you read the album cover guide first before you continue here. This guide builds on top of the album cover guide but you can use all features completely independently from each other.
+This guide builds on top of the [Album Cover Integration](/wallpaper-engine-docs/scene/audiovisualizer/albumcover) feature. While you do not need to incorporate album covers into your wallpaper for any of the topics discussed here, we still recommend you read the album cover guide first before you continue here. This guide builds on top of the album cover guide but you can use all features completely independently from each other.
 
 ## Displaying Song Title, Album Title & Artist Name
 
@@ -33,9 +33,9 @@ Create one text element for each type of music data you want to add. The easiest
 * Album Title
 * Artist Name
 
-![Media Text Layers Example](/img/tutorials/media_text_layers.png)
+![Media Text Layers Example](/wallpaper-engine-docs/img/tutorials/media_text_layers.png)
 
-Once you have create a layer for each of them, you can utilize the [MediaPropertiesEvent](/en/scene/scenescript/reference/class/MediaPropertiesEvent.html) in SceneScript to retrieve the data that you need. To do this, select your first layer (for example the song layer), then click on the cogwheel icon next to the **Text** property of the layer and select **Bind SceneScript**. You will be presented with a sample code snippet which you can replace with our sample code below.
+Once you have create a layer for each of them, you can utilize the [MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent) in SceneScript to retrieve the data that you need. To do this, select your first layer (for example the song layer), then click on the cogwheel icon next to the **Text** property of the layer and select **Bind SceneScript**. You will be presented with a sample code snippet which you can replace with our sample code below.
 
 Copy the appropriate SceneScript code to your layer and repeat the process for all of your text layers:
 
@@ -113,7 +113,7 @@ Once you have copied the code to each respective text layer and use the **Run Pr
 
 ## Utilizing Album Cover Colors via SceneScript
 
-You can also access album cover colors through the [mediaThumbnailChanged](/en/scene/scenescript/reference/event/media.html) event, specifically the [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.md) class that is provided as a function parameter.
+You can also access album cover colors through the [mediaThumbnailChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) event, specifically the [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent) class that is provided as a function parameter.
 
 **In this example, we will showcase how to change the background color of the entire wallpaper to match the album cover.**
 
@@ -151,7 +151,7 @@ export function mediaThumbnailChanged(event) {
 	color = event.primaryColor;
 }
 ```
-The code assigns `event.primaryColor` to the color of the property. The `primaryColor` value is one of many color values that Wallpaper Engine provides in the [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.md), see the **MediaThumbnailEvent** page for a full list of color values you can use. It's important to note that the `textColor` value will always contain a value that makes text easy to read on top of the `primaryColor` value. If you add text on top of a dynamically colored background such as here, you can use the `textColor` property for the text to ensure that it will always be easy to read.
+The code assigns `event.primaryColor` to the color of the property. The `primaryColor` value is one of many color values that Wallpaper Engine provides in the [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent), see the **MediaThumbnailEvent** page for a full list of color values you can use. It's important to note that the `textColor` value will always contain a value that makes text easy to read on top of the `primaryColor` value. If you add text on top of a dynamically colored background such as here, you can use the `textColor` property for the text to ensure that it will always be easy to read.
 
 ### Adding a simple color transition
 
@@ -211,4 +211,4 @@ This snippet will ensure that when a user stops media playback or has never star
 
 To get a full overview of what data you can retrieve via SceneScript, be sure to check out the reference page on all relevant SceneScript events:
 
-* [SceneScript Media Events](/en/scene/scenescript/reference/event/media.html)
+* [SceneScript Media Events](/wallpaper-engine-docs/scene/scenescript/reference/event/media)

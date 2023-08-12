@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Motion Blur** effect accumulates the image over time to create a blurry appearance of movement.
 
-![Blur](/img/effects/Spin.gif)
+![Blur](/wallpaper-engine-docs/img/effects/Spin.gif)
 
 ### Effect Settings
 
@@ -16,7 +16,7 @@ The **Motion Blur** effect accumulates the image over time to create a blurry ap
 
 *Motion Blur* can be combined with other effects but keep in mind that the *Motion Blur* effect will only be applied to effects that are listed **above** itself in the effects list. Move the *Motion Blur* effect below any affect that you want it to apply to.
 
-For example, if you have applied a [Spin effect](/scene/effects/effect/spin.html) or [Scroll effect](/scene/effects/effect/scroll.html) to a layer, make sure *Motion Blur* is below these effects in the effects list. You can re-arrange the effects list by simply dragging and dropping effects with your mouse. See the video below to see how the *Motion Blur* effect only starts becoming visible once it is moved below the *Spin* effect:
+For example, if you have applied a [Spin effect](/wallpaper-engine-docs/scene/effects/effect/spin) or [Scroll effect](/wallpaper-engine-docs/scene/effects/effect/scroll) to a layer, make sure *Motion Blur* is below these effects in the effects list. You can re-arrange the effects list by simply dragging and dropping effects with your mouse. See the video below to see how the *Motion Blur* effect only starts becoming visible once it is moved below the *Spin* effect:
 
 <video width="100%" controls loop autoplay>
   <source src="/videos/effects_order.mp4" type="video/mp4">

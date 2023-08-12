@@ -5,10 +5,10 @@ prev: ../overview.md
 
 The **VHS** effect can add an old-school retro effect to your image. It consists of several components: a scrolling distortion line, a noise overlay, random artifacts and chromatic aberration. The distortion line will shift the image from side to side and scroll from top to bottom by default. The noise overlay will add a faint random pattern over the entire image in combination with small, thin artifacts that randomly appear. Chromatic aberration will separate the colors of the image diagonally.
 
-![VHS](/img/effects/VHS.gif)
+![VHS](/wallpaper-engine-docs/img/effects/VHS.gif)
 
 ::: warning Please note
-If you only want to utilize the chromatic aberration of this effect, we recommend using the [Chromatic Aberration effect](/scene/effects/effect/chromaticaberration.html) directly as it offers more customization options and better performance.
+If you only want to utilize the chromatic aberration of this effect, we recommend using the [Chromatic Aberration effect](/wallpaper-engine-docs/scene/effects/effect/chromaticaberration) directly as it offers more customization options and better performance.
 :::
 
 ### Effect Settings

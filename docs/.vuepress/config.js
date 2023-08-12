@@ -5,16 +5,16 @@ module.exports = {
 	title: 'Wallpaper Engine - Designer Documentation',
 	base: '/wallpaper-engine-docs/',
 	locales: {
+		"/zh/": {
+			lang: 'zh',
+			title: zh.title,
+			description: zh.description,
+		},
 		'/en/': {
 			lang: 'en',
 			title: en.title,
 			description: en.description,
 		},
-		"/zh/": {
-			lang: 'zh',
-			title: zh.title,
-			description: zh.description,
-		}
 	},
 	themeConfig: {
 		logo: '/img/wallpaper_engine_logo_small.png',

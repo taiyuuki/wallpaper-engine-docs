@@ -2,7 +2,7 @@
 
 Puppet Warping in combination with *SceneScript* can also be used to create interactive wallpaper elements. In this tutorial, we will discuss how to allow users to grab and drag around individual bones.
 
-You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
+You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial.
 
 ## Interactive bones
 
@@ -21,7 +21,7 @@ If you would like to follow along or see the full sample project, you can downlo
 
 In order to achieve this, we need to utilize puppet warping in combination with SceneScript. We start by creating a puppet warp on our *jelly* object. The geometry does not require any special attention. For the bone setup, our basic example only includes two bones: One static root bone which represents the outer areas of our jelly object and another bone in the center of the jelly object that has been configured to use **Spring simulation** in the **Bone Constraints**:
 
-![Puppet Warp - Interactive Bone Setup](/img/puppet-warp/puppet_warp_interactive_bones.png)
+![Puppet Warp - Interactive Bone Setup](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_interactive_bones.png)
 
 For the bone constraints of the center bone, we have enabled **Spring simulation** and then **Physics translation** and left everything else in its default state. This means that we are able to move the bone around (this is what enabling **physics translation** does) and since it's a **spring simulation**, it will automatically return to its original position when the mouse cursor is released.
 
@@ -29,7 +29,7 @@ Also, it's important to set a **Name** for the bone that we can later reference 
 
 For the bone weights, the center bone gets a small area in the middle of the object. In our case, the green area represents the area that will be dragged by the mouse cursor, while the red area represents the immovable area that belongs to the root bone:
 
-![Puppet Warp - Interactive Weight Setup](/img/puppet-warp/puppet_warp_interactive_weights.png)
+![Puppet Warp - Interactive Weight Setup](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_interactive_weights.png)
 
 We do not need to create any animations for this example, as the mouse interactions are completely separate from this.
 

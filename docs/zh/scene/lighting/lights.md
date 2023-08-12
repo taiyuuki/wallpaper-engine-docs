@@ -1,13 +1,13 @@
 # Tips for Advanced Lighting
 
-By default, light sources you place in the editor will emit a static light. In some cases, it can be useful to introduce movement or a pulsating flickering. In this guide, we introduce a few ways that you can improve your light using [Timeline Animations](/scene/timeline/introduction) and [SceneScript](/scene/scenescript/introduction).
+By default, light sources you place in the editor will emit a static light. In some cases, it can be useful to introduce movement or a pulsating flickering. In this guide, we introduce a few ways that you can improve your light using [Timeline Animations](/wallpaper-engine-docs/scene/timeline/introduction) and [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction).
 
 ::: danger Please note
 This article specifically only concerns itself with image layers with lighting enabled. You should have read and understood the introduction guide before you continue with this article:
 
-* [Real-Time Lighting & Reflections](/scene/lighting/introduction)
+* [Real-Time Lighting & Reflections](/wallpaper-engine-docs/scene/lighting/introduction)
 
-Also note that you can also use the [Pulse effect](/scene/effects/effect/pulse) to achieve similar results in some cases without relying on a more complex real-time lighting setup.
+Also note that you can also use the [Pulse effect](/wallpaper-engine-docs/scene/effects/effect/pulse) to achieve similar results in some cases without relying on a more complex real-time lighting setup.
 :::
 
 This article discusses the following topics:
@@ -22,7 +22,7 @@ One thing you might want to do is to introduce a flickering effect for your ligh
 
 The easiest way you can create a pulsating light effect is to utilize timeline animations on the **Intensity** property of the light source. We generally recommend animating the **Intensity** rather than the **Radius** of your light sources, as this will result in the most natural looking results. If you have not worked with timeline animations already, we would recommend that you read the introductory tutorial on timeline animations first before you continue:
 
-* [Timeline Animation Introduction](/scene/timeline/introduction)
+* [Timeline Animation Introduction](/wallpaper-engine-docs/scene/timeline/introduction)
 
 The most simple pulse effect can be achieved by creating a timeline animation that takes the intensity from a value of 1.00 to 2.00 and then back to 1.00. However, in our example we want to achieve more of a flickering effect that mimics a fire source. 
 
@@ -150,7 +150,7 @@ You can see this complete implementation in the following video:
 
 Using **SceneScript**, you can also dynamically attach the light to the mouse cursor position which essentially turns the mouse into a kind of flash light that shines onto the scene.
 
-![Real-time lighting and reflections](/img/pbr/pbr_mouse.gif)
+![Real-time lighting and reflections](/wallpaper-engine-docs/img/pbr/pbr_mouse.gif)
 
 As described in the previous section on light movement, the light has a pre-defined height. Since the mouse cursor is always at a height of 0, we need to make sure to leave the **Z axis** position unchanged. To get started, select the light source you want to attach to the mouse cursor and next to the **Origin** property, click on the cogwheel symbol and select **Bind Script**.
 

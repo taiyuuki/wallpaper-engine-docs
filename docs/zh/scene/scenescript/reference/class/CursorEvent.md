@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class CursorEvent
 
-Provides information about the cursor position during [cursor events](/scene/scenescript/reference/event/cursor).
+Provides information about the cursor position during [cursor events](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor).
 
 ::: warning
 This class is only fully compatible with 2D wallpapers, the `Z` position is currently not used.

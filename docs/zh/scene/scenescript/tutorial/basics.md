@@ -11,7 +11,7 @@ prev: ../tutorials.md
 在本指南中，我们将使用简单的**文本**图层作为示例。如果你想跟着操作，只需在壁纸中添加**文本**图层即可。
 
 :::tip 关于本指南
-以下教程显得非常冗长，因为我们会尝试逐步介绍。它同时照顾了绝对的初学者和高级程序员，但如果你是经验丰富的程序员，只需稍微浏览一下，然后阅读更高级的[SceneScript教程](/scene/scenescript/tutorials)或[SceneScrip语言参考](/scene/scenescript/reference)就足够了。
+以下教程显得非常冗长，因为我们会尝试逐步介绍。它同时照顾了绝对的初学者和高级程序员，但如果你是经验丰富的程序员，只需稍微浏览一下，然后阅读更高级的[SceneScript教程](/wallpaper-engine-docs/scene/scenescript/tutorials)或[SceneScrip语言参考](/wallpaper-engine-docs/scene/scenescript/reference)就足够了。
 
 我们邀请初学者与本指南一起操作并进行一些实验。如果你迷路了，请务必观看我们在每个部分下提供的视频。
 :::
@@ -20,7 +20,7 @@ prev: ../tutorials.md
 
 在编辑器中选择任何元素时，你都可以在右侧找到对应的属性。可以看到，所有属性旁边都有一个齿轮图标，例如以下截图中的红色箭头指向的位置：
 
-![SceneScript in the User Interface](/img/scenescript/scenescript_ui.png)
+![SceneScript in the User Interface](/wallpaper-engine-docs/img/scenescript/scenescript_ui.png)
 
 当你在属性旁边看到齿轮图标时，这意味着你可以通过单击该图标并选择“绑定脚本”将**SceneScript代码绑定**到该属性。在我们的示例中，我们将为**文本**图层的**文本**属性执行此操作。
 
@@ -114,7 +114,7 @@ export function update(value) {
 
 在前面的示例中，我们使用了**文本**属性，该属性的类型是`String`，但其他属性，例如**起点**、**角度**和**比例**呢？
 
-![Vec3 Samples](/img/scenescript/vec3.png)
+![Vec3 Samples](/wallpaper-engine-docs/img/scenescript/vec3.png)
 
 这三个属性由`x`，`y`，`z`组成。为了处理这些属性，Wallpaper Engine提供了一个名为`Vec3`的新类(`class`)，每当将脚本绑定到这些属性时，都会使用该类。该类包含`x`，`y`，`z`三个值，并允许你在每次`update`函数中访问和修改它们。
 
@@ -238,6 +238,6 @@ C:\Program Files (x86)\Steam\steamapps\common\wallpaper_engine\log.txt
 
 ## 更多关于SceneScript
 
-如果你完成了本页的学习，那么你应该对SceneScript的基础知识有了很好的了解。请务必查看[SceneScript语言参考](/scene/scenescript/reference)，以大致了解SceneScript提供的所有类、全局变量、事件和模块。
+如果你完成了本页的学习，那么你应该对SceneScript的基础知识有了很好的了解。请务必查看[SceneScript语言参考](/wallpaper-engine-docs/scene/scenescript/reference)，以大致了解SceneScript提供的所有类、全局变量、事件和模块。
 
-此外，请查看我们的[SceneScript教程](/scene/scenescript/tutorials)，了解SceneScript的一些特定和高级用例。
+此外，请查看我们的[SceneScript教程](/wallpaper-engine-docs/scene/scenescript/tutorials)，了解SceneScript的一些特定和高级用例。

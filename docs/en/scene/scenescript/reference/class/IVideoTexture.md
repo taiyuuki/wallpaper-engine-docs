@@ -6,7 +6,7 @@ prev: ../../reference.md
 
 This class represents a video texture. Video textures are `.mp4` video files which are rendered similar to an image layer texture. Objects of this class allow you to control a video texture and read its current playback state. Using the `addEndedCallback` function, you can attach custom logic which is executed after the video has reached its end.
 
-Not to be confused with [ITextureAnimation](/scene/scenescript/reference/class/ITextureAnimation).
+Not to be confused with [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation).
 
 ## Properties
 

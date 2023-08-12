@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Advanced Fluid Simulation** effect can be used to create different types of interactive smoke, fire and liquid simulations. The effect is relatively complex due to its numerous settings that can be tweaked for the desired behavior. See the bottom of this page for some usage samples.
 
-![Advanced Fluid Simulation](/img/effects/Advanced_Fluid_Simulation.gif)
+![Advanced Fluid Simulation](/wallpaper-engine-docs/img/effects/Advanced_Fluid_Simulation.gif)
 
 ### Effect Settings
 
@@ -90,7 +90,7 @@ We now further tweak all settings of the effect before continuing. We used the f
 The line emitter was given a **dark** blue color, all other values were configured by using the mouse controls in the editor.
 
 ::: tip
-These type of simulations tend to look even better in combination with [HDR Bloom](/zh/scene/effects/bloom.html), give it a try!
+These type of simulations tend to look even better in combination with [HDR Bloom](/wallpaper-engine-docs/scene/effects/bloom), give it a try!
 :::
 
 ### Working with Gradient Maps
@@ -108,7 +108,7 @@ See the following video for a quick example:
 
 ### SceneScript: Attaching Emitters to Mouse Cursor & Audio-Responsiveness
 
-As always, you can custom-program behavior into most properties of the simulation with the help of [SceneScript](/zh/scene/scenescript/introduction.html). In this example, we will showcase how to utilize SceneScript to attach a point emitter to your mouse cursor and how to make it audio-responsive.
+As always, you can custom-program behavior into most properties of the simulation with the help of [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction). In this example, we will showcase how to utilize SceneScript to attach a point emitter to your mouse cursor and how to make it audio-responsive.
 
 #### Attaching Emitter to Mouse Cursor
 

@@ -3,9 +3,9 @@ prev: ../overview.md
 ---
 # Chromatic Aberration Effect
 
-The **Chromatic Aberration** effect creates a multi-colored outlined similar to artifacts you might find on photographs. The effect itself is static but you can utilize [SceneScript](/en/scene/scenescript/introduction.html) to create animations for it.
+The **Chromatic Aberration** effect creates a multi-colored outlined similar to artifacts you might find on photographs. The effect itself is static but you can utilize [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction) to create animations for it.
 
-![Blur](/img/effects/Chromatic_Aberration.gif)
+![Blur](/wallpaper-engine-docs/img/effects/Chromatic_Aberration.gif)
 
 ### Effect Settings
 

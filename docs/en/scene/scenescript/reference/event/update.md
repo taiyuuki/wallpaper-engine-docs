@@ -13,7 +13,7 @@ export function update(value) {
 }
 ```
 
-Wallpaper Engine will attempt to convert any numeric return values to [Vec2](/scene/scenescript/reference/class/Vec3) and [Vec3](/scene/scenescript/reference/class/Vec3) if you are working on a property that expects these return types. For example, if you return `2` on the `Scale` property, Wallpaper Engine will first convert the value to `Vec3(2, 2, 2)` so that it matches the return type the `Scale` property expects.
+Wallpaper Engine will attempt to convert any numeric return values to [Vec2](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) and [Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) if you are working on a property that expects these return types. For example, if you return `2` on the `Scale` property, Wallpaper Engine will first convert the value to `Vec3(2, 2, 2)` so that it matches the return type the `Scale` property expects.
 
 You can choose to not return any value, then the property will not be modified.
 

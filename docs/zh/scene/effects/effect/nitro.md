@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Nitro** effect allows you to add lightning flashes to an image. Two scrolling textures are blended on top of one another and then filtered to achieve this effect.
 
-![Nitro](/img/effects/Nitro.gif)
+![Nitro](/wallpaper-engine-docs/img/effects/Nitro.gif)
 
 ### Effect Settings
 

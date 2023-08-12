@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Cursor Ripple** effect allows you to apply a liquid ripple effect to an image layer that only becomes visible when the mouse cursor of a user hovers over it. The effect uses a collision mask so that you can limit it precisely to certain parts of your images.
 
-![Cursor Ripple Effect](/img/effects/Cursor_Ripple.gif)
+![Cursor Ripple Effect](/wallpaper-engine-docs/img/effects/Cursor_Ripple.gif)
 
 ### Effect Settings
 
@@ -23,4 +23,4 @@ We recommend enabling the **Perspective** option and adjusting the perspective p
 
 Setting this up is rather simple, first enable the **Perspective** option, then re-adjust the four points on the screen so that they move along the surface on your image. Take the following example where we adjusted the perspective points to roughly match the angle of the ground floor:
 
-![Cursor Ripple Perspective](/img/effects/Cursor_Ripple_Perspective.png)
+![Cursor Ripple Perspective](/wallpaper-engine-docs/img/effects/Cursor_Ripple_Perspective.png)

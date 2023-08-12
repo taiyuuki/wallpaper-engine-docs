@@ -6,7 +6,7 @@ Reducing the memory required to display images will improve the performance and 
 
 You can check the currently required texture memory in the editor by clicking on **View** in the top menu row and then enabling the **Show Stats** option. The stats will then be displayed in the scene window in the **Active texture memory** row.
 
-![Scene Stats](/img/performance/Stats.png)
+![Scene Stats](/wallpaper-engine-docs/img/performance/Stats.png)
 
 ## Keep Texture Resolutions Low
 
@@ -14,7 +14,7 @@ The first step in optimizing your project is to reduce the overall size of textu
 
 Additionally, when using image layers, always make sure they are as small as needed. Wallpaper Engine will automatically suggest that you crop imported image layers to a resolution that is *as small as possible* for that layer. This will also automatically re-adjust the position of the layer to account for the space that was removed. We strongly recommend you make use of this functionality, especially on high-resolution wallpapers (4K UHD and larger), this can significantly reduce the VRAM usage:
 
-![Crop Imported Layers](/img/performance/Cropping.png)
+![Crop Imported Layers](/wallpaper-engine-docs/img/performance/Cropping.png)
 
 By default, Wallpaper Engine also adds a padding to each cropped image layer. This is to account for image effects that go beyond the object itself. The padding also uses a bit of VRAM, so if you know you will not use any effects that go beyond the initial size of the layer, you can also set it to 0 (or if you need more padding, increase it as needed).
 
@@ -32,7 +32,7 @@ No one likes low-quality wallpapers but the compressions in Wallpaper Engine are
 
 You can choose the compression method when importing a new image:
 
-![Import Texture Compression](/img/performance/Import_compression.png)
+![Import Texture Compression](/wallpaper-engine-docs/img/performance/Import_compression.png)
 
 ### Optimizing an Existing Layer
 
@@ -49,13 +49,13 @@ Compressed DXT5 and DXT1 textures need to have a resolution of a power of two *(
 
 In the following example a normal 1920 x 1080 image was imported as DXT5. It has to be padded to a resolution of 2048 x 2048, because that's the next power of two for 1920 and 1080. As you can see, there are a ton of black pixels in the example, half of the memory used is practically wasted.
 
-![Texture Padding](/img/performance/Power_of_two_padding.png)
+![Texture Padding](/wallpaper-engine-docs/img/performance/Power_of_two_padding.png)
 
 You should consider reducing the height of the image to 1024, then Wallpaper Engine can create a 2048 x 1024 texture instead, that's only half the memory that was needed before.
 
 Of course this means that your actual image has a smaller resolution as well, so you need to decide if and how this trade-off works for you. You can scale the layer in Wallpaper Engine to correct for this reduction in size by 1.055 (which is 1080 / 1024):
 
-![Texture Padding](/img/performance/Fix_optimized_scale.png)
+![Texture Padding](/wallpaper-engine-docs/img/performance/Fix_optimized_scale.png)
 
 ::: tip
 If you optimized the background image like this, check your project resolution in the editor by clicking on **Edit** in the menu bar at the top and then **Project Settings**. You can verify and change project resolution there, if it is misconfigured, your image might be cut off unintentionally.

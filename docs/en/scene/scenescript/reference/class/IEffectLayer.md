@@ -18,7 +18,7 @@ If set to `true`, the layer will use perspective rendering instead of flat rende
 
 ### solid: Boolean
 
-If set to `true`, the layer will trigger [cursor events](/scene/scenescript/reference/event/cursor).
+If set to `true`, the layer will trigger [cursor events](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor).
 
 ## Functions
 

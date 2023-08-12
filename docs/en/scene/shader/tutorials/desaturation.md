@@ -1,7 +1,7 @@
 # Tutorial: Shader Programming Desaturation
 
 ## Adding New Effect
-Make sure you have enabled the [Asset Creation](/scene/assets/sharing) options in the editor!
+Make sure you have enabled the [Asset Creation](/wallpaper-engine-docs/scene/assets/sharing) options in the editor!
 
 * Click on **Add Effect** on the right.
 * Click on **New** at the bottom of the dialog.

@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Blend** effect allows you to blend multiple images or even animated image layers into one layer.
 
-![Blend](/img/effects/Blend.gif)
+![Blend](/wallpaper-engine-docs/img/effects/Blend.gif)
 
 ::: tip
 You can drag and drop an image layer into the **Blend texture** to dynamically use another image layer as a blend texture.

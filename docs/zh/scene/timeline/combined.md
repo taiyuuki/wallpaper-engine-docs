@@ -1,6 +1,6 @@
 # Combined Timeline Animations
 
-This guide picks up where the [introductory guide to timeline animations](/scene/timeline/introduction) has left off. We will extend our existing animation and add another property to it. For this example, we will take the cloud movement animation and add a growing and shrinking of the size to it as can be seen in the following preview:
+This guide picks up where the [introductory guide to timeline animations](/wallpaper-engine-docs/scene/timeline/introduction) has left off. We will extend our existing animation and add another property to it. For this example, we will take the cloud movement animation and add a growing and shrinking of the size to it as can be seen in the following preview:
 
 <video width="100%" controls autoplay loop>
   <source src="/videos/timeline_combined_result.mp4" type="video/mp4">

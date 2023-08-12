@@ -2,13 +2,13 @@
 
 Wallpaper Engine supports real-time lighting and reflections on 2D scenes. This requires you to enable either the **Lighting** or **Reflection** options in the material settings of an image layer. These two functionalities work well together but, as always, try to not enable both of them if you do not really need them to keep the performance impact as low as possible.
 
-![Real-time lighting and reflections](/img/pbr/pbr_mouse.gif)
+![Real-time lighting and reflections](/wallpaper-engine-docs/img/pbr/pbr_mouse.gif)
 
 ## Generating a Normal Map
 
 In order for 2D images to get a perception of depth that is used for lighting and reflections, we need to make use of a normal map. Normal mapping is a common approach in video games to give flat textures a perception of being three-dimensional. Wallpaper Engine comes with a normal map generator that you can use to easily generate a normal map for your image layers.
 
-In order to get started, select your image layer that you want to apply real-time lighting and / or reflections onto. This works best if your specific character or object is its own layer, we highly recommend using [foreground separation](/scene/image-preparation/foreground-separation) to first separate any character or object from the background before you continue, if you have not done so already.
+In order to get started, select your image layer that you want to apply real-time lighting and / or reflections onto. This works best if your specific character or object is its own layer, we highly recommend using [foreground separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation) to first separate any character or object from the background before you continue, if you have not done so already.
 
 After selecting the layer that you want to create the normal map for, scroll down on the right-hand side and click on the **Configure Lighting & Reflections** in the **Materials** section towards the bottom. Now, enable the **Lighting** or **Reflection** option (or both) to reveal additional options, including the normal map generator.
 
@@ -113,4 +113,4 @@ In our example, we noticed a slight glow at the top of the helmet decorations. W
 
 If you have created a normal map and painted the other material maps as needed, the lighting on your wallpaper should already look pretty good. However, at this point, all the light in the scene is static, be sure to check out our guide on advanced lighting tips to learn about different ways you can make the lighting a bit more complex and interactive:
 
-* [Tips for Advanced Lighting](/scene/lighting/lights)
+* [Tips for Advanced Lighting](/wallpaper-engine-docs/scene/lighting/lights)

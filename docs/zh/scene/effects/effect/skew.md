@@ -9,7 +9,7 @@ The **Skew** effect allows you to shift an edge of the image horizontally or ver
 You should apply this effect only on top of other existing effects. If you apply this effect merely to a static image, consider modifying your image in an image editor instead to improve the performance of the wallpaper, since there is no need to use a live effect for that.
 :::
 
-![Skew](/img/effects/Skew.gif)
+![Skew](/wallpaper-engine-docs/img/effects/Skew.gif)
 
 ### Effect Settings
 

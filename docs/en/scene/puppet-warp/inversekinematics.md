@@ -2,11 +2,11 @@
 
 Wallpaper Engine supports inverse kinematics animations for puppet warp models. This approach allows you to define sensible movement ranges for a character's joints and Wallpaper Engine will dynamically animate the movement of entire limbs.
 
-You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
+You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial.
 
 ## Basic Introduction to Inverse Kinematics
 
-We generally recommend using [character sheets](/scene/puppet-warp/charactersheet) when using inverse kinematics for the best visual result. However, you can also use inverse kinematics for simple puppet warp animations. For this introductory guide, we will use a simple stick figure to explain the core idea of inverse kinematics in its most basic form.
+We generally recommend using [character sheets](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) when using inverse kinematics for the best visual result. However, you can also use inverse kinematics for simple puppet warp animations. For this introductory guide, we will use a simple stick figure to explain the core idea of inverse kinematics in its most basic form.
 
 ### Creating Bones for Inverse Kinematics
 

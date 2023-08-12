@@ -9,7 +9,7 @@ The **Transform** effect allows you to rotate, scale or move the image.
 You should apply this effect only on top of other existing effects. If you apply this effect merely to a static image, consider modifying your image in an image editor instead to improve the performance of the wallpaper, since there is no need to use a live effect for that.
 :::
 
-![Transform](/img/effects/Transform.gif)
+![Transform](/wallpaper-engine-docs/img/effects/Transform.gif)
 
 ### Effect Settings
 

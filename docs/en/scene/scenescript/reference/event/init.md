@@ -6,7 +6,7 @@ prev: ../../reference.md
 
 This event function will be called shortly after the object that owns the script has been created. It's useful for modifying or retrieving the initial value of a property for example. Since the `update()` function is called many times per second, you should try and place any code in the `init()` function that does not need to be recalculated every frame to optimize performance.
 
-Wallpaper Engine will attempt to convert any numeric return values to [Vec2](/scene/scenescript/reference/class/Vec3) and [Vec3](/scene/scenescript/reference/class/Vec3) if you are working on a property that expects these return types. For example, if you return `2` on the `Scale` property, Wallpaper Engine will first convert the value to `Vec3(2, 2, 2)` so that it matches the return type the `Scale` property expects.
+Wallpaper Engine will attempt to convert any numeric return values to [Vec2](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) and [Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) if you are working on a property that expects these return types. For example, if you return `2` on the `Scale` property, Wallpaper Engine will first convert the value to `Vec3(2, 2, 2)` so that it matches the return type the `Scale` property expects.
 
 ## Example Usage
 

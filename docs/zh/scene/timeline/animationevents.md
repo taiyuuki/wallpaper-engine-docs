@@ -1,6 +1,6 @@
 # SceneScript Events in Timeline Animations
 
-You can add **animation events** to any [timeline](/scene/timeline/introduction) or [puppet warp animation](/scene/puppet-warp/introduction) and use them to trigger effects, play sounds or perform any other custom SceneScript logic in your wallpaper when an animation passes a certain frame. Before getting started, make sure you're also familiar with the basics of [SceneScript](/scene/scenescript/introduction.md), which will be used to handle all animation events.
+You can add **animation events** to any [timeline](/wallpaper-engine-docs/scene/timeline/introduction) or [puppet warp animation](/wallpaper-engine-docs/scene/puppet-warp/introduction) and use them to trigger effects, play sounds or perform any other custom SceneScript logic in your wallpaper when an animation passes a certain frame. Before getting started, make sure you're also familiar with the basics of [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction), which will be used to handle all animation events.
 
 ## Creating an Event
 

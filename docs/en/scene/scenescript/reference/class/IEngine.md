@@ -42,15 +42,15 @@ The runtime has a rollover to retain floating point precision. If you want to cr
 
 ### AUDIO\_RESOLUTION\_16: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object with **16** frequency bands.
+Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object with **16** frequency bands.
 
 ### AUDIO\_RESOLUTION\_32: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object with **32** frequency bands.
+Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object with **32** frequency bands.
 
 ### AUDIO\_RESOLUTION\_64: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object with **64** frequency bands.
+Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object with **64** frequency bands.
 
 ## Functions
 
@@ -88,7 +88,7 @@ Registers your script with the audio responsive system in Wallpaper Engine and g
 
 Valid values for the `resolution` parameter are `engine.AUDIO_RESOLUTION_16`, `engine.AUDIO_RESOLUTION_32` and `engine.AUDIO_RESOLUTION_64` which divide the audio spectrum into 16, 32 and 64 sections respectively.
 
-Returns an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object that you can store to retrieve the audio volume levels in each rendered frame.
+Returns an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object that you can store to retrieve the audio volume levels in each rendered frame.
 
 ### registerAsset(file: String): IAssetHandle
 

@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class AudioBuffers
 
-Provides access to the left and right audio spectrum values and their combined average. The `left`, `right` and `average` arrays always have the same size as defined in the `resolution` parameter of [engine.registerAudioBuffers(resolution: Number)](/scene/scenescript/reference/class/IEngine). Their contents will be updated for every frame automatically, so you can continuously read the audio levels from this object.
+Provides access to the left and right audio spectrum values and their combined average. The `left`, `right` and `average` arrays always have the same size as defined in the `resolution` parameter of [engine.registerAudioBuffers(resolution: Number)](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine). Their contents will be updated for every frame automatically, so you can continuously read the audio levels from this object.
 
 If you have initialized this object with a resolution of `16` for example, then accessing either `left[0]`, `right[0]` or `average[0]` would return you the current audio levels of low bass frequencies which is useful for detecting beats and most commonly used in Wallpaper Engine. Accessing `left[15]`, `right[15]` or `average[15]` would be for high treble frequencies, while all values in between represent a specific audio frequency range.
 

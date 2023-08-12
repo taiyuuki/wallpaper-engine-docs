@@ -10,7 +10,7 @@ Keep in mind that the physics simulations can slightly change their behavior dep
 
 ## Bone Physics Examples
 
-We will use the Samurai example from the [Puppet Warp Character Sheet Guide](/scene/puppet-warp/charactersheet) to showcase two different types of implementations of bone physics. If you would like to check out the examples from this guide in detail, [click here to download the sample project.](/samples/samurai_tutorial.zip)
+We will use the Samurai example from the [Puppet Warp Character Sheet Guide](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) to showcase two different types of implementations of bone physics. If you would like to check out the examples from this guide in detail, [click here to download the sample project.](/samples/samurai_tutorial.zip)
 
 ### Rope Physics
 
@@ -23,7 +23,7 @@ In our first example, we will add physics simulation to the rope attached to the
 
 To achieve this, we open up the **Skeleton** step of the puppet warp and select the bone which connects the samurai's hand and the root bone at the bottom of the rope:
 
-![Puppet Warp - Rope Bone](/img/puppet-warp/puppet_warp_gravity_bone_inactive.png)
+![Puppet Warp - Rope Bone](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_gravity_bone_inactive.png)
 
 We then click on the **Edit Constraints** button on the right-hand side to open the **Bone Constraints** menu. In this case, we enable the **Rigid simulation** option and configure it as follows:
 
@@ -39,7 +39,7 @@ We then click on the **Edit Constraints** button on the right-hand side to open 
 
 You will also notice that the forward angle becomes visible in the bone preview, visualized by the brown line with the circle at the end, make sure it points in the correct direction (in this case: the direction of gravity).
 
-![Puppet Warp - Rope Bone with Gravity enabled](/img/puppet-warp/puppet_warp_gravity_bone_active.png)
+![Puppet Warp - Rope Bone with Gravity enabled](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_gravity_bone_active.png)
 
 This is all that it takes to enable the physics for the rope bone. You do not actually need to animate the bone itself, but rather you should animate a parent bone (in this case the hand) and the bone will dynamically follow along and simulate the physics. You may need to tweak the values from above for your example, it's not possible to provide you with values that will work in all cases but you can use the values from above as a baseline and then tweak them to your specific use-case.
 
@@ -54,7 +54,7 @@ Next up, we will animate a series of bones with a physics simulation. We will us
 
 Specifically, we are dealing with the four bones which are present along the cape, as shown in the following screenshot where they have already been fully configured:
 
-![Puppet Warp - Cape Bones](/img/puppet-warp/puppet_warp_cape_gravity.png)
+![Puppet Warp - Cape Bones](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_cape_gravity.png)
 
 The first three bones on the cape have been configured to use a **Spring simulation**, while the last bone on the left has been configured to use a **Rigid simulation**. This is not necessarily *the best* solution, but we felt that the outcome of this looked quite nice in this case and you can experiment with mixing bones with rigid and spring simulations and see how the behavior changes.
 

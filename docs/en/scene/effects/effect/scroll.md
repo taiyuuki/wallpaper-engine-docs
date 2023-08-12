@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Scroll** effect can be used to continuously scroll an image in a specified direction. It's useful for textures that loop seamlessly and can be used to create special effects in combination with other effects.
 
-![Scroll](/img/effects/Scroll.gif)
+![Scroll](/wallpaper-engine-docs/img/effects/Scroll.gif)
 
 ## Effect settings
 

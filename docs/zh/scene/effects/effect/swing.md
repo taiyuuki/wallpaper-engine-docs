@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Swing** effect allows you to swing part of an image back and forth. You can change the direction, the strength and the smoothness through the effect settings.
 
-![Swing](/img/effects/Swing.gif)
+![Swing](/wallpaper-engine-docs/img/effects/Swing.gif)
 
 ### Effect Settings
 

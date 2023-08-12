@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Pulse** effect can is useful for animating any type of lighting. It can either pulsate a light in set intervals or react to any audio being played on the system.
 
-![Pulse](/img/effects/Pulse.gif)
+![Pulse](/wallpaper-engine-docs/img/effects/Pulse.gif)
 
 ### Effect Settings
 

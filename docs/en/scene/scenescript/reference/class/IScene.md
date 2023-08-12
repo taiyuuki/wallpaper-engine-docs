@@ -106,7 +106,7 @@ Remove a layer by index, name or reference. The layer will actually be removed i
 
 ### createLayer(configuration: String|Object|IAssetHandle): ILayer
 
-Creates a new layer and returns a reference to it. The configuration can simply be a path to the asset relative to the project, a custom object just like in the `scene.json` file itself with any overrides you want or an [IAssetHandle](/scene/scenescript/reference/class/IAssetHandle) returned by `engine.registerAsset()`.
+Creates a new layer and returns a reference to it. The configuration can simply be a path to the asset relative to the project, a custom object just like in the `scene.json` file itself with any overrides you want or an [IAssetHandle](/wallpaper-engine-docs/scene/scenescript/reference/class/IAssetHandle) returned by `engine.registerAsset()`.
 
 ### sortLayer(layer: String|Number|ILayer, index: Number): Boolean
 

@@ -13,9 +13,9 @@ In this guide, we explain how you can use SceneScript to modify the colors of an
 
 ## Color Properties and SceneScript
 
-Wallpaper Engine offers a [color property](/scene/userproperties/color) that you can find throughout various assets in the editor, you can also add a distinct [Tint effect](/scene/effects/effect/tint) to image layers for more complex scenarios.
+Wallpaper Engine offers a [color property](/wallpaper-engine-docs/scene/userproperties/color) that you can find throughout various assets in the editor, you can also add a distinct [Tint effect](/wallpaper-engine-docs/scene/effects/effect/tint) to image layers for more complex scenarios.
 
-The color property in Wallpaper Engine is always represented by a [Vec3](/scene/scenescript/reference/class/Vec3) object. The three properties represent the three RGB color channels:
+The color property in Wallpaper Engine is always represented by a [Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) object. The three properties represent the three RGB color channels:
 
 * `x`: Red Color Channel
 * `y`: Green Color Channel
@@ -29,7 +29,7 @@ To implement this example in your own project, select an image layer in your wal
 
 ### Utilizing the WEColor Module
 
-SceneScript comes with the [WEColor](/scene/scenescript/reference/module/WEColor) module which holds a few utility functions to make it easier to work with colors. In our example, we want to constantly shift the colors. Implementing this with just the `red`, `green` and `blue` color channels is rather tedious. For this reason, it makes sense to work on the **HSV** representation of our color instead of the standard **RGB** representation.
+SceneScript comes with the [WEColor](/wallpaper-engine-docs/scene/scenescript/reference/module/WEColor) module which holds a few utility functions to make it easier to work with colors. In our example, we want to constantly shift the colors. Implementing this with just the `red`, `green` and `blue` color channels is rather tedious. For this reason, it makes sense to work on the **HSV** representation of our color instead of the standard **RGB** representation.
 
 If you are unfamiliar with **HSV**, it represents each color with three components: `Hue`, `Saturation` and `Value`. The `Hue` value represents the color on its own which makes it very convenient for our use-case, as we simply have to modify the `Hue` value instead of having to deal with `red`, `green` and `blue` color values.
 

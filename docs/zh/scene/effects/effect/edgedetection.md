@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Edge Detection** effect applies a filter to the image that separates edges and surfaces by color. By default, edges will become black and surfaces will be white.
 
-![Edge Detection](/img/effects/Edge_detection.png)
+![Edge Detection](/wallpaper-engine-docs/img/effects/Edge_detection.png)
 
 ### Effect Settings
 

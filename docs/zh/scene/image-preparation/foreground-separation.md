@@ -8,7 +8,7 @@ Foreground separation in Wallpaper Engine works well for most images but in some
 
 In this guide, we will showcase how to separate a character from an image and turn it into its own layer. In the following example, we are able to use foreground separation to turn our sample image into two layers: One layer for the character in the foreground of our image and another background layer for the scenery in the background of the image. In more complex scenarios, you can use foreground separation multiple times on the same base image, for example if you have multiple characters or objects on your image that you would like to turn into independent layers.
 
-![Foreground Separation](/img/foreground-separation/foreground_separation.gif)
+![Foreground Separation](/wallpaper-engine-docs/img/foreground-separation/foreground_separation.gif)
 
 As you can see, the character has been cut out through foreground separation. The background is left with a blurred area that is automatically filled in. While the blur might become visible under certain circumstances, it should be hardly noticeable in most cases, as the colors are determined by background image, allowing them to blend in well with the image.
 
@@ -21,7 +21,7 @@ In its most basic form, this separating foreground objects into distinct layers 
   Your browser does not support the video tag.
 </video>
 
-Foreground separation can also be used as a starting point for a [puppet warp animation](/scene/puppet-warp/introduction).
+Foreground separation can also be used as a starting point for a [puppet warp animation](/wallpaper-engine-docs/scene/puppet-warp/introduction).
 
 ## How to use Foreground Separation
 
@@ -96,4 +96,4 @@ If you are dealing with very fine outlines on a character or an object, it may b
 
 Should you still notice issues with the foreground separation results, you can still make minor adjustments to the automatic foreground separation by connecting Wallpaper Engine with an external image editor. Afterwards, you can manually edit the **Albedo** texture of your image layer. See the following guide for more infos:
 
-* [External Image Editor Quick Access](/scene/image-preparation/external-editor)
+* [External Image Editor Quick Access](/wallpaper-engine-docs/scene/image-preparation/external-editor)

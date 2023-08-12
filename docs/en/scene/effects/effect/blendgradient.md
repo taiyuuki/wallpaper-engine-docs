@@ -7,7 +7,7 @@ The **Blend Gradient** effect allows you to blend two images into one another us
 
 Create blend animations it with **SceneScript** or a **Timeline Animation** by modifying the **Blend amount** value from `0.00` until `1.00` over time.
 
-![Blend](/img/effects/Blend_Gradient.gif)
+![Blend](/wallpaper-engine-docs/img/effects/Blend_Gradient.gif)
 
 ### Effect Settings
 

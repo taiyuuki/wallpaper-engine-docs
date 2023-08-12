@@ -1,12 +1,12 @@
 # Character Sheet Creation
 
-Wallpaper Engine allows you to create a character sheet which you can use to create a high-quality [puppet warp animation](/scene/puppet-warp/introduction). As a prerequisite, you need a character that has been cut out and loaded into Wallpaper Engine as its own layer. You can use the [foreground separation](/scene/image-preparation/foreground-separation) feature of Wallpaper Engine to cut out a character from a base image or use a third-party image editing tool of your choice to manually create a character cut-out with a transparent area around your character.
+Wallpaper Engine allows you to create a character sheet which you can use to create a high-quality [puppet warp animation](/wallpaper-engine-docs/scene/puppet-warp/introduction). As a prerequisite, you need a character that has been cut out and loaded into Wallpaper Engine as its own layer. You can use the [foreground separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation) feature of Wallpaper Engine to cut out a character from a base image or use a third-party image editing tool of your choice to manually create a character cut-out with a transparent area around your character.
 
 ## Character Sheet Introduction
 
-Character sheets cut up characters from an image into multiple independent parts and allow for layering of individual body parts for much more detailed animations using puppet warping. In our example, we use the same character that was used in the [foreground separation](/scene/image-preparation/foreground-separation) tutorial:
+Character sheets cut up characters from an image into multiple independent parts and allow for layering of individual body parts for much more detailed animations using puppet warping. In our example, we use the same character that was used in the [foreground separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation) tutorial:
 
-![Character Sheet](/img/character-sheet-creation/character_sheet_example.png)
+![Character Sheet](/wallpaper-engine-docs/img/character-sheet-creation/character_sheet_example.png)
 
 Most notably, the sword has been removed from the original character and the area it previously occupied is filled in with a color blur of the surrounding areas. For many animations, this blur will be hardly noticeable in later animations. Take a look at our sample puppet warp animation we created with the previous character sheet and notice how the sword, shield and head all move quite strongly without causing any distortions or unwanted side effects on the surrounding body parts, which is the main advantage of using puppet warp animations with character sheets:
 
@@ -43,7 +43,7 @@ While painting the mask, make sure to regularly check the **Foreground** and **B
 ::: tip Tip
 In this tutorial, we are showcasing the **Paint Brush Mode** for the character sheet creation. You can also use **Polygon Mode** to draw the outlines of your character's limbs. To learn more about the two paint modes, see the relevant section in the foreground separation tutorial where we showcase both options:
 
-* [Foreground Separation](/scene/image-preparation/foreground-separation)
+* [Foreground Separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation)
 :::
 
 ### Further Separating a Limb
@@ -68,7 +68,7 @@ We continue with our character by creating another limb. Unlike last time, we mo
 
 In the final step, we create yet another limb on the **Body**, representing our character's head. After properly masking it just like before, we are ready to finalize our character sheet. Be sure to check all limbs one more time and make sure that they look exactly as you expect. For our character, we now have the **Body** (which always exists), followed by the head, shield and arm. The arm has another child limb, namely the sword.
 
-Since we are satisfied with our character sheet, we confirm by clicking on **OK** in the lower right corner. Wallpaper Engine will now generate a character sheet from all the limbs we have drawn. We can now use the character sheet layer to create a puppet warp animation. See the [puppet warp character sheet guide](/scene/puppet-warp/charactersheet) in order to continue from this point on.
+Since we are satisfied with our character sheet, we confirm by clicking on **OK** in the lower right corner. Wallpaper Engine will now generate a character sheet from all the limbs we have drawn. We can now use the character sheet layer to create a puppet warp animation. See the [puppet warp character sheet guide](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) in order to continue from this point on.
 
 <video width="100%" controls>
   <source src="/videos/cs_summary.mp4" type="video/mp4">
@@ -77,4 +77,4 @@ Since we are satisfied with our character sheet, we confirm by clicking on **OK*
 
 Should you notice smaller issues with the character sheet, keep in mind that you can still make minor adjustments to the character sheet by connecting Wallpaper Engine with an external image editor and then editing the **Albedo** texture, see the following guide for more infos:
 
-* [External Image Editor Quick Access](/scene/image-preparation/external-editor)
+* [External Image Editor Quick Access](/wallpaper-engine-docs/scene/image-preparation/external-editor)

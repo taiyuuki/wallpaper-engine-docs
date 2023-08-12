@@ -10,13 +10,13 @@ SceneScript introduces a handful of globals which you can access at any point in
 
 | Global        | Description   |
 |---------------|---------------|
-| [engine](/zh/scene/scenescript/reference/class/IEngine.html) | Access to general features of the application. `IEngine` class. |
-| [input](/zh/scene/scenescript/reference/class/IInput.html) | Input related data, mainly the mouse cursor. `IInput` class.|
-| [thisScene](/zh/scene/scenescript/reference/class/IScene.html) | The currently loaded scene wallpaper. `IScene` class |
-| [thisLayer](/zh/scene/scenescript/reference/class/ILayer.html) | The layer this script has been loaded on. `ILayer` class. |
-| [thisObject](/zh/scene/scenescript/reference/class/IThisPropertyObject.html) | The object this script belongs to. `IThisPropertyObject` class. |
-| [console](/zh/scene/scenescript/reference/class/IConsole.html) | Access the console log for debugging purposes. `IConsole` class. |
-| [shared](/zh/scene/scenescript/reference/class/Shared.html) | Empty by default, allows you to share data between multiple scripts. `Shared` class. |
+| [engine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | Access to general features of the application. `IEngine` class. |
+| [input](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | Input related data, mainly the mouse cursor. `IInput` class.|
+| [thisScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | The currently loaded scene wallpaper. `IScene` class |
+| [thisLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | The layer this script has been loaded on. `ILayer` class. |
+| [thisObject](/wallpaper-engine-docs/scene/scenescript/reference/class/IThisPropertyObject) | The object this script belongs to. `IThisPropertyObject` class. |
+| [console](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | Access the console log for debugging purposes. `IConsole` class. |
+| [shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | Empty by default, allows you to share data between multiple scripts. `Shared` class. |
 
 ## Events
 
@@ -24,22 +24,22 @@ SceneScript uses an event system that allows you to run specific code whenever c
 
 | Event                | Description   |
 |----------------------|---------------|
-| [init](/zh/scene/scenescript/reference/event/init.html) | This initialization function will be called once after the object it belongs to has been created. |
-| [update](/zh/scene/scenescript/reference/event/update.html) | This event function will be called every frame for all scripts that export it. |
-| [destroy](/zh/scene/scenescript/reference/event/destroy.html) | This event function will be called just before the object it belongs to gets destroyed. |
-| [resizeScreen](/zh/scene/scenescript/reference/event/resizeScreen.html) | This function will be called every time the wallpaper resizes because of a change to the current resolution. |
-| [applyUserProperties](/zh/scene/scenescript/reference/event/applyUserProperties.html) | This event function will be called once initially when the wallpaper is loaded and whenever any user properties are being adjusted by the user. |
-| [cursorEnter](/zh/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor enters the bounds of the object. |
-| [cursorLeave](/zh/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor leaves the bounds of the object. |
-| [cursorMove](/zh/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor has been moved. |
-| [cursorDown](/zh/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor is being pressed down on an object. |
-| [cursorUp](/zh/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor is being released over an object.  |
-| [cursorClick](/zh/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor has been pressed and released on the same object. |
-| [mediaStatusChanged](/zh/scene/scenescript/reference/event/media.html) | This event function will be called when the media integration is turned on or off by the user. |
-| [mediaPlaybackChanged](/zh/scene/scenescript/reference/event/media.html) | This event function will be called when the users starts, stops or pauses media. |
-| [mediaPropertiesChanged](/zh/scene/scenescript/reference/event/media.html) | This event function will be called when the properties of the currently playing media change. |
-| [mediaThumbnailChanged](/zh/scene/scenescript/reference/event/media.html) | This event function will be called when the thumbnail of the currently playing media changes. |
-| [mediaTimelineChanged](/zh/scene/scenescript/reference/event/media.html) | This event function will be called when the current time of the playing media changes and is only provided by certain applications. |
+| [init](/wallpaper-engine-docs/scene/scenescript/reference/event/init) | This initialization function will be called once after the object it belongs to has been created. |
+| [update](/wallpaper-engine-docs/scene/scenescript/reference/event/update) | This event function will be called every frame for all scripts that export it. |
+| [destroy](/wallpaper-engine-docs/scene/scenescript/reference/event/destroy) | This event function will be called just before the object it belongs to gets destroyed. |
+| [resizeScreen](/wallpaper-engine-docs/scene/scenescript/reference/event/resizeScreen) | This function will be called every time the wallpaper resizes because of a change to the current resolution. |
+| [applyUserProperties](/wallpaper-engine-docs/scene/scenescript/reference/event/applyUserProperties) | This event function will be called once initially when the wallpaper is loaded and whenever any user properties are being adjusted by the user. |
+| [cursorEnter](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor enters the bounds of the object. |
+| [cursorLeave](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor leaves the bounds of the object. |
+| [cursorMove](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor has been moved. |
+| [cursorDown](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor is being pressed down on an object. |
+| [cursorUp](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor is being released over an object.  |
+| [cursorClick](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor has been pressed and released on the same object. |
+| [mediaStatusChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the media integration is turned on or off by the user. |
+| [mediaPlaybackChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the users starts, stops or pauses media. |
+| [mediaPropertiesChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the properties of the currently playing media change. |
+| [mediaThumbnailChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the thumbnail of the currently playing media changes. |
+| [mediaTimelineChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the current time of the playing media changes and is only provided by certain applications. |
 
 ## Classes
 
@@ -47,35 +47,35 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 
 | Class                | Description   |
 |----------------------|---------------|
-| [AnimationEvent](/zh/scene/scenescript/reference/class/AnimationEvent.html) | This object describes an animation event that has been fired from a timeline or puppet warp animation. |
-| [AudioBuffers](/zh/scene/scenescript/reference/class/AudioBuffers.html) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
-| [CameraTransforms](/zh/scene/scenescript/reference/class/CameraTransforms.html) | Objects of this class describe the camera orientation and position. |
-| [CursorEvent](/zh/scene/scenescript/reference/class/CursorEvent.html) | Provides information about the cursor position during cursor events. |
-| [IAnimation](/zh/scene/scenescript/reference/class/IAnimation.html) | This class represents a timeline property animation. |
-| [IAnimationLayer](/zh/scene/scenescript/reference/class/IAnimationLayer.html) | This class represents a puppet warp animation layer. |
-| [IConsole](/zh/scene/scenescript/reference/class/IConsole.html) | You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log. |
-| [IEffect](/zh/scene/scenescript/reference/class/IEffect.html) | Provides access to image effects used on image layers. |
-| [IEffectLayer](/zh/scene/scenescript/reference/class/IEffectLayer.html) | Base class for image and text layers. |
-| [IEngine](/zh/scene/scenescript/reference/class/IEngine.html) | Provides general information about the user device and the running wallpaper. |
-| [IImageLayer](/zh/scene/scenescript/reference/class/IImageLayer.html) | This class provides access to functions specific to image layers. |
-| [IInput](/zh/scene/scenescript/reference/class/IInput.html) | Provides access to input related data, mainly the mouse cursor. |
-| [ILayer](/zh/scene/scenescript/reference/class/ILayer.html) | Provides access to data related to a layer. |
-| [IMaterial](/zh/scene/scenescript/reference/class/IMaterial.html) | Provides access to dynamic properties of materials / shader properties. |
-| [IParticleSystem](/zh/scene/scenescript/reference/class/IParticleSystem.html) | Provides access to particle systems and lets you modify their playback state. |
-| [IParticleSystemInstance](/zh/scene/scenescript/reference/class/IParticleSystemInstance.html) | Provides access to instance modifiers for particle systems. You can use this to adjust details of a particle system dynamically. |
-| [IScene](/zh/scene/scenescript/reference/class/IScene.html) | Provides access to properties of the currently loaded scene. |
-| [ISoundLayer](/zh/scene/scenescript/reference/class/ISoundLayer.html) | Provides access functions specific to sound layers. |
-| [ITextureAnimation](/zh/scene/scenescript/reference/class/ITextureAnimation.html) | This class represents a texture animation. |
-| [IVideoTexture](/zh/scene/scenescript/reference/class/IVideoTexture.html) | This class represents a video texture animation. |
-| [Mat4](/zh/scene/scenescript/reference/class/Mat4.html) | Utility class used for creating a 4 dimensional identity matrix. |
-| [MediaPlaybackEvent](/zh/scene/scenescript/reference/class/MediaPlaybackEvent.html) | Media integration event, fired when the user starts, stops or pauses media. |
-| [MediaPropertiesEvent](/zh/scene/scenescript/reference/class/MediaPropertiesEvent.html) | Media integration event, fired when the properties of the current media session are changing. |
-| [MediaStatusEvent](/zh/scene/scenescript/reference/class/MediaStatusEvent.html) | Media integration event, fired when the user turns the media integration on or off. |
-| [MediaThumbnailEvent](/zh/scene/scenescript/reference/class/MediaThumbnailEvent.html) | Media integration event, fired when the thumbnail pertaining to the current media changes. |
-| [MediaTimelineEvent](/zh/scene/scenescript/reference/class/MediaTimelineEvent.html) | Optional media integration event, fired irregularly when the current time of the media session changes. |
-| [Shared](/zh/scene/scenescript/reference/class/Shared.html) | Related to the global object `shared` which you may use to share data between multiple scripts. |
-| [Vec2](/zh/scene/scenescript/reference/class/Vec2.html) | Utility class which holds a 2 dimensional value pair: `x` and `y`. |
-| [Vec3](/zh/scene/scenescript/reference/class/Vec3.html) | Utility class which holds a 3 dimensional value pair: `x`, `y` and `z`. |
+| [AnimationEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/AnimationEvent) | This object describes an animation event that has been fired from a timeline or puppet warp animation. |
+| [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
+| [CameraTransforms](/wallpaper-engine-docs/scene/scenescript/reference/class/CameraTransforms) | Objects of this class describe the camera orientation and position. |
+| [CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent) | Provides information about the cursor position during cursor events. |
+| [IAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimation) | This class represents a timeline property animation. |
+| [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) | This class represents a puppet warp animation layer. |
+| [IConsole](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log. |
+| [IEffect](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffect) | Provides access to image effects used on image layers. |
+| [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | Base class for image and text layers. |
+| [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | Provides general information about the user device and the running wallpaper. |
+| [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | This class provides access to functions specific to image layers. |
+| [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | Provides access to input related data, mainly the mouse cursor. |
+| [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | Provides access to data related to a layer. |
+| [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | Provides access to dynamic properties of materials / shader properties. |
+| [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | Provides access to particle systems and lets you modify their playback state. |
+| [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) | Provides access to instance modifiers for particle systems. You can use this to adjust details of a particle system dynamically. |
+| [IScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | Provides access to properties of the currently loaded scene. |
+| [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) | Provides access functions specific to sound layers. |
+| [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) | This class represents a texture animation. |
+| [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture) | This class represents a video texture animation. |
+| [Mat4](/wallpaper-engine-docs/scene/scenescript/reference/class/Mat4) | Utility class used for creating a 4 dimensional identity matrix. |
+| [MediaPlaybackEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPlaybackEvent) | Media integration event, fired when the user starts, stops or pauses media. |
+| [MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent) | Media integration event, fired when the properties of the current media session are changing. |
+| [MediaStatusEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaStatusEvent) | Media integration event, fired when the user turns the media integration on or off. |
+| [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent) | Media integration event, fired when the thumbnail pertaining to the current media changes. |
+| [MediaTimelineEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaTimelineEvent) | Optional media integration event, fired irregularly when the current time of the media session changes. |
+| [Shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | Related to the global object `shared` which you may use to share data between multiple scripts. |
+| [Vec2](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec2) | Utility class which holds a 2 dimensional value pair: `x` and `y`. |
+| [Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) | Utility class which holds a 3 dimensional value pair: `x`, `y` and `z`. |
 
 ## Modules
 
@@ -83,6 +83,6 @@ Wallpaper Engine also provides some modules which can be used to access certain 
 
 | Module                | Description   |
 |----------------------|---------------|
-| [WEColor](/zh/scene/scenescript/reference/module/WEColor.html) | Module which provides utility functions related to color manipulation. |
-| [WEMath](/zh/scene/scenescript/reference/module/WEMath.html) | Module which provides utility functions related to general mathematical functions. |
-| [WEVector](/zh/scene/scenescript/reference/module/WEVector.html) | Module which provides utility functions related to working with vectors. |
+| [WEColor](/wallpaper-engine-docs/scene/scenescript/reference/module/WEColor) | Module which provides utility functions related to color manipulation. |
+| [WEMath](/wallpaper-engine-docs/scene/scenescript/reference/module/WEMath) | Module which provides utility functions related to general mathematical functions. |
+| [WEVector](/wallpaper-engine-docs/scene/scenescript/reference/module/WEVector) | Module which provides utility functions related to working with vectors. |

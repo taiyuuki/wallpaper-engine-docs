@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Water Waves** applies a wave animation to the image that works well for water, clothes and hair animations. 
 
-![Water Ripple](/img/effects/Water_Waves_Complete.gif)
+![Water Ripple](/wallpaper-engine-docs/img/effects/Water_Waves_Complete.gif)
 
 ### Effect Settings
 

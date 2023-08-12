@@ -1,8 +1,8 @@
 # 3D Perspective Extrusion
 
-With puppet warping, you can also simulate a 3D perspective of 2D images. We will use the samurai from our [Character Sheet Example](/scene/puppet-warp/charactersheet) to showcase an example of this. However, it is not necessary to use a character sheet, you can also use a standard model for this purpose and achieve similar results.
+With puppet warping, you can also simulate a 3D perspective of 2D images. We will use the samurai from our [Character Sheet Example](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) to showcase an example of this. However, it is not necessary to use a character sheet, you can also use a standard model for this purpose and achieve similar results.
 
-You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
+You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial.
 
 ## Puppet Warp Geometry Setup
 

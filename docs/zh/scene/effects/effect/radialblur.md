@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The radial blur effect allows you to generate a circular motion blur effect around a specific point of a given layer.
 
-![Radial Blur](/img/effects/Radial_Blur.gif)
+![Radial Blur](/wallpaper-engine-docs/img/effects/Radial_Blur.gif)
 
 ### Effect Settings
 

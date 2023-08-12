@@ -1,12 +1,12 @@
 # Time of Day Changes with SceneScript
 
-In this tutorial we will explain how SceneScript enables you to change parts of your wallpaper depending on the current time of day. Our example is rather specific, but you can access the current time of day via SceneScript via [**engine.timeOfDay**](/zh/scene/scenescript/reference/class/IEngine.html#timeofday-number) for your own ideas and custom logic of any type.
+In this tutorial we will explain how SceneScript enables you to change parts of your wallpaper depending on the current time of day. Our example is rather specific, but you can access the current time of day via SceneScript via [**engine.timeOfDay**](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine.html#timeofday-number) for your own ideas and custom logic of any type.
 
 Alternatively, you can also use the *ECMAScript* `Date` class to access the current hours, minutes seconds and more date-related data just like you would in other languages such as *JavaScript*.
 
 ## Change Background Image Depending on Time of Day
 
-We will explore how to utilize the [Blend effect](/scene/effects/effect/blend.html) to change the entire background image multiple times during a day depending on the current time. We strongly recommend that you utilize the *Blend* effect for this type of effect instead of using multiple image layers to reduce VRAM usage. This can significantly improve performance, especially when using effects on the image layer.
+We will explore how to utilize the [Blend effect](/wallpaper-engine-docs/scene/effects/effect/blend) to change the entire background image multiple times during a day depending on the current time. We strongly recommend that you utilize the *Blend* effect for this type of effect instead of using multiple image layers to reduce VRAM usage. This can significantly improve performance, especially when using effects on the image layer.
 
 <video width="100%" controls autoplay loop>
   <source src="/videos/timeofday.mp4" type="video/mp4">
@@ -17,7 +17,7 @@ We will explore how to utilize the [Blend effect](/scene/effects/effect/blend.ht
 
 Start off by adding the image that you want to use at midnight as a base image for your wallpaper. In our case, it's the night-time version of a window, as shown in the animation above. It's important to use the midnight image as a base image, since our SceneScript logic will expect this image to be shown at exactly midnight when the clock reaches 00:00:00.
 
-After adding the midnight image as a layer, add the [Blend effect](/scene/effects/effect/blend.html) to it to continue with the rest of this tutorial.
+After adding the midnight image as a layer, add the [Blend effect](/wallpaper-engine-docs/scene/effects/effect/blend) to it to continue with the rest of this tutorial.
 
 ### Blend Mode
 
@@ -72,8 +72,8 @@ export function update(value) {
 
 This snippet makes use of two Wallpaper Engine SceneScript features:
 
-* [**engine.timeOfDay**](/zh/scene/scenescript/reference/class/IEngine.html#timeofday-number) which represents the current day with values from 0.00 - 1.00 instead of seconds, where 0.00 is 00:00:00 and 1.00 is 23:59:59.
-* [**WEMath.smoothStep()**](/zh/scene/scenescript/reference/module/WEMath.html#smoothstep-min-number-max-number-value-number-number) is a function which smoothly calculates a value between two values which we use to smoothly blend over from one texture to the next.
+* [**engine.timeOfDay**](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine.html#timeofday-number) which represents the current day with values from 0.00 - 1.00 instead of seconds, where 0.00 is 00:00:00 and 1.00 is 23:59:59.
+* [**WEMath.smoothStep()**](/wallpaper-engine-docs/scene/scenescript/reference/module/WEMath.html#smoothstep-min-number-max-number-value-number-number) is a function which smoothly calculates a value between two values which we use to smoothly blend over from one texture to the next.
 
 Add this script to all **Blend amount** values for each blend amount texture. Make sure to always reconfigure the `START_HOUR` and `END_HOUR` values to control at what time of day each blend texture appears.
 

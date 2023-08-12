@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Color Key** effect allows you to remove parts of the image that match a certain color. This kind of effect is used by *green screens* in video editing software.
 
-![Color Key](/img/effects/Color_key.gif)
+![Color Key](/wallpaper-engine-docs/img/effects/Color_key.gif)
 
 ### Effect Settings
 

@@ -10,7 +10,7 @@ tags:
 ---
 # Adding your first effects
 
-In this tutorial, we will be working with an image with a lake, trees and a mountain ([Click here to download](/img/tutorials/mountain.png)) which we will use to showcase a few basic effects. 
+In this tutorial, we will be working with an image with a lake, trees and a mountain ([Click here to download](/wallpaper-engine-docs/img/tutorials/mountain.png)) which we will use to showcase a few basic effects. 
 
 After your image has been imported, you will be presented with the main Wallpaper Engine editor window. In this section, we will explain what **effects** are and how to apply them. Image effects can be found on the right-hand side of the editor in the properties section (**marked in blue** in the following screenshot): 
 

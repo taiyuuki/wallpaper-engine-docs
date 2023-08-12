@@ -1,6 +1,6 @@
 # Multiple Animations per Puppet
 
-You can apply multiple animations to your puppet warp characters and objects. This offers some advantages over just using one animation, mainly that you can apply different timings on different movements. If you have worked through our [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction), you may have noticed how we animated all body parts within one animation. This can look good in many cases, but you may want your character to move certain body parts less or more frequently than other parts.
+You can apply multiple animations to your puppet warp characters and objects. This offers some advantages over just using one animation, mainly that you can apply different timings on different movements. If you have worked through our [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction), you may have noticed how we animated all body parts within one animation. This can look good in many cases, but you may want your character to move certain body parts less or more frequently than other parts.
 
 For example, you may have a general idle stance for your character and want them to move their arm every 30 seconds. Rather than building one massive animation that contains all these bits and pieces, you can just use multiple smaller animations and Wallpaper Engine will merge them into one for you.
 

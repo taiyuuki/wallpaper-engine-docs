@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Water Ripple** distorts the image to add a ripple effect. The effect can optionally be scrolled along a specified direction. The effect can be used to animate still waters, hot air and to some extent clothing and hair.
 
-![Water Ripple](/img/effects/Water_ripple.gif)
+![Water Ripple](/wallpaper-engine-docs/img/effects/Water_ripple.gif)
 
 ### Effect Settings
 

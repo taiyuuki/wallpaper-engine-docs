@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Fisheye** effect allows you to add a fisheye distortion to the image.
 
-![Fisheye](/img/effects/Fisheye.gif)
+![Fisheye](/wallpaper-engine-docs/img/effects/Fisheye.gif)
 
 ### Effect Settings
 

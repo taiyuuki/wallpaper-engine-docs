@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Clouds** effect allows you to add simple moving clouds to your image. They can be displayed in a flat manner or even with perspective distortion. You can also fully tweak their colors, size and sharpness.
 
-![Clouds](/img/effects/Clouds.gif)
+![Clouds](/wallpaper-engine-docs/img/effects/Clouds.gif)
 
 ### Effect Settings
 

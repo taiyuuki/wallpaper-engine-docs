@@ -3,9 +3,9 @@
 Puppet warping is an advanced way to create complex animations for characters and some objects with Wallpaper Engine. Puppet warping is a multi-step process that requires you to have a separate image layer with a cutout of the character or object you want to animate.
 
 ::: warning Before you get started
-Puppet warping relatively complex feature, you can also create character animations with just [image effects](/scene/effects/overview) such as the [Shake effect](/scene/effects/effect/shake) which is a much simpler process.
+Puppet warping relatively complex feature, you can also create character animations with just [image effects](/wallpaper-engine-docs/scene/effects/overview) such as the [Shake effect](/wallpaper-engine-docs/scene/effects/effect/shake) which is a much simpler process.
 
-Before you get started with puppet warping, you should have a basic understanding of [Timeline Animations](/scene/timeline/introduction) as the principles applied there are used to create the animations in puppet warping.
+Before you get started with puppet warping, you should have a basic understanding of [Timeline Animations](/wallpaper-engine-docs/scene/timeline/introduction) as the principles applied there are used to create the animations in puppet warping.
 :::
 
 In this tutorial, we will create a simple puppet warp animation using a samurai character that we have cut out of an existing background image using Photoshop. We have then retouched the original image to hide the already existing character from the image. If you are unable to work with a cutout of a character, puppet warping is likely not the right tool for you and you should instead rely on character animations using image effects.
@@ -28,13 +28,13 @@ All puppet warp animations consist of multiple steps which you can see in the pr
 
 ## 1. Creating and importing a character cutout
 
-Puppet warping requires a clean image cutout with transparency around the character model. We used *Adobe Photoshop* for this task but you can achieve similar results with free software such as *Paint.NET* and *GIMP* for example. We first cut out our samurai character from the [base image](/img/puppet-warp/samurai_4k.png). We then cleaned up the base image by painting over the existing samurai and removing him from the picture altogether, resulting in a [base image without the character](/img/puppet-warp/cyberpunkbg.png). You can see we did not necessarily do a perfect job with the removal but since we will place the samurai back to where it was, the imperfections are hardly noticeable in the final wallpaper as it will be mostly hidden by the same character again. You can obviously also use a character from one image and place it on an entirely separate background if you would like.
+Puppet warping requires a clean image cutout with transparency around the character model. We used *Adobe Photoshop* for this task but you can achieve similar results with free software such as *Paint.NET* and *GIMP* for example. We first cut out our samurai character from the [base image](/wallpaper-engine-docs/img/puppet-warp/samurai_4k.png). We then cleaned up the base image by painting over the existing samurai and removing him from the picture altogether, resulting in a [base image without the character](/wallpaper-engine-docs/img/puppet-warp/cyberpunkbg.png). You can see we did not necessarily do a perfect job with the removal but since we will place the samurai back to where it was, the imperfections are hardly noticeable in the final wallpaper as it will be mostly hidden by the same character again. You can obviously also use a character from one image and place it on an entirely separate background if you would like.
 
 The main character cutout we imported into Wallpaper Engine was the following image file:
 
-![Samurai Cutout](/img/puppet-warp/samurai_simple.png)
+![Samurai Cutout](/wallpaper-engine-docs/img/puppet-warp/samurai_simple.png)
 
-If you would like, you can take the character file and the [base image without the character](/img/puppet-warp/cyberpunkbg.png) and follow along with this tutorial.
+If you would like, you can take the character file and the [base image without the character](/wallpaper-engine-docs/img/puppet-warp/cyberpunkbg.png) and follow along with this tutorial.
 
 
 ## 2. Establishing the geometry of the character
@@ -58,7 +58,7 @@ Watch the following video to see how we create the geometry for our object and a
 
 When creating slices, you should check that the additional slices do not introduce any severe issues in the mesh generation, see the image below for good and a bad example. If you notice any odd patterns in the mesh as in the bad example, try moving the slices around slightly to fix any issues with the mesh generation.
 
-![Geometry Mesh Problems](/img/puppet-warp/geometry_errors.jpg)
+![Geometry Mesh Problems](/wallpaper-engine-docs/img/puppet-warp/geometry_errors.jpg)
 
 ## 3. Creating the character bone skeleton
 
@@ -100,7 +100,7 @@ You can see this process including turning the hat in the following video:
 
 ## 5. Creating animations with the finalized puppet
 
-The final step in the puppet warp process is to actually create animations. This is done using [Timeline Animations](/scene/timeline/introduction) on the individual bones we created. You can get started by clicking on **Create** in the **Animation** section of the puppet warp overview and then clicking on the **Add** button in the list of animations. It's possible to create multiple animations for one object, which is why animations are stored as a list like that.
+The final step in the puppet warp process is to actually create animations. This is done using [Timeline Animations](/wallpaper-engine-docs/scene/timeline/introduction) on the individual bones we created. You can get started by clicking on **Create** in the **Animation** section of the puppet warp overview and then clicking on the **Add** button in the list of animations. It's possible to create multiple animations for one object, which is why animations are stored as a list like that.
 
 Similarly to **Timeline Animations**, you are asked to select an animation mode, a time in seconds and a number of frames. We will use a **Loop** animation, in that case it's important that all bones start the way the animation ends to ensure there are no sudden jumps. In some cases, it may also be easier to just create a **Mirror** animation which is first played forward and then played in reverse which may not be noticeable in simple cases such as a breathing animation. **Single** animations can be used as intro animations or in combination with more complex *SceneScript* logic.
 

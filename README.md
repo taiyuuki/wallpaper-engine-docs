@@ -23,13 +23,13 @@ server {
         listen 443 default_server ssl;
         root /var/www/docs.wallpaperengine.io/docs/.vuepress/dist;
         server_name docs.wallpaperengine.io;
-        index /en/index.html;
+        index /wallpaper-engine-docs/index.html;
 
         ssl_certificate     /etc/letsencrypt/live/docs.wallpaperengine.io/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/docs.wallpaperengine.io/privkey.pem;
 
         location / {
-                try_files $uri $uri/ /en/index.html /404.html;
+                try_files $uri $uri/ /wallpaper-engine-docs/index.html /404.html;
         }
 }
 ```

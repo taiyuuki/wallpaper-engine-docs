@@ -3,7 +3,7 @@
 Timeline animations allow you to create animations with a pre-defined length for all properties of your wallpaper components. If that sounds confusing, don't worry, this guide will introduce you to all steps needed to create timeline animations by providing a few sample use-cases with in-depth explanations.
 
 ::: tip
-Do not confuse timeline animations with animations that are created through [effects](/scene/effects/overview), they are entirely different concepts.
+Do not confuse timeline animations with animations that are created through [effects](/wallpaper-engine-docs/scene/effects/overview), they are entirely different concepts.
 :::
 
 ## Creating a simple movement animation

@@ -2,7 +2,7 @@
 
 A more advanced way to create puppet warp animations can be done with character sheets. Character sheets require you to use a cut-up version of your character which separates your character into its different limbs / pieces. This allows for more complex and more accurate animations to be created as parts can freely move and overlap without the image becoming distorted. It is not necessary to achieve good results with puppet warp but it can make a big difference depending on what you want to do. **You can still follow along the other tutorials of the puppet warp section, even if you don't rely on character sheets.**
 
-You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
+You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial.
 
 ## Creating a Character Sheet
 
@@ -10,13 +10,13 @@ Make sure to separate each individual body and clothing part into their own sepa
 
 In our example, we use the samurai character from our previous puppet warping tutorials and cut it up into its own character sheet using a photo editing tool. Our character sheet looks as follows (you can use the following image file to follow along):
 
-![Character Sheet Example](/img/puppet-warp/samurai_sheet.png)
+![Character Sheet Example](/wallpaper-engine-docs/img/puppet-warp/samurai_sheet.png)
 
 ### Using Wallpaper Engine to create a Character Sheet
 
 Wallpaper Engine comes with a character sheet creation tool which you can use to create a character sheet with relative ease. See our character sheet creation tutorial here:
 
-* [Character Sheet Creation](/scene/image-preparation/character-sheet)
+* [Character Sheet Creation](/wallpaper-engine-docs/scene/image-preparation/character-sheet)
 
 ## Preparing the character sheet
 
@@ -24,19 +24,19 @@ Wallpaper Engine comes with a character sheet creation tool which you can use to
 
 Just like with a puppet warp that is based on a non-cut-up character, we have to go through all the same steps as in the introductory guide to puppet warping. First we have to establish the geometry of the object. It should not be necessary to create slices here as explained in the introduction tutorial, as the slices are now redundant, as all parts of your character should be clearly separated:
 
-![Character Sheet Geometry](/img/puppet-warp/puppet_sheet_geometry.png)
+![Character Sheet Geometry](/wallpaper-engine-docs/img/puppet-warp/puppet_sheet_geometry.png)
 
 ### Character Skeleton
 
 When creating the bones of the character, make sure to keep the correct order of bones intact. For example, the arms and the head are connected to the bone in the upper body area, while the hat bone is connected to head bone. Repeat this until each body part is connected to its respective *neighbor*:
 
-![Character Sheet Skeleton](/img/puppet-warp/puppet_sheet_skeleton.png)
+![Character Sheet Skeleton](/wallpaper-engine-docs/img/puppet-warp/puppet_sheet_skeleton.png)
 
 ### Character Weights
 
 Painting the weights of the character should be much easier using a character sheet, as the regions of your character should now be clearly separate. For example, you can see how the hat and the sword have clearly been painted as one color which would not have been very simple to do in the original version of the model. You can also see how we have separated some elements into different regions nonetheless. For example: The rope, the cape and the legs have been separated into different bones to allow for more precise animations to be created:
 
-![Character Sheet Weights](/img/puppet-warp/puppet_sheet_weights.png)
+![Character Sheet Weights](/wallpaper-engine-docs/img/puppet-warp/puppet_sheet_weights.png)
 
 ## Reassembling the character sheet into a pose
 

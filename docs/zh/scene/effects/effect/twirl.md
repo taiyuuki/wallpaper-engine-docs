@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Twirl** effect allows you to create a spiral animation around a point in your image. The spiral can be round or have an elliptical shape, the shape can be easily configured with the editor controls.
 
-![Twirl](/img/effects/Twirl.gif)
+![Twirl](/wallpaper-engine-docs/img/effects/Twirl.gif)
 
 ### Effect Settings
 

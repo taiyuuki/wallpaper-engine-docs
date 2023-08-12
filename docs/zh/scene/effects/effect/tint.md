@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Tint** effect allows you to colorize the image. In general this effect should only be used in combination with any animations. If you can simply edit your image and colorize it beforehand, then you should definitely opt for that, because that would be better for performance than using an unnecessary effect.
 
-![Tint](/img/effects/Tint.png)
+![Tint](/wallpaper-engine-docs/img/effects/Tint.png)
 
 ### Effect Settings
 

@@ -3,9 +3,9 @@ prev: ../overview.md
 ---
 # Shine Effect
 
-The **Shine** effect is similar to the [Godrays effect](/scene/effects/effect/godrays.html) but instead of just adding a single ray, it adds multiple rays in various directions. This can be used to create certain light scenarios but also works well in combination with particle systems if this effect is applied to a full screen or composition layer. The effect can be extensively customized and you might need to tweak a little depending on your use-case.
+The **Shine** effect is similar to the [Godrays effect](/wallpaper-engine-docs/scene/effects/effect/godrays) but instead of just adding a single ray, it adds multiple rays in various directions. This can be used to create certain light scenarios but also works well in combination with particle systems if this effect is applied to a full screen or composition layer. The effect can be extensively customized and you might need to tweak a little depending on your use-case.
 
-![Shine](/img/effects/Shine.gif)
+![Shine](/wallpaper-engine-docs/img/effects/Shine.gif)
 
 ### Effect Settings
 

@@ -3,9 +3,9 @@
 Puppet warping allows you to utilize texture channels to blend between two or more different textures as part of your animation. In this tutorial, we will showcase how to implement a simple eye blinking animation with this approach.
 
 ::: warning Please note
-You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial since this guide expects you to have a basic puppet warp layer set up.
+You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial since this guide expects you to have a basic puppet warp layer set up.
 
-The tutorial showcases a [character sheet](/scene/puppet-warp/charactersheet), though character sheets are not necessary for this feature to function.
+The tutorial showcases a [character sheet](/wallpaper-engine-docs/scene/puppet-warp/charactersheet), though character sheets are not necessary for this feature to function.
 :::
 
 <video width="100%" controls autoplay loop>

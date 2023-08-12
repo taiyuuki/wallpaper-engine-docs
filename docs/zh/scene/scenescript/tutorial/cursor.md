@@ -6,7 +6,7 @@ prev: ../tutorials.md
 
 SceneScript comes with a set of events related to the mouse cursor which lets you react to mouse movement and mouse clicks. Be sure to view the reference page for cursor events to get a quick overview:
 
-* [SceneScript Cursor Events](/zh/scene/scenescript/reference/event/cursor.html)
+* [SceneScript Cursor Events](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor)
 
 On this page, we will show some use-cases that you can utilize or build upon for your own wallpapers.
 
@@ -20,7 +20,7 @@ In order to play a sound by clicking on a wallpaper element, you will first need
 
 Once you have prepared the sound layer, select the layer that you want to click on to play your sound file. For general events like this, there is no dedicated place to define them in Wallpaper Engine. By convention, you should place cursor click events next to the **Visibility** property in the upper right corner when selecting a layer. To do this, click on the cogwheel icon next to the eye icon in the upper right corner of your layer, then select **Bind Script**:
 
-![SceneScript Event Script Location](/img/scenescript/scenescript_event_script.png)
+![SceneScript Event Script Location](/wallpaper-engine-docs/img/scenescript/scenescript_event_script.png)
 
 You will be presented with an empty `update()` function, you can delete the function as it is not needed for the click event. In order to react to mouse clicks, we will need the `cursorClick` event function. Wallpaper Engine will automatically execute this function when a user clicks on an object in Wallpaper Engine. In the event function, we now have to retrieve the sound layer that we have created previously using `thisScene.getLayer()` and execute the `play()` function on it to play the sound.
 
@@ -46,9 +46,9 @@ You don't need to copy-paste this example into the editor, you can quickly acces
 
 ## Mouse Cursor Click to Run a Timeline Animation
 
-In a similar fashion to the previous tutorial, you can also apply this approach to [timeline animations](/zh/scene/timeline/introduction.html) for example. We generated a timeline animation on the **Scale** property of an image layer. During the setup of the timeline animation, it was important that was set the **Mode** to **Single** so that our animation only plays once and to specifically give our timeline animation a name. In our case, we called it `LogoShake`:
+In a similar fashion to the previous tutorial, you can also apply this approach to [timeline animations](/wallpaper-engine-docs/scene/timeline/introduction) for example. We generated a timeline animation on the **Scale** property of an image layer. During the setup of the timeline animation, it was important that was set the **Mode** to **Single** so that our animation only plays once and to specifically give our timeline animation a name. In our case, we called it `LogoShake`:
 
-![SceneScript Event Timeline Animation](/img/scenescript/scenescript_click_event_timeline.png)
+![SceneScript Event Timeline Animation](/wallpaper-engine-docs/img/scenescript/scenescript_click_event_timeline.png)
 
 We now repeat the same steps as we did in the previous section by creating a `cursorClick()` function on the visibility property of our object. However, in this example, we will retrieve and work with our timeline animation instead of a separate sound layer.
 
@@ -75,12 +75,12 @@ Now, when we click on our object, our timeline animation will be played once as 
 ::: tip
 In principle, what we explained on this page works for all wallpaper editor elements that contain a type of `play()` functionality:
 
-* [IAnimation](/zh/scene/scenescript/reference/class/IAnimation.html) - Timeline Property Animations
-* [IAnimationLayer](/zh/scene/scenescript/reference/class/IAnimationLayer.html) - Puppet Warp Animations
-* [IParticleSystem](/zh/scene/scenescript/reference/class/IParticleSystem.html) - Particle Systems
-* [ISoundLayer](/zh/scene/scenescript/reference/class/ISoundLayer.html) - Sound Files
-* [ITextureAnimation](/zh/scene/scenescript/reference/class/ITextureAnimation.html) - Texture Animations
-* [IVideoTexture](/zh/scene/scenescript/reference/class/IVideoTexture.html) - MP4-based Video Textures
+* [IAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimation) - Timeline Property Animations
+* [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) - Puppet Warp Animations
+* [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) - Particle Systems
+* [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) - Sound Files
+* [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) - Texture Animations
+* [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture) - MP4-based Video Textures
 
 First prepare a relevant object, then retrieve it from the wallpaper, then call the `play()` function on it.
 :::

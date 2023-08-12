@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Reflection** effect allows you to reflect a part of the image on a given axis. This allows you to even reflect underlying animations. Make sure to start with painting the opacity mask in order to see the effect.
 
-![Reflection](/img/effects/Reflection.gif)
+![Reflection](/wallpaper-engine-docs/img/effects/Reflection.gif)
 
 ### Effect Settings
 

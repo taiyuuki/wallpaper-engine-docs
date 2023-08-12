@@ -4,7 +4,7 @@ In this guide we will showcase examples of how using the **Mirror** and **Single
 
 ## Wallpaper intro with a single timeline animation
 
-In this section, we will show you how you can use timeline animations to create intro animations to your wallpaper. We will be using the [Refraction effect](/scene/effects/effect/refraction) for this tutorial, but keep in mind that this is just an example and you can apply timeline animations with any effect or property of your choice, it's really up to your imagination what to do with them.
+In this section, we will show you how you can use timeline animations to create intro animations to your wallpaper. We will be using the [Refraction effect](/wallpaper-engine-docs/scene/effects/effect/refraction) for this tutorial, but keep in mind that this is just an example and you can apply timeline animations with any effect or property of your choice, it's really up to your imagination what to do with them.
 
 To get started, we have prepared a window scene with multiple layers, one of them being a window texture. We select our window and then add the **Refraction** effect to it to get started. The effect has a property called **Strength** which we want to increase over time. We'll click on the cogwheel icon, select *Bind Timeline Animation* and configure it. For **Mode**, we select **Single** since we only want the animation to play once and then stay in its last state forever. This is essentially all we need to do to create intro animations. For this tutorial, we will change the duration to 3600 seconds (5 minutes) to slowly let the ice freeze over the window.
 

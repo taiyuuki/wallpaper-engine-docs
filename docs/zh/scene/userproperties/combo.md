@@ -1,6 +1,6 @@
 # Combo Box User Property
 
-A combo box property will offer users a dropdown menu with selection of pre-defined options. The user of the wallpaper will be able to pick one of them and the wallpaper will show the layers that you have associated with the respective option. Combo boxes can also be very useful in combination with SceneScript, however, this advanced usage is covered in the [SceneScript section](/scene/scenescript/introduction) of the documentation.
+A combo box property will offer users a dropdown menu with selection of pre-defined options. The user of the wallpaper will be able to pick one of them and the wallpaper will show the layers that you have associated with the respective option. Combo boxes can also be very useful in combination with SceneScript, however, this advanced usage is covered in the [SceneScript section](/wallpaper-engine-docs/scene/scenescript/introduction) of the documentation.
 
 This example will show you how to make it possible for users to select one of multiple layers of your wallpaper. We will showcase this using three weather options: rain, snow and fog. Only one type of weather effect will be visible depending on the choice of the user. We are starting with a basic background image and have added the three weather effects via the **Add Asset** button on the left-hand side.
 

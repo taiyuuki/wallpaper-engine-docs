@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **X-Ray** effect allows you to blend two images together through a shape that follows the cursor. By default this shape is a simple circle, but you can change it by replacing its texture. This effect allows you to easily blend two different version of an image together and to hide content that is only revealed by moving the cursor over it.
 
-![X-Ray](/img/effects/Xray.gif)
+![X-Ray](/wallpaper-engine-docs/img/effects/Xray.gif)
 
 ### Effect Settings
 

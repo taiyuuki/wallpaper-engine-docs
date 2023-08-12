@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Spin** effect can be used to continuously rotate parts of an image around its center or a specified point.
 
-![Spin](/img/effects/Spin.gif)
+![Spin](/wallpaper-engine-docs/img/effects/Spin.gif)
 
 ### Effect Settings
 

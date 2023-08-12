@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Film Grain** effect adds a noisy grain overlay to your image.
 
-![Film Grain](/img/effects/Film_grain.gif)
+![Film Grain](/wallpaper-engine-docs/img/effects/Film_grain.gif)
 
 ### Effect Settings
 

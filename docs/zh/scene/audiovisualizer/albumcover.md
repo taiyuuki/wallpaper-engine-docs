@@ -2,7 +2,7 @@
 
 Wallpaper Engine allows you to integrate Windows Media data such as album covers, song titles, current playtime and more into your wallpaper. This guide will primarily explain how to utilize album covers in your wallpapers. You can learn more about how to retrieve additional information in the following guide:
 
-* [Media Information Integration](/zh/scene/audiovisualizer/mediainformation.md)
+* [Media Information Integration](/wallpaper-engine-docs/scene/audiovisualizer/mediainformation)
 
 <video width="100%" controls autoplay loop>
   <source src="/videos/album_simple_showcase.mp4" type="video/mp4">
@@ -31,9 +31,9 @@ Click on the cogwheel icon next to the *Albedo* texture and select **Bind Album 
 
 ## Advanced: Creating a Transition between Album Covers
 
-In this section, we want to utilize the **Blend effect** to smoothly transition between two album covers using a [Timeline Animation](/zh/scene/timeline/introduction.md). It is a bit more advanced, but if you follow this section step-by-step, you should be able to implement this yourself.
+In this section, we want to utilize the **Blend effect** to smoothly transition between two album covers using a [Timeline Animation](/wallpaper-engine-docs/scene/timeline/introduction). It is a bit more advanced, but if you follow this section step-by-step, you should be able to implement this yourself.
 
-First, select the album cover layer you have created previously. Click on the **Add** button in the effects list on the right-hand side and select the [Blend effect](/zh/scene/effects/effect/blend.html) or the [Blend Gradient effect](/zh/scene/effects/effect/blendgradient.html).
+First, select the album cover layer you have created previously. Click on the **Add** button in the effects list on the right-hand side and select the [Blend effect](/wallpaper-engine-docs/scene/effects/effect/blend) or the [Blend Gradient effect](/wallpaper-engine-docs/scene/effects/effect/blendgradient).
 
 Next, select the blend effect you have created and click on the cogwheel icon next to the *Albedo* texture. Just like before, select **Bind Album Cover**. In the pop-up window that appears, select the **Previous album cover** option now and confirm your change. You will not see any immediate changes, but this means the blend texture will always be the previous album cover that was used.
 

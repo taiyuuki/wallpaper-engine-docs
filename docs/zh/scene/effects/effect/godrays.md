@@ -9,7 +9,7 @@ The **God Rays** effect adds shimmering god rays to the image which are emitted 
 This effect can be heavy on performance and you may want to consider adding a user property to allow users to turn this off.
 :::
 
-![Godrays](/img/effects/Godrays.gif)
+![Godrays](/wallpaper-engine-docs/img/effects/Godrays.gif)
 
 ### Effect Settings
 

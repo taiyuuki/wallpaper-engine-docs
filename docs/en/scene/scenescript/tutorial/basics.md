@@ -11,7 +11,7 @@ Almost every property of all Wallpaper Engine assets and effects can be controll
 We will be using a simple **Text Layer** in this guide. If you would like to follow along, simply add a **Text Layer** asset to your wallpaper.
 
 ::: tip About This Introductory Guide
-The following guide is rather lengthy because we try to go step-by-step for a slow introduction. It caters to absolute beginners and advanced programers alike, though if you are a seasoned programmer, it might suffice to just skim over it and move on to more advanced [SceneScript tutorials](/scene/scenescript/tutorials) or the [SceneScript Reference](/scene/scenescript/reference).
+The following guide is rather lengthy because we try to go step-by-step for a slow introduction. It caters to absolute beginners and advanced programers alike, though if you are a seasoned programmer, it might suffice to just skim over it and move on to more advanced [SceneScript tutorials](/wallpaper-engine-docs/scene/scenescript/tutorials) or the [SceneScript Reference](/wallpaper-engine-docs/scene/scenescript/reference).
 
 We invite beginners to just work alongside this guide and experiment around a little. Be sure to watch the videos we provide under each section if you get lost.
 :::
@@ -20,7 +20,7 @@ We invite beginners to just work alongside this guide and experiment around a li
 
 When selecting any element in the editor, you will find its properties on the right-hand side. Notice how all properties have a cogwheel icon next to them, as highlighted by the red arrows in the following screenshot:
 
-![SceneScript in the User Interface](/img/scenescript/scenescript_ui.png)
+![SceneScript in the User Interface](/wallpaper-engine-docs/img/scenescript/scenescript_ui.png)
 
 Whenever you see the cogwheel icon next to a property, it means you can bind SceneScript code to it by clicking on the icon and selecting **Bind SceneScript**. In our example, we will do this for the **Text** property of our **Text Layer**. 
 
@@ -114,7 +114,7 @@ When executing the SceneScript code now, our text layer will represent the curre
 
 In the previous example, we used the **Text** property which holds a custom text in the form of a `String`. But what about other properties like **Origin**, **Angles** and **Scale** for example?
 
-![Vec3 Samples](/img/scenescript/vec3.png)
+![Vec3 Samples](/wallpaper-engine-docs/img/scenescript/vec3.png)
 
 These three properties consist of an `x`, `y` and `z` value. In order to handle these properties, Wallpaper Engine supplies a new class called `Vec3` that will be used whenever you bind a script to these properties. The `Vec3` class holds the three `x`, `y` and `z` values and allows you to access and modify them in the `update` cycle.
 
@@ -237,6 +237,6 @@ Usually it suffices to debug the behavior of your SceneScript code in the editor
 
 ## More About SceneScript
 
-If you have worked your way through this page, you should have a good understanding of the fundamentals of SceneScript. Be sure to take a look at the [SceneScript Reference](/scene/scenescript/reference) to get an overview of all classes, globals, events and modules that SceneScript offers.
+If you have worked your way through this page, you should have a good understanding of the fundamentals of SceneScript. Be sure to take a look at the [SceneScript Reference](/wallpaper-engine-docs/scene/scenescript/reference) to get an overview of all classes, globals, events and modules that SceneScript offers.
 
-Additionally, check out our [SceneScript Tutorials](/scene/scenescript/tutorials) for some specific and advanced use-cases of SceneScript.
+Additionally, check out our [SceneScript Tutorials](/wallpaper-engine-docs/scene/scenescript/tutorials) for some specific and advanced use-cases of SceneScript.

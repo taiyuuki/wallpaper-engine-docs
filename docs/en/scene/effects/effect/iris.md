@@ -5,7 +5,7 @@ prev: ../overview.md
 
 The **Iris Movement** effect allows you to add motion to the eyes of a character. This effect will make your character gaze around realistically in a random manner. In order for this to work, you should start by adding an opacity mask to the eyes of your character. Depending on your specific image, try to make a soft transition from the iris/center to the border of the eyes to improve the results of the effect.
 
-![Iris](/img/effects/Iris.gif)
+![Iris](/wallpaper-engine-docs/img/effects/Iris.gif)
 
 ### Effect Settings
 
@@ -27,7 +27,7 @@ Just as shown in the preview image above, this effect can be used to create rand
 
 First, we have to create the eye animation. Add an **Iris Movement** effect to your image, then create an **Opacity Mask** around the eyes of your character (notice how the eyes are painted in white):
 
-![Iris Eyes Mask](/img/effects/iris_eyes_mask.png)
+![Iris Eyes Mask](/wallpaper-engine-docs/img/effects/iris_eyes_mask.png)
 
 In the next step, we slightly adjust the settings of the effect. Enable the **Background** option for the layer and choose a **Background Color** that matches the eyes of your character.
 
@@ -39,7 +39,7 @@ We also increase the **Speed** to **0.6** to increase the eye movement slightly 
 
 In the second step, we create a new **Iris Movement** effect on the same layer. Be sure to give it an appropriate name such as *Head Movement* so that you can differentiate the two effects at first glance in the future. Paint the opacity mask for this version of the effect around the head of your character:
 
-![Head Eyes Mask](/img/effects/iris_head_mask.png)
+![Head Eyes Mask](/wallpaper-engine-docs/img/effects/iris_head_mask.png)
 
 You will have to adjust the settings a bit as well. First of all, it's important that the **Speed** setting matches the **Speed** setting value of the iris movement exactly to ensure that the head and eye movement stay synchronized. 
 
@@ -47,4 +47,4 @@ Additionally, we increase the **Smoothness** and reduce the **Phase** option a l
 
 The two effects then combine into a result that looks something like this:
 
-![Iris](/img/effects/Iris.gif)
+![Iris](/wallpaper-engine-docs/img/effects/Iris.gif)

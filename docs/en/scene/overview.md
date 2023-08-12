@@ -4,7 +4,7 @@ This section of the Wallpaper Engine designer documentation will guide you throu
 
 ### Getting Started
 
-If you just want to get started with your first animated wallpaper, we recommend working your way through our [Getting Started Guide](/scene/first/gettingstarted). It will teach you all the fundamentals of the editor but it will leave out some of the more advanced features that you should check out once you have given the basics a try.
+If you just want to get started with your first animated wallpaper, we recommend working your way through our [Getting Started Guide](/wallpaper-engine-docs/scene/first/gettingstarted). It will teach you all the fundamentals of the editor but it will leave out some of the more advanced features that you should check out once you have given the basics a try.
 
 ### What's next?
 
@@ -16,4 +16,4 @@ And if you're a game developer or aspire to be one, you can even take a look at 
 
 ## Video Support
 
-If you have an .mp4 video file that you would like to share with others, you can simply drag and drop it into the **Create Wallpaper** button in the editor. Since the publishing process is the same for all wallpaper types, you can [read the guide on publishing](/scene/first/publishing) for more information on how to share your wallpaper with others.
+If you have an .mp4 video file that you would like to share with others, you can simply drag and drop it into the **Create Wallpaper** button in the editor. Since the publishing process is the same for all wallpaper types, you can [read the guide on publishing](/wallpaper-engine-docs/scene/first/publishing) for more information on how to share your wallpaper with others.

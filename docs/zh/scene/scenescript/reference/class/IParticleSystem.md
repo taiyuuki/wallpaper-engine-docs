@@ -10,7 +10,7 @@ This class provides access to particle systems and lets you modify their playbac
 
 ### instance: IParticleSystemInstance
 
-Access to instance modifiers, see [IParticleSystemInstance](/scene/scenescript/reference/class/IParticleSystemInstance) for more information.
+Access to instance modifiers, see [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) for more information.
 
 ## Functions
 

@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Cursor Events
 
-SceneScript offers multiple cursor event that allows you to interact with mouse movements and mouse clicks. The parameter for all cursor events is an [CursorEvent](/scene/scenescript/reference/class/CursorEvent) object with additional event data.
+SceneScript offers multiple cursor event that allows you to interact with mouse movements and mouse clicks. The parameter for all cursor events is an [CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent) object with additional event data.
 
 All mouse cursor events will only work on objects marked as **Solid** in the layer settings. 
 

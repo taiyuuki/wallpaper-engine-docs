@@ -6,7 +6,7 @@ prev: ../../reference.md
 
 This class represents a texture animation. By default, all instances of an animated texture share an animation state. Calling any function here that changes the animation will disconnect it from the shared state. You can revert this and use the shared animation state again by calling join.
 
-Not to be confused with [IVideoTexture](/scene/scenescript/reference/class/IVideoTexture).
+Not to be confused with [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture).
 
 ## Properties
 
