@@ -10,66 +10,66 @@ tags:
 ---
 # Adding your first effects
 
-In this tutorial, we will be working with an image with a lake, trees and a mountain ([Click here to download](/wallpaper-engine-docs/img/tutorials/mountain.png)) which we will use to showcase a few basic effects. 
+在本教程中，我们将使用带有湖泊，树木和山脉的图像（[单击此处下载](/wallpaper-engine-docs/img/tutorials/mountain.png)），我们将使用它来展示一些基本效果。
 
-After your image has been imported, you will be presented with the main Wallpaper Engine editor window. In this section, we will explain what **effects** are and how to apply them. Image effects can be found on the right-hand side of the editor in the properties section (**marked in blue** in the following screenshot): 
+导入图像后，您将看到Wallpaper Engine编辑器主窗口。在本节中，我们将解释什么是**效果**以及如何应用它们。图像效果可以在编辑器右侧的属性部分找到（在以下屏幕截图中**标记为蓝色**）：
 
 ![Effects can be found on the right-hand side of the editor](./overview.png)
 
-Effects are always applied to **assets**. Right now, your wallpaper only contains a single asset: The background image which you have imported.
+效果始终应用于**静态资源**之上。现在，您的壁纸仅包含一个静态资源：也就是您导入的背景图像。
 
-## Animating the lake water
+#为湖水制作动画
 
-We will start by animating the waterfront using the **Water Ripple** effect. On the right-hand side, click on the **Add** button in the effects section. A pop-up will open from which you can see all currently installed effects. Select the **Water Ripple** effect and confirm by clicking the **OK** button.
+我们首先使用**水波纹**效果对湖水进行动画处理。在右侧，单击效果部分中的**添加**按钮。将打开一个弹出窗口，您可以从中查看所有当前安装的效果。选择**水波纹**效果并单击**确认**按钮。
 
-You will immediately notice that the complete wallpaper gets a water effect applied to it which is the default behavior. In this case, we only want the water effect to be applied to the lake area of the image.
+您会注意到整个壁纸会立即应用水波纹效果，这是默认设置。但我们只希望将水效果应用于图像中的湖泊区域。
 
-We can limit the effect to the water area of the image by painting an *Opacity Mask*. Click on the **Paint** button in the *Opacity Mask* section after adding the effect. You can start by drawing a rough outline of the lake as in the video below. The water ripples should now be limited to the area of the lake. By using the **Show Mask** option, you can view the areas you have painted the effect onto. View the following video to see these fundamental steps in action:
+我们可以通过绘制**不透明度蒙版**来限制效果的区域。点击“不透明度蒙版”部分的**绘制**按钮。您就可以开始绘制湖泊的粗略轮廓，如下面的视频所示。水波纹现在应该仅限于湖泊区域。通过**显示蒙版**选项，您可以查看效果绘制的区域。观看以下视频，了解这些基本步骤的实际应用：
 
 <video width="100%" controls loop autoplay>
   <source src="/videos/opacity_mask.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-The first attempt will leave a lot of rough edges and the water ripples will seem unrealistically strong further away in the image. For this purpose, you can use the **Value** and **Size** sliders at the lower left corner when painting. By lowering the value, you can lower the perceived strength of the water ripples in the areas that you draw over. By setting it to 0, you can completely erase any areas that you have accidentally painted over. The mask will represent these changes in the **Value** by showing areas with lower values darker and higher values lighter.
+第一次绘制时边缘会很粗糙，波纹在图像中看起来强烈的不真实。为此，您可以在绘画时使用左下角的**数量**和**大小**滑块。通过降低该这些值，可以降低所绘制区域中水波纹的感知强度。通过将其设置为0，您可以完全擦除意外绘制的任何区域。蒙版**数量**的变化，越低表示颜色越暗、越高表示颜色越亮。
 
-Try to erase any unwanted areas, for example any accidentally shoreline areas, by setting the strength to 0 and gradually reduce the strength of the water ripples in the distance. This will result in a much more realistic effect rather than painting the maximum value everywhere.
+你可以通过将值设置为0来擦除任何不需要的区域，例如意外绘制的海岸线，并逐渐降低远处水波纹的**数量**，而不是给所有区域都绘制为最大值，这将产生更逼真的效果。
 
-Watch the following video to get an idea of what this process looks like, you may need to give it a few iterations and adjust the values until it starts looking somewhat realistic. Especially at the points of the image that are furthest away and near shorelines, try using low values below 60. Readjust the size of the paint brush to paint fine details of the image accurately.
+观看以下视频以了解此过程，您可能需要对其进行多次调整，直到它开始看起来显得逼真。尤其是最远和靠近海岸线的位置，请尽量使用低于60的**数量**，调整画笔的大小，以精确绘制图像的细节。
 
 <video width="100%" controls>
   <source src="/videos/opacity_mask_fix.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-You can repeat this process until you have perfected the outline but often minor issues are not visible when the wallpaper is applied later, so don't worry if the opacity mask is not pixel-perfect!
+您可以重复此过程，直到轮廓更完善，一些细小的问题在应用壁纸后是看不到的，因此，即使不透明蒙版做不到像素级别的完美，也请不要担心！
 
-## Adding a wind sway effect to the treeline
+## 为林线添加随风摇摆效果
 
-In the next step, we will add a sway effect to the treelines in the picture, imitating a wind breeze moving the trees. The most suitable effect for this is **Foliage Sway**. Return to your background layer and click on the **Add** button in the effects area like before and add the **Foliage Sway** effect.
+接下来，我们将为图片中的林线添加摇摆效果，模仿随风摇摆的树木。最适合是**树叶摇摆**效果。返回到背景图层，像之前一样单击效果区域中的**添加**按钮，然后添加**树叶摇摆**效果。
 
-Just as with the *Water Ripples* that we added in the previous section, the complete background layer will start swaying. Click on the **Paint** button next to the opacity mask section and start drawing over the tree areas. Similar as with the water, more far-away areas should be painted with a lower value.
+就像我们在上一节中添加的水波纹一样，整个背景层都在摇摆。单击不透明度蒙版部分旁边的“绘画”按钮，然后开始在树区域上绘制。与水波纹类似，较远的区域应绘制较低的值。
 
-In our current example, the trees furthest away on the other side of the river have a low value of 128, while the trees towards the frontside of the right-hand side of the image are painted with the max value of 255. You can also adjust the properties of the sway effect. For example, since this image is rather calm, it may make sense to reduce the **Speed** and to slightly adjust the **Direction**. These things are entirely subjective and you should just experiment to see what kind of visual changes you can achieve.
+在我们当前的示例中，湖对岸最远的树木的数值应当较低，为128，而图像右侧正面的树木为最大值为255。您还可以调整摇摆效果的属性。例如，由于目前图像过于平静，因此降低**速度**、微调**方向**，也许就是有意义的调整。但这些都是完全主观的，你应该亲自尝试一下，看看具体实现什么样的视觉变化。
 
-Watch the following video which shows the opacity mask that we drew and how we slightly adjust some of the properties:
+观看以下视频，其中展示了我们绘制的不透明度蒙版以及我们如何微调某些属性：
 
 <video width="100%" controls>
   <source src="/videos/sway_effect.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Creating a cloud movement animation
+## 创建云朵移动动画
 
-With Wallpaper Engine, you can always experiment with alternative ways of using effects. In this section we will animate the clouds using the **Water Flow** effect. Unlike the two previous effects, this effect does not have an *Opacity Mask* but rather a *Flow Map*. The main difference is that it will not create any visible effect until you actually paint it and while painting, the direction your mouse moves actually influences the direction of the effect. The flow map represents this with different colors, as each direction will paint a different color.
+使用Wallpaper Engine，您可以随时尝试使用效果的替代方法。在本节中，我们将使用水流效果对云进行动画处理。与前两个效果不同，此效果没有不透明度蒙版，而是具有**流量图**。主要区别在于，在您实际绘制之前，它不会创建任何可见的效果，并且在绘制时，鼠标移动的方向实际上会影响效果的方向。**流量图**用不同的颜色表示不同的方向。
 
-Add the **Water Flow** effect to the background layer and start painting over the clouds from left to right. The clouds will start infinitely moving in the direction that your mouse took and will repeat this movement continuously. You may also notice that the cloud movement is a bit too fast with the default settings. Clouds move rather slowly, so try reducing the **Speed** property of the flow significantly to achieve a more realistic cloud movement. Just like before, you can remove the effect from any area of the image by setting the value to 0 and then painting over these specific areas of the image again.
+将**水流**效果添加到背景图层，然后从左到右开始在云上绘制。云将开始沿鼠标所走的方向无限移动，并将连续重复此移动。您可能还会注意到，使用默认设置时，云移动得有点太快了。云的实际移动速度应当是很慢的，因此请尝试大幅降低**流量图**的**速度**属性，以实现更真实的云移动效果。就和上面说的一样，您可以通过将值设置为0，然后再次在图像的这些特定区域上进行绘制从而将图像的任何区域删除效果。
 
-You can watch the following video to see how the flow map is drawn and how we have reduced the speed of the effect:
+您可以观看以下视频，了解如何绘制流量图以及我们如何降低效果的速度：
 
 <video width="100%" controls>
   <source src="/videos/cloud_effect.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-This wraps up the basic introduction to image effects. All effects work similar to the ones presented here, you can explore effects further by reading the relevant pages of this documentation. The next section of this tutorial will introduce you to wallpaper assets.
+图像效果的基本介绍到此结束。所有效果的工作方式都与本节介绍的效果类似，您可以通过阅读本文档的相关页面进一步探索。本教程的下一部分将向您介绍壁纸静态资源。

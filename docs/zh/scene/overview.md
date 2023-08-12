@@ -1,19 +1,19 @@
-# The Wallpaper Engine Editor
+# Wallpaper Engine编辑器
 
-This section of the Wallpaper Engine designer documentation will guide you through the creation of wallpapers based on image files. The Wallpaper Engine editor caters to casual and more advanced users and allows you to add various elements and effects to your wallpapers.
+这一节的Wallpaper Engine编辑器设计人员文档，将指导你基于图像文件创建壁纸。Wallpaper Engine编辑器迎合了休闲用户和更高级的用户，你可以为壁纸添加各种元素和效果。
 
-### Getting Started
+### 入门指南
 
-If you just want to get started with your first animated wallpaper, we recommend working your way through our [Getting Started Guide](/wallpaper-engine-docs/scene/first/gettingstarted). It will teach you all the fundamentals of the editor but it will leave out some of the more advanced features that you should check out once you have given the basics a try.
+如果你想创建你的第一张动态壁纸，我们建议你按照我们的[入门指南](/wallpaper-engine-docs/scene/first/gettingstarted)进行操作。它将教你编辑器的所有基础知识，但它会省略一些高级的功能，当你开始尝试基础知识，你应该查看这些功能。
 
-### What's next?
+### 下一步是什么?
 
-You can also create complex and interactive particle systems with its particle editor, timeline animations with its animation system, let parts of your wallpaper react to audio, use a parallax effect to make different layers of your wallpaper react to mouse movement.
+你还可以使用其粒子编辑器创建复杂的交互式粒子系统，使用动画系统创建时间轴动画，使用音频响应式系统让壁纸的某些部分对音频做出反应，使用视差效果使墙纸的不同层对鼠标移动做出反应。
 
-You can even program custom logic into your wallpaper using SceneScript - our own scripting language, similar to JavaScript. It's a great way to get into the basics of programming and you should feel right at home if you already have programming experience.
+你甚至可以使用SceneScript将自定义逻辑编程到壁纸中——这是我们自定义的脚本语言，类似于JavaScript。这是了解编程基础知识的好方法，如果你已经有编程经验，你会有宾至如归的感觉。
 
-And if you're a game developer or aspire to be one, you can even take a look at creating and using your own custom shaders to program your own effects and share them with members of the community.
+如果你是游戏开发人员或渴望成为游戏开发人员，你甚至可以创建和使用自己的自定义着色器来编写自己的效果并与社区成员共享。
 
-## Video Support
+## 支持视频
 
-If you have an .mp4 video file that you would like to share with others, you can simply drag and drop it into the **Create Wallpaper** button in the editor. Since the publishing process is the same for all wallpaper types, you can [read the guide on publishing](/wallpaper-engine-docs/scene/first/publishing) for more information on how to share your wallpaper with others.
+如果你有想要与他人共享的.mp4视频文件，只需将其拖放到编辑器中的**创建壁纸**按钮中即可。由于所有类型的壁纸发布流程都是相同的，因此你可以[阅读发布指南](/wallpaper-engine-docs/scene/first/publishing)来了解有关如何与他人共享壁纸的更多信息。
