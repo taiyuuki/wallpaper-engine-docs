@@ -1,13 +1,20 @@
 const en = require('../../app_strings/en.json');
+const zh = require('../../app_strings/zh.json');
 
 module.exports = {
-	title: 'Wallpaper Engine - Designer Documentation',
+	// title: 'Wallpaper Engine - Designer Documentation',
+	base: '/wallpaper-engine-docs/',
 	locales: {
 		'/en/': {
 			lang: 'en',
 			title: en.title,
 			description: en.description,
 		},
+		"/zh/": {
+			lang: 'zh',
+			title: zh.title,
+			description: zh.description,
+		}
 	},
 	themeConfig: {
 		logo: '/img/wallpaper_engine_logo_small.png',
@@ -29,23 +36,38 @@ module.exports = {
 					{ text: en.navbar_web, link: '/web/overview' }
 				]
 			},
+			'/zh/': {
+				searchPlaceholder: zh.searchPlaceholder,
+				selectText: zh.language_name,
+				label: zh.language_name,
+				ariaLabel: zh.language_name,
+				sidebar: {
+					'/zh/scene/': getSceneSidebar('/zh/', zh.sidebar_overview, zh.sidebar_gettingstarted, zh.sidebar_effects, zh.sidebar_assets, zh.sidebar_properties, zh.sidebar_audio, zh.sidebar_particles, zh.sidebar_animations, zh.sidebar_puppetwarp, zh.sidebar_parallax, zh.sidebar_rgb, zh.sidebar_performance, zh.sidebar_scenescript, zh.sidebar_shaders, zh.sidebar_imagepreparation, zh.sidebar_lightingandreflections),
+					'/zh/web/': getWebSidebar('/zh/', zh.sidebar_web_overview, zh.sidebar_web_first, zh.sidebar_web_customization, zh.sidebar_web_audio, zh.sidebar_web_performance, zh.sidebar_web_rgb, zh.sidebar_web_debug),
+					'/': []
+				},
+				nav: [
+					{ text: zh.navbar_scene, link: '/scene/overview' },
+					{ text: zh.navbar_web, link: '/web/overview' }
+				]
+			}
 		}
 	},
 	plugins: [
 		['@vuepress/back-to-top', true],
-		['vuepress-plugin-redirect', { locales: true } ],
+		['vuepress-plugin-redirect', { locales: true }],
 		['vuepress-plugin-smooth-scroll'],
-		['sitemap', { hostname: 'https://docs.wallpaperengine.io' } ],
+		['sitemap', { hostname: 'https://taiyuuki.github.io/wallpaper-engine-docs/' }],
 		['robots', {
-				host: "https://docs.wallpaperengine.io",
-				allowAll: true,      
-				sitemap: "/sitemap.xml",
-				policies: [
-					{
-						userAgent: '*',
-					}
-				]
-			},
+			host: "https://taiyuuki.github.io/wallpaper-engine-docs/",
+			allowAll: true,
+			sitemap: "/sitemap.xml",
+			policies: [
+				{
+					userAgent: '*',
+				}
+			]
+		},
 		],
 	]
 };
