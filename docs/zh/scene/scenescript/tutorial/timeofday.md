@@ -1,6 +1,6 @@
 # Time of Day Changes with SceneScript
 
-In this tutorial we will explain how SceneScript enables you to change parts of your wallpaper depending on the current time of day. Our example is rather specific, but you can access the current time of day via SceneScript via [**engine.timeOfDay**](/en/scene/scenescript/reference/class/IEngine.html#timeofday-number) for your own ideas and custom logic of any type.
+In this tutorial we will explain how SceneScript enables you to change parts of your wallpaper depending on the current time of day. Our example is rather specific, but you can access the current time of day via SceneScript via [**engine.timeOfDay**](/zh/scene/scenescript/reference/class/IEngine.html#timeofday-number) for your own ideas and custom logic of any type.
 
 Alternatively, you can also use the *ECMAScript* `Date` class to access the current hours, minutes seconds and more date-related data just like you would in other languages such as *JavaScript*.
 
@@ -72,8 +72,8 @@ export function update(value) {
 
 This snippet makes use of two Wallpaper Engine SceneScript features:
 
-* [**engine.timeOfDay**](/en/scene/scenescript/reference/class/IEngine.html#timeofday-number) which represents the current day with values from 0.00 - 1.00 instead of seconds, where 0.00 is 00:00:00 and 1.00 is 23:59:59.
-* [**WEMath.smoothStep()**](/en/scene/scenescript/reference/module/WEMath.html#smoothstep-min-number-max-number-value-number-number) is a function which smoothly calculates a value between two values which we use to smoothly blend over from one texture to the next.
+* [**engine.timeOfDay**](/zh/scene/scenescript/reference/class/IEngine.html#timeofday-number) which represents the current day with values from 0.00 - 1.00 instead of seconds, where 0.00 is 00:00:00 and 1.00 is 23:59:59.
+* [**WEMath.smoothStep()**](/zh/scene/scenescript/reference/module/WEMath.html#smoothstep-min-number-max-number-value-number-number) is a function which smoothly calculates a value between two values which we use to smoothly blend over from one texture to the next.
 
 Add this script to all **Blend amount** values for each blend amount texture. Make sure to always reconfigure the `START_HOUR` and `END_HOUR` values to control at what time of day each blend texture appears.
 

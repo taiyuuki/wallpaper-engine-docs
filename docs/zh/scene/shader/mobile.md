@@ -73,7 +73,7 @@ Integers are often not required where you would use them in other languages, lik
 
 ## Shader Variables
 
-The keywords **attribute**, **varying** and **uniform** are used for their respective purposes. In DirectX 11 these variables are converted into buffers internally while in OpenGL ES **in** and **out** will substitute them as required. More about [Shader Variables](/en/scene/shader/variables.html).
+The keywords **attribute**, **varying** and **uniform** are used for their respective purposes. In DirectX 11 these variables are converted into buffers internally while in OpenGL ES **in** and **out** will substitute them as required. More about [Shader Variables](/zh/scene/shader/variables.html).
 
 ## Environment Detection
 

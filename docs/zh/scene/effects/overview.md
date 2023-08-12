@@ -14,7 +14,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 
 <div class="effect-list">
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/sway.html">
+		<a href="/zh/scene/effects/effect/sway.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Sway.gif')"></div>
 			<div>
 				<h4>Foliage Sway</h4>
@@ -23,7 +23,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/iris.html">
+		<a href="/zh/scene/effects/effect/iris.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Iris.gif')"></div>
 			<div>
 				<h4>Iris Movement</h4>
@@ -32,7 +32,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/pulse.html">
+		<a href="/zh/scene/effects/effect/pulse.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Pulse.gif')"></div>
 			<div>
 				<h4>Pulse</h4>
@@ -41,7 +41,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/scroll.html">
+		<a href="/zh/scene/effects/effect/scroll.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Scroll.gif')"></div>
 			<div>
 				<h4>Scroll</h4>
@@ -50,7 +50,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/shake.html">
+		<a href="/zh/scene/effects/effect/shake.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Shake.gif')"></div>
 			<div>
 				<h4>Shake</h4>
@@ -59,7 +59,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/spin.html">
+		<a href="/zh/scene/effects/effect/spin.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Spin.gif')"></div>
 			<div>
 				<h4>Spin</h4>
@@ -68,7 +68,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/swing.html">
+		<a href="/zh/scene/effects/effect/swing.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Swing.gif')"></div>
 			<div>
 				<h4>Swing</h4>
@@ -77,7 +77,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/twirl.html">
+		<a href="/zh/scene/effects/effect/twirl.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Twirl.gif')"></div>
 			<div>
 				<h4>Twirl</h4>
@@ -86,7 +86,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/waterflow.html">
+		<a href="/zh/scene/effects/effect/waterflow.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Water_flow.gif')"></div>
 			<div>
 				<h4>Water Flow</h4>
@@ -95,7 +95,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/waterripple.html">
+		<a href="/zh/scene/effects/effect/waterripple.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Water_Ripples_Complete.gif')"></div>
 			<div>
 				<h4>Water Ripple</h4>
@@ -104,7 +104,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/waterwaves.html">
+		<a href="/zh/scene/effects/effect/waterwaves.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Water_Waves_Complete.gif')"></div>
 			<div>
 				<h4>Water Waves</h4>
@@ -119,7 +119,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 
 <div class="effect-list">
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/blur.html">
+		<a href="/zh/scene/effects/effect/blur.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Blur.png')"></div>
 			<div>
 				<h4>Blur</h4>
@@ -128,7 +128,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/blurprecise.html">
+		<a href="/zh/scene/effects/effect/blurprecise.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Blur_precise.gif')"></div>
 			<div>
 				<h4>Blur Precise</h4>
@@ -137,7 +137,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/motionblur.html">
+		<a href="/zh/scene/effects/effect/motionblur.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Motion_blur.gif')"></div>
 			<div>
 				<h4>Motion Blur</h4>
@@ -146,7 +146,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 		<div class="effect-box">
-		<a href="/en/scene/effects/effect/radialblur.html">
+		<a href="/zh/scene/effects/effect/radialblur.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Radial_Blur.gif')"></div>
 			<div>
 				<h4>Radial Blur</h4>
@@ -161,7 +161,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 
 <div class="effect-list">
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/cursorripple.html">
+		<a href="/zh/scene/effects/effect/cursorripple.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Cursor_Ripple.gif')"></div>
 			<div>
 				<h4>Cursor Ripple</h4>
@@ -170,7 +170,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 		<div class="effect-box">
-		<a href="/en/scene/effects/effect/advancedfluidsimulation.html">
+		<a href="/zh/scene/effects/effect/advancedfluidsimulation.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Advanced_Fluid_Simulation.gif')"></div>
 			<div>
 				<h4>Advanced Fluid Simulation</h4>
@@ -179,7 +179,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/depthparallax.html">
+		<a href="/zh/scene/effects/effect/depthparallax.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Depth_Parallax.gif')"></div>
 			<div>
 				<h4>Depth Parallax</h4>
@@ -188,7 +188,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/xray.html">
+		<a href="/zh/scene/effects/effect/xray.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Xray.gif')"></div>
 			<div>
 				<h4>X-Ray</h4>
@@ -203,7 +203,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 
 <div class="effect-list">
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/blend.html">
+		<a href="/zh/scene/effects/effect/blend.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Blend.gif')"></div>
 			<div>
 				<h4>Blend</h4>
@@ -212,7 +212,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/blendgradient.html">
+		<a href="/zh/scene/effects/effect/blendgradient.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Blend_Gradient.gif')"></div>
 			<div>
 				<h4>Blend Gradient</h4>
@@ -221,7 +221,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 		<div class="effect-box">
-		<a href="/en/scene/effects/effect/chromaticaberration.html">
+		<a href="/zh/scene/effects/effect/chromaticaberration.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Chromatic_Aberration.gif')"></div>
 			<div>
 				<h4>Chromatic Aberration</h4>
@@ -230,7 +230,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/clouds.html">
+		<a href="/zh/scene/effects/effect/clouds.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Clouds.gif')"></div>
 			<div>
 				<h4>Clouds</h4>
@@ -239,7 +239,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/colorkey.html">
+		<a href="/zh/scene/effects/effect/colorkey.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Color_key.gif')"></div>
 			<div>
 				<h4>Color Key</h4>
@@ -248,7 +248,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/filmgrain.html">
+		<a href="/zh/scene/effects/effect/filmgrain.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Film_grain.gif')"></div>
 			<div>
 				<h4>Film Grain</h4>
@@ -257,7 +257,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/fire.html">
+		<a href="/zh/scene/effects/effect/fire.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Fire.gif')"></div>
 			<div>
 				<h4>Fire</h4>
@@ -266,7 +266,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/nitro.html">
+		<a href="/zh/scene/effects/effect/nitro.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Nitro.gif')"></div>
 			<div>
 				<h4>Nitro</h4>
@@ -275,7 +275,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/opacity.html">
+		<a href="/zh/scene/effects/effect/opacity.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Opacity.gif')"></div>
 			<div>
 				<h4>Opacity</h4>
@@ -284,7 +284,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/reflection.html">
+		<a href="/zh/scene/effects/effect/reflection.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Reflection.gif')"></div>
 			<div>
 				<h4>Reflection</h4>
@@ -293,7 +293,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/tint.html">
+		<a href="/zh/scene/effects/effect/tint.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Tint.png')"></div>
 			<div>
 				<h4>Tint</h4>
@@ -302,7 +302,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/vhs.html">
+		<a href="/zh/scene/effects/effect/vhs.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/VHS.gif')"></div>
 			<div>
 				<h4>VHS</h4>
@@ -316,7 +316,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 
 <div class="effect-list">
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/fisheye.html">
+		<a href="/zh/scene/effects/effect/fisheye.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Fisheye.png')"></div>
 			<div>
 				<h4>Fisheye</h4>
@@ -325,7 +325,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/perspective.html">
+		<a href="/zh/scene/effects/effect/perspective.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Perspective.gif')"></div>
 			<div>
 				<h4>Perspective</h4>
@@ -334,7 +334,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/refraction.html">
+		<a href="/zh/scene/effects/effect/refraction.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Refract.gif')"></div>
 			<div>
 				<h4>Refraction</h4>
@@ -343,7 +343,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/skew.html">
+		<a href="/zh/scene/effects/effect/skew.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Skew.gif')"></div>
 			<div>
 				<h4>Skew</h4>
@@ -352,7 +352,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/transform.html">
+		<a href="/zh/scene/effects/effect/transform.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Transform.gif')"></div>
 			<div>
 				<h4>Transform</h4>
@@ -367,7 +367,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 
 <div class="effect-list">
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/edgedetection.html">
+		<a href="/zh/scene/effects/effect/edgedetection.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Edge_detection.png')"></div>
 			<div>
 				<h4>Edge Detection</h4>
@@ -376,7 +376,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/godrays.html">
+		<a href="/zh/scene/effects/effect/godrays.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Godrays.gif')"></div>
 			<div>
 				<h4>God Rays</h4>
@@ -385,7 +385,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/localcontrast.html">
+		<a href="/zh/scene/effects/effect/localcontrast.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Local_contrast.gif')"></div>
 			<div>
 				<h4>Local Contrast</h4>
@@ -394,7 +394,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
-		<a href="/en/scene/effects/effect/shine.html">
+		<a href="/zh/scene/effects/effect/shine.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Shine.gif')"></div>
 			<div>
 				<h4>Shine</h4>

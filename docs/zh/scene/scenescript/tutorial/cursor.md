@@ -6,7 +6,7 @@ prev: ../tutorials.md
 
 SceneScript comes with a set of events related to the mouse cursor which lets you react to mouse movement and mouse clicks. Be sure to view the reference page for cursor events to get a quick overview:
 
-* [SceneScript Cursor Events](/en/scene/scenescript/reference/event/cursor.html)
+* [SceneScript Cursor Events](/zh/scene/scenescript/reference/event/cursor.html)
 
 On this page, we will show some use-cases that you can utilize or build upon for your own wallpapers.
 
@@ -46,7 +46,7 @@ You don't need to copy-paste this example into the editor, you can quickly acces
 
 ## Mouse Cursor Click to Run a Timeline Animation
 
-In a similar fashion to the previous tutorial, you can also apply this approach to [timeline animations](/en/scene/timeline/introduction.html) for example. We generated a timeline animation on the **Scale** property of an image layer. During the setup of the timeline animation, it was important that was set the **Mode** to **Single** so that our animation only plays once and to specifically give our timeline animation a name. In our case, we called it `LogoShake`:
+In a similar fashion to the previous tutorial, you can also apply this approach to [timeline animations](/zh/scene/timeline/introduction.html) for example. We generated a timeline animation on the **Scale** property of an image layer. During the setup of the timeline animation, it was important that was set the **Mode** to **Single** so that our animation only plays once and to specifically give our timeline animation a name. In our case, we called it `LogoShake`:
 
 ![SceneScript Event Timeline Animation](/img/scenescript/scenescript_click_event_timeline.png)
 
@@ -75,12 +75,12 @@ Now, when we click on our object, our timeline animation will be played once as 
 ::: tip
 In principle, what we explained on this page works for all wallpaper editor elements that contain a type of `play()` functionality:
 
-* [IAnimation](/en/scene/scenescript/reference/class/IAnimation.html) - Timeline Property Animations
-* [IAnimationLayer](/en/scene/scenescript/reference/class/IAnimationLayer.html) - Puppet Warp Animations
-* [IParticleSystem](/en/scene/scenescript/reference/class/IParticleSystem.html) - Particle Systems
-* [ISoundLayer](/en/scene/scenescript/reference/class/ISoundLayer.html) - Sound Files
-* [ITextureAnimation](/en/scene/scenescript/reference/class/ITextureAnimation.html) - Texture Animations
-* [IVideoTexture](/en/scene/scenescript/reference/class/IVideoTexture.html) - MP4-based Video Textures
+* [IAnimation](/zh/scene/scenescript/reference/class/IAnimation.html) - Timeline Property Animations
+* [IAnimationLayer](/zh/scene/scenescript/reference/class/IAnimationLayer.html) - Puppet Warp Animations
+* [IParticleSystem](/zh/scene/scenescript/reference/class/IParticleSystem.html) - Particle Systems
+* [ISoundLayer](/zh/scene/scenescript/reference/class/ISoundLayer.html) - Sound Files
+* [ITextureAnimation](/zh/scene/scenescript/reference/class/ITextureAnimation.html) - Texture Animations
+* [IVideoTexture](/zh/scene/scenescript/reference/class/IVideoTexture.html) - MP4-based Video Textures
 
 First prepare a relevant object, then retrieve it from the wallpaper, then call the `play()` function on it.
 :::

@@ -14,7 +14,7 @@ Some media data is not available in certain audio players. Always build your wal
 
 ## mediaStatusChanged
 
-This event function will be called when the media integration is turned on or off by the user in the app settings. The event parameter is a [MediaStatusEvent](/en/scene/scenescript/reference/class/MediaStatusEvent.md). You can utilize this to adapt your wallpaper for users who choose not to use this feature at all.
+This event function will be called when the media integration is turned on or off by the user in the app settings. The event parameter is a [MediaStatusEvent](/zh/scene/scenescript/reference/class/MediaStatusEvent.md). You can utilize this to adapt your wallpaper for users who choose not to use this feature at all.
 
 ```js
 export function mediaStatusChanged(event: MediaStatusEvent) {
@@ -24,7 +24,7 @@ export function mediaStatusChanged(event: MediaStatusEvent) {
 
 ## mediaPlaybackChanged
 
-This event function will be called when the users starts, stops or pauses media playback. The event parameter is a [MediaPlaybackEvent](/en/scene/scenescript/reference/class/MediaPlaybackEvent.md). You can use the class constants to check for the appropriate state. For example: `event.state == MediaPlaybackEvent.PLAYBACK_PLAYING`, see the `MediaPlaybackEvent` class for more information.
+This event function will be called when the users starts, stops or pauses media playback. The event parameter is a [MediaPlaybackEvent](/zh/scene/scenescript/reference/class/MediaPlaybackEvent.md). You can use the class constants to check for the appropriate state. For example: `event.state == MediaPlaybackEvent.PLAYBACK_PLAYING`, see the `MediaPlaybackEvent` class for more information.
 
 ```js
 export function mediaPlaybackChanged(event: MediaPlaybackEvent) {
@@ -34,7 +34,7 @@ export function mediaPlaybackChanged(event: MediaPlaybackEvent) {
 
 ## mediaPropertiesChanged
 
-This event function will be called when the properties of the currently playing media change. It contains text information such as the song title, artist name, album name and more. All information are supplied by the [MediaPropertiesEvent](/en/scene/scenescript/reference/class/MediaPropertiesEvent.md) parameter.
+This event function will be called when the properties of the currently playing media change. It contains text information such as the song title, artist name, album name and more. All information are supplied by the [MediaPropertiesEvent](/zh/scene/scenescript/reference/class/MediaPropertiesEvent.md) parameter.
 
 ```js
 export function mediaPropertiesChanged(event: MediaPropertiesEvent) {
@@ -44,7 +44,7 @@ export function mediaPropertiesChanged(event: MediaPropertiesEvent) {
 
 ## mediaThumbnailChanged
 
-This event function will be called when the thumbnail of the currently playing media changes. The event parameter is a [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.md) and also contains additional information, such as primary, secondary and tertiary colors used in the album art which you can utilize in your wallpaper.
+This event function will be called when the thumbnail of the currently playing media changes. The event parameter is a [MediaThumbnailEvent](/zh/scene/scenescript/reference/class/MediaThumbnailEvent.md) and also contains additional information, such as primary, secondary and tertiary colors used in the album art which you can utilize in your wallpaper.
 
 ```js
 export function mediaThumbnailChanged(event: MediaThumbnailEvent) {

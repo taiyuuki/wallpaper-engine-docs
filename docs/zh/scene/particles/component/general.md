@@ -20,7 +20,7 @@ This refract particle stays in place and is animated with *Particle Operator Siz
 
 #### Albedo Texture
 
-The main texture used by this particle system. You can also import a sprite sheet to create animated textures or spawn particles with individual textures. Be sure to read our [Particle System Sprite Sheet Tutorial](/en/scene/particles/tutorial/spritesheet.html) if you want to learn more about how to utilize sprite sheets in your particle systems.
+The main texture used by this particle system. You can also import a sprite sheet to create animated textures or spawn particles with individual textures. Be sure to read our [Particle System Sprite Sheet Tutorial](/zh/scene/particles/tutorial/spritesheet.html) if you want to learn more about how to utilize sprite sheets in your particle systems.
 
 #### Normal Map Texture
 
@@ -30,7 +30,7 @@ The main texture used by this particle system. You can also import a sprite shee
 
 #### Overbright
 
-Allows you to adjust the brightness of your particle system. If you intend to raise the brightness, try enabling the [Bloom Effect](/en/scene/effects/bloom.html) on your wallpaper instead, especially *HDR Bloom* can achieve higher quality results than increasing the *Overbright* value.
+Allows you to adjust the brightness of your particle system. If you intend to raise the brightness, try enabling the [Bloom Effect](/zh/scene/effects/bloom.html) on your wallpaper instead, especially *HDR Bloom* can achieve higher quality results than increasing the *Overbright* value.
 
 #### Refract Amount
 

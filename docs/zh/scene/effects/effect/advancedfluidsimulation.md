@@ -90,7 +90,7 @@ We now further tweak all settings of the effect before continuing. We used the f
 The line emitter was given a **dark** blue color, all other values were configured by using the mouse controls in the editor.
 
 ::: tip
-These type of simulations tend to look even better in combination with [HDR Bloom](/en/scene/effects/bloom.html), give it a try!
+These type of simulations tend to look even better in combination with [HDR Bloom](/zh/scene/effects/bloom.html), give it a try!
 :::
 
 ### Working with Gradient Maps
@@ -108,7 +108,7 @@ See the following video for a quick example:
 
 ### SceneScript: Attaching Emitters to Mouse Cursor & Audio-Responsiveness
 
-As always, you can custom-program behavior into most properties of the simulation with the help of [SceneScript](/en/scene/scenescript/introduction.html). In this example, we will showcase how to utilize SceneScript to attach a point emitter to your mouse cursor and how to make it audio-responsive.
+As always, you can custom-program behavior into most properties of the simulation with the help of [SceneScript](/zh/scene/scenescript/introduction.html). In this example, we will showcase how to utilize SceneScript to attach a point emitter to your mouse cursor and how to make it audio-responsive.
 
 #### Attaching Emitter to Mouse Cursor
 

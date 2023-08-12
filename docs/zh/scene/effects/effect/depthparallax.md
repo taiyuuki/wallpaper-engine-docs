@@ -12,7 +12,7 @@ The **Depth Parallax** effect allows you to create a perceived 3D depth for your
 
 We highly recommend reading the full guide on the Depth Parallax, as the initial set-up of the effect is more complicated than usual:
 
-* [**Full Guide on Depth Parallax**](/en/scene/parallax/depthparallax.html)
+* [**Full Guide on Depth Parallax**](/zh/scene/parallax/depthparallax.html)
 
 ## Installing the Free Editor Extensions DLC
 

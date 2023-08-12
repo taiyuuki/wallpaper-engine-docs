@@ -14,7 +14,7 @@ To quickly add this example to your wallpaper, simply click on the cogwheel icon
 
 ## Registering the Audio Buffers
 
-To get started, you first need to initialize the audio responsive system from Wallpaper Engine by calling the the `registerAudioBuffers()` function from the [global engine object](/en/scene/scenescript/reference/class/IEngine.html). The function will return an [AudioBuffers](/en/scene/scenescript/reference/class/AudioBuffers.html) object, we recommend storing it in a `const` at the top of your script so that you only need to call this function once when the wallpaper is loaded:
+To get started, you first need to initialize the audio responsive system from Wallpaper Engine by calling the the `registerAudioBuffers()` function from the [global engine object](/zh/scene/scenescript/reference/class/IEngine.html). The function will return an [AudioBuffers](/zh/scene/scenescript/reference/class/AudioBuffers.html) object, we recommend storing it in a `const` at the top of your script so that you only need to call this function once when the wallpaper is loaded:
 
 ```js{3}
 'use strict';

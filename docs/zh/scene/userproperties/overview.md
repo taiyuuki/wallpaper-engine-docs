@@ -6,12 +6,12 @@ Wallpaper Engine allows you to make parts of your wallpaper configurable by your
 
 The following user property types are available in Wallpaper Engine. Click on any of them to view a detailed description on how they work:
 
-* [**Color**](/en/scene/userproperties/color.html) (`color`): A color picker
-* [**Slider**](/en/scene/userproperties/slider.html) (`slider`): A slider that allows users to select a number within a specified range
-* [**Checkbox**](/en/scene/userproperties/checkbox.html) (`bool`): A checkbox that is either on or off
-* [**Combo**](/en/scene/userproperties/combo.html) (`combo`): A dropdown selector where each element has a text and a hidden value
-* [**Text**](/en/scene/userproperties/text.html) (`textinput`): A text input field
-* [**Texture**](/en/scene/userproperties/texture.html) (`texture`): Allows users to replace a texture with a custom image or video
+* [**Color**](/zh/scene/userproperties/color.html) (`color`): A color picker
+* [**Slider**](/zh/scene/userproperties/slider.html) (`slider`): A slider that allows users to select a number within a specified range
+* [**Checkbox**](/zh/scene/userproperties/checkbox.html) (`bool`): A checkbox that is either on or off
+* [**Combo**](/zh/scene/userproperties/combo.html) (`combo`): A dropdown selector where each element has a text and a hidden value
+* [**Text**](/zh/scene/userproperties/text.html) (`textinput`): A text input field
+* [**Texture**](/zh/scene/userproperties/texture.html) (`texture`): Allows users to replace a texture with a custom image or video
 
 Properties will be shown on the right-hand side when a wallpaper is selected:
 

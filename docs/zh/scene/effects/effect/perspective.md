@@ -3,7 +3,7 @@ prev: ../overview.md
 ---
 # Perspective Effect
 
-The **Perspective** effect allows you to apply a perspective transformation to the image. This can be useful in combination with [**Texture User Properties**](/en/scene/userproperties/texture.html) to create surfaces with user-replaceable textures or to apply certain effects to the sky, the floor or any other surface with an angled perspective.
+The **Perspective** effect allows you to apply a perspective transformation to the image. This can be useful in combination with [**Texture User Properties**](/zh/scene/userproperties/texture.html) to create surfaces with user-replaceable textures or to apply certain effects to the sky, the floor or any other surface with an angled perspective.
 
 ::: tip
 You should apply this effect only on top of other existing effects or when using a texture user property. If you apply this effect merely to a static image, consider modifying your image in an image editor instead to improve the performance of the wallpaper, since there is no need to use a live effect for that.

@@ -6,7 +6,7 @@ prev: ../../reference.md
 
 This object describes a media playback event, which fires whenever the user starts, stops or pauses their media session.
 
-The object provides color information which are stored in a [Vec3](/en/scene/scenescript/reference/class/Vec3.html) object, the RGB values are normalized to a range between 0.00 and 1.00. You can use these color objects in color properties, for example.
+The object provides color information which are stored in a [Vec3](/zh/scene/scenescript/reference/class/Vec3.html) object, the RGB values are normalized to a range between 0.00 and 1.00. You can use these color objects in color properties, for example.
 
 ## Properties
 
