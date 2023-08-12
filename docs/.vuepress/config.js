@@ -2,7 +2,7 @@ const en = require('../../app_strings/en.json');
 const zh = require('../../app_strings/zh.json');
 
 module.exports = {
-	// title: 'Wallpaper Engine - Designer Documentation',
+	title: 'Wallpaper Engine - Designer Documentation',
 	base: '/wallpaper-engine-docs/',
 	locales: {
 		'/en/': {
@@ -57,9 +57,9 @@ module.exports = {
 		['@vuepress/back-to-top', true],
 		['vuepress-plugin-redirect', { locales: true }],
 		['vuepress-plugin-smooth-scroll'],
-		['sitemap', { hostname: 'https://taiyuuki.github.io/wallpaper-engine-docs/' }],
+		['sitemap', { hostname: 'https://taiyuuki.github.io/wallpaper-engine-docs' }],
 		['robots', {
-			host: "https://taiyuuki.github.io/wallpaper-engine-docs/",
+			host: "https://taiyuuki.github.io/wallpaper-engine-docs",
 			allowAll: true,
 			sitemap: "/sitemap.xml",
 			policies: [
