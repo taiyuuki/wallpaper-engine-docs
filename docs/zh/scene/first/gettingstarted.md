@@ -6,8 +6,6 @@
 
 ## 导入图像
 
-Once you open the Wallpaper Engine editor, you are presented with the welcome screen of the editor. You can simply drag and drop the image you want to animate into the **Create Wallpaper** button to get started:
-
 打开Wallpaper Engine编辑器后，您将看到编辑器的欢迎屏幕。您只需将用于制作动画的图像拖放到**创建壁纸**按钮中即可：
 
 ![Square image compares to 16:9 aspect ratio](./new.png)

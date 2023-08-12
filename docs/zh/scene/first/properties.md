@@ -8,48 +8,49 @@ tags:
   - customization
   - tweaking
 ---
-# Adding user options
+# 添加用户属性
 
-Wallpaper Engine allows users to customize your wallpapers even further with the help of **user properties**. User properties allow you to give users the option to further tweak and customize individual aspects of your wallpaper, including hiding objects from the wallpaper altogether.
+Wallpaper Engine允许用户在**用户属性**的帮助下进一步自定义你的壁纸。用户属性允许你为用户提供进一步调整和自定义壁纸各个方面的选项，包括完全隐藏壁纸中的对象。
 
-## Creating a visibility property
+## 创建可见性属性
 
-You may want to give users the ability to hide an element that you have added to your wallpaper. Each element has a **visibility property** in the upper right corner (represented by the **eye icon**). You can assign an option to this element by clicking on the cogwheel icon next to the visibility icon and selecting **Bind User Property**. This will open the user property menu and prompt you to create a compatible user property - in this case a checkbox property makes sense (the visibility can be either "on" or "off"). Create a new checkbox property by giving it a name and a default state and then confirm your selection. You can also add and edit the optional **key** value which is needed for more advanced features, in most cases it's fine to leave the auto-generated default value there.
+你可能希望让用户自己能够隐藏添加到壁纸中的元素（组件）。在每个元素的右上角都有一个可见性属性（**眼睛图标**）。你可以通过单击旁边的齿轮图标并选择**绑定用户属性**来为此元素分配选项。这将打开用户属性菜单并提示你关联对应的用户属性——在这种情况下，**复选框**将发挥作用（可见性可以是“开”或“关”）。通过为其指定名称和默认状态来创建新的复选框属性，然后确认你的选择。你还可以添加和编辑更高级功能所需的可选**值**，在大多数情况下，可以保留自动生成的默认值。
 
-That's it! If you now apply the wallpaper and select it in the "Installed" tab of Wallpaper Engine, you will find your user property at the bottom of the list and changing it will change the visibility of your wallpaper object. See the video below which showcases this by making the visibility of a clock user-configurable.
+就是这样！如果你现在应用壁纸，并在Wallpaper Engine的“已安装”选项卡中选中这张壁纸，你将可以在右侧壁纸信息的底部找到你配置的用户属性，更改它将更改壁纸对象的可见性。请参阅下面的视频，该视频展示了时钟的可见性用户属性。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/visibility_property.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Creating sub-properties with display conditions
-In some cases, you may want to show additional properties under certain conditions. For example, take the example we have used in the previous section: You may have a clock and whenever the clock is enabled, you want to show users an additional option to switch between the 24 hour and 12 hour format. This helps declutter the properties list as you can selectively show properties whenever they are needed.
+## 创建具有显示条件的子属性
 
-In the case of the clock, you can find a *Use 24h format* property when selecting the clock. Create a new checkbox user property for this setting just like in the previous example. In this case, however, you need to take the **key** value we mentioned in that section and create a little bit of code in the **display condition** option. Don't worry, it's not very complicated. The identifier of the clock property we created is **show_clock** - you can always look the identifier of each property up by opening the clock property in the property list. We now want the display condition to be:
+在某些情况下，你可能希望在某些条件下显示或隐藏其他属性。例如，以我们在上一节中使用的示例为例：你有一个可见性的时钟，每当启用时钟时，你都希望向用户显示一个额外的选项，以便在 24 小时和 12 小时格式之间切换。这有助于整理属性列表，让你可以在需要时有选择地显示属性。
+
+对于时钟，你可以在时钟的属性中找到**使用24小时格式**的属性。类似于上一示例中的操作，为它创建新的复选框用户属性。然而在这种情况下，你需要获取该用户属性的**关键字**，并在显示条件输入框中写入一行代码。别担心，它不是很复杂。我们创建的时钟属性的关键字**show_clock** —— 你始终可以通过在属性列表中打开时钟属性来查找每个属性的关键字。我们现在希望显示条件为：
 
 ```js
 show_clock.value == true
 ```
 
-This means that whenever the value of our `show_clock` property is `true` (which means "enabled"), we want this property to become visible in the user property list. This means that when a user turns on the clock, a new "24 hour clock" option becomes visible to them. You can view the video below to see how to set this up and what the outcome looks like:
+这意味着每当我们的`show_clocktrue`属性的值为`true`（这意味着“已启用”）时，我们都希望此属性在用户属性列表中可见。这意味着当用户打开时钟时，他们可以看到一个新的“24小时制”选项。你可以观看下面的视频，了解如何进行设置和结果：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/display_condition.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Additional user property types (color and slider)
+## 其他用户属性（颜色和滑块）
 
-Whenever you want to assign a new user property to an option, Wallpaper Engine will automatically suggest the appropriate type for the property. For example, when assigning a property to a color option, a **color** type user property will be created. For numeric options, you can create a **slider** user property which we will showcase in this section.
+每当你要为选项分配新的用户属性时，Wallpaper Engine都会自动为该属性建议适当的类型。例如，将属性分配给颜色选项时，将创建颜色类型用户属性。对于数字类型的选项，你可以创建一个滑块用户属性，我们将在本节中展示这两种属性。
 
-First, pick an element you want to make configurable. In this case, we will just add a rain asset to our wallpaper and then next to the **Count** option, we click on the cogwheel icon and select **Bind User Property** just like before. This time around, Wallpaper Engine will suggest a slider property because **Count** is a number and not just "on or off" like the visibility. You will be asked to configure a default value, a minimum value, a maximum value and if the slider uses fractions or just whole numbers. In our example, we will set the default value to 0 (which means the rain is off by default), the minimum value will also be 0 and the maximum value will be 2. We also turn off fractional values. This means that the slider can be either 0, 1 or 2. If you apply the property now and then apply the wallpaper, you will see that changing the new rain property from 0 to 1 will enable the rain and further increasing it to 2 will increase the rain intensity. You can see this whole example in the video below:
+首先，选择要使其可配置的元素。在这种情况下，我们只需在壁纸中添加一个**雨**组件，然后和之前一样单击**计数**选项旁的齿轮图标，并选择**绑定用户属性**。这一次，壁纸引擎将建议使用**滑块**属性，因为**计数**属性是一个数字，而不仅仅是像可见性那样“打开或关闭”。系统将要求你配置默认值、最小值、最大值以及滑块是使用分数还是仅使用整数。在我们的示例中，我们将默认值设置为 0（这意味着默认情况下雨是关闭的），最小值也将为 0，最大值将为 2。我们还会关闭小数值。这意味着滑块可以是 0、1 或 2。如果现在应用该属性，然后应用墙纸壁纸，你将看到，将新的rain属性从0更改为1将启用**雨**，进一步增加到2将增加雨的强度。你可以在下面的视频中看到整个示例：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/slider_property.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Combo user properties
+## 组合框用户属性
 
-You may have noticed that Wallpaper Engine also offers **Combo** type user properties. These are mainly useful when you create custom-programmed logic with **SceneScript**. For more infos about these types of properties, please see the **SceneScript** chapter of this documentation website.
+你可能已经注意到，Wallpaper Engine还提供**组合框**类型的用户属性。当你使用 SceneScript 创建自定义编程逻辑时，这将非常有用。有关这些类型的属性的详细信息，请参阅本文档网站的 **SceneScript** 章节。

@@ -1,38 +1,38 @@
-# Publishing a wallpaper
+# 发布壁纸
 
-Once you feel like your wallpaper is ready, you can publish it on the Workshop, though this is entirely optional. You can initiate the upload process by clicking on **Workshop** at the top of the editor and then selecting **Prepare for publishing**. 
+当你认为你的壁纸一切准备就绪，你可以把它发布到**创意工坊**上，尽管这不是必要的。但你可以通过单击编辑器顶部的**创意工坊**，然后选择**在创意工坊上分享壁纸**。
 
-::: tip Please note
-Publishing your wallpaper will not keep a backup of your project files. Make sure to manually back up your wallpaper project files in the `wallpaper_engine\projects\myprojects` directory if you wish to edit them in the future.
+::: tip 请注意
+发布壁纸并不会备份你的项目文件，如果你希望将来还能编辑壁纸项目，请确保手动备份`wallpaper_engine\projects\myprojects`目录中的壁纸项目文件。
 :::
 
-You will be presented with a publishing form where you can create a **title** and a **description** of your wallpaper. Additionally, you should select the appropriate **genre** for your wallpaper and you are required to select an **age rating** that fits the content of your wallpaper.
+选择发布以后，你会看到一个发布表单，你需要填写壁纸的**标题**和**描述**。此外，你应该为壁纸选择合适的**类型**，并且选择适合壁纸内容的**年龄分级**。
 
-Wallpapers can be published with different levels of visibility: **Publicly**, **Friends-only** or **Private**. If you do not see the option to publish wallpapers publicly, your account may be restricted in some way.
+壁纸可以以不同的可见性级别发布：**公开的**、**仅限好友**或**私人的**。如果你没有看到**公开的**选项，则你的帐户可能以某种方式受到了限制。
 
-## Preview Images
+## 预览图像
 
-Wallpaper Engine allows you to generate a static preview image with a few clicks or you can import a preview image that you have prepared with another tool. Make sure to always make the preview images suitable for all ages, even if your wallpaper targets an adult audience!
+Wallpaper Engine允许你通过点击几下生成静态的预览图像，或者你可以导入使用其他工具准备的预览图像。请确保预览图像始终适合于所有年龄段，即使你的壁纸针对成人用户！
 
-### Animated Preview Images
+### 动态预览图
 
-You can also use animated GIFs as a preview image. GIFs can be up to 256x256px but Wallpaper Engine will only ever request 128x128px preview images from the servers. If you want the best quality in the app, you should stick to 128x128px. The maximum allowed file size is 1 MB but we recommend keeping the size below 500 KB.
+你还可以使用GIF动画作为预览图像。GIF最高可达256x256像素，但Wallpaper Engine只会从服务器请求 128x128 像素的预览图像。如果你想在应用程序中获得最佳的预览效果，则应使用128x128像素的预览图。虽然允许的最大文件大小为 1 MB，但我们建议将大小保持在 500 KB 以下。
 
-### Built-in GIF recorder
+### 内置GIF录制器
 
-After clicking on the **Take snapshot** button, press **G** to switch to the GIF recording mode. You can press the **F** key to cycle through the different GIF recording quality modes where you can choose between resolution, frames per second and length of the GIF. You can see the current settings in the upper left corner of the preview creation mode. These limitations are mainly in place to ensure the GIF file meets the file size restrictions for preview images.
+点击**捕获预览**按钮，按**G**可以切换到GIF录制模式。你可以按**F**键循环切换不同的GIF录制质量，可以在其中选择分辨率、每秒帧数和GIF长度。你可以在预览创建模式的左上角看到当前设置参数。这些限制主要是为了确保GIF文件满足预览图像的文件大小限制。
 
-## Uploading the wallpaper
+## 上传壁纸
 
-Once you have filled out the wallpaper details, you can upload your wallpaper by clicking on the **Publish** button.
+填写壁纸详细信息后，你可以点击**发布**按钮上传壁纸。
 
-You can watch the following video to see the complete publishing process in action:
+你可以观看以下视频，了解完整的发布过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/publish.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Publishing Updates
+## 发布更新
 
-In the future, you can push an update to your existing wallpaper by going through this process again. Wallpaper Engine will remember each project automatically publish an update to all your users rather than publishing a brand new wallpaper. Keep in mind that updates are received with a little bit of a delay, so don't be concerned if your users don't see the update immediately.
+以后，你可以通过再次执行此过程来推送对现有壁纸的更新。壁纸引擎会记住每个项目并自动向所有用户发布更新，而不是发布全新的壁纸。请记住，更新会稍有延迟，因此如果你的用户没有立即看到更新，请不要担心。

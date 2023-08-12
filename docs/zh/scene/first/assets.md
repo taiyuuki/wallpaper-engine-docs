@@ -11,8 +11,6 @@
 
 ## 使用移动、旋转和缩放组件
 
-Your assets will be added to your wallpaper immediately but the position and size may not immediately be the way you want them. Wallpaper Engine uses 3D handles which you may already be familiar with if you have ever worked with a 3D game engine. These handles allow you to easily modify the **Origin** (*the position*), the **Angle** (*the rotation*) and the **Scale** (*the size*) of your assets. Watch the video below to see how the different handles allow you to move, scale and resize your assets:
-
 您的组件将立即添加到壁纸中，但位置和大小可能不会立即就是您想要的。Wallpaper Engine使用3D处理器（handles），如果您曾经使用过3D游戏引擎，您可能已经熟悉这种处理器。这些处理器允许您轻松修改组件的**起点**（位置）、**角度**（旋转）和**比例**（大小）。观看下面的视频，了解不同的处理器如何移动、缩放和调整组件大小：
 
 <video width="100%" controls loop>
