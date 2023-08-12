@@ -53,7 +53,7 @@ You can add multiple emitters of each type within the same effect. Read the exam
 In this example, we will showcase the line emitter and make use of the collision mask to create an interactive ice vapor effect as shown in the video below.
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/line_emitter_sample.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/line_emitter_sample.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -68,7 +68,7 @@ Once you set the *line emitter count* to `1`, you will find the line emitter on 
 One important aspect of this example is the collision mask. We want our ice vapor to collide with the sides of the glass and the ice cubes on our image. To accomplish this, we can draw a custom collision mask. Click on the **Paint** button next to the *collision mask*. We draw a line on the outline of the glass, then fully paint over the ice cubes.
 
 <video width="100%" controls>
-  <source src="/videos/fluid_collision.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/fluid_collision.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -102,7 +102,7 @@ Wallpaper Engine comes with several ready-to-use gradient maps that you can util
 See the following video for a quick example:
 
 <video width="100%" controls>
-  <source src="/videos/fluid_gradients.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/fluid_gradients.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -171,7 +171,7 @@ You can adjust the `IDLE_SIZE` and `CLICK_SIZE` values at the top of the script 
 See the following video for an example of this solution. In the video, the emitter is also attached to the mouse cursor as explained in the previous section of this guide:
 
 <video width="100%" controls>
-  <source src="/videos/fluid_onclick.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/fluid_onclick.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -190,6 +190,6 @@ For the **Max** value, you can type in a relatively high number such as `5`, sin
 The result of this example can be viewed in the following video. Note that the video has no audio but we added an audio visualizer to show you when we start and stopped the background music:
 
 <video width="100%" controls>
-  <source src="/videos/fluid_audioresponse.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/fluid_audioresponse.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -9,6 +9,6 @@ Next up, open up your browser and type `localhost:8080` (or whatever port you ha
 You can find a video below showcasing this process.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/web_debugging.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/web_debugging.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -19,7 +19,7 @@ You may want to give users the ability to hide an element that you have added to
 That's it! If you now apply the wallpaper and select it in the "Installed" tab of Wallpaper Engine, you will find your user property at the bottom of the list and changing it will change the visibility of your wallpaper object. See the video below which showcases this by making the visibility of a clock user-configurable.
 
 <video width="100%" controls>
-  <source src="/videos/visibility_property.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/visibility_property.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -35,7 +35,7 @@ show_clock.value == true
 This means that whenever the value of our `show_clock` property is `true` (which means "enabled"), we want this property to become visible in the user property list. This means that when a user turns on the clock, a new "24 hour clock" option becomes visible to them. You can view the video below to see how to set this up and what the outcome looks like:
 
 <video width="100%" controls>
-  <source src="/videos/display_condition.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/display_condition.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -46,7 +46,7 @@ Whenever you want to assign a new user property to an option, Wallpaper Engine w
 First, pick an element you want to make configurable. In this case, we will just add a rain asset to our wallpaper and then next to the **Count** option, we click on the cogwheel icon and select **Bind User Property** just like before. This time around, Wallpaper Engine will suggest a slider property because **Count** is a number and not just "on or off" like the visibility. You will be asked to configure a default value, a minimum value, a maximum value and if the slider uses fractions or just whole numbers. In our example, we will set the default value to 0 (which means the rain is off by default), the minimum value will also be 0 and the maximum value will be 2. We also turn off fractional values. This means that the slider can be either 0, 1 or 2. If you apply the property now and then apply the wallpaper, you will see that changing the new rain property from 0 to 1 will enable the rain and further increasing it to 2 will increase the rain intensity. You can see this whole example in the video below:
 
 <video width="100%" controls>
-  <source src="/videos/slider_property.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/slider_property.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

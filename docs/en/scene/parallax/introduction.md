@@ -17,7 +17,7 @@ We have created a sample project with a space background and a separate space sh
 Afterwards, we select our background image and slightly adjust the **parallax depth** setting to our liking. The same process can be repeated for any other layer. Again, keep in mind you can turn of the parallax setting for any layer by setting the **parallax depth** to 0.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/parallax_depth.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/parallax_depth.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -26,7 +26,7 @@ Afterwards, we select our background image and slightly adjust the **parallax de
 In our example, the background image will move outside of the visible area due to the parallax effect now which will make the gray background color visible. This is something you should always avoid. To compensate for this we can either import a slightly larger background image or we need to increase the scale of the background layer, otherwise the wallpaper will have visible border whenever the user moves the mouse towards the outer edge of the screen. In this example, we slightly increase the scale of the image:
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/parallax_depth_fix_borders.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/parallax_depth_fix_borders.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -37,7 +37,7 @@ You can also limit the direction of the parallax scrolling effect to only allow 
 We will limit movement of the background layer of the wallpaper we just created to the horizontal axis by setting the **Y** property to 0, as shown in the following video:
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/parallax_depth_limit_movement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/parallax_depth_limit_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

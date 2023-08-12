@@ -19,7 +19,7 @@ After confirming the user property, you can see the the cogwheel icon next to th
 See this whole process in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/property_checkbox.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/property_checkbox.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -34,7 +34,7 @@ We now click on **File** and **Apply Wallpaper** again, the new user property is
 See this whole process in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/property_checkbox_secondary.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/property_checkbox_secondary.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -55,6 +55,6 @@ This means that the **24H Clock** property will only be visible when the value o
 We now click on **File** and **Apply Wallpaper** once again. When turning off the **Clock** option, you can now see that this will also hide the **24H** option from the user property list:
 
 <video width="100%" controls loop>
-  <source src="/videos/property_checkbox_secondary_visibility.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/property_checkbox_secondary_visibility.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -3,7 +3,7 @@
 Wallpaper Engine allows you to take control of supported RGB devices through its API and synchronize your wallpaper with LED hardware. Even if you do not own any or just a limited set of compatible hardware, you can simply utilize an emulator. Both Corsair's iCUE software and Razer offer ways to emulate devices that you do not own.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/rgb_emulator.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/rgb_emulator.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -84,7 +84,7 @@ This is currently the most efficient way to compress and send the bitmap. It's s
 The color data you send will automatically be converted by the hardware drivers and applied to all devices according to the configuration set by the hardware manufacturer. In the following example, a canvas with two rising audio bars (see the *audio visualizer* section of the documentation) split at the center of the canvas was used:
 
 <video width="100%" loop autoplay controls>
-  <source src="/videos/rgb_audio.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/rgb_audio.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

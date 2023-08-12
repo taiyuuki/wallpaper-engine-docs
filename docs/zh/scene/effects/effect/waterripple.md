@@ -35,6 +35,6 @@ First, paint the opacity mask that covers the area of the image that you want th
 Keep in mind that there are no right or wrong values, you can experiment around and tweak these values to your liking and to match the scene of your image! After you have set these values, you can fix any details in your opacity mask that you might have missed while painting for the first time. Have a look at the following video to get an idea of how we did it:
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/water_ripple_heat.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/water_ripple_heat.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -11,6 +11,6 @@ Whenever you are dealing with a texture or a mask, you can quickly access your i
 See the following video for a demonstration where we edit the texture of an image layer. We first select our image layer, then scroll down to the **Materials** section and select the advanced view for materials. Next to the **Albedo** texture, we click on **Manual Editing** followed by **Edit with External Image Editor** to add some eye brows to our jelly texture. After using the quick save functionality of our editor, Wallpaper Engine automatically re-imports the updated texture.
 
 <video width="100%" controls>
-  <source src="/videos/external_editor.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/external_editor.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

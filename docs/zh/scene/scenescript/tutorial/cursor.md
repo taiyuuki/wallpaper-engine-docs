@@ -68,7 +68,7 @@ export function cursorClick(event) {
 Now, when we click on our object, our timeline animation will be played once as shown in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/scenescript_click_event_timeline.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_click_event_timeline.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

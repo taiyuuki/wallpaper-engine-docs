@@ -25,7 +25,7 @@ Inverse kinematics is typically only enabled for the last bone of each respectiv
 Watch the skeleton setup in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/ik_bones.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/ik_bones.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -36,7 +36,7 @@ After your inverse kinematics limbs have been configured, you need to make some 
 In the puppet warp skeleton settings, select the inverse kinematics bones of your character and move the **Angle** alignment so that the **red arrow faces the direction of the limb**. For example, in our case we turn the angle so that it faces the direction of the hands. Repeat this process for all relevant limbs as shown in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/ik_angle.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/ik_angle.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -47,7 +47,7 @@ Now that we have finished our basic puppet warp setup, we can create an animatio
 In our example, we grab the root bone of our character and drag it lower, this will cause our character to animate the legs and arms into a squatting position. We then move the timeline slider to the center of the animation timeline. Again, we do not move the slider to the end because we enabled the **Wrap loop frames** option, so Wallpaper Engine will finish the rest of the animation for us and we do not need to define the end position again. We now move the root bone of our character upwards and this will automatically move all inverse kinematics limbs according to their configuration. You will notice that the legs remain stationary until they are overstretched and only leave the ground once the entire chain of bones is stretched out fully. This results in a realistic jump motion that involves all limbs, you can watch the full process and the end result in this video:
 
 <video width="100%" controls loop>
-  <source src="/videos/ik_simple_animation.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/ik_simple_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -60,7 +60,7 @@ Our previous jumping animation example is a bit oversimplified to quickly showca
 See a simple example of this in the following video and note how only the square-shaped target controller is animated and not the bones of the arm themselves:
 
 <video width="100%" controls loop>
-  <source src="/videos/ik_target_controllers.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/ik_target_controllers.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -69,6 +69,6 @@ See a simple example of this in the following video and note how only the square
 You may have noticed that Wallpaper Engine will show you additional points leading to the center of your limbs with inverse kinematics. These so-called orientation controllers decide what direction a limb will twist. You can reposition them to adjust at which point a limb will twist in the corresponding direction. You can do this before starting your animations but you can also move them during the animation itself. Watch the following video to get an idea of how orientation controllers change the behavior of the inverse kinematics animation:
 
 <video width="100%" controls loop>
-  <source src="/videos/ik_orientation_controller.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/ik_orientation_controller.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

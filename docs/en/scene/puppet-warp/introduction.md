@@ -13,7 +13,7 @@ In this tutorial, we will create a simple puppet warp animation using a samurai 
 ## Puppet Warp Process Summary
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/puppet_warp_intro.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_intro.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -50,7 +50,7 @@ While viewing the *Geometry* section, you clicking anywhere with your mouse will
 Watch the following video to see how we create the geometry for our object and add the additional geometry slices to the hat:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_geometry.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_geometry.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -77,7 +77,7 @@ From the bone that is centered in the chest area, we place one bone towards the 
 You can see the complete process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_skeleton.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_skeleton.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -94,7 +94,7 @@ Be sure to always test if everything was painted correctly, especially near hole
 You can see this process including turning the hat in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_weights.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_weights.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -115,7 +115,7 @@ You can skip this if you are not using **Loop** mode on the animation, otherwise
 You can see this setup process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_loopkeyframes.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_loopkeyframes.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -130,7 +130,7 @@ Once we're done with a first draft of our animation, we can save it and then go 
 You can view the steps we described in this section in the following video and just try and work along:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_simple_animation.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_simple_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

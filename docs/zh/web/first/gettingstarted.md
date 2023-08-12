@@ -9,7 +9,7 @@ Be sure to place your HTML file and all relevant files in a dedicated project fo
 Once you have set up a project directory, simply drag and drop the main HTML file into the **Create Wallpaper** button in the Wallpaper Engine editor. This will start the import process and copy all your files into the Wallpaper Engine project directory. Be aware that this makes a copy of your files and places it in the `wallpaper_engine\projects\myprojects\` directory. You can view and edit the copied files by clicking on **Edit** and then **Open in Explorer** at the top of the Wallpaper Engine editor.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/web_new_project.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/web_new_project.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

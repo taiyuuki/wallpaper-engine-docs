@@ -78,7 +78,7 @@ You will not see any changes in the editor at first. This is because the editor 
 You can see these steps in the following video:
 
 <video width="100%" controls >
-  <source src="/videos/scenescript_basic.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_basic.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -106,7 +106,7 @@ export function update(value) {
 When executing the SceneScript code now, our text layer will represent the current seconds of your device clock. See this example and the result in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_seconds.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_seconds.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -138,7 +138,7 @@ Also note how Wallpaper Engine automatically filled in the type hint `@param {Ve
 If we save this code now and then use the **Run Preview** function again, you will see your object jump to the position that you defined in your SceneScript code. See this process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_intro.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_intro.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -166,7 +166,7 @@ export function update(value) {
 To see this process and the outcome of this, watch the following video:
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_basic_movement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_basic_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -193,7 +193,7 @@ This might seem confusing at first glance, but essentially this means that our `
 Check out the following video to see this section and its result in action:
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_sine_movement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_sine_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -225,7 +225,7 @@ export function update(value) {
 If you use the **Run Preview** functionality in the editor now, you will see how Wallpaper Engine will continuously log the value of `value.y` to the editor log whenever the `update()` function is called. See the following video to see this in action:
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_sine_debug.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_sine_debug.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

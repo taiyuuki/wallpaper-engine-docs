@@ -27,7 +27,7 @@ You will immediately notice that the complete wallpaper gets a water effect appl
 We can limit the effect to the water area of the image by painting an *Opacity Mask*. Click on the **Paint** button in the *Opacity Mask* section after adding the effect. You can start by drawing a rough outline of the lake as in the video below. The water ripples should now be limited to the area of the lake. By using the **Show Mask** option, you can view the areas you have painted the effect onto. View the following video to see these fundamental steps in action:
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/opacity_mask.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/opacity_mask.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -38,7 +38,7 @@ Try to erase any unwanted areas, for example any accidentally shoreline areas, b
 Watch the following video to get an idea of what this process looks like, you may need to give it a few iterations and adjust the values until it starts looking somewhat realistic. Especially at the points of the image that are furthest away and near shorelines, try using low values below 60. Readjust the size of the paint brush to paint fine details of the image accurately.
 
 <video width="100%" controls>
-  <source src="/videos/opacity_mask_fix.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/opacity_mask_fix.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -55,7 +55,7 @@ In our current example, the trees furthest away on the other side of the river h
 Watch the following video which shows the opacity mask that we drew and how we slightly adjust some of the properties:
 
 <video width="100%" controls>
-  <source src="/videos/sway_effect.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/sway_effect.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -68,7 +68,7 @@ Add the **Water Flow** effect to the background layer and start painting over th
 You can watch the following video to see how the flow map is drawn and how we have reduced the speed of the effect:
 
 <video width="100%" controls>
-  <source src="/videos/cloud_effect.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/cloud_effect.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

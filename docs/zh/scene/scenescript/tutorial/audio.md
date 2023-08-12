@@ -72,7 +72,7 @@ We don't recommend using this code example in your wallpaper, follow-along with 
 If you now save this script and click on **Run Preview** while listening to music, your image layer will dynamically resize depending on the audio volume of the bass frequencies of your music. Watch the following video to preview this code example:
 
 <video width="100%" controls >
-  <source src="/videos/scenescript_basic_audio.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_basic_audio.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -205,6 +205,6 @@ export function init(value) {
 You can see the outcome of this in the following video. The animation is now much smoother and even when no audio is playing, our object remains visible and never grows to excessive sizes:
 
 <video width="100%" controls >
-  <source src="/videos/scenescript_smoothened_audio.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_smoothened_audio.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -35,7 +35,7 @@ Each array will generally contain a floating point value from 0.00 to 1.00. 0.00
 ## Audio visualization example
 
 <video width="100%" loop autoplay>
-  <source src="/videos/web_audio_visualizer.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/web_audio_visualizer.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

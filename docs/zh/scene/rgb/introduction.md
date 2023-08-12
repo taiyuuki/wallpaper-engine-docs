@@ -5,7 +5,7 @@ Wallpaper Engine allows you to take control of supported RGB devices through its
 By default, Wallpaper Engine will mirror the colors of your wallpaper to any compatible device. However, you can also configure a single layer to be responsible for all lighting.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/rgb_emulator.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/rgb_emulator.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -19,6 +19,6 @@ The **Motion Blur** effect accumulates the image over time to create a blurry ap
 For example, if you have applied a [Spin effect](/wallpaper-engine-docs/scene/effects/effect/spin) or [Scroll effect](/wallpaper-engine-docs/scene/effects/effect/scroll) to a layer, make sure *Motion Blur* is below these effects in the effects list. You can re-arrange the effects list by simply dragging and dropping effects with your mouse. See the video below to see how the *Motion Blur* effect only starts becoming visible once it is moved below the *Spin* effect:
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/effects_order.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/effects_order.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

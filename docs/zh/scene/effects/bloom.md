@@ -15,7 +15,7 @@ To enable basic bloom on your wallpaper, click on the scene settings and enable 
 The example image here has a high contrast and a lot of well defined light sources, so it works well with bloom. The animated details like the rainbow strips at the top of the walls are especially good candidates for the bloom effect. You want to make sure that the bloom effect is not applied to the entire image, since that generally does not look good, try to configure the threshold so it only affects bright parts of the image.
 
 <video width="100%" controls>
-  <source src="/videos/effects_bloom_basic.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/effects_bloom_basic.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -42,13 +42,13 @@ Every layer will have a new option called **HDR brightness** appear in their pro
 In this example we are enabling **HDR Bloom** and switch back to the layers menu. Here we increase the **HDR brightness** option for the top two rainbow layers to add a nice, high quality glow effect to them.
 
 <video width="100%" controls>
-  <source src="/videos/effects_hdr_bloom.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/effects_hdr_bloom.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 Other examples of HDR bloom are glowing text or glowing particles, both also have an **HDR brightness** option that allows you to adjust the individual glow per object. For small particles or objects, you can even increase this value far beyond the provided limit and push the glow further.
 
 <video width="100%" controls>
-  <source src="/videos/effects_hdr_bloom_examples.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/effects_hdr_bloom_examples.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

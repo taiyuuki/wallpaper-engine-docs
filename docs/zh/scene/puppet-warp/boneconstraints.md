@@ -17,7 +17,7 @@ We will use the Samurai example from the [Puppet Warp Character Sheet Guide](/wa
 In our first example, we will add physics simulation to the rope attached to the sword of the samurai character that we have used in the other puppet warp guides:
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/puppet_warp_rope_gravity.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_rope_gravity.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -48,7 +48,7 @@ This is all that it takes to enable the physics for the rope bone. You do not ac
 Next up, we will animate a series of bones with a physics simulation. We will use the cape of the samurai as an example, as it spans across multiple bones which are all exclusively moving the cloth of the cape:
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/puppet_warp_cape_gravity.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_cape_gravity.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

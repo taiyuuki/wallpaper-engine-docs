@@ -35,7 +35,7 @@ Once the animation is done, we move the light source slightly off the visible ar
 You can see the process and the final result in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/pbr_light_timeline.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_light_timeline.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -142,7 +142,7 @@ Essentially, the light will now fade in in the beginning of the animation and it
 You can see this complete implementation in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/pbr_light_movement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_light_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

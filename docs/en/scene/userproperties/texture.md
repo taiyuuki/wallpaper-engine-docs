@@ -21,7 +21,7 @@ When viewing your wallpaper in the **Installed** tab of Wallpaper Engine now, yo
 You can see this entire process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/property_texture.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/property_texture.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

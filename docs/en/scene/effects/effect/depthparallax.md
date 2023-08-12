@@ -6,7 +6,7 @@ prev: ../overview.md
 The **Depth Parallax** effect allows you to create a perceived 3D depth for your images. This effect requires you to enable **Camera Parallax** in the scene settings of the editor, followed by setting the parallax depth to **0** for the current layer.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/depth_parallax.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/depth_parallax.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

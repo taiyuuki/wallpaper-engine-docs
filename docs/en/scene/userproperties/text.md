@@ -9,6 +9,6 @@ This already suffices to set up a customizable text field. After confirming the 
 You can see the full process for this in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/property_textinput.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/property_textinput.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -5,7 +5,7 @@ Blend rules are an advanced feature of puppet warp animations. They allow you to
 We will showcase blend rules with the following example animation. **Notice how the sword remains attached to the rock until the knight pulls on it.** After the sword is pulled, it continues to follow the hand movement as the knight is holding it. This was achieved through a blend rule that changed the parent bone of the sword from the rock to the hand of the knight.
 
 <video width="100%" controls>
-  <source src="/videos/blend_rule_animation.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/blend_rule_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -34,7 +34,7 @@ We select the hand bone and look for our blend rule in the timeline animation li
 The sword will now smoothly transition from the stationary rock position that we have placed it in from the start and will follow along the knight's hand. Watch the following video to see this entire section carried out:
 
 <video width="100%" controls>
-  <source src="/videos/blend_rule_example.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/blend_rule_example.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -27,7 +27,7 @@ tags:
 我们可以通过绘制**不透明度蒙版**来限制效果的区域。点击“不透明度蒙版”部分的**绘制**按钮。您就可以开始绘制湖泊的粗略轮廓，如下面的视频所示。水波纹现在应该仅限于湖泊区域。通过**显示蒙版**选项，您可以查看效果绘制的区域。观看以下视频，了解这些基本步骤的实际应用：
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/opacity_mask.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/opacity_mask.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -38,7 +38,7 @@ tags:
 观看以下视频以了解此过程，您可能需要对其进行多次调整，直到它开始看起来显得逼真。尤其是最远和靠近海岸线的位置，请尽量使用低于60的**数量**，调整画笔的大小，以精确绘制图像的细节。
 
 <video width="100%" controls>
-  <source src="/videos/opacity_mask_fix.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/opacity_mask_fix.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -55,7 +55,7 @@ tags:
 观看以下视频，其中展示了我们绘制的不透明度蒙版以及我们如何微调某些属性：
 
 <video width="100%" controls>
-  <source src="/videos/sway_effect.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/sway_effect.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -68,7 +68,7 @@ tags:
 您可以观看以下视频，了解如何绘制流量图以及我们如何降低效果的速度：
 
 <video width="100%" controls>
-  <source src="/videos/cloud_effect.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/cloud_effect.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

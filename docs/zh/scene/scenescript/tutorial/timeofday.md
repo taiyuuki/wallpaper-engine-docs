@@ -9,7 +9,7 @@ Alternatively, you can also use the *ECMAScript* `Date` class to access the curr
 We will explore how to utilize the [Blend effect](/wallpaper-engine-docs/scene/effects/effect/blend) to change the entire background image multiple times during a day depending on the current time. We strongly recommend that you utilize the *Blend* effect for this type of effect instead of using multiple image layers to reduce VRAM usage. This can significantly improve performance, especially when using effects on the image layer.
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/timeofday.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeofday.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -36,7 +36,7 @@ The quickest way to load the additional textures is by dragging and dropping the
  See the following video to see the steps until here:
 
 <video width="75%" style="margin:0 auto;display:block;" controls autoplay loop>
-  <source src="/videos/blend_textures.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/blend_textures.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

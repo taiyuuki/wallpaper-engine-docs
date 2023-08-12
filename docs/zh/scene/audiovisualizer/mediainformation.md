@@ -21,7 +21,7 @@ One thing that you need to keep in mind with text layers with dynamic content is
 You can see the setup and the end result of this in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/media_text_settings.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/media_text_settings.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -124,7 +124,7 @@ In this example, we will be changing the **background color**. This only makes s
 :::
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/media_colors.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/media_colors.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

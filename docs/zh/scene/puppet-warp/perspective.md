@@ -23,7 +23,7 @@ Once you have finalized the depth mask, you can fine-tune the **Extrusion Scale*
 You can see an exemplary video of this process here, where we paint a depth map for our character while reviewing the outcome using the **Extrusion Preview** functionality:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_extrusion_painting.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_extrusion_painting.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -38,7 +38,7 @@ Animating the **Y** axis will make the movement appear left / right and animatin
 We select the bone and hide all properties except the *Angles Y* option. The angle Y keyframe starts at a value of 0, then transitions to *-15* a few frames later, followed by transition to an angle of **+15** before circling back to an angle of **-15** again. The animation ends where it started at a value of 0. This already suffices in our example to create the perception of left and right movement. You can see this process and the final result in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_extrusion_animation.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_extrusion_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -3,7 +3,7 @@
 The **Depth Parallax** effect in Wallpaper Engine allows you to create a perceived 3D effect on your image. This effect requires a few extra steps to set up, so we recommend following along if you are using the effect for the first time.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/depth_parallax.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/depth_parallax.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -26,7 +26,7 @@ Click on **Scene options** on the left-hand side and set **Camera Parallax** to 
 You can see the full process up until here in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/depth_parallax_scene_settings.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/depth_parallax_scene_settings.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -50,7 +50,7 @@ In a lot of cases, you can simply use the default values for the depth map gener
 See this process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/depth_parallax_create.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/depth_parallax_create.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -73,7 +73,7 @@ Wallpaper Engine will now present you with the paint overview on the left. You c
 See this depth map improvement process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/depth_parallax_fix.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/depth_parallax_fix.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

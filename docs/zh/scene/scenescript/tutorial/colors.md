@@ -7,7 +7,7 @@ prev: ../tutorials.md
 In this guide, we explain how you can use SceneScript to modify the colors of an object. We also explain how to utilize the `WEColor` module to easily shift through colors instead of having to manually deal with **RGB** values. As always, this is just an example implementation, you can modify the colors in much more complex ways and create your own custom behavior.
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/scenescript_color.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_color.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

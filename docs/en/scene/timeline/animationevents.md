@@ -9,7 +9,7 @@ Start by opening the timeline or puppet warp animation you wish to add an event 
 In our example we will trigger a sword sound right when the character starts moving the sword up and rotates it. We move the frame guide to frame 2 and click on the alarm clock button.
 
 <video width="100%" controls>
-  <source src="/videos/timeline_animationevents_open_dialog.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_animationevents_open_dialog.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -21,7 +21,7 @@ Now click on **OK** to add the new event and close the dialog. You can also add 
 You will see a dot in the timeline on each frame that has any events now.
 
 <video width="100%" controls>
-  <source src="/videos/timeline_animationevents_add_event.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_animationevents_add_event.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -35,14 +35,14 @@ We want to play a sound, so we'll import a new sound into the editor by dragging
 The sound should now be paused and waiting to be started from a script.
 
 <video width="100%" controls>
-  <source src="/videos/timeline_animationevents_import_sound.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_animationevents_import_sound.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 In order to react to an animation event in a script, we have to make sure to attach our script to the same layer on which the animation event is played, in our case the **Samurai** layer. We'll select this layer and attach a script by clicking on the **cog wheel** icon in the top right and choosing **Bind Script**.
 
 <video width="100%" controls>
-  <source src="/videos/timeline_animationevents_add_script.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_animationevents_add_script.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -60,7 +60,7 @@ export function animationEvent(event, value) {
 ```
 
 <video width="100%" controls>
-  <source src="/videos/timeline_animationevents_edit_script.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_animationevents_edit_script.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -70,6 +70,6 @@ export function animationEvent(event, value) {
 Click on **Run Preview** at the top and see if the sound is being played. In case there is any scripting error, you can check the **Log** at the bottom to see the error details and fix the script.
 
 <video width="100%" controls>
-  <source src="/videos/timeline_animationevents_complete.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_animationevents_complete.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

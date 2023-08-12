@@ -78,7 +78,7 @@ export function update(value) {
 你可以在以下视频中查看：
 
 <video width="100%" controls >
-  <source src="/videos/scenescript_basic.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_basic.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -106,7 +106,7 @@ export function update(value) {
 执行SceneScript代码时，我们的文本层将表示设备时钟的当前秒数。请参阅以下示例视频：
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_seconds.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_seconds.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -138,7 +138,7 @@ export function update(value) {
 如果我们现在保存此代码，然后再次使用**运行预览**，你将看到目标对象移动到了在SceneScript代码中定义的新位置。在以下视频中查看此过程：
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_intro.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_intro.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -166,7 +166,7 @@ export function update(value) {
 观看以下视频查看输出结果：
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_basic_movement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_basic_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -194,7 +194,7 @@ export function update(value) {
 观看以下视频查看结果：
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_sine_movement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_sine_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -226,7 +226,7 @@ export function update(value) {
 如果你现在使用编辑器中的**运行预览**功能，你将看到每当调用`update()`函数时，Wallpaper Engine是如何连续打印编辑器日志中的值。请观看以下视频，了解实际操作：
 
 <video width="100%" controls>
-  <source src="/videos/scenescript_vec3_sine_debug.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/scenescript_vec3_sine_debug.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

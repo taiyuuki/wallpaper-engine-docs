@@ -11,7 +11,7 @@ Your particle system needs at least one renderer to function. There are four dif
 The following video shows how all four renderers behave when particles move in a fast vortex. Keep in mind that this is simply a showcase example, each renderer caters to specific use-cases.
 
 <video width="auto" style="margin:0 auto;display:block;" controls loop autoplay>
-  <source src="/videos/particle_system_renderer.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/particle_system_renderer.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

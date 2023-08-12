@@ -8,7 +8,7 @@ Make sure you have enabled the [Asset Creation](/wallpaper-engine-docs/scene/ass
 * Enter a new name for the effect (in this example: *"Desaturate"*) and click OK.
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/shader_new.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/shader_new.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -57,6 +57,6 @@ Click on **OK** in the shader editor and you should immediately see the slider a
 You can see the steps from this section in the following video, including the finished effect:
 
 <video width="100%" controls loop autoplay>
-  <source src="/videos/shader_desaturation_tutorial.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/shader_desaturation_tutorial.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

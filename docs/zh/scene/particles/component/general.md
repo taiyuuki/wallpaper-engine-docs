@@ -45,7 +45,7 @@ Depending on what type of content your particle system holds, choosing the corre
 ::: details Click here to compare the three blend modes
 
 <video width="100%" controls loop>
-  <source src="/videos/particle_system_blending.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/particle_system_blending.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -39,7 +39,7 @@ You can choose the compression method when importing a new image:
 If you want to apply DXT5 compression to an existing layer, you can do so easily. Select your layer and scroll down to the **Advanced Texture Settings** button on the right-hand side. Click on the button, then next to the **Albedo** texture, click on the cogwheel icon and select **Texture Properties**. Now look for the **Format** option and change it to **DXT5**. Accordingly, you should see a reduction in the **Video memory** statistic above. See a video of this process here:
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/texture_format_change.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/texture_format_change.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

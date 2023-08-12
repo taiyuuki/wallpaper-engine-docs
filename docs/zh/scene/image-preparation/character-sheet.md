@@ -11,7 +11,7 @@ Character sheets cut up characters from an image into multiple independent parts
 Most notably, the sword has been removed from the original character and the area it previously occupied is filled in with a color blur of the surrounding areas. For many animations, this blur will be hardly noticeable in later animations. Take a look at our sample puppet warp animation we created with the previous character sheet and notice how the sword, shield and head all move quite strongly without causing any distortions or unwanted side effects on the surrounding body parts, which is the main advantage of using puppet warp animations with character sheets:
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/character_sheet_puppet_warp.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/character_sheet_puppet_warp.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -36,7 +36,7 @@ While painting the mask, make sure to regularly check the **Foreground** and **B
 
 
 <video width="100%" controls>
-  <source src="/videos/cs_arm.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/cs_arm.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -51,7 +51,7 @@ In this tutorial, we are showcasing the **Paint Brush Mode** for the character s
 Once the arm and sword have been properly masked, we continue by further separating the arm from the sword, this will give us some additional flexibility in the puppet warp animation. To do this, make sure the **Arm** is selected in the hierarchy, then click on the **Add Limb** button to create a child limb of the arm. In our case, we will name it **Sword**. Just like before, we mark the sword and hand as **foreground**, while we mark the upper arm as **background**. Since the sword has already been separated from the main body, we don't need to be very precise with our painting, as the arm is now presented in its cut-out state and the main body is completely ignored:
 
 <video width="100%" controls>
-  <source src="/videos/cs_sword.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/cs_sword.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -60,7 +60,7 @@ Once the arm and sword have been properly masked, we continue by further separat
 We continue with our character by creating another limb. Unlike last time, we move back to the **Body** in the hierarchy by selecting it first, then we create a new limb using the **Add Limb** button. We want to create a limb that represents the shield of our character. What is interesting to note here is that the sword that we have previously made a limb will now be ignored since it has been separated from the shield. Effectively, this means we can ignore the shield while drawing our foreground mask and you will notice that the area that was previously covered by the sword has now been filled with a blurred color that roughly represents the shield's overall color scheme:
 
 <video width="100%" controls>
-  <source src="/videos/cs_shield.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/cs_shield.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -71,7 +71,7 @@ In the final step, we create yet another limb on the **Body**, representing our 
 Since we are satisfied with our character sheet, we confirm by clicking on **OK** in the lower right corner. Wallpaper Engine will now generate a character sheet from all the limbs we have drawn. We can now use the character sheet layer to create a puppet warp animation. See the [puppet warp character sheet guide](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) in order to continue from this point on.
 
 <video width="100%" controls>
-  <source src="/videos/cs_summary.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/cs_summary.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

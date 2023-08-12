@@ -13,6 +13,6 @@ Saving the project and using the ou will see that changing the new rain property
 After saving and applying your wallpaper, select it in the **Installed** tab of the Wallpaper Engine browse window. You will now find your slider property on the right-hand side and can adjust your slider value dynamically. You can see the full process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/slider_property.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/slider_property.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

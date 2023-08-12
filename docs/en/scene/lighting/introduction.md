@@ -27,7 +27,7 @@ Click on the **Generate** button in the **Normal map** section to open up the no
  **Watch the video below to see all the steps up until this point:**
 
 <video width="100%" controls>
-  <source src="/videos/pbr_generate.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_generate.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -42,7 +42,7 @@ Keep in mind that light sources will only have an effect on image layers with th
 For now, we simply add two light sources to our scene and use the color picker to select colors directly from our wallpaper so that the light color matches the contents of the image. You can see this process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/pbr_light.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_light.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -59,7 +59,7 @@ Be sure to always adjust the **Background Color** option in the **Scene options*
 You can see these two steps in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/pbr_ambient_light.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_ambient_light.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -68,7 +68,7 @@ You can see these two steps in the following video:
 Now that we have added lighting to our scene, it becomes noticeable that the light is reflected excessively in some places, for example on the face of our sample character:
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/pbr_skin_reflection.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_skin_reflection.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -79,7 +79,7 @@ The **Metallic map** allows us to paint which areas are *shiny like metal* and w
 We then move on and paint areas that we want to highlight with a very high value of 255, such as the sword and shield of our character. These elements will now appear very shiny and metallic while the face now will be much less reflective.
 
 <video width="100%" controls>
-  <source src="/videos/pbr_metallic.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_metallic.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -92,7 +92,7 @@ After having added the metallic map in the previous step, the result is already 
 In our case, the roughness map looks rather similar to the metallic map but it lets us further emphasize certain parts of the image by tweaking the reflection further. We started by painting the entire mask with a value of around 70 followed by values around 200 for the skin and cloth elements and values from around 10 - 50 for areas where we wanted to add a strong shine to the image, such as the helmet of our character and the sword. See the following video of the mask we have drawn for our character as we show you the mask overlayed to the image layer, followed by the end result.
 
 <video width="100%" controls>
-  <source src="/videos/pbr_roughness.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_roughness.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -105,7 +105,7 @@ Additionally to the previous maps, you can also add a **Reflection map**. A refl
 In our example, we noticed a slight glow at the top of the helmet decorations. We add a **Reflection map**, and as a very first step, we paint the whole map in white (at a value of 255) to ensure the reflections we have created previously stay as they are. We then set the value to 0 and paint the helmet decorations in black and save the reflection map. Looking at the helmet decorations now, the minor glow that was previously present has now disappeared entirely.
 
 <video width="100%" controls>
-  <source src="/videos/pbr_reflection.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/pbr_reflection.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -9,7 +9,7 @@ You should have read and understood the [Puppet Warp Introduction Guide](/wallpa
 In this guide, we will go into how to create an interactive wallpaper element that users can drag and release.
 
 <video width="100%" controls loop>
-  <source src="/videos/puppet_warp_interactive.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_interactive.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -129,6 +129,6 @@ We have also created a much more complex example of this in a separate project. 
 You can see the advanced example in action in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/puppet_warp_interactive_advanced.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_interactive_advanced.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

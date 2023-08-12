@@ -5,7 +5,7 @@ Wallpaper Engine allows you to integrate Windows Media data such as album covers
 * [Media Information Integration](/wallpaper-engine-docs/scene/audiovisualizer/mediainformation)
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/album_simple_showcase.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/album_simple_showcase.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -51,7 +51,7 @@ Select the blend effect and navigate towards the bottom of its property list. Ne
 Once this is done, you will see the timeline of the **Blend amount** value at the bottom. Grab the timeline selector and move it all the way to the last frame. Afterwards, drag the **Blend amount** value down to `0.00` on the right. You should now see a smooth curve in the timeline animation, see the following video as an example:
 
 <video width="100%" controls>
-  <source src="/videos/album_blend.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/album_blend.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

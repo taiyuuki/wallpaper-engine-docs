@@ -15,6 +15,6 @@ showclock.value == true
 This way, our *24H Clock* property will only be visible whenever the user has also enabled the *Show Clock* property. You can see the implementation and the result in action in the following video:
 
 <video width="80%" style="margin: 0 auto;display: block;" controls loop autoplay>
-  <source src="/videos/web_display_condition.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/web_display_condition.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

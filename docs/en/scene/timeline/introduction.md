@@ -13,7 +13,7 @@ In order to get started with timeline animations, let's say you want to repeated
 The first step is to establish what you actually want to animate, so let's have a look what happens if you move an object from left to right in the editor:
 
 <video width="100%" controls>
-  <source src="/videos/timeline_intro.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_intro.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -38,14 +38,14 @@ Make sure to have enough frames in your animation to create natural looking anim
 :::
 
 <video width="100%" controls>
-  <source src="/videos/timeline_simple_configuration.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_simple_configuration.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 Once you confirm the settings, you will immediately see the timeline animation panel on your screen. The timeline animation will show three lines that represent the three values of the *Origin* property: **X** (red), **Y** (green) and **Z** (blue). Since we really only care about moving the object on the **X** axis (left to right), we start by hiding the other values by right-clicking on the **Origin x** option on the left and selecting *Show single* to hide the other lines:
 
 <video width="100%" controls>
-  <source src="/videos/timeline_show_single.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_show_single.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -56,7 +56,7 @@ Once the cloud is in its starting position, move the timeline marker in the grap
 Once you have placed the keyframe at the end, you can already click on the *Play* button to start the animation preview loop. You can see this process and the outcome in the video below.
 
 <video width="100%" controls>
-  <source src="/videos/timeline_keyframe_placement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_keyframe_placement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -65,14 +65,14 @@ By default, Wallpaper Engine will smoothen animations by easing the speed of the
 However, in this case, we want the cloud to move at a constant speed since clouds generally don't accelerate or slow down their movements. To ensure this, turn off the Bézier curves by selecting the keyframes of the *Origin x* line (the two red boxes) and then click on the *Toggle Bézier interpolation* button three times until it is turned off (it has four modes: *both, left, right, none* - these are represented by the coloring of the button) and the graph turns from a curve into a straight line. This means the cloud now moves at a constant speed across the screen. See the following video for a showcase of this:
 
 <video width="100%" controls>
-  <source src="/videos/timeline_interpolation.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_interpolation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 That's it, we now have a cloud that moves from left to right in a permanent loop. Simple changes that you could add at this point would be to move the cloud much further off the screen to delay its re-appearance, for example. You can also rewatch all steps and the result in the following video.
 
 <video width="100%" controls>
-  <source src="/videos/timeline_simple_movement.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/timeline_simple_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

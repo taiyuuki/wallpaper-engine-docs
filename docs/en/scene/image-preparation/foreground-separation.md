@@ -17,7 +17,7 @@ As you can see, the character has been cut out through foreground separation. Th
 In its most basic form, this separating foreground objects into distinct layers allows you to apply effects to your foreground character without affecting your background (for example with the **Shake effect** which is often used for breathing and tends to spill over into the background). It also enables you you to place other assets in between your foreground layer and your background layer. We have showcased this in the following video where we placed a **Smoke** asset in between our character and the background by moving it in between the layers:
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/foreground_layering.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/foreground_layering.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -34,7 +34,7 @@ There are two modes that you can use to define the outlines of your character. T
 Get started by enabling **Paint Brush Mode** by clicking the brush symbol in the foreground separation window as shown in the following video:
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/foreground_separation_mode.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/foreground_separation_mode.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -53,7 +53,7 @@ See the following video for an example of how to extract a character. Notice how
 **Take note when the brush changes from "Mark Foreground" to "Mark Background".**
 
 <video width="100%" controls>
-  <source src="/videos/foreground_separation.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/foreground_separation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -70,7 +70,7 @@ In order to get started, set a point anywhere at the outline of your character, 
 The following video shows the same image as in the previous section being extracted by using **Polygon Mode**:
 
 <video width="100%" controls>
-  <source src="/videos/foreground_separation_polygon.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/foreground_separation_polygon.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -29,7 +29,7 @@ Once you have filled out the wallpaper details, you can upload your wallpaper by
 You can watch the following video to see the complete publishing process in action:
 
 <video width="100%" controls>
-  <source src="/videos/publish.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/publish.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
