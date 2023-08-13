@@ -1,4 +1,4 @@
-# Album Cover Integration
+# 专辑封面整合
 
 Wallpaper Engine allows you to integrate Windows Media data such as album covers, song titles, current playtime and more into your wallpaper. This guide will primarily explain how to utilize album covers in your wallpapers. You can learn more about how to retrieve additional information in the following guide:
 

@@ -4,7 +4,7 @@ prev: ../tutorials.md
 
 # SceneScript基础知识
 
-对于几乎所有的Wallpaper Engine资源和效果，其每个属性都可以使用SceneScript进行控制。在本指南中，我们将展示SceneScript的一些基本功能，让你了解如何开始使用SceneScript。
+对于几乎所有的Wallpaper Engine组件和效果，其每个属性都可以使用SceneScript进行控制。在本指南中，我们将展示SceneScript的一些基本功能，让你了解如何开始使用SceneScript。
 
 [[toc]]
 
@@ -22,7 +22,7 @@ prev: ../tutorials.md
 
 ![SceneScript in the User Interface](/wallpaper-engine-docs/img/scenescript/scenescript_ui.png)
 
-当你在属性旁边看到齿轮图标时，这意味着你可以通过单击该图标并选择“绑定脚本”将**SceneScript代码绑定**到该属性。在我们的示例中，我们将为**文本**图层的**文本**属性执行此操作。
+当你在属性旁边看到齿轮图标时，这意味着你可以通过单击该图标并选择**绑定脚本**将**SceneScript代码绑定**到该属性。在我们的示例中，我们将为**文本**图层的**文本**属性执行此操作。
 
 ## SceneScript的update()函数
 
@@ -146,9 +146,9 @@ export function update(value) {
 
 让我们在前面的示例中添加一个更动态的移动对象的方式，而不是仅仅将其放置在场景中的随机位置。有多种方法可以解决这个问题，我们在这里展示一个例子。
 
-我们将首先从一个不太理想的方案开始，然后在下一步中修正为更好的方案。解决此问题的一种方案是从任意值开始，例如`500`，然后不断递增。Wallpaper Engine提供了一个全局对象`engine`，你可以在代码的任意位置访问该对象。它有一个`engine.runtime`对象，用于保存壁纸的当前运行时间。
+我们将首先从一个不太理想的方案开始，然后在下一步中修正为更好的方案。解决此问题的一种方案是从任意值开始，例如`500`，然后不断递增。Wallpaper Engine提供了一个全局对象`engine`，你可以在代码的任意位置访问该对象。它有一个`engine.runtime`属性，用于保存壁纸的当前运行时间。
 
-在我们的示例中，我们希望向上移动对象。我们给`value.y`设置一个起始高度，然后让它增加`engine.runtime`乘以100，这样我们的对象在运行时间的每一秒都会移动100像素：
+在我们的示例中，我们希望向上移动对象。我们给`value.y`设置一个起始值，然后让它增加`engine.runtime`乘以100，这样我们的对象在壁纸运行时间的每一秒都会移动100像素：
 
 ```js{8}
 'use strict';
@@ -231,7 +231,7 @@ export function update(value) {
 </video>
 
 ::: tip
-通常，在编辑器中调试SceneScript代码的行为就足够了。但在某些情况下，你可能希望在将壁纸应用于桌面时对其进行调试。在这种情况下，你可以在Wallpaper Engine设置的**常规**选项卡中将**日志级别**设置为**详细**。这样Wallpaper Engine将记录位于`wallpaper_engine`目录中的Wallpaper Engine日志文件中的所有`console.log()`调用，默认情况下你可以在此处找到该文件：
+通常，在编辑器中调试SceneScript代码的行为就足够了。但在某些情况下，你可能希望在将壁纸应用于桌面时对其进行调试。在这种情况下，你可以在Wallpaper Engine设置的**常规**选项卡中将**日志级别**设置为**完整记录**。这样Wallpaper Engine将记录位于`wallpaper_engine`目录中的Wallpaper Engine日志文件中的所有`console.log()`调用，默认情况下你可以在此处找到该文件：
 
 C:\Program Files (x86)\Steam\steamapps\common\wallpaper_engine\log.txt
 :::

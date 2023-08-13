@@ -1,7 +1,7 @@
-# Introduction to Effects
+# 效果简介
 
-Effects can be applied to existing assets, mainly images that you have imported. You can use effects on image layers, text layers, fullscreen layers and composition layers. You can combine multiple effects and even link layers through effects to blend them together. To add an effect, select a layer you have added to your project (for example, a main background image) and then click on the **Add** button in the *Effects* area on the right-hand side.
+效果可以应用于现有组件，通常情况下主要是你导入的图像。你可以在图像图层、文本图层、全屏图层和合成图层上使用效果。你还可以组合多种效果，甚至可以通过效果链接图层以将它们混合在一起。要添加效果，请选择已添加到项目中的图层（例如，主背景图像），然后单击右侧**效果**区域中的**添加**按钮，就会列出所有已安装的效果列表。
 
-When hovering or select an effect in a list, an eye icon and a red X icon will appear. The eye icon will allow you to temporarily toggle an effect off and on while the X permanently removes the effect from the current layer. Double-clicking on an effect opens its effect properties where you can further configure and fine-tune the effect to your liking.
+添加效果后，将鼠标悬停或选择该效果，会显示一个眼睛图标和一个红色 X 图标。点击眼睛图标将允许你暂时关闭和打开效果，而点击 X 将从当前图层中永久删除效果。双击效果将打开效果属性，你可以在其中根据自己的喜好进一步配置和微调。
 
 ![Effects can be found on the right-hand side](/wallpaper-engine-docs/img/effects/effects.png)

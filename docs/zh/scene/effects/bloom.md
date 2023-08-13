@@ -1,18 +1,18 @@
-# Bloom Effects
+# 高光效果
 
-The bloom effects add a glow around bright parts of the wallpaper. This is especially useful for images with a lot of contrast or dark images where you've added some bright particle effects like fire or lighting. Bloom can be enabled in the **Scene options** and unlike other effects, is applied to all layers where it can be further tweaked.
+高光效果可以给壁纸的明亮部分周围增添光芒。这对于高对比度图像或添加了一些明亮粒子效果（如火焰或照明）的黑暗图像特别有用。高光可以在**场景选项**中启用，与其他效果不同，它应用于可配置的所有图层。
 
-Bloom is only visible if the **post-processing** option is at least set to **enabled**. You can also choose to support **HDR bloom** on your wallpaper, which will only be visible to users who set **post-processing** to **ultra** in their settings and it requires notably more performance, so care should be taken that the wallpaper is otherwise [optimized well](/wallpaper-engine-docs/scene/performance/texture). Should you enable **HDR bloom**, make sure to also configure the standard bloom settings for users who do not wish to use HDR.
+仅当**后处理**选项至少设置为**启用**时，**高光**才可见。你还可以选择开启壁纸的**超后处理HDR**（后面简称**HDR高光**），这仅对在设置中将后处理设置为**超高**的用户可见，并且需要明显更高的性能，因此需要保证壁纸在其他方面做到更好的[性能优化](/wallpaper-engine-docs/scene/performance/texture)。如果启用HDR，请确保同时为不希望使用HDR的用户配置普通的高光设置。
 
 ::: tip
-If you are adding bloom just to make the source image you imported glow, but without really taking advantage of any animations or particles, then you should consider to add the glow into your image directly. Especially **HDR bloom** requires a lot of processing power so it should be used appropriately.
+如果你添加高光只是为了使导入的源图像发光，但没有真正利用动画或粒子，那么你应该考虑将发光直接添加到图像中。特别是HDR高光需要消耗大量的处理能力，因此应该在合适的情况下才使用。
 :::
 
-# Basic Bloom
+# 基础高光
 
-To enable basic bloom on your wallpaper, click on the scene settings and enable bloom there. You can now adjust the bloom **strength** and also the brightness **threshold** for bloom. A lower threshold means that bloom will be applied sooner and to darker areas of the image.
+想要在壁纸上添加基础高光效果，请在场景设置中勾选**高光**。然后你就可以调整高光**强度**和高光**阈值**了。低的阈值意味着高光应用于较暗的图像区域。
 
-The example image here has a high contrast and a lot of well defined light sources, so it works well with bloom. The animated details like the rainbow strips at the top of the walls are especially good candidates for the bloom effect. You want to make sure that the bloom effect is not applied to the entire image, since that generally does not look good, try to configure the threshold so it only affects bright parts of the image.
+这里的示例图像有高对比度，且很多明亮的部分，所以它很适和应用高光效果。一些动画细节如墙壁上的霓虹条纹，也是很好的高光应用对象。你需要确保高光效果不是应用于整个图像，因为通常这样会看起来不太好，尝试配置阈值，使其只应用于较亮的图像区域。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/effects_bloom_basic.mp4')" type="video/mp4">
@@ -20,33 +20,33 @@ The example image here has a high contrast and a lot of well defined light sourc
 </video>
 
 
-# HDR Bloom
+# HDR高光
 
-You can enable the high-quality **HDR bloom** effect additionally to the normal bloom effect by checking the **Ultra post-processing (HDR)** checkbox below the bloom option. HDR bloom requires a lot more performance and should only be used if it has a great visual impact on your wallpaper. Keep in mind you have to set the option **Post-processing** to **Ultra** in your performance settings to see HDR on your final wallpaper, the editor ignores this option and always allows you to preview the bloom HDR look.
+除了基础高光，你还可以在**高光**选项下启用**超后处理HDR**。HDR高光需要更高的性能，并且只有在对壁纸具有很大视觉影响时才使用。请记住，你必须在性能设置中将选项**后处理**设置为**超高**，才能在最终壁纸上看到HDR，而编辑器则会忽略这个选项，始终允许你预览HDR高光效果。
 
 ::: tip
-If you enable HDR bloom, all users who only have normal bloom enabled will only see normal bloom on your wallpaper. Make sure to test your wallpaper with both bloom settings in the editor!
+如果你启用了HDR高光，但所有用户都只看到了普通的高光效果，请确保你在编辑器中同时测试了两种高光设置。
 :::
 
-With HDR enabled, the wallpaper can become brighter than what your monitor is physically capable of displaying. HDR bloom can pick this **overbrightening** up and create an *emissive* glow effect only around parts of the image that are brighter than possible. You can control this brightness on every image, image effect or particle effect separately and control exactly which parts of the image will be glowing.
+启用超后处理HDR后，壁纸会变得比你的显示器物理上能够显示的更亮。HDR高光可以提取这些图像**溢出的亮度**，并在它们周围产生一种*发光*的效果。你可以分别控制每个图像、图像效果或粒子效果的亮度，并准确控制图像的哪些部分将发光。
 
-A few additional options will appear with HDR bloom enabled:
+启用超后处理HDR后，将增加以下额外选项：
 
-* **HDR strength**: This is the same as the standard bloom strength and controls the amount of glow, but this one allows you to control the strength when HDR is enabled.
-* **HDR scatter**: This option controls how much the glow effect is spread over the image from a glowing source or if the glow stays only close to the source.
-* **HDR threshold**: This is the same as the standard bloom threshold and allows you to control how bright the image must be to produce bloom. The key difference is that you usually keep this value close to 1, meaning only parts of the image that are *overbright* will actually produce bloom.
-* **HDR threshold smoothing**: This option controls how smooth the transition between brightness below and above the threshold will be and can be useful to reduce flickering. If you set this to 0, then the transition will be immediate, if you set this to 1, then even dark part of the image will glow very slightly and this glow becomes stronger the brighter the image becomes.
+* **HDR强度**：与基础高光的强度相同，用于控制发光量，但此功能允许你在启用HDR时控制其强度。
+* **HDR散射**：此选项控制发光效果在发光源图像上的分布程度，或者发光部分是否靠近光源。
+* **HDR阈值**：与基础高光的阈值相同，允许你控制图像必须有多亮才能产生高光。主要区别在于，你通常营地将此值保持在接近1的位置，这意味着只有图像中**过亮**的部分才会真正产生泛光。
+* **HDR阈值平滑**: 此选项控制低于阈值和高于阈值的亮度之间的平滑过渡程度，可用于减少闪烁。如果将其设置为0，则过渡将是立即的，如果将其设置为1，则即使是图像的黑暗部分也会发出非常轻微的光，并且图像越亮，这种发光就越强。
 
-Every layer will have a new option called **HDR brightness** appear in their properties when you have HDR bloom enabled. This brightness allows you to set the amount of over-brightening on a layer and it only affects the wallpaper when HDR is enabled for the user as well.
+每个图层都会在你启用**HDR高光**时出现一个新的选项**HDR强度**。这个强度允许你控制图层的发光量，并且仅对用户启用了HDR的用户可见。
 
-In this example we are enabling **HDR Bloom** and switch back to the layers menu. Here we increase the **HDR brightness** option for the top two rainbow layers to add a nice, high quality glow effect to them.
+在这个例子中，我们启用了**HDR高光**，然后我们切换到图层菜单。我们给前两个霓虹图层添加**HDR强度**选项，以为其添加一个漂亮的高质量发光效果。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/effects_hdr_bloom.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Other examples of HDR bloom are glowing text or glowing particles, both also have an **HDR brightness** option that allows you to adjust the individual glow per object. For small particles or objects, you can even increase this value far beyond the provided limit and push the glow further.
+HDR高光的另一个例子是发光文本或发光粒子，两者都具有**HDR亮度**选项，允许你调整每个对象的单个发光。对于小粒子或物体，你甚至可以通过提高此值远远超出提供的限制，并且将发光推向更远。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/effects_hdr_bloom_examples.mp4')" type="video/mp4">

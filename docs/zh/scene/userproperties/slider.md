@@ -1,16 +1,16 @@
-# Slider User Property
+# 滑块用户属性
 
-Many wallpaper components can be tweaked by changing individual settings in the editor. For example, you might have added rain to your wallpaper and increased the size or amount of rain. Some users might prefer slightly different values here, and in that case you can easily create and assign a **Slider** user property to give them the ability to do so. This guide we will showcase this exact scenario but you can apply this every time you see a configurable numeric value in the editor in the settings section on the right-hand side.
+许多壁纸组件可以通过更改编辑器中的单个设置来调整。例如，你可能给壁纸添加了下雨效果，并设置了雨的大小或数量。但某些用户可能更喜欢略有不同的值，在这种情况下，你可以轻松创建和分配**滑块**用户属性，以使他们能够自定义该属性。本指南我们将展示此方案，每当在编辑器右侧设置部分看到可配置的**数值**时，都可以应用此属性。
 
-We start by adding a rain asset to our wallpaper. After selecting it, we navigate to the **Count** option on the right-hand side. Click on the cogwheel icon and select **Bind User Property**, Wallpaper Engine will automatically suggest a slider property because **Count** is a number.
+首先，我们给壁纸添加雨组件。选中组件后，我们在右侧的选项中找到**计数**。单击齿轮图标并选择绑定用户属性，Wallpaper Engine将自动建议使用滑块属性，因为**计数**属性是一个数字。
 
-You will be asked to configure a default value, a minimum value, a maximum value and if the slider uses fractions or just whole numbers. In our example, we will set the default value to 0 (which means the rain is off by default), the minimum value will also be 0 and the maximum value will be 2. We also turn off fractional values as this level of precision is unnecessary in this case. This means that the slider can be either 0, 1 or 2.
+系统将要求你配置默认值、最小值、最大值以及是否允许使用分数还是仅使用整数。在我们的示例中，我们将默认值设置为0（这意味着默认情况下雨是关闭的），最小值也为0，最大值为2。我们还关闭**分数**，因为本例中我们用不着分数级别的精度。这意味着滑块的值可以是0、1或2。
 
-Saving the project and using the ou will see that changing the new rain property from 0 to 1 will enable the rain and further increasing it to 2 will increase the rain intensity.
+保存项目并应用壁纸，你将看到将雨的属性从0更改为1是启用下雨效果，进一步将其增加到2将增加雨的强度。
 
-## Checking the Wallpaper Browser
+## 在壁纸浏览器中查看
 
-After saving and applying your wallpaper, select it in the **Installed** tab of the Wallpaper Engine browse window. You will now find your slider property on the right-hand side and can adjust your slider value dynamically. You can see the full process in the following video:
+保存并应用墙纸后，在Wallpaper Engine主界面的**已安装**选项卡中选中该壁纸。你将在右侧找到对应的滑块属性，并且可以动态调整滑块的值。你可以在以下视频中看到完整的过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/slider_property.mp4')" type="video/mp4">

@@ -1,6 +1,6 @@
-# Audio Visualization in Wallpaper Engine
+# Wallpaper Engine的音频可视化
 
-The audio visualization guides are still in progress and will be released soon. For now we only offer the following two articles, though they only make up a small part of Wallpaper Engine's audio visualization capabilities:
+音频可视化指南的编写仍在进行当中，将于未来发布。目前我们仅提供以下两篇文章，但它们仅仅是Wallpaper Engine的音频可视化能力的一小部分:
 
-* [Album Cover Integration](/wallpaper-engine-docs/scene/audiovisualizer/albumcover)
+* [专辑封面整合](/wallpaper-engine-docs/scene/audiovisualizer/albumcover)
 * [Media Playback Data](/wallpaper-engine-docs/scene/audiovisualizer/mediainformation)

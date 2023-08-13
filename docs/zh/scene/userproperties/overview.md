@@ -1,20 +1,20 @@
-# User Properties Introduction
+# 用户属性介绍
 
-Wallpaper Engine allows you to make parts of your wallpaper configurable by your users by adding so called *user properties* to your project. These user properties appear on the right-hand side when a user selects your wallpaper in the Wallpaper Engine **Installed** tab. In this guide, we will explain how to create and make use of properties and what each property type represents. Advanced users can also integrate user properties into their **SceneScript** code, this is documented in the [SceneScript section](/wallpaper-engine-docs/scene/scenescript/introduction) of the documentation.
+Wallpaper Engine允许你通过将**用户属性**添加到项目中，使壁纸的某些部分可由用户自行配置。当用户在**已安装**选项卡中选择壁纸时，这些用户属性将显示在右侧。在本指南中，我们将解释如何创建和使用属性以及每种属性类型所代表的内容。高级用户还可以将用户属性集成到 SceneScript 代码中，这将在文档的 [SceneScript部分](/wallpaper-engine-docs/scene/scenescript/introduction)中进行了说明。
 
-## User Properties
+## 用户属性
 
-The following user property types are available in Wallpaper Engine. Click on any of them to view a detailed description on how they work:
+Wallpaper Engine支持以下几种用户属性类型。单击其中任何一个以查看有关其工作原理的详细说明：
 
-* [**Color**](/wallpaper-engine-docs/scene/userproperties/color) (`color`): A color picker
-* [**Slider**](/wallpaper-engine-docs/scene/userproperties/slider) (`slider`): A slider that allows users to select a number within a specified range
-* [**Checkbox**](/wallpaper-engine-docs/scene/userproperties/checkbox) (`bool`): A checkbox that is either on or off
-* [**Combo**](/wallpaper-engine-docs/scene/userproperties/combo) (`combo`): A dropdown selector where each element has a text and a hidden value
-* [**Text**](/wallpaper-engine-docs/scene/userproperties/text) (`textinput`): A text input field
-* [**Texture**](/wallpaper-engine-docs/scene/userproperties/texture) (`texture`): Allows users to replace a texture with a custom image or video
+* [**颜色**](/wallpaper-engine-docs/scene/userproperties/color) (`color`)：颜色选择器
+* [**滑块**](/wallpaper-engine-docs/scene/userproperties/slider) (`slider`)：滑块可以让用户在指定范围内选择一个数字。
+* [**复选框**](/wallpaper-engine-docs/scene/userproperties/checkbox) (`bool`)：打开或关闭的复选框
+* [**组合框**](/wallpaper-engine-docs/scene/userproperties/combo) (`combo`)：一个下拉选择器，其中每个元素都有一个文本和一个隐藏值
+* [**文本框**](/wallpaper-engine-docs/scene/userproperties/text) (`textinput`)：输入文本字段。
+* [**纹理**](/wallpaper-engine-docs/scene/userproperties/texture) (`texture`)：允许用户将纹理替换为自定的图片或视频。
 
-Properties will be shown on the right-hand side when a wallpaper is selected:
+选中壁纸后，用户属性将显示在右侧：
 
 ![User Properties](/wallpaper-engine-docs/img/tutorials/scene_properties.jpg)
 
-You can always view, edit and even create new properties by opening your project in the Wallpaper Engine editor, navigating to the **Edit** menu at the top and selecting **Change Project settings**.
+你可以随时查看、编辑、创建新属性，方式是：在Wallpaper Engine编辑器中，点击顶部的**编辑**菜单并选择**更改项目设置**。
