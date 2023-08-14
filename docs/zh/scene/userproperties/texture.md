@@ -1,49 +1,49 @@
-# Texture User Property
+# 纹理用户属性
 
-If you would like to allow users to replace a texture with an **image or video** of their own choice, you can use the texture user property to do so. The texture user property can be applied to:
+如果要允许用户将纹理替换为自己选择的图像或视频，则可以使用**纹理**用户属性来执行此操作。纹理用户属性可应用于：
 
-* Image layers
-* Effect masks
-* Particle system textures
+* 图像图层
+* 效果蒙版
+* 粒子系统纹理
 
-In this guide, we will showcase the basic example using an image layer, which is the most common use-case for this feature.
+在本指南中，我们将展示使用图像图层的基本示例，这是此功能最常见的用例。
 
-Keep in mind that any effects and their masks will not be updated when a user replaces a texture, so this feature is best-suited for simple image layers without complex and specific effect masks.
+记住，当用户替换纹理时，任何效果及其蒙版都不会发生变化，因此此功能最适合没有复杂和特定效果蒙版的简单图像图层。
 
-## Making an Image Layer Configurable
+## 让图像图层可配置
 
-To get started, select an image layer of your choice in the editor, then check the right-hand side and navigate to the **Advanced Texture Settings** button towards the bottom.
+首先，在编辑器中选择你需要配置图像图层，然后检查右侧并找到底部的**高级纹理设置**按钮。
 
-You will see the **Albedo** texture of your image layer, which is the base texture of the layer. Click on the cogwheel icon next to it and select **Bind User Property**. You will now be presented with the user property selection screen. You can now create a new **Texture** type user property and link it to the texture of your image layer.
+你将看到图像图层的**反照率**纹理，这是图层的基本纹理。单击它旁边的齿轮图标，然后选择**绑定用户属性**，你将看到用户属性选择界面，你可以创建新的**纹理**类型的用户属性，并将其关联到图像图层的纹理。
 
-When viewing your wallpaper in the **Installed** tab of Wallpaper Engine now, you will find your new texture property on the right-hand side. Users can now import all compatible image and video formats. If the user does not use this property, the image that you initially imported into the editor will be used instead.
+在Wallpaper Engine的**已安装**选项卡中查看壁纸时，你会在右侧找到新的纹理属性。用户可以导入所有兼容的图像和视频格式。如果用户不使用此属性，则将使用最初导入编辑器的图像。
 
-You can see this entire process in the following video:
+你可以在以下视频中看到整个过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/property_texture.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Performance Optimization
+### 性能优化
 
-If you want to create your wallpaper with a large default background color that can be replaced with a custom image, read this section.
+如果你要创建一个可以替换的自定义背景颜色的壁纸，请阅读此部分。
 
-It is important that you do not import a large single-color image and then apply the texture user property to it - this will cause a lot of texture memory to be used even if your users never use this feature.
+最重要的是，不要导入整张单色图像，然后对其应用**纹理**属性——即使用户从未使用此功能，这也会导致消耗大量的内存。
 
-We recommend that you create a small image in the aspect ratio of your wallpaper. For example, if you are creating a 4K UHD (3840x2160) or Full HD (1920x1080) wallpaper, create a small placeholder image first. This image would be in your desired default color, for example all black or all white. We recommend creating a 244x144px image for these resolutions.
+我们建议你按照壁纸的纵横比例创建一个小图像。例如，如果要创建 4K UHD （3840x2160） 或全高清 （1920x1080） 壁纸，请先创建一个小占位符图像。此图像将采用所需的默认颜色，例如全黑或全白。我们建议为这些分辨率创建 244x144 像素的纹理图像。
 
-Then, import it into your wallpaper and increase the scale accordingly so that your image covers the entire wallpaper. In the case of 244x144px, you need to set the scale to 7.5 in the editor when working with a Full HD wallpaper and 15.0 if you are working with a 4K wallpaper. This will ensure your image covers the entire wallpaper and that it uses as little memory as necessary for this. Users will then be able to import their own images on top of that.
+然后，将其导入到壁纸中并相应地增加**比例**，以便图像覆盖整个壁纸。对于 244x144 像素的纹理图像，使用全高清壁纸时，你需要在编辑器中将**比例**设置为 7.5，如果使用 15K 壁纸，则需要将**比例**设置为 0.4。这样你的图像就会覆盖整个壁纸，并且它将尽可能小的消耗内存。然后，用户将能够在此基础上导入自己的图像。
 
-#### Summary
+#### 总结
 
-**Do not:**
+**不要：**
 
-* Start your wallpaper with a large single-colored image and then apply a texture user property to it
+* 使用大的单色图像，然后将其应用于**纹理**用户属性。
 
-**Do this:**
+**而应该这样做：**
 
-* Create a wallpaper using the *Scene template* in your desired resolution (for example 1920x1080)
-* Create a small image that is the same aspect ratio as your project resolution (for example, take 1920x1080 and divide it by 7.5 to get to 244x144)
-* Import the image and increase the scale until it covers your entire wallpaper
-* Now create a texture user property on your small image. User images will be correctly scaled automatically.
+* 使用**场景模板**以所需的分辨率（例如 1920x1080）创建壁纸。
+* 创建一个与项目分辨率宽高比相同的小图像（例如，取 1920x1080 并将其除以 7.5 得到 244x144）。
+* 导入图像并增加比例，直到它覆盖整个壁纸。
+* 在小图像上创建一个纹理用户属性，这样用户使用的图像将自动按正确的比例缩放。

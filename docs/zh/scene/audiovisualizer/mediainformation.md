@@ -1,45 +1,49 @@
-# Working with Media Playback Data
+# 播放媒体数据
 
-This guide builds on top of the [Album Cover Integration](/wallpaper-engine-docs/scene/audiovisualizer/albumcover) feature. While you do not need to incorporate album covers into your wallpaper for any of the topics discussed here, we still recommend you read the album cover guide first before you continue here. This guide builds on top of the album cover guide but you can use all features completely independently from each other.
+本指南建立在[集成专辑封面](/wallpaper-engine-docs/scene/audiovisualizer/albumcover)功能之上。虽然在本节中讨论的任何内容中，专辑封面集成不是必需的，但我们仍然建议您先阅读集成专辑封面的指南，然后再继续阅读本指南。虽然本指南建立在集成专辑封面指南之上，但您可以完全独立地使用所有功能。
 
-## Displaying Song Title, Album Title & Artist Name
+## 显示歌曲标题，专辑标题和艺术家姓名
 
-In this section, we will discuss how to add certain song information to your wallpaper. Please note that some data may not be available if it is not transmitted by the respective media player or if the audio file does not include certain pieces of information. For example, there is no guarantee that a song file includes an album title.
+在本节中，我们将讨论如何将歌曲信息添加到壁纸中。请注意，如果某些数据不是由相应的媒体播放器传输的，或者音频文件不包含某些信息，则无法使用。例如不能保证歌曲文件一定包含专辑标题。
 
-### Creating a Text Element
+### 创建文本元素
 
-To get started, we need to create text layers for each element that we want to show. Click on **Add asset** on the left-hand side and add a new **Text layer** to your wallpaper.
+首先，我们需要为要显示的每个元素创建**文本**图层。单击左侧的**添加组件**，然后向墙纸添加新的**文本**图层。
 
-One thing that you need to keep in mind with text layers with dynamic content is that they could potentially become very long. This is why it is important that you properly configure the text layer for media information:
+对于具有动态内容的文本图层，您需要记住的一件事是，它们可能会很长。这就是为什么正确配置媒体信息的文本层很重要：
 
-1. Adjust the **Point size** value to change the size of the text layer. Do not change the **Scale** of the text layer, it will reduce the quality of the text unnecessarily.
-2. Set the **Horizontal alignment** to *left* and adjust the position of the text to account for this change.
-3. Enable the **Max width** option and adjust the maximum width using the purple dotted line that appears in the editor. This is especially important when working with dynamic text such as song titles, as they can be very long.
-4. Enable the **Max rows** option and set the limit to *1* (or another value of choice).
-5. Lastly, you might want to enable the **Overflow ellipsis** option. This will cut off text that is too long and replace the end with three dots "..." to make it clear that the text was cut off.
+1. 调整**点大小**以更改文本图层的大小。不要通过更改文本图层**比例**的方式调整大小，这样会降低文本显示的清晰度。
+2. 将**水平对齐方式**设置为**左对齐**，并相应调整文本的位置。
+3. 勾选**限制宽度**选项并使用编辑器中显示的紫色虚线调整最大宽度。这在处理动态文本（如歌曲标题）时尤其重要，因为它们可能很长。
+4. 勾选**限制行**选项并将限制设置为**1**（或其他值）。
+5. 最后，您可能希望勾选**溢出省略号**选项。这将截断太长的文本，并将结尾替换为三个点“...”表示文本被切断。
 
-You can see the setup and the end result of this in the following video:
+您可以在以下视频中看到设置及其最终结果：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/media_text_settings.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Integrating Album Data via SceneScript
-
-Create one text element for each type of music data you want to add. The easiest way to do this is to create one text layer, configure it as explained in the previous section. Set a font and font size of your choice. Now use use the **Duplicate** functionality on the text layer (right-click on the text layer, then select *Duplicate*). Repeat this until you have one layer for each data point. In our case, we will create the three most common (and the most reliable) layers:
+### 通过SceneScript集成专辑数据
 
 * Song Title
 * Album Title
 * Artist Name
 
+为要添加的每种类型的音乐数据创建一个文本元素。的最简单方法是创建一个**文本**图层，按照上一节中的说明对其进行配置，设置字体和字体大小。可以使用文本图层上的**复制**功能（右键单击文本图层，然后选择**复制**）。重复此操作，直到每个数据都有一个图层。在我们的例子中，我们将创建三个最常见（也是最可靠）的层：
+
+* 歌曲名称
+* 专辑名称
+* 艺术家姓名
+
 ![Media Text Layers Example](/wallpaper-engine-docs/img/tutorials/media_text_layers.png)
 
-Once you have create a layer for each of them, you can utilize the [MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent) in SceneScript to retrieve the data that you need. To do this, select your first layer (for example the song layer), then click on the cogwheel icon next to the **Text** property of the layer and select **Bind SceneScript**. You will be presented with a sample code snippet which you can replace with our sample code below.
+创建好每个图层后，可以利用 SceneScript 中的[MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent)来检索所需的数据。为此，请选择第一个图层（例如歌曲图层），然后单击图层的**文本**属性旁边的齿轮图标并选择**绑定脚本**。您将看到一个示例代码片段，您可以用下面的示例代码替换它。
 
-Copy the appropriate SceneScript code to your layer and repeat the process for all of your text layers:
+将相应的 SceneScript 代码复制到图层，然后对所有文本图层重复此过程：
 
-::: details Click to show song title code
+::: 点击显示歌曲标题代码
 
 ```js
 'use strict';
@@ -63,7 +67,7 @@ export function mediaPropertiesChanged(event) {
 ```
 :::
 
-::: details Click to show album title code
+::: 单击以显示专辑名称代码
 ```js
 'use strict';
 
@@ -86,7 +90,7 @@ export function mediaPropertiesChanged(event) {
 ```
 :::
 
-::: details Click to show artist name code
+::: 点击显示艺术家姓名代码
 ```js
 'use strict';
 
@@ -109,18 +113,18 @@ export function mediaPropertiesChanged(event) {
 ```
 :::
 
-Once you have copied the code to each respective text layer and use the **Run Preview** functionality at the top of the editor, start playing music with a compatible media player. You should now see all data points appear, as long as your music player actually sends the data to Windows.
+将代码复制到每个相应的文本层并使用编辑器顶部的**运行预览**后，开始使用兼容的媒体播放器播放音乐。您现在应该看到所有对应的数据都将出现，前提是您的媒体播放器将实际数据发送给了Windows。
 
-## Utilizing Album Cover Colors via SceneScript
+## 通过SceneScript获取并使用专辑封面颜色
 
-You can also access album cover colors through the [mediaThumbnailChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) event, specifically the [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent) class that is provided as a function parameter.
+您还可以通过[mediaThumbnailChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media)事件访问专辑封面颜色，特别是以函数参数形式提供的[MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent)类的实例。
 
-**In this example, we will showcase how to change the background color of the entire wallpaper to match the album cover.**
+**在此示例中，我们将展示如何更改整个壁纸的背景颜色以匹配专辑封面。**
 
-::: danger Please note
-In this example, we will be changing the **background color**. This only makes sense if you do not have a background image across your entire wallpaper.
+::: danger 请注意
+在此示例中，我们将更改背景颜色。只有当您的整个壁纸没有背景图像时，这才有意义。
 
-**The code showcased here works on any color property in the editor. You may also apply it to any text layer color or any other color property in the editor.**
+**此处显示的代码适用于编辑器中的任何颜色属性。您还可以将其应用于编辑器中任意文本图层颜色或任意其他颜色属性。**
 :::
 
 <video width="100%" controls loop autoplay>
@@ -128,7 +132,7 @@ In this example, we will be changing the **background color**. This only makes s
   Your browser does not support the video tag.
 </video>
 
-To get started, navigate to your color property of choice on any element in the editor. We will be changing the overall background color of our wallpaper, so we select **Scene options** in the upper left corner of the editor. We then click on the cogwheel icon next to the **Background color** property and select **Bind SceneScript**. Now we replace the sample script with the following code:
+要开始使用，请在编辑器中任意元素上选择颜色属性。这里我们将更改壁纸整体的背景颜色，我们需要选择编辑器左上角的场景选项。然后，我们单击**背景颜色**属性旁边的齿轮图标，选择**绑定脚本**，将示例脚本替换为以下代码：
 
 ```js
 'use strict';
@@ -151,11 +155,12 @@ export function mediaThumbnailChanged(event) {
 	color = event.primaryColor;
 }
 ```
-The code assigns `event.primaryColor` to the color of the property. The `primaryColor` value is one of many color values that Wallpaper Engine provides in the [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent), see the **MediaThumbnailEvent** page for a full list of color values you can use. It's important to note that the `textColor` value will always contain a value that makes text easy to read on top of the `primaryColor` value. If you add text on top of a dynamically colored background such as here, you can use the `textColor` property for the text to ensure that it will always be easy to read.
 
-### Adding a simple color transition
+代码将分配给属性`event.primaryColor`颜色。`primaryColor`是Wallpaper Engine擎在[MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent)中提供的众多颜色之一，有关可以使用的完整颜色列表，请参阅**MediaThumbnailEvent**页面。请务必注意，`textColor`将有一个始终让文本易于阅读的值`primaryColor`。如果在动态背景上添加文本，则可以使用文本的`textColor`属性以确保文本始终易于阅读。
 
-You can also extend the previous code sample with a simple color transition animation. Use the following code snippet where the new and old color are continuously transitioned to one another during the `update()` function:
+### 添加简单的颜色过渡
+
+你还可以使用简单的颜色过渡动画扩展前面的代码示例。使用以下代码片段，其中新旧颜色在`update()`函数执行期间不断相互转换：
 
 ```js
 'use strict';
@@ -190,9 +195,9 @@ export function mediaThumbnailChanged(event) {
 }
 ```
 
-## Hiding Media Playback Elements When Playback is Stopped
+## 停止播放时隐藏媒体播放元素
 
-If a user is not actively playing any audio, it might make sense to hide the album cover and other media-related elements. To achieve this, select the element you want to hide when media playback is stopped and click on the cogwheel icon in the upper right corner next to the *eye symbol*. Then select **Bind SceneScript** and use the following snippet:
+如果用户未主动播放任何音频，则需要隐藏专辑封面和其他与媒体相关的元素。为此，请选择要在媒体播放停止时隐藏的元素，然后单击右上角**眼睛符号**旁边的齿轮图标。然后选择**绑定脚本**并使用以下代码片段：
 
 ```js
 'use strict';
@@ -205,10 +210,10 @@ export function mediaPlaybackChanged(event) {
 }
 ```
 
-This snippet will ensure that when a user stops media playback or has never started any media playback, the element will be hidden. Note that Wallpaper Engine differentiates between playback being stopped and paused: If a user just temporarily pauses media playback, the element will remain visible.
+此代码段将确保当用户停止媒体播放或从未开始任何媒体播放时，该元素将被隐藏。请注意，Wallpaper Engine区分了停止播放和暂停播放：如果用户只是暂停媒体播放，该元素将保持可见。
 
-## More Media Data
+## 更多媒体数据
 
-To get a full overview of what data you can retrieve via SceneScript, be sure to check out the reference page on all relevant SceneScript events:
+要全面了解更多媒体数据，可以查看相关的SceneScript事件参考页面:
 
-* [SceneScript Media Events](/wallpaper-engine-docs/scene/scenescript/reference/event/media)
+* [SceneScript媒体事件](/wallpaper-engine-docs/scene/scenescript/reference/event/media)

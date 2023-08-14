@@ -165,7 +165,7 @@ sidebarDepth: 2
 			<div class="effect-box-image" style="background-image: url('/wallpaper-engine-docs/img/effects/Cursor_Ripple.gif')"></div>
 			<div>
 				<h4>光标波纹</h4>
-				<p>当鼠标光标移动上时产生涟漪效果。</p>
+				<p>当鼠标光标移动时产生涟漪效果。</p>
 			</div>
 		</a>
 	</div>

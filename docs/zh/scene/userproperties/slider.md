@@ -10,7 +10,7 @@
 
 ## 在壁纸浏览器中查看
 
-保存并应用墙纸后，在Wallpaper Engine主界面的**已安装**选项卡中选中该壁纸。你将在右侧找到对应的滑块属性，并且可以动态调整滑块的值。你可以在以下视频中看到完整的过程：
+保存并应用壁纸后，在Wallpaper Engine主界面的**已安装**选项卡中选中该壁纸。你将在右侧找到对应的滑块属性，并且可以动态调整滑块的值。你可以在以下视频中看到完整的过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/slider_property.mp4')" type="video/mp4">

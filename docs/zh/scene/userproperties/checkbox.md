@@ -1,58 +1,58 @@
-# Checkbox User Property
+# 复选框用户属性
 
-A checkbox property allows users to select either **on** or **off** for a specific feature. You can assign it to most options in the editor that can be either in an **on** or **off** state.
+复选框属性允许用户为特定功能选择**打开**或**关闭**。你可以将其分配给编辑器中可以处于打开或关闭状态的大多数选项。
 
-In this tutorial, we will show two common use-cases for this. First, we want to hide an object in the wallpaper when a user property is turned off. Then, we show how individual settings of assets and effects can be turned on or off by the user.
+在本教程中，我们将展示两个常见的例子。首先，我们希望在关闭用户属性时隐藏壁纸中的对象。然后，我们将展示如何让用户打开或关闭组件、效果的各个设置。
 
-In our example, we will use a clock that can be turned off if a user wishes to do so and additionally, let users choose between a 24 hour clock and a 12 hour clock.
+在我们的示例中，我们将使用一个时钟，如果用户有需要，可以关闭该时钟，此外，让用户可以在24小时制和12小时制之间进行选择。
 
-## Hiding an Element
+## 隐藏元素
 
-Select or create an editor component of your choice. We have added a clock to our wallpaper and we would like users to be able to turn it off if they prefer having no clock in their wallpaper.
+选择或创建你想使用的编辑器组件，我们添加一个时钟到壁纸中。我们希望如果用户更喜欢壁纸中没有时钟，他们可以选择将其关闭。
 
-Each element has a **visibility property** in the upper right corner (represented by the **eye icon**). You can assign an option to this element by clicking on the cogwheel icon next to the visibility icon and selecting **Bind User Property**. This will open the user property menu and prompt you to create a compatible user property - in this case a checkbox property. Create a new checkbox property by giving it a name and a default value and then confirm your selection. We simply name our user property **Clock** so that it's easy to understand what this property does.
+每个元素在右上角都有一个可见性属性（用眼睛图标表示）。你可以通过单击旁边的齿轮图标并选择**绑定用户属性**来为此元素分配选项。这将打开用户属性菜单，并提示你创建兼容的用户属性——在本例中是复选框属性。通过为其指定名称和默认值来创建新的复选框属性，然后确认你的选择。我们将用户属性命名为Clock，以便于理解此属性的作用。
 
-You can also edit the optional **key** value which is needed for more advanced features, in most cases it's fine to leave the auto-generated default value there, in our case, the **key** of the property is `clock` (with a lowercase **c**).
+你还可以设置和编辑用于更高级功能所需的可选项**关键字**，在大多数情况下，可以保留自动生成的默认值，在我们的例子中，属性的**关键字**是clock（小写**c**）。
 
-After confirming the user property, you can see the the cogwheel icon next to the visibility option is now highlighted. Click on **File** in the upper left corner and then select **Apply Wallpaper** to apply the wallpaper to your desktop. Using this option, your wallpaper is also selected in the main user interface of Wallpaper Engine. Check the section on the right-hand side, you will now find the **Clock** user property there, allowing you to hide and show the clock to your liking.
+保存用户属性后，你可以看到可见性选项旁边的齿轮图标现在会高亮显示。单击左上角菜单**文件**，然后选择**应用壁纸**将壁纸应用于桌面。使用此选项，你可以在Wallpaper Engine的主用户界面中选择壁纸，然后查看右侧部分，你将在那里找到用户属性**Clock**，允许用户根据自己的喜好隐藏和显示时钟。
 
-See this whole process in the following video:
+在以下视频中查看整个过程：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/property_checkbox.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Turning an Option On or Off
+## 打开或关闭选项
 
-Many elements and effects you can use in the editor have options that can be turned on or off. If you like, you can grant users the freedom to do so on their own for selected options. In our case, we will continue with our clock and add an option to toggle between a 24H clock and a 12H clock. 
+你在编辑器中使用的许多元素和效果都具有可以打开或关闭的选项。如果你需要，你可以授予用户自行对所有选项进行控制。在我们的这个例子中，我们继续处理我们的时钟，并添加一个选项在 24H制 时钟和 12H制 时钟之间切换。
 
-We select our **Clock** once again and locate the **Use 24h format** option. Just like before, we click on **Bind User Property**. Instead of using the already existing user property, we create another user property by clicking on **Add Property**. It's important to make sure that it's a **Checkbox** just like before. To keep it simple and easy to understand for users, we name our property **24H Clock** and confirm our selection and make sure the property has now been linked to the **Use 24h format** option.
+我们再次选择**Clock**并找到**使用24小时格式**选项。和之前一样，我们单击**绑定用户属性**。我们不使用已经存在的用户属性，而是通过单击**添加属性**来创建另一个用户属性。重要的是要确保它是一个**复选框**，为了让用户容易理解，我们将我们的属性简单命名为**24H Clock**，并确保该属性关联到**使用24小时格式**选项。
 
-We now click on **File** and **Apply Wallpaper** again, the new user property is now visible in the Wallpaper Engine user interface and clicking it will switch between the 24H and 12H clock.
+我们现在再次单击左上角菜单的**文件**并选择**应用壁纸**，将会在Wallpaper Engine用户界面中看到新的用户属性，单击它将在 24H 和 12H 时钟之间切换。
 
-See this whole process in the following video:
+在以下视频中查看整个过程：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/property_checkbox_secondary.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Conditionally Hiding Options
+## 有条件的隐藏选项
 
-In our previous example, the **24H Clock** option does not make sense when the clock itself is turned off as it has no visible effect on the wallpaper. This can be confusing for users of your wallpaper in some cases. This is why we recommend hiding these types of sub-options by utilizing the **Display Condition** in the settings of your user property.
+在我们前面的示例中，当时钟本身关闭时，**24H Clock**选项是没有意义的，因为它对壁纸效果不会有任何影响。这可能会让壁纸的某些用户感到困惑。因此，我们建议利用用户属性设置中的**条件**来隐藏这些类型的子选项。
 
-First, you need to find the **Key** that was assigned to your primary user property. In the editor, go to **Edit** and then **Change Project Settings** to view all existing user properties. Then click on the edit icon next to your primary user property to view its key. In our case, the key for our property is `clock` (note, the label of the property is **Clock** with an uppercase **C**, but the auto-generated key is `clock` with a lowercase **c**).
+首先，你需要找到主用户属性(**Clock**)的**关键字**。在编辑器中，单击**编辑**，然后选择**更改项目设置**以查看所有的用户属性。然后单击主用户属性旁边的编辑图标以查看其**关键字**。在我们的例子中，**Clock**属性的关键字是**clock**（注意，属性的标签是带有大写 C 的 Clock，但自动生成的关键字是带有小写 c 的 clock）。
 
-We then go back to the user property list and select our secondary user property, in our case it's the **24H Clock** property. In the **Display Condition** field, we now type the following:
+然后，我们返回到用户属性列表编辑子用户属性，在本例中为**24H Clock**属性。在**条件**字段的输入框中，我们现在键入以下内容：
 
 ```js
 clock.value == true
 ```
 
-This means that the **24H Clock** property will only be visible when the value of the **Clock** property is `true` (in other words: it's turned **on**). You could achieve the opposite by writing `clock.value == false` instead.
+这意味着 **24H Clock** 属性仅在 **Clock** 属性的值为true（也就是打开状态）时才可见。你可以通过写作`clock.value == false`来实现相反的效果。
 
-We now click on **File** and **Apply Wallpaper** once again. When turning off the **Clock** option, you can now see that this will also hide the **24H** option from the user property list:
+我们现在再次单击**文件**并**应用壁纸**。当你闭**Clock**选项时，可以看到这也将从用户属性列表中隐藏**24H**的选项：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/property_checkbox_secondary_visibility.mp4')" type="video/mp4">

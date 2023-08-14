@@ -1,63 +1,63 @@
-# 专辑封面整合
+# 集成专辑封面
 
-Wallpaper Engine allows you to integrate Windows Media data such as album covers, song titles, current playtime and more into your wallpaper. This guide will primarily explain how to utilize album covers in your wallpapers. You can learn more about how to retrieve additional information in the following guide:
+Wallpaper Engine允许您将Windows媒体数据（如专辑封面，歌曲标题，当前播放时间等）集成到壁纸中。本指南将主要说明如何在壁纸中集成专辑封面。您可以在以下指南中了解有关如何获取的详细信息：
 
-* [Media Information Integration](/wallpaper-engine-docs/scene/audiovisualizer/mediainformation)
+* [媒体信息集成](/wallpaper-engine-docs/scene/audiovisualizer/mediainformation)
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/album_simple_showcase.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-*A simple showcase of the album cover integration as explained in this tutorial. Note that Wallpaper Engine relies on the Windows Media overlay for album covers, as shown in the video above.*
+*本教程中介绍的集成专辑封面简单示例。请注意，Wallpaper Engine依赖于专辑封面的Windows媒体层，如上面的视频内容所示。*
 
-## Album Cover Resolution
+## 专辑封面分辨率
 
-We recommend limiting the resolution of the album cover integration to 256x256 pixels or less. The quality and resolution of album covers generally depends on the respective media player and the audio file. However, we recommend using square resolutions between 100x100 pixels and 256x256 pixels in size.
+我们建议将专辑封面的分辨率限制为 256x256 像素或更低。专辑封面的质量和分辨率通常取决于相应的媒体播放器和音频文件。但是，我们建议使用大小介于 100x100 像素和 256x256 像素之间的正方形分辨率。
 
-## Creating a Placeholder
+## 创建占位符
 
-Users of your wallpapers will not always be playing media content at all times, making it important to ensure that the space in which the album cover is placed has some sort of placeholder while no audio playback is active.
+壁纸的用户不会始终都在播放媒体内容，因此很重要的一点是，没有音频播放处于活动状态时，确保专辑封面的放置空间具有某种占位符。
 
-If no audio is playing and you simply want a solid color (or to hide the album cover entirely), you should use a **Solid Placeholder** layer, as it offers the best performance for this use-case. To add a **Solid Placeholder** layer, click on **Add Asset** on the left-hand side, followed by selecting the **Solid Placeholder** type from the list towards the bottom. Select a preferred size and default color for the album cover layer.
+如果没有音频正在播放时，您只希望封面位置是一个纯色的区域（或完全隐藏专辑封面），则应使用**纯色占位符**图层，因为这样能具有最佳的性能。要添加**纯色占位符**，请单击左侧的**添加组件**，然后在列表底部选择**纯色占位符**，然后按照专辑封面设置首选大小和默认颜色。
 
-If you want to show a placeholder image instead, you can simply import it into the editor and proceed without having to use the **Solid Placeholder** layer. In our example, we will showcase this feature using a 256x256px placeholder image that we have prepared. It is mainly important that your image is square and ideally has the exact resolution that you later want to use for your album covers.
+如果要改为显示的占位符图像，只需将该图像导入编辑器然后调整它，而无需使用**纯色占位符**。在我们的示例中，我们将使用 256x256 像素的占位符图像来展示此功能。最重要的是，您的图像是方形的，并且理论上应当和您以后想要用于专辑封面的分辨率一致。
 
-## Assigning the Album Cover
+## 分配专辑封面
 
-Once you have created your placeholder, you can now continue with the most basic implementation of this feature, mainly to just show an album cover whenever one becomes available. To do this, select your placeholder layer and click on **Advanced Texture Settings** on the right-hand side towards the bottom of the properties list.
+创建占位符后，您可以继续功能的实现，主要是要在播放媒体时显示专辑封面。为此，请选择占位符图层，然后单击属性列表底部右侧的**高级纹理设置**。
 
-Click on the cogwheel icon next to the *Albedo* texture and select **Bind Album Cover**. You will be presented with two options: *Current album cover* and *Previous album cover*. In this case, we want to use the *Current album cover* but we will show you how to utilize the previous album cover in the next section. Confirm your selection and press the **Run Preview** button in the editor. You should now see your album cover in your wallpaper once you start playing music with a media player that integrates with the Windows media functions.
+单击**反照率**纹理旁边的齿轮图标，然后选择**绑定专辑封面**。您将看到两个选项：**当前专辑封面**和**上一张专辑封面**。本例中，我们使用**当前专辑封面**，我们将在下一节中向您展示如何使用**上一张专辑封面**。确认之后，单击编辑器上的**运行预览**按钮。这样一来，只要您使用Windows媒体功能集成的播放器播放音乐，您就会在壁纸中看到专辑封面。
 
-## Advanced: Creating a Transition between Album Covers
+## 高级：在专辑封面之间创建过渡
 
-In this section, we want to utilize the **Blend effect** to smoothly transition between two album covers using a [Timeline Animation](/wallpaper-engine-docs/scene/timeline/introduction). It is a bit more advanced, but if you follow this section step-by-step, you should be able to implement this yourself.
+在本节中，我们需要利用**混合**效果，使用[时间轴动画]((/wallpaper-engine-docs/scene/timeline/introduction))在两个专辑封面之间平滑过渡。它更高级一些，但如果您逐步按照本节进行操作，您应该能够自己实现这一点。
 
-First, select the album cover layer you have created previously. Click on the **Add** button in the effects list on the right-hand side and select the [Blend effect](/wallpaper-engine-docs/scene/effects/effect/blend) or the [Blend Gradient effect](/wallpaper-engine-docs/scene/effects/effect/blendgradient).
+首先，选择您之前创建的专辑封面图层。单击右侧效果列表中的**添加**按钮，然后选择[混合效果]((/wallpaper-engine-docs/scene/effects/effect/blend) or the [Blend Gradient effect](/wallpaper-engine-docs/scene/effects/effect/blendgradient))或[混合渐变](/wallpaper-engine-docs/scene/effects/effect/blendgradient)效果。
 
-Next, select the blend effect you have created and click on the cogwheel icon next to the *Albedo* texture. Just like before, select **Bind Album Cover**. In the pop-up window that appears, select the **Previous album cover** option now and confirm your change. You will not see any immediate changes, but this means the blend texture will always be the previous album cover that was used.
+接下来，选择您创建的混合效果，然后单击**反照率**纹理旁边的齿轮图标。和之前一样，选择**绑定专辑封面**，在弹出窗口中，选择**上一张专辑封面**。但您不会立即看到任何变动，混合纹理始终是之前的专辑封面。
 
-### Creating a Timeline Animation
+### 创建时间轴动画
 
-Now that you have configured the *Albedo texture*, you need to create a short timeline animation that will allow you to smoothly transition between the two album covers.
+您已经配置了**反照率**纹理，您需要创建一个简短的时间轴动画，以便您在两个专辑封面之间平滑过渡。
 
-Select the blend effect and navigate towards the bottom of its property list. Next to the **Blend amount** value, click on the cogwheel icon and select **Bind Timeline Animation**. You will now see the animation options, you will need to make some changes here:
+选择**混合效果**并在其属性的底部找到**混合量**。在混合量旁边，单击齿轮图标并选择绑定时间轴动画。您现在将看到动画选项，您需要在此处进行一些更改：
 
-* **Mode:** Set this option to **Single**, since we only want the transition to play once when needed.
-* **Seconds:** This is the duration that it will take to transition between the album covers, set it to your liking, for example, 2 seconds.
-* **Frames:** You can leave this value at `60`.
-* **Start paused:** Make sure this option is **enabled**.
+* **模式：** 将此选项设置为**单张**，因为我们只希望在需要时播放一次过渡。
+* **秒：** 这是专辑封面之间过渡时间，根据自己的喜好进行设置，例如2秒。
+* **帧率：** 你可以将这个值维持在`60`。
+* **开始播放时暂停：** 确保**勾选**这个选项。
 
-Once this is done, you will see the timeline of the **Blend amount** value at the bottom. Grab the timeline selector and move it all the way to the last frame. Afterwards, drag the **Blend amount** value down to `0.00` on the right. You should now see a smooth curve in the timeline animation, see the following video as an example:
+完成此操作后，您将在底部看到针对**混合量**的时间轴动画。抓住时间轴选择器并将其一直移动到最后一帧。然后，将混合量向下拖动到右侧。这样，您应该会在时间轴动画中看到一条平滑的曲线，请参阅以下视频示例：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/album_blend.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Enabling the Animation with SceneScript
+### 使用SceneScript启用动画
 
-The last step to get the album cover transition to work is to utilize the `mediaThumbnailChanged` event which is triggered whenever Wallpaper Engine receives a new album cover. Go back to the **Blend animation** that you have previously created and, once again, click on the cogwheel icon next to the **Blend amount** property of the effect. This time, select **Bind SceneScript**. You will be presented with a placeholder script, replace the contents of the script window with the following code:
+使专辑封面过渡的最后一步是使用每次Wallpaper Engine收到新专辑封面时触发的`mediaThumbnailChanged`事件。返回到之前创建的**混合**效果，然后再次单击效果的**混合量**属性旁边的齿轮图标。这一次，选择**绑定脚本**。您将看到自动生成的默认脚本，将脚本的内容替换为以下代码：
 
 ```js
 'use strict';
@@ -70,8 +70,10 @@ export function mediaThumbnailChanged(event) {
 }
 ```
 
-This will start playing the timeline animation that you have just created when a new thumbnail is available. The animation will smoothly transition between the old album cover to the new album cover.
+当收到新的专辑封面时，这将开始播放您刚刚创建的时间轴动画。动画将在旧专辑封面到新专辑封面之间平滑过渡。
 
-## Additional Media Features
+## 其他媒体功能
 
-This guide provided a basic example of how to utilize the album cover feature. We suggest that you also consider users who might not be playing music by hiding these elements and ensuring the wallpaper works even without music playing. For some more advanced tutorials, see the
+本指南提供了如何使用专辑封面功能的基本示例。我们建议您应当考虑可能不播放音乐的用户，方法是隐藏这些元素并确保即使没有播放音乐也能正常工作。有关更高级的教程，请参阅
+
+> 译注：原文就是这样戛然而止，并没有提供参阅的链接，可能正如上一页所说，这部分内容还在建设当中。

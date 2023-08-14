@@ -28,9 +28,9 @@ zh
 │    │    ├─ overview.md✅
 │    │    └─ sharing.md✅
 │    ├─ audiovisualizer
-│    │    ├─ albumcover.md
-│    │    ├─ mediainformation.md
-│    │    └─ overview.md
+│    │    ├─ albumcover.md✅
+│    │    ├─ mediainformation.md✅
+│    │    └─ overview.md✅
 │    ├─ effects
 │    │    ├─ bloom.md✅
 │    │    ├─ effect
@@ -193,13 +193,13 @@ zh
 │    │    ├─ introduction.md
 │    │    └─ modes.md
 │    └─ userproperties
-│           ├─ checkbox.md
-│           ├─ color.md
-│           ├─ combo.md
-│           ├─ overview.md
-│           ├─ slider.md
-│           ├─ text.md
-│           └─ texture.md
+│           ├─ checkbox.md✅
+│           ├─ color.md✅
+│           ├─ combo.md✅
+│           ├─ overview.md✅
+│           ├─ slider.md✅
+│           ├─ text.md✅
+│           └─ texture.md✅
 └─ web
     ├─ api
     │    ├─ icue.md

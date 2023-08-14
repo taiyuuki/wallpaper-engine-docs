@@ -1,12 +1,12 @@
-# Text Input User Property
+# 文本框用户属性
 
-A **Text Layer** in Wallpaper Engine allows you to enter any type of free text, including emoji characters. With the help of a text input property, you can allow users to enter a custom text on your wallpaper.
+Wallpaper Engine中的**文本**图层允许你输入任何类型的自由文本，包括表情符号字符。借助文本输入属性，你可以让用户在壁纸上输入自定义文本。
 
-First, create a new text layer through the **Add Asset** menu on the left-hand side. Select your text layer and next to the **Text** option, click on **Bind User Property**. Select **Add Property** to create a new user property of the **Text** type. You will be asked to enter a **Title** which will later be visible to your users. In our example, we'll name it **Center Text** though you should find a fitting name for your use-case. We also add a default value, which is what will be displayed when a user uses the wallpaper for the first time.
+首先，通过左侧的**添加组件**菜单创建新的**文本**图层，然后单击右侧**文本**选项旁的齿轮图标，选择**绑定用户属性**。然后选择**添加属性**以创建**文本框**类型的新用户属性，然后会要求你输入一个**标题**，该标题之后会在用户属性中让用户看到。在我们的示例中，我们将它命名为**Center Text**。我们给它添加一个默认值，这是用户首次使用壁纸时将显示的值。
 
-This already suffices to set up a customizable text field. After confirming the user property, you can click on **File** in the upper left corner and then select **Apply Wallpaper**. You will now find a text input with your default value in the properties list of your wallpaper. Typing in new text will change the visible text on the wallpaper in real time.
+这样就可以让用户自定义文本输入了。确认用户属性后，可以单击左上角的菜单**文件**，然后选择**应用壁纸**。现在，你将在壁纸的属性列表中找到具有默认值的文本输入。输入新文本将实时更改壁纸上的可见文本。
 
-You can see the full process for this in the following video:
+你可以在以下视频中看到完整的过程：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/property_textinput.mp4')" type="video/mp4">
