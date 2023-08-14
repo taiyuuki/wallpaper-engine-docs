@@ -1,88 +1,88 @@
-# SceneScript Reference
+# SceneScript语言参考
 
-SceneScript is follows the ECMAScript 2018 specification, so you can utilize all functionalities from ECMAScript that you would also find in similar languages such as *JavaScript*. This is very useful as you can make use of various helpful classes. For example, `Date` allows you to access the current date and time, `Math` allows you to access various mathematical utility functions.
+SceneScript 遵循 ECMAScript 2018 规范，因此您可以使用 ECMAScript 中所有的功能，这些功能可以在类似的语言（如 JavaScript）中找到。这非常有用，因为您可以使用各种有用的类。例如，允许访问当前日期和时间的`Date`，允许您访问各种数学函数的`Math`。
 
-This page only covers all additions that SceneScript adds to make working with wallpapers possible.
+本页仅介绍 SceneScript 为使处理壁纸而添加的所有新增功能。
 
-## Globals
+## 全局变量
 
-SceneScript introduces a handful of globals which you can access at any point in your code.
+SceneScript 引入了一些全局变量，您可以在任何代码的位置访问这些全局变量。
 
 | Global        | Description   |
 |---------------|---------------|
-| [engine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | Access to general features of the application. `IEngine` class. |
-| [input](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | Input related data, mainly the mouse cursor. `IInput` class.|
-| [thisScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | The currently loaded scene wallpaper. `IScene` class |
-| [thisLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | The layer this script has been loaded on. `ILayer` class. |
-| [thisObject](/wallpaper-engine-docs/scene/scenescript/reference/class/IThisPropertyObject) | The object this script belongs to. `IThisPropertyObject` class. |
-| [console](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | Access the console log for debugging purposes. `IConsole` class. |
-| [shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | Empty by default, allows you to share data between multiple scripts. `Shared` class. |
+| [engine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | 访问应用程序的常规功能。 `IEngine` class. |
+| [input](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | 与输入相关的数据，主要是鼠标光标。 `IInput` class.|
+| [thisScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | 当前加载的场景壁纸对象。 `IScene` class |
+| [thisLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | 当前脚本所在的图层对象。 `ILayer` class. |
+| [thisObject](/wallpaper-engine-docs/scene/scenescript/reference/class/IThisPropertyObject) | 当前脚本所属的对象。 `IThisPropertyObject` class. |
+| [console](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | 访问控制台日志以进行调试。 `IConsole` class. |
+| [shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | 默认情况下为空，允许您在多个脚本之间共享数据。 `Shared` class. |
 
-## Events
+## 事件
 
-SceneScript uses an event system that allows you to run specific code whenever certain events take place. Most notably, the `update` event is most commonly used to execute SceneScript code at every frame that Wallpaper Engine calculates. The `init` event is good for running code once when the wallpaper is first loaded and the `applyUserProperties` event allows you to react to changes to user properties of your wallpaper. Additionally, there are a handful of `cursor` events which related to mouse movement and mouse input which you can incorporate into your wallpaper.
+SceneScript 使用事件系统，该系统允许您在发生某些事件时运行特定代码。最值得注意的是，`update`事件是最常用于在Wallpaper Engine中每一帧中执行的SceneScript代码。`init`事件适用于首次加载壁纸时运行一次的代码，`applyUserProperties`事件允许您对壁纸的用户属性更改做出反应。此外，还有一些与鼠标移动和鼠标输入相关的`cursor`事件，您可以将这些事件添加到壁纸中。
 
 | Event                | Description   |
 |----------------------|---------------|
-| [init](/wallpaper-engine-docs/scene/scenescript/reference/event/init) | This initialization function will be called once after the object it belongs to has been created. |
-| [update](/wallpaper-engine-docs/scene/scenescript/reference/event/update) | This event function will be called every frame for all scripts that export it. |
-| [destroy](/wallpaper-engine-docs/scene/scenescript/reference/event/destroy) | This event function will be called just before the object it belongs to gets destroyed. |
-| [resizeScreen](/wallpaper-engine-docs/scene/scenescript/reference/event/resizeScreen) | This function will be called every time the wallpaper resizes because of a change to the current resolution. |
-| [applyUserProperties](/wallpaper-engine-docs/scene/scenescript/reference/event/applyUserProperties) | This event function will be called once initially when the wallpaper is loaded and whenever any user properties are being adjusted by the user. |
-| [cursorEnter](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor enters the bounds of the object. |
-| [cursorLeave](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor leaves the bounds of the object. |
-| [cursorMove](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor has been moved. |
-| [cursorDown](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor is being pressed down on an object. |
-| [cursorUp](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor is being released over an object.  |
-| [cursorClick](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor has been pressed and released on the same object. |
-| [mediaStatusChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the media integration is turned on or off by the user. |
-| [mediaPlaybackChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the users starts, stops or pauses media. |
-| [mediaPropertiesChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the properties of the currently playing media change. |
-| [mediaThumbnailChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the thumbnail of the currently playing media changes. |
-| [mediaTimelineChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | This event function will be called when the current time of the playing media changes and is only provided by certain applications. |
+| [init](/wallpaper-engine-docs/scene/scenescript/reference/event/init) | 此初始化函数将在创建其所属的对象后调用一次。 |
+| [update](/wallpaper-engine-docs/scene/scenescript/reference/event/update) | 所有导出了这个函数的脚本，都会在每一帧调用一次此函数。 |
+| [destroy](/wallpaper-engine-docs/scene/scenescript/reference/event/destroy) | 此事件函数将在它所属的对象被销毁之前调用。 |
+| [resizeScreen](/wallpaper-engine-docs/scene/scenescript/reference/event/resizeScreen) | 每次分辨率改变时，都会调用此函数。 |
+| [applyUserProperties](/wallpaper-engine-docs/scene/scenescript/reference/event/applyUserProperties) | 此事件函数将在第一次加载墙纸、以及用户调整任意用户属性时调用。 |
+| [cursorEnter](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 当鼠标的光标进入对象的边界时，将调用此事件函数。 |
+| [cursorLeave](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 当鼠标的光标离开对象的边界时，将调用此事件函数。 |
+| [cursorMove](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 移动鼠标光标时将调用此事件函数。 |
+| [cursorDown](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 当在对象上按下鼠标点击时，将调用此事件函数。 |
+| [cursorUp](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 当在对象上抬起鼠标点击时，将调用此事件函数。  |
+| [cursorClick](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 当在同一对象上点击并抬起鼠标时，将调用此事件函数。 |
+| [mediaStatusChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当用户改变媒体状态（打开或关闭）时，将调用此事件函数。 |
+| [mediaPlaybackChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当用户启动、停止或暂停媒体时，将调用此事件函数。 |
+| [mediaPropertiesChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当当前播放的媒体的属性发生更改时，将调用此事件函数。 |
+| [mediaThumbnailChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当当前播放的媒体的缩略图更改时，将调用此事件函数。 |
+| [mediaTimelineChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当播放媒体的当前时间发生变化时，将调用此事件函数，并且仅由某些应用程序提供。 |
 
 ## Classes
 
-All components of Wallpaper Engine are provided with a fitting class so that you can access everything programmatically. The following list contains all relevant classes introduced by SceneScript:
+Wallpaper Engine为所有组件都提供了一个适当的类，以便您可以通过编程方式访问所有内容。以下列表包含 SceneScript 引入的所有相关类：
 
 | Class                | Description   |
 |----------------------|---------------|
-| [AnimationEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/AnimationEvent) | This object describes an animation event that has been fired from a timeline or puppet warp animation. |
-| [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
-| [CameraTransforms](/wallpaper-engine-docs/scene/scenescript/reference/class/CameraTransforms) | Objects of this class describe the camera orientation and position. |
-| [CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent) | Provides information about the cursor position during cursor events. |
-| [IAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimation) | This class represents a timeline property animation. |
-| [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) | This class represents a puppet warp animation layer. |
-| [IConsole](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log. |
-| [IEffect](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffect) | Provides access to image effects used on image layers. |
-| [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | Base class for image and text layers. |
-| [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | Provides general information about the user device and the running wallpaper. |
-| [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | This class provides access to functions specific to image layers. |
-| [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | Provides access to input related data, mainly the mouse cursor. |
-| [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | Provides access to data related to a layer. |
-| [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | Provides access to dynamic properties of materials / shader properties. |
-| [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | Provides access to particle systems and lets you modify their playback state. |
-| [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) | Provides access to instance modifiers for particle systems. You can use this to adjust details of a particle system dynamically. |
-| [IScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | Provides access to properties of the currently loaded scene. |
-| [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) | Provides access functions specific to sound layers. |
-| [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) | This class represents a texture animation. |
-| [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture) | This class represents a video texture animation. |
-| [Mat4](/wallpaper-engine-docs/scene/scenescript/reference/class/Mat4) | Utility class used for creating a 4 dimensional identity matrix. |
-| [MediaPlaybackEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPlaybackEvent) | Media integration event, fired when the user starts, stops or pauses media. |
-| [MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent) | Media integration event, fired when the properties of the current media session are changing. |
-| [MediaStatusEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaStatusEvent) | Media integration event, fired when the user turns the media integration on or off. |
-| [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent) | Media integration event, fired when the thumbnail pertaining to the current media changes. |
-| [MediaTimelineEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaTimelineEvent) | Optional media integration event, fired irregularly when the current time of the media session changes. |
-| [Shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | Related to the global object `shared` which you may use to share data between multiple scripts. |
-| [Vec2](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec2) | Utility class which holds a 2 dimensional value pair: `x` and `y`. |
-| [Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) | Utility class which holds a 3 dimensional value pair: `x`, `y` and `z`. |
+| [AnimationEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/AnimationEvent) | 此类的对象描述已从时间轴动画或变形动画触发的动画事件。 |
+| [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) | 提供对左右音频频谱值及其组合平均值的访问，以便进行音频可视化。 |
+| [CameraTransforms](/wallpaper-engine-docs/scene/scenescript/reference/class/CameraTransforms) | 该类的对象描述相机方向和位置。 |
+| [CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent) | 提供有关鼠标事件的位置信息。 |
+| [IAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimation) | 此类表示时间轴属性动画。 |
+| [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) | 此类表示变形动画图层。 |
+| [IConsole](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | 您可以通过全局对象在 SceneScript 代码的任何位置访问此接口，以便与控制台日志进行交互。 |
+| [IEffect](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffect) | 提供对图像图层上使用的图像效果的访问。 |
+| [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | 图像图层和文本图层的基础类。 |
+| [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | 提供有关用户设备和正在运行的墙纸的通用信息。 |
+| [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | 此类提供对特定图像图层的函数的访问。 |
+| [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | 提供对输入相关数据（主要是鼠标）的访问。 |
+| [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | 提供对与图层相关的数据的访问。 |
+| [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | 提供对材质/着色器属性的动态属性的访问。 |
+| [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | 提供对粒子系统的访问，并允许您修改其播放状态。 |
+| [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) | 提供对粒子系统的实例修饰符的访问。您可以使用它来动态调整粒子系统的细节。 |
+| [IScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | 提供对当前加载场景的属性的访问。 |
+| [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) | 提供特定于声音层的访问功能。 |
+| [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) | 此类表示纹理动画。 |
+| [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture) | 此类表示视频纹理动画。 |
+| [Mat4](/wallpaper-engine-docs/scene/scenescript/reference/class/Mat4) | 用于创建4维矩阵的类。 |
+| [MediaPlaybackEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPlaybackEvent) | 媒体集成事件，在用户启动、停止或暂停媒体时触发。 |
+| [MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent) | 媒体集成事件，在当前媒体会话的属性发生更改时触发。 |
+| [MediaStatusEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaStatusEvent) | 媒体集成事件，在用户打开或关闭媒体集成时触发。 |
+| [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent) |媒体集成事件，当与当前媒体相关的缩略图发生更改时触发。 |
+| [MediaTimelineEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaTimelineEvent) | 可选的媒体集成事件，在媒体的当前时间发生更改时触发。 |
+| [Shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | 与可用于在多个脚本之间共享数据的全局对象。 |
+| [Vec2](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec2) | 保存二维键值的类：`x` 和 `y`. |
+| [Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) | 保存三维键值的类：`x`, `y` 和 `z`. |
 
 ## Modules
 
-Wallpaper Engine also provides some modules which can be used to access certain utility functions. These can be helpful to easily implement certain use-cases.
+Wallpaper Engine还提供了一些可用于访问某些功能的模块。这些有助于轻松实现某些功能。
 
-| Module                | Description   |
+| 模块                | 描述   |
 |----------------------|---------------|
-| [WEColor](/wallpaper-engine-docs/scene/scenescript/reference/module/WEColor) | Module which provides utility functions related to color manipulation. |
-| [WEMath](/wallpaper-engine-docs/scene/scenescript/reference/module/WEMath) | Module which provides utility functions related to general mathematical functions. |
-| [WEVector](/wallpaper-engine-docs/scene/scenescript/reference/module/WEVector) | Module which provides utility functions related to working with vectors. |
+| [WEColor](/wallpaper-engine-docs/scene/scenescript/reference/module/WEColor) | 提供与颜色处理相关的函数模块 |
+| [WEMath](/wallpaper-engine-docs/scene/scenescript/reference/module/WEMath) | 提供与数学相关的函数模块。 |
+| [WEVector](/wallpaper-engine-docs/scene/scenescript/reference/module/WEVector) | 提供与向量相关的函数模块。 |
