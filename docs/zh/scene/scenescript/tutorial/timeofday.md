@@ -1,39 +1,39 @@
-# Time of Day Changes with SceneScript
+# 使用 SceneScript 更改时间
 
-In this tutorial we will explain how SceneScript enables you to change parts of your wallpaper depending on the current time of day. Our example is rather specific, but you can access the current time of day via SceneScript via [**engine.timeOfDay**](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine.html#timeofday-number) for your own ideas and custom logic of any type.
+在本教程中，我们将介绍 SceneScript 如何根据当前时间更改壁纸的某些部分。我们的示例会很具体，但实际你可以通过[**engine.timeOfDay**](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine.html#timeofday-number)简单获取当前时间，以便实现您的想法或自定义逻辑。
 
-Alternatively, you can also use the *ECMAScript* `Date` class to access the current hours, minutes seconds and more date-related data just like you would in other languages such as *JavaScript*.
+或者，您也可以使用 *ECMAScript* 的`Date`类来访问当前的小时、分钟、秒和更多与日期相关的数据，就像在其他语言（如 *JavaScript*）中一样。
 
-## Change Background Image Depending on Time of Day
+## 根据时间更改背景图像
 
-We will explore how to utilize the [Blend effect](/wallpaper-engine-docs/scene/effects/effect/blend) to change the entire background image multiple times during a day depending on the current time. We strongly recommend that you utilize the *Blend* effect for this type of effect instead of using multiple image layers to reduce VRAM usage. This can significantly improve performance, especially when using effects on the image layer.
+我们将探讨如何利用[混合效果](/wallpaper-engine-docs/scene/effects/effect/blend)根据当前时间多次更改整个背景图像。我们强烈建议您使用*混合*效果，而不是使用多个图像图层，以减少对显存的消耗。这可以显著提高性能，尤其是对于图像图层。
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/timeofday.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Base Image with Blend Effect
+### 混合效果的基础图像
 
-Start off by adding the image that you want to use at midnight as a base image for your wallpaper. In our case, it's the night-time version of a window, as shown in the animation above. It's important to use the midnight image as a base image, since our SceneScript logic will expect this image to be shown at exactly midnight when the clock reaches 00:00:00.
+首先添加一张午夜图像作为壁纸的基础图像。在我们的例子中，它是一个窗户的夜间版本，如上面的动画所示。我们将用 SceneScript 逻辑令此图像在时钟到达午夜时刻00：00：00时显示。
 
-After adding the midnight image as a layer, add the [Blend effect](/wallpaper-engine-docs/scene/effects/effect/blend) to it to continue with the rest of this tutorial.
+添加午夜图像图层后，向其添加 [混合效果](/wallpaper-engine-docs/scene/effects/effect/blend) ，然后继续本教程的后续步骤。
 
-### Blend Mode
+### 混合模式
 
-Select the blend effect that you have added to your midnight layer. First, make sure to set the **Blend mode** option to **Normal**. This is to ensure that each blend texture is rendered in its original state without being influenced by other blend textures. In some cases you may want to deviate from this for artistic purposes, but in most cases the **Normal** option is probably the best choice.
+选择已添加到的混合效果。首先，确保**混合模式**选项的设置是**Normal**（正常模式）。这是为了确保混合纹理以其原始状态呈现，而不受其他混合纹理的影响。在某些情况下，您可能希望出于艺术目的偏离这一点，但在大多数情况下，**Normal**选项应该是最佳选择。
 
-### Number of Textures
+### 纹理数量
 
-After configuring the blend mode, set the **Number of textures** option to each additional image you want to display throughout the day in addition to your starting image. In our case, we have **three** additional images in addition to the base image which represents night-time, so we set the value to **3**:
+ 配置混合模式后，将**纹理量**选项设置为除基础图像以外，要在一天中显示的附加图像数量。在我们的例子中，除了代表午夜的基本图像之外，我们还有**三个**额外的图像，因此我们将值设置为**3**：
 
-1. Dawn
-2. Mid-day
-3. Dusk
+1. 黎明
+2. 中午
+3. 黄昏
 
-The quickest way to load the additional textures is by dragging and dropping them into the blend texture box. Make sure the images are in the correct order, from the beginning of the day until the end of the day.
+加载其他纹理最快捷的方法是将它们直接拖到编辑器**混合纹理**框中，并确保图像按一天从开始到结束的正确顺序。
 
- See the following video to see the steps until here:
+请参阅以下视频，了解以上步骤：
 
 <video width="75%" style="margin:0 auto;display:block;" controls autoplay loop>
   <source :src="$withBase('/videos/blend_textures.mp4')" type="video/mp4">
@@ -42,11 +42,13 @@ The quickest way to load the additional textures is by dragging and dropping the
 
 You should now see the last blend texture as your wallpaper texture, since the last blend texture is overlapping all other textures right now.
 
-### SceneScript Logic for Blend Amount
+你现在可以看到最后一个混合纹理作为壁纸图像了，因为最后一个混合纹理覆盖了所有其他纹理。
 
-This is where SceneScript comes in handy. We now need to alter the **Blend amount** options at the bottom of the *Blend effect* properties list using SceneScript, so that each texture starts appearing at a specific time of day. We can achieve this with SceneScript by starting all blend amounts at a value of 0, followed by smoothly increasing the value to 1 when a specific time of day has been reached.
+### 混合量的 SceneScript 逻辑
 
-Click on the cogwheel icon next to the first **Blend Amount** value and select **Bind Script**. Now replace the existing sample script with the following code snippet:
+现在就是SceneScript发挥作用的时候。我们需要使用 SceneScript 更改**混合效果**属性列表底部的**混合量**选项，以便每个纹理在一天中的特定时间开始出现。我们可以使用 SceneScript 实现此目的，方法是混合量从0开始，然后在达到一天中的特定时间时平滑地将该值增加到1。
+
+单击第一个**混合量**旁边的齿轮图标，然后选择**绑定脚本**，然后将现有示例脚本替换为以下代码片段：
 
 ```js{5,6}
 'use strict';
@@ -72,35 +74,37 @@ export function update(value) {
 
 This snippet makes use of two Wallpaper Engine SceneScript features:
 
-* [**engine.timeOfDay**](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine.html#timeofday-number) which represents the current day with values from 0.00 - 1.00 instead of seconds, where 0.00 is 00:00:00 and 1.00 is 23:59:59.
-* [**WEMath.smoothStep()**](/wallpaper-engine-docs/scene/scenescript/reference/module/WEMath.html#smoothstep-min-number-max-number-value-number-number) is a function which smoothly calculates a value between two values which we use to smoothly blend over from one texture to the next.
+此代码片段使用两个Wallpaper Engine SceneScript功能:
 
-Add this script to all **Blend amount** values for each blend amount texture. Make sure to always reconfigure the `START_HOUR` and `END_HOUR` values to control at what time of day each blend texture appears.
+* [**engine.timeOfDay**](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine.html#timeofday-number) 表示当前一天当中的时间，值的范围是0.00-1.00，而不是秒，其中0.00代表00:00:00,而1.00代表23:59:59。
+* [**WEMath.smoothStep()**](/wallpaper-engine-docs/scene/scenescript/reference/module/WEMath.html#smoothstep-min-number-max-number-value-number-number) 这是一个函数，它可以平滑地计算两个值之间的值，我们用它来从一个纹理平滑地混合到下一个纹理。
 
-The default value of `0.004` for the `BLEND_DURATION` constant results in a smooth transition that lasts exactly 14.4 seconds between the two adjacent blend layers, you can slightly adjust this value to your liking but make sure to use the same value for all layers. Increasing the value by `0.001` increases the blend time by 3.6 seconds.
+将此脚本添加到每个**混合纹理**的混合量。确保始终重新配置`START_HOUR`和`END_HOUR`值，以控制每个混合纹理在一天中的什么时间出现。
 
-Double-check that you are not leaving any gaps between blend layers by accident, your values should cover the entire day without skipping any hour of the day. The only exception is around midnight, since the base image is always visible by default at exactly midnight.
+常量`BLEND_DURATION`的默认值`0.004`会让两个相邻混合图层之间的平滑过渡正好持续14.4秒，您可以根据自己的喜好稍微调此值，但请确保对所有图层使用相同的值。每增加`0.001`会使混合时间延长3.6秒。
 
-In our example, we have set the following values but you should adjust them to your liking:
+仔细检查混合图层之间是否没有留下任何间隙，您设置的各个时间段应涵盖一整天，而没有跳过一天中的任何时间。唯一的例外是在午夜，因为默认情况下，基本图像在午夜始终可见。
 
-**Blend amount:**
+在我们的示例中，我们设置的值如下，但您可以根据自己的喜好调整它们：
+
+**混合量:**
 ```js
 const START_HOUR = 7;
 const END_HOUR = 10;
 ```
 
-**Blend amount 2:**
+**混合量2:**
 ```js
 const START_HOUR = 10;
 const END_HOUR = 18;
 ```
 
-**Blend amount 3:**
+**混合量3:**
 ```js
 const START_HOUR = 18;
 const END_HOUR = 22;
 ```
 
-If your day and night cycle contains a different number of blend textures, you need to distribute hourly texture changes appropriately.
+如果你的昼夜周期包含不同数量的混合纹理，则需要适当地重新分配每个纹理的涵盖时间。
 
-In our example, the night-time base texture is visible before 7:00 in the morning and becomes visible again at 22:00 in the evening after the last blend texture fades out again. You cannot configure the midnight texture, it will be visible whenever all blend textures are invisible.
+在我们的示例中，基础的午夜纹理在早上7：00之前可见，最后一个混合纹理淡出之后，在晚上22：00将再次可见。您不需要配置午夜图像纹理，因为其他混合纹理都不可见时，它就会变为可见。

@@ -1,12 +1,12 @@
 # SceneScript语言参考
 
-SceneScript 遵循 ECMAScript 2018 规范，因此您可以使用 ECMAScript 中所有的功能，这些功能可以在类似的语言（如 JavaScript）中找到。这非常有用，因为您可以使用各种有用的类。例如，允许访问当前日期和时间的`Date`，允许您访问各种数学函数的`Math`。
+SceneScript 遵循 ECMAScript 2018 规范，因此你可以使用 ECMAScript 中所有的功能，这些功能可以在类似的语言（如 JavaScript）中找到。这非常有用，因为你可以使用各种有用的类。例如，允许访问当前日期和时间的`Date`，允许你访问各种数学函数的`Math`。
 
 本页仅介绍 SceneScript 为使处理壁纸而添加的所有新增功能。
 
 ## 全局变量
 
-SceneScript 引入了一些全局变量，您可以在任何代码的位置访问这些全局变量。
+SceneScript 引入了一些全局变量，你可以在任何代码的位置访问这些全局变量。
 
 | Global        | Description   |
 |---------------|---------------|
@@ -16,11 +16,11 @@ SceneScript 引入了一些全局变量，您可以在任何代码的位置访�
 | [thisLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | 当前脚本所在的图层对象。 `ILayer` class. |
 | [thisObject](/wallpaper-engine-docs/scene/scenescript/reference/class/IThisPropertyObject) | 当前脚本所属的对象。 `IThisPropertyObject` class. |
 | [console](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | 访问控制台日志以进行调试。 `IConsole` class. |
-| [shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | 默认情况下为空，允许您在多个脚本之间共享数据。 `Shared` class. |
+| [shared](/wallpaper-engine-docs/scene/scenescript/reference/class/Shared) | 默认情况下为空，允许你在多个脚本之间共享数据。 `Shared` class. |
 
 ## 事件
 
-SceneScript 使用事件系统，该系统允许您在发生某些事件时运行特定代码。最值得注意的是，`update`事件是最常用于在Wallpaper Engine中每一帧中执行的SceneScript代码。`init`事件适用于首次加载壁纸时运行一次的代码，`applyUserProperties`事件允许您对壁纸的用户属性更改做出反应。此外，还有一些与鼠标移动和鼠标输入相关的`cursor`事件，您可以将这些事件添加到壁纸中。
+SceneScript 使用事件系统，该系统允许你在发生某些事件时运行特定代码。最值得注意的是，`update`事件是最常用于在Wallpaper Engine中每一帧中执行的SceneScript代码。`init`事件适用于首次加载壁纸时运行一次的代码，`applyUserProperties`事件允许你对壁纸的用户属性更改做出反应。此外，还有一些与鼠标移动和鼠标输入相关的`cursor`事件，你可以将这些事件添加到壁纸中。
 
 | Event                | Description   |
 |----------------------|---------------|
@@ -28,7 +28,7 @@ SceneScript 使用事件系统，该系统允许您在发生某些事件时运�
 | [update](/wallpaper-engine-docs/scene/scenescript/reference/event/update) | 所有导出了这个函数的脚本，都会在每一帧调用一次此函数。 |
 | [destroy](/wallpaper-engine-docs/scene/scenescript/reference/event/destroy) | 此事件函数将在它所属的对象被销毁之前调用。 |
 | [resizeScreen](/wallpaper-engine-docs/scene/scenescript/reference/event/resizeScreen) | 每次分辨率改变时，都会调用此函数。 |
-| [applyUserProperties](/wallpaper-engine-docs/scene/scenescript/reference/event/applyUserProperties) | 此事件函数将在第一次加载墙纸、以及用户调整任意用户属性时调用。 |
+| [applyUserProperties](/wallpaper-engine-docs/scene/scenescript/reference/event/applyUserProperties) | 此事件函数将在第一次加载壁纸、以及用户调整任意用户属性时调用。 |
 | [cursorEnter](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 当鼠标的光标进入对象的边界时，将调用此事件函数。 |
 | [cursorLeave](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 当鼠标的光标离开对象的边界时，将调用此事件函数。 |
 | [cursorMove](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor) | 移动鼠标光标时将调用此事件函数。 |
@@ -43,7 +43,7 @@ SceneScript 使用事件系统，该系统允许您在发生某些事件时运�
 
 ## Classes
 
-Wallpaper Engine为所有组件都提供了一个适当的类，以便您可以通过编程方式访问所有内容。以下列表包含 SceneScript 引入的所有相关类：
+Wallpaper Engine为所有组件都提供了一个适当的类，以便你可以通过编程方式访问所有内容。以下列表包含 SceneScript 引入的所有相关类：
 
 | Class                | Description   |
 |----------------------|---------------|
@@ -52,17 +52,17 @@ Wallpaper Engine为所有组件都提供了一个适当的类，以便您可以�
 | [CameraTransforms](/wallpaper-engine-docs/scene/scenescript/reference/class/CameraTransforms) | 该类的对象描述相机方向和位置。 |
 | [CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent) | 提供有关鼠标事件的位置信息。 |
 | [IAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimation) | 此类表示时间轴属性动画。 |
-| [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) | 此类表示变形动画图层。 |
-| [IConsole](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | 您可以通过全局对象在 SceneScript 代码的任何位置访问此接口，以便与控制台日志进行交互。 |
+| [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) | 此类表示骨骼动画图层。 |
+| [IConsole](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | 你可以通过全局对象在 SceneScript 代码的任何位置访问此接口，以便与控制台日志进行交互。 |
 | [IEffect](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffect) | 提供对图像图层上使用的图像效果的访问。 |
 | [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | 图像图层和文本图层的基础类。 |
-| [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | 提供有关用户设备和正在运行的墙纸的通用信息。 |
+| [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | 提供有关用户设备和正在运行的壁纸的通用信息。 |
 | [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | 此类提供对特定图像图层的函数的访问。 |
 | [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | 提供对输入相关数据（主要是鼠标）的访问。 |
 | [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | 提供对与图层相关的数据的访问。 |
 | [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | 提供对材质/着色器属性的动态属性的访问。 |
-| [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | 提供对粒子系统的访问，并允许您修改其播放状态。 |
-| [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) | 提供对粒子系统的实例修饰符的访问。您可以使用它来动态调整粒子系统的细节。 |
+| [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | 提供对粒子系统的访问，并允许你修改其播放状态。 |
+| [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) | 提供对粒子系统的实例修饰符的访问。你可以使用它来动态调整粒子系统的细节。 |
 | [IScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | 提供对当前加载场景的属性的访问。 |
 | [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) | 提供特定于声音层的访问功能。 |
 | [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) | 此类表示纹理动画。 |

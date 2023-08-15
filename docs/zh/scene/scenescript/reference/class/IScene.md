@@ -4,126 +4,130 @@ prev: ../../reference.md
 
 # SceneScript Class IScene
 
-You can access this interface through the global object `thisScene` anywhere in your SceneScript code to access properties and functions related to the currently loaded scene.
+您可以在 SceneScript 代码中任意位置的全局对象`thisScene`访问此接口，以获取与当前加载的场景相关的属性和函数。
 
 [[toc]]
 
-## Properties
+## 属性
 
 ### bloom: Boolean
 
-Turns the bloom effect on and off.
+高光效果的状态（打开或关闭）。
 
 ### bloomstrength: Number
 
-Strength of the bloom effect.
+高光效果的强度。
 
 ### bloomthreshold: Number
 
-Minimum brightness required to make bloom show up.
+使高光效果显示的最低亮度。
 
 ### clearenabled: Boolean
 
-Whether the backbuffer will be cleared at the beginning of a frame.
+是否在每帧开始时清除后台缓存。
 
 ### clearcolor: Vec3
 
-The color to clear the backbuffer with.
+清除后台缓冲使用的颜色。
 
 ### ambientcolor: Vec3
 
 The ambient color in 3D.
 
+3D的环境颜色。
+
 ### skylightcolor: Vec3
 
 The lower ambient color in 3D.
 
+3D的较低环境色。
+
 ### fov: Number
 
-Field of view in 3D.
+3D的视野。
 
 ### nearz: Number
 
-Near Z plane distance for 3D.
+3D的近Z平面距离。
 
 ### farz: Number
 
-Far Z plane distance for 3D.
+3D的远Z平面距离。
 
 ### camerafade: Boolean
 
-Whether the camera will show the fade effect when changing paths.
+更改路径时相机是否会显示淡入淡出效果。
 
 ### camerashake: Boolean
 
-Turns camera shake on or off.
+关闭或打开相机抖动。
 
 ### camerashakespeed: Number
 
-Sets the base speed for the camera shake.
+设定相机抖动的基本速度。
 
 ### camerashakeamplitude: Number
 
-Sets the magnitude of the camera shake.
+设置相机抖动的幅度。
 
 ### camerashakeroughness: Number
 
-Sets how rough the camera will shake.
+设置相机抖动的粗糙度。
 
 ### cameraparallax: Boolean
 
-Turns the camera parallax effect on or off.
+打开或关闭相机视差效果。
 
 ### cameraparallaxamount: Number
 
-How strong the parallax will scale.
+视差的强度。
 
 ### cameraparallaxdelay: Number
 
-How quickly or slowly the parallax effect will transition.
+视差过渡的延迟量。
 
 ### cameraparallaxmouseinfluence: Number
 
-How much the parallax effect is affected by the cursor position.
+视差效果受鼠标光标位置的影响程度。
 
-## Functions
+## 函数
 
 ### getLayer(name: String|Number): ILayer
 
-Get a layer by index or custom name.
+按索引或自定义名称获取图层。
 
 ### getLayerCount(): Number
 
-Get the total layer count.
+获取图层数量。
 
 ### enumerateLayers(): ILayer[]
 
-Get all layers in an array.
+获取所有图层并放入数组中。
 
 ### destroyLayer(name: String|Number|ILayer): Boolean
 
-Remove a layer by index, name or reference. The layer will actually be removed in a deferred manner so consider this when expecting scripts to stop or destroy on that layer.
+按索引或自定义名称或图层引用删除图层。该图层实际上将以延迟的方式删除，因此如果想用脚本来停止或删除图层时，请考虑这一点。
 
 ### createLayer(configuration: String|Object|IAssetHandle): ILayer
 
-Creates a new layer and returns a reference to it. The configuration can simply be a path to the asset relative to the project, a custom object just like in the `scene.json` file itself with any overrides you want or an [IAssetHandle](/wallpaper-engine-docs/scene/scenescript/reference/class/IAssetHandle) returned by `engine.registerAsset()`.
+创建图层并返回其引用，图层配置可以是相对于项目路径的组件，也可以是像`scene.json`文件那样的自定义对象，或者是通过`engine.registerAsset()`返回的[IAssetHandle](/wallpaper-engine-docs/scene/scenescript/reference/class/IAssetHandle)对象，
 
 ### sortLayer(layer: String|Number|ILayer, index: Number): Boolean
 
-Changes the display order of a layer.
+更改图层的显示顺序。
 
 ### getLayerIndex(layer: String|ILayer): Number
 
-Returns the current index of a layer in the scene graph.
+返回图层的当前索引。
 
 ### getInitialLayerConfig(layer: String|Number|ILayer): Object;
 
-Get the initial configuration of an existing layer.
+获取现有图层的初始配置。
 
 ### getCameraTransforms(): CameraTransforms
 
-Returns the current, static camera transforms. Do not use this while using a camera path!
+返回当前的静态摄像机变换，使用摄像机路径时不要使用!
 
 ### setCameraTransforms(cameraTransforms: CameraTransforms): void
 
-Changes the current, static camera transforms. Do not use this while using a camera path!
+更改当前的静态摄像机变换，使用摄像机路径时不要使用!

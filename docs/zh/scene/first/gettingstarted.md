@@ -20,4 +20,4 @@ Wallpaper Engine编辑器非常强大，适合休闲和高级用户。掌握基�
 
 在开始使用导入的任何图像之前，请首先确保主背景图像就是真实的屏幕分辨率。我们在本指南中使用的示例图像是 1920 x 1080，这是计算机屏幕上最常用的分辨率。
 
-在开始创建第一张壁纸和本指南以阅读其他内容前，你还可以阅读[项目解决方案指南](/wallpaper-engine-docs/scene/performance/resolution)以获取更详细说明。
+在开始创建第一张壁纸以及阅读本指南和其他内容前，你还可以阅读[项目解决方案指南](/wallpaper-engine-docs/scene/performance/resolution)以获取更详细说明。

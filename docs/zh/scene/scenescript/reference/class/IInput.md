@@ -4,18 +4,19 @@ prev: ../../reference.md
 
 # SceneScript Class IInput
 
-You can access this interface through the global `input` object anywhere in your SceneScript code to access input related data.
 
-## Properties
+您可以在 SceneScript 代码中任意位置的全局对象`input`访问此接口，以获取与输入相关的数据。
+
+## 属性
 
 ### cursorWorldPosition: Vec3
 
-Position of the mouse cursor in the world / wallpaper. Only valid for 2D wallpapers.
+鼠标光标在墙纸中的位置。仅适用于 2D 壁纸。
 
 ### cursorScreenPosition: Vec2
 
-Position of the mouse cursor relative to the top left corner of the wallpaper screen area.
+鼠标光标相对于墙纸屏幕区域左上角的位置。
 
 ### cursorLeftDown: Boolean
 
-Whether the left mouse button is currently being pressed down.
+当前是否按下鼠标左键。

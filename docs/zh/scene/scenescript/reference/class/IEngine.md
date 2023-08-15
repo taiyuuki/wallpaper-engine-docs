@@ -2,102 +2,106 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Class IEngine
+# SceneScript class IEngine
 
-You can access this interface at any point in your scripts via the `engine` global to retrieve general information about the system of the wallpaper user and the running wallpaper.
+您可以在全局脚本中的任何位置访问此接口，以获取有关用户系统和正在运行的壁纸的一些信息。
 
 [[toc]]
 
-## Properties
+## 属性
 
 ### screenResolution: Vec2
 
-The size of the screen the wallpaper is displayed on.
+屏幕分辨率。
 
 ### canvasSize: Vec2
 
 The size of the wallpaper project defined in the editor. Only for 2D scenes.
 
+编辑器中定义的壁纸尺寸，只适用于2D场景壁纸。
+
 ### userProperties: Object
 
-Access to the user properties and the values currently selected by the user. Color properties are converted to Vec3 automatically.
+获取用户属性和用户属性当前的值。其中颜色属性会自动转换为 Vec3。
 
 ### timeOfDay: Number
 
-The time of day in the range [0.00, 1.00] representing the 24h clock. This means that 00:00:00 is represented as 0.00 and 23:59:59 is represented by a value of 1.00.
+以[0.00, 1.00]的范围表示一天中的时间。这意味着00:00:00表示为0.00，23:59:59表示为1.00。
 
 ### frametime: Number
 
-Time it took to update the last frame. This property is useful as it allows you to create create animations with a normalized speed. If create any sort of animation with SceneScript, it will have a different speed for users with a different FPS limit unless you first normalize it with `engine.frametime`.
+更新上一帧所花费的时间。此属性非常有用，因为它可以让你创建具有规范化速度的动画。如果使用 SceneScript 创建任何类型的动画，对于具有不同 FPS 限制的用户，它将具有不同的速度，除非您优先使用`engine.frametime`对速度进行平衡。
 
 ### runtime: Number
 
-Total time in seconds that the wallpaper has been running.
+墙纸运行的总时间（以秒为单位）。
 
 ::: danger Please Note
-The runtime has a rollover to retain floating point precision. If you want to create a timer, consider using `setTimeout();` instead.
+runtime会保留有限的浮点精度。如果你想创建一个计时器，请考虑使用`setTimeout()`作为替代。
 :::
 
-## Constants
+## 常量
 
 ### AUDIO\_RESOLUTION\_16: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object with **16** frequency bands.
+用作`registerAudioBuffers()`的参数，创建具有**16**个频段的[AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers)对象。
 
 ### AUDIO\_RESOLUTION\_32: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object with **32** frequency bands.
+用作`registerAudioBuffers()`的参数，创建具有**32**个频段的[AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers)对象。
 
 ### AUDIO\_RESOLUTION\_64: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object with **64** frequency bands.
+用作`registerAudioBuffers()`的参数，创建具有**64**个频段的[AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers)对象。
 
-## Functions
+## 函数
 
 ### isDesktopDevice(): Boolean
 
-Returns `true` on the Wallpaper Engine PC app and `false` on mobile devices.
+返回`true`说明当前的Wallpaper Engine在PC上运行，`false`则在移动设备上。
 
 ### isMobileDevice(): Boolean
 
-Returns `true` on the Wallpaper Engine mobile app and `false` on PCs.
+返回`true`说明当前的Wallpaper Engine在移动设备上运行，`false`则在PC上。
 
 ### isWallpaper(): Boolean
 
-Returns `true` when the wallpaper is being used as a wallpaper (as opposed to being used as a screensaver).
+当壁纸被用作壁纸（而不是屏幕保护程序）时返回`true`。
 
 ### isScreensaver(): Boolean
 
 Returns `true` when the wallpaper is being used as a screensaver (as opposed to being used as a wallpaper).
 
+当壁纸被用作屏幕保护程序（而不是壁纸）时返回`true`。
+
 ### isPortrait(): Boolean
 
-Returns true if the screen uses a portrait resolution.
+如果壁纸分辨率是横屏，则返回`true`。
 
 ### isLandscape(): Boolean
 
-Returns true if the screen uses a landscape resolution.
+如果壁纸分辨率是竖屏，则返回`true`。
 
 ### isRunningInEditor(): Boolean
 
-You can use this to check whether the script is currently running inside the editor or not.
+你可以使用此函数来检查当前脚本是否正在运行中。
 
 ### registerAudioBuffers(resolution: Number): AudioBuffers
 
-Registers your script with the audio responsive system in Wallpaper Engine and get access to the current audio volume levels of the user. The `resolution` parameter is required and defines in how many parts the audio spectrum is subdivided. To conserve memory and performance, you should always stick to the lowest number that you actually need.
+注册您的脚本到音频响应系统中，并获得用户的当前音频电平。`resolution`参数是必需的，用于定义分割音频频段的数量。为了节省内存和性能，您应该尽量使用实际需要的最低数字。
 
-Valid values for the `resolution` parameter are `engine.AUDIO_RESOLUTION_16`, `engine.AUDIO_RESOLUTION_32` and `engine.AUDIO_RESOLUTION_64` which divide the audio spectrum into 16, 32 and 64 sections respectively.
+有效的`resolution`参数是`engine.AUDIO_RESOLUTION_16`，`engine.AUDIO_RESOLUTION_32`和`engine.AUDIO_RESOLUTION_64`，它们分别将音频频段分割为16，32和64个频段。
 
-Returns an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object that you can store to retrieve the audio volume levels in each rendered frame.
+函数返回一个[AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers)对象，您可以将其存储到每帧渲染的音频电平中。
 
 ### registerAsset(file: String): IAssetHandle
 
-If you create any layers dynamically with SceneScript, use function this to mark an asset as being used by your wallpaper. This is important for releasing a wallpaper to the Workshop, as only used or marked assets will be included in the scene archive that is generated.
+如果使用 SceneScript 动态创建任何图层，请使用此函数将该组件标记为在你的壁纸中被使用。这对于发布到创意工坊非常重要，因为只有被使用或被标记的组件才会被打包到生成的场景壁纸中。
 
 ### setTimeout(callback: Function, delay?: Number): Function
 
-Starts a timeout callback in milliseconds. Returns a new callback that can be used to stop the timeout prematurely.
+以毫秒为单位启动延时器。返回可以提前停止延时器的回调。
 
 ### setInterval(callback: Function, delay?: Number): Function
 
-Starts a repeating interval callback in milliseconds. Returns a new callback that can be used to stop the interval.
+以毫秒为单位启动计时器。返回可以提前停止计时器的回调。

@@ -2,19 +2,21 @@
 prev: ../tutorials.md
 ---
 
-# Processing Audio Data with SceneScript
+# 使用 SceneScript 处理音频数据
 
-With SceneScript, you can access the audio levels on the current end-user device. Wallpaper Engine collects the audio levels of certain audio frequencies and makes them available to you for further processing. In this tutorial, we will explain the basics of retrieving these audio levels and we will implement an example where we change the size of an element in the editor to follow the beat of music that a user is playing.
+使用 SceneScript，你可以访问当前用户设备上的音频频率。Wallpaper Engine收集音频频率的电平，并使其可供你进一步处理。在本教程中，我们将介绍获取音频数据的基础知识，我们将实现一个示例，在该示例中，我们将使元素的大小跟随用户正在播放的音乐节拍自动缩放。
 
 ::: tip
-You can quickly access the finalized solution presented at the bottom of this page in the editor without having to copy-paste any code from this page.
+你可以在编辑器中快速访问此页面底部提供的最终解决方案，而无需从此页面复制粘贴任何代码。
 
-To quickly add this example to your wallpaper, simply click on the cogwheel icon next to the property you want to resize along with the beat of your music. Then click on **Bind Script**. The SceneScript code editor will appear. Next, click on **Snippets** at the top, followed by **Replace Script**. Select **Audio Scale** from the list of available scripts and confirm with **OK**.
+要快速将此示例添加到壁纸中，只需单击要随着音乐节拍调整大小的属性旁边的齿轮图标。选择**绑定脚本**，打开脚本编辑器。接下来，单击顶部的**代码段**，然后单击**替换脚本**，从脚本列表中选择**音频因素**（Audio Scale），然后单击**确定**。
 :::
 
-## Registering the Audio Buffers
+> 译注：在编辑器中，Audio Scale被翻译为“音频因素”，容易令人费解，Scale是比例缩放的意思，Audio Scale要表达的意思应该是对象的大小跟随音频缩放，但为了避免有人找不到对应的选项，所以这里也将其译作“音频因素”。
 
-To get started, you first need to initialize the audio responsive system from Wallpaper Engine by calling the the `registerAudioBuffers()` function from the [global engine object](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine). The function will return an [AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers) object, we recommend storing it in a `const` at the top of your script so that you only need to call this function once when the wallpaper is loaded:
+## 注册音频缓冲区
+
+首先，需要通过从[全局变量engine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine)调用`registerAudioBuffers()`函数，让Wallpaper Engine初始化音频响应系统。该函数将返回一个[AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers)对象，我们建议将其存储在脚本顶部的`audioBuffer`变量中，这样在加载壁纸时只需调用此函数一次：
 
 ```js{3}
 'use strict';
@@ -31,21 +33,21 @@ export function update(value) {
 }
 ```
 
-The parameter of `registerAudioBuffers` determines the number of frequency bands you need, you should always choose the lowest number to ensure you are not wasting any system performance or memory. Valid values are:
+`registerAudioBuffers`的参数决定了你需要的频段数量，你应该始终选择最低限度的数值，以确保不会浪费系统性能或内存。有效的值是:
 
-* `engine.AUDIO_RESOLUTION_16` - 16 frequencies
-* `engine.AUDIO_RESOLUTION_32` - 32 frequencies
-* `engine.AUDIO_RESOLUTION_64` - 64 frequencies
+* `engine.AUDIO_RESOLUTION_16` - 16个频段
+* `engine.AUDIO_RESOLUTION_32` - 32个频段
+* `engine.AUDIO_RESOLUTION_64` - 64个频段
 
-In our example, we registered 16 frequencies since we only care about the bass frequencies as part of this tutorial, so a more finely-divided audio band is unnecessary.
+在我们的示例中，我们注册了 16 个频段，因为在我们的教程中我们只关心低音频率，不需要更精细的音频频段。
 
-## Basic Audio Responsive Example
+## 音频响应基本示例
 
-Let's start with a very basic audio responsive example. We have an image layer that we placed in the center of our scene and we want to make it resize dynamically with the beat of music. To achieve this, we click on the cogwheel icon next to the **Scale** property and select **Bind SceneScript**. We can now modify the **Scale** with SceneScript.
+让我们从一个非常基本的音频响应示例开始。我们有一个图像图层放置在壁纸的中心，我们希望让它随着音乐的节拍动态调整大小。为此，我们单击**比例**属性旁边的齿轮图标，然后选择**绑定脚本**。然后，我们就可以使用 SceneScript 修改比例了。
 
-We now need to extend the example above by retrieving some audio volume levels from the `audioBuffer` that we created. The audio buffer object allows us to access `audioBuffer.average` to retrieve the average audio levels of the left and right audio channel. You can also only retrieve the left audio channel by accessing `audioBuffer.left` and the right audio channel by accessing `audioBuffer.right`.
+我们需要用创建的`audioBuffer`获取电平以扩展上面的示例。`audioBuffer`对象允许我们访问`audioBuffer.average`获取左右音频通道的平均电平。你也可以只访问`audioBuffer.left`获取左音频通道，只访问`audioBuffer.right`获取右音频通道。
 
-In the final step, we need to choose which audio frequency we want to access. In Wallpaper Engine, you most commonly want to work with low frequencies that represent the bass and the beat of music. That means, you can access the bass frequencies by accessing the first element via `audioBuffer.average[0]`. In our case, `[0]` represents the low bass frequencies, while `15` represents high treble frequencies. We go with `[0]` because we want our element to resize along the beat of our music.
+最后一步，我们需要选择音频频段。在Wallpaper Engine中，最常处理的是频段是低音频段，它们代表低音频率和音乐节拍。你可以通过访问第一个元素`audioBuffer.average[0]`来获取低音频段。这里的[0]代表低音频段，而15则代表高音频段。选择[0]是因为我们希望元素随着音乐的节拍动态的调整大小。
 
 ```js
 'use strict';
@@ -66,37 +68,38 @@ export function update(value) {
 ```
 
 ::: danger
-We don't recommend using this code example in your wallpaper, follow-along with the rest of the page to learn about how to improve on this simple implementation.
+我们不建议在壁纸中使用此代码示例，请遵循页面的剩余内容，了解如何改进此实现。
 :::
 
-If you now save this script and click on **Run Preview** while listening to music, your image layer will dynamically resize depending on the audio volume of the bass frequencies of your music. Watch the following video to preview this code example:
+
+如果现在保存此脚本，并在播放音乐时点击**运行预览**，则图像图层将根据音乐的低音频率动态调整大小。观看以下视频以预览此代码示例：
 
 <video width="100%" controls >
   <source :src="$withBase('/videos/scenescript_basic_audio.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Improving Audio Responsive Behavior
+## 改进音频响应行为
 
-Our previous example has a few issues that we will address one by one now:
+我们之前的示例有几个问题，我们现在一一解决：
 
-* When no audio is playing, the scale is set to 0 and our element disappears.
-* The element can become very large when the audio levels reach peak levels.
-* The animation does not appear very smooth and it jumps around erratically.
+* 当没有播放音频时，比例为0时元素消失。
+* 当电平达到峰值电平时，该元素可能会变得非常大。
+* 动画看起来不是很流畅，并且跳来跳去不规则。
 
-## Enforcing a Minimum Default Size
+## 强制最小默认大小
 
-There are multiple ways you could achieve a minimum size, but the example we give here is the approach we recommend as it allows you to easily modify the default size in the editor later.
+有多种方法可以实现最小大小，但我们在这里给出的示例是我们推荐的方法，因为它允许你以后在编辑器中轻松修改默认大小。
 
-First, set the **Scale** property to a desired value in the editor. In our example, we configure **Scale X**, **Scale Y** and **Scale Z** to be **0.5** for our image layer. It makes sense to start with a smaller value than 1 to ensure the quality of the image does not suffer when the image gets scaled up too large.
+首先，在编辑器中将 **比例** 属性设置为所需的值。在我们的示例中，我们将图像图层比例的**X**、**Y**和**Z**配置为0.5，合理的选择是让其小于1，以确保在图像放大时图像质量不会受到影响。
 
-After that, we extend our SceneScript code further by introducing the `init` function. The `init` function is called once when the wallpaper is loaded and allows us to store the default value of `Scale` that you configured in the editor in a variable. We then use this default value to add the audio volume on top:
+之后，我们通过引入`init`函数，`init`函数会在壁纸加载时调用一次，并将默认值赋值给**比例**。之后我们要在此默认值的基础上增加音频音量：
 
 ```js
 	value.x = defaultScale.x + audioBuffer.average[0];
 ```
 
-If no audio is playing, the scale will now be the same as your default value and everything louder than that will have the audio volume additionally on top of that. The full script looks like this now, notice how we store the default value in the variable `defaultScale` in the `init` function:
+如果没有音频正在播放，则比例将与默认值相同，并且所有比默认值更大的声音都将在此基础之上进行增加。完整的脚本如下所示，请注意我们是如何在`init`函数中存储默认值的：
 
 ```js
 'use strict';
@@ -127,12 +130,12 @@ export function init(value) {
 ```
 
 ::: tip
-You can quickly add the `init` function in the SceneScript editor by clicking on **Snippets** at the top, then select **Insert Function**, followed by **init**.
+你可以在 SceneScript 编辑器中快速添加`init`函数，方法是单击顶部的**代码段**，然后选择**插入函数**，选择**init**。
 :::
 
-## Restricting the Maximum Audio Response
+## 限制最大音频响应
 
-At this point, the animation will have a minimum size but it may still reach very large levels. It's important to note that the audio buffers normally do not reach values greater than `1.00`, however, in some cases this may happen. For this reason, we recommend always limiting the values you are working with. You can conveniently do this with the `Math.min()` function which easily allows you to limit a number to exceed a specific value. In our case, we extend our code by wrapping `audioBuffer.average[0]` in `Math.min()` with a maximum value of `1.00`:
+现在，音频响应动画具有最小默认值，但仍可能变得非常大。需要注意的是，音频缓冲区通常不会大于`1.00`，但是，在某些情况下不排除会发生。因此，我们建议始终限制正在使用的值。你可以使用`Math.min()`函数轻松地将数字限制为不超过特定的值。在我们的例子中，我们通过`Math.min()`限定`audioBuffer.average[0]`的最大值为`1.00`：
 
 ```js
 	value.x = defaultScale.x + Math.min(audioBuffer.average[0], 1.00);
@@ -140,30 +143,32 @@ At this point, the animation will have a minimum size but it may still reach ver
 	value.z = defaultScale.z + Math.min(audioBuffer.average[0], 1.00);
 ```
 
-If you do more complex processing with the audio data, you should first work with the unrestricted original audio data and only at the last step limit its value. Take how we do it in the next section of this page, where we only apply `Math.min()` at the last step of our processing.
 
-## Smoothing the Audio Response
+如果你需要对音频数据进行更复杂的处理，应使用未被限制的原始音频数据，仅在最后一步对其进行限制。在本页的下一节中，我们只在最后一步对音频数据使用`Math.min()`进行处理。
 
-The last issue we need to address is the erratic movement of our audio visualization. The `update()` function is called every time Wallpaper Engine renders a new frame. This means that the values can jump significantly between frames if the audio volume changes drastically in a short period of time. Follow-along this section by reading the paragraphs below and review the code block below to see its corresponding lines, it's not as complicated as it looks at first glance!
+## 平滑音频响应
 
-We can address this by adding a bit of extra code to smoothen the audio response. First, we need to declare a new variable that stores the audio response across multiple `update()` calls, we will name this variable `smoothAudioVolume` and initiate it with a value of `0` outside of any function.
+我们需要解决的最后一个问题是音频可视化不流畅。每次Wallpaper Engine渲染新帧时都会调用`update()`函数。这意味着，如果音频音量在短时间内发生剧烈变化，则值可能会在帧之间显着跳跃。请结合后面的代码来阅读下面的段落，它其实并不像看起来那么复杂！
 
-Next, we calculate the difference between the current audio volume and the previous audio volume (stored in `smoothAudioVolume`) to see how much the audio levels have changed since the last frame has been calculated. We store this result in a variable named `volumeDifference`.
+我们可以通过添加一些额外的代码来平滑过度音频响应。首先，我们需要声明一个新变量，用于存储多次`update()`调用时的音频响应，我们将此变量命名为`smoothAudioVolume`并在函数外部将其初始化为`0`，
 
-We use the `volumeDifference` in the next step to smoothen the response by multiplying it with a smoothing factor. In our example, we placed the `SMOOTHING_RATE` in a constant at the top of the code with a value of `15`, you can alter this number to increase or decrease the level of smoothing.
+接下来，我们计算当前音频音量与先前音频音量（存储在`smoothAudioVolume`中）之间的差异，以查看自计算最后一帧以来电平发生了多少变化。我们将此结果存储在名为`volumeDifference`的变量中。
 
-We also multiply this with `engine.frametime`. This is important as we need the frametime to normalize the animation across different FPS settings, otherwise it will look different depending on what FPS setting is used. Keep in mind that the `update()` function is called once per frame. That means, if your FPS limit is 60, the `update()` function is called 60 times. If your FPS limit is `30`, it will just be called 30 times.
+我们在下一步中使用`volumeDifference`乘以一个平滑乘数，在我们的示例中，我们将平滑乘数放在代码顶部的常量`SMOOTHING_RATE`中，其值为15，你可以更改此数字以增加或减少平滑级别。
 
-Finally, we add this calculation to our `smoothAudioVolume` variable. In our code, this really just means the following:
+我们还需要将其乘以`engine.frametime`，这很重要，因为我们需要用每帧的时间来调整不同 FPS 设置中的动画速度，否则在不同的FPS设置下，速度会有所不同。请记住，`update()`函数每帧调用一次，这意味着，如果你的 FPS 限制为 60，则该函数将每秒被调用 60 次。如果你的 FPS 限制为 30 ，则只会被调用 30 次。
+
+最后，我们将计算结果赋值给`smoothAudioVolume`变量。在我们的实际上代码中，只有这一行：
 
 ```js
 	smoothAudioVolume += volumeDifference * SMOOTHING_RATE * engine.frametime;
 ```
-Just like in the previous sections, we use `Math.min()` to limit our maximum value to `1.00` to account for peak audio levels.
 
-We then simply return `smoothAudioVolume` at the end of the `update()` function. Previously, we modified value and specifically set `value.x`, `value.y` and `value.z`. However, if you know that all of them will be the same, you can just return a number and Wallpaper Engine will automatically apply the number to all three of them. This also works for `Vec2` properties, for example.
+就像前面的部分一样，我们使用`Math.min()`将电平的峰值限制为`1.00`。
 
-The final code now looks as follows:
+然后，我们只需在`update()`函数的末尾返回`smoothAudioVolume`。之前我们修改了`value`的值并专门设置`了value.x`和`value.y`，但是如果你清楚的知道三者是同一个值，则可以返回一个数字，Wallpaper Engine 会自动将该数字应用于三个值。这一点同样适用于`Vec2`属性。
+
+最终代码现在如下所示：
 
 ```js{4,7,15,18,21}
 'use strict';
@@ -202,7 +207,7 @@ export function init(value) {
 }
 ```
 
-You can see the outcome of this in the following video. The animation is now much smoother and even when no audio is playing, our object remains visible and never grows to excessive sizes:
+你可以在以下视频中看到此操作的结果。动画现在变得更加流畅，即使没有播放音频，我们的对象仍然可见，并且永远不会变得过大：
 
 <video width="100%" controls >
   <source :src="$withBase('/videos/scenescript_smoothened_audio.mp4')" type="video/mp4">
