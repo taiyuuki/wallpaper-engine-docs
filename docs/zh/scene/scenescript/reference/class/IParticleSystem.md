@@ -4,32 +4,32 @@ prev: ../../reference.md
 
 # SceneScript Class IParticleSystem
 
-This class provides access to particle systems and lets you modify their playback state.
+该类提供访问粒子系统，让你可以修改它们的播放状态。
 
-## Properties
+## 属性
 
 ### instance: IParticleSystemInstance
 
-Access to instance modifiers, see [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) for more information.
+可供修改的实例，更多信息参见 [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) 。
 
-## Functions
+## 函数
 
 ### play(): void
 
-Resume emission or restart particles if emission has finished.
+如果播放已经结束，则恢复或重新播放粒子效果。
 
 ### pause(): void
 
-Pause emission of new particles.
+暂停粒子效果。
 
 ### stop(): void
 
-Stop emission and clear all existing particles immediately.
+停止并立即清除所有现有粒子。
 
 ### isPlaying(): Boolean
 
-Check if any particles are still being emitted or simulated.
+检查是否还有粒子正在发射或模拟。
 
 ### emitParticles(count: Number?): void
 
-Emit the provided number of particles instantly, disregarding whether the system is stopped or paused.
+立即发射指定数量的粒子，不管粒子系统是否处于停止或暂停。

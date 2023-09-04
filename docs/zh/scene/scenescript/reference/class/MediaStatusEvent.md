@@ -4,10 +4,10 @@ prev: ../../reference.md
 
 # SceneScript Class MediaStatusEvent
 
-This object describes a media status event, which will be fired whenever the user toggles the entire media integration on or off. When turned off, wallpapers may want to hide respective layers completely.
+该对象描述媒体状态事件，当用户启用或禁用整个媒体会话时触发。当被禁用时，你可能会希望壁纸能隐藏相应的图层。
 
-## Properties
+## 属性
 
 ### enabled: Boolean
 
-Whether the user has currently enabled the media integration option.
+用户当前是否启用媒体。

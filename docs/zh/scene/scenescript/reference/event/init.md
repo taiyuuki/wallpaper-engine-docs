@@ -2,15 +2,15 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Event init
+# init事件
 
-This event function will be called shortly after the object that owns the script has been created. It's useful for modifying or retrieving the initial value of a property for example. Since the `update()` function is called many times per second, you should try and place any code in the `init()` function that does not need to be recalculated every frame to optimize performance.
+这个事件函数将在对象创建后不久被调用。它对于修改或获取属性的**初始值**非常有用。例如，由于`update()`函数每秒会被调用很多次，你应该尝试在`init()`函数中编写不需要每帧重新计算的代码，以优化性能。
 
-Wallpaper Engine will attempt to convert any numeric return values to [Vec2](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) and [Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3) if you are working on a property that expects these return types. For example, if you return `2` on the `Scale` property, Wallpaper Engine will first convert the value to `Vec3(2, 2, 2)` so that it matches the return type the `Scale` property expects.
+Wallpaper Engine会尝试将任何数字返回值转换为[Vec2](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3)和[Vec3](/wallpaper-engine-docs/scene/scenescript/reference/class/Vec3)。例如，如果`比例`属性绑定的函数返回值为`2`，Wallpaper Engine会将值转换为`Vec3(2, 2, 2)`，以便它与`比例`属性的类型相匹配。
 
-## Example Usage
+## 使用示例
 
-In the following example, we use the `init()` event to store the initial value of the user property in a variable called `initialValue`. This has the advantage that the code in the `update()` function uses the position of our element in the editor as a starting point. Alternatively, we could also just hard-code a value for `initialValue.y` in the `update()` function.
+在下面的示例中，我们使用`init()`事件将用户属性的初始值存储在变量`initialValue`中，这有一个好处是我们可以给`update()`函数使用的元素位置指定一个初始值。我们也可以在`update()`函数中以固定的算法使用`initialValue.y`的值。
 
 ```js{3,18-21}
 'use strict';
@@ -37,4 +37,4 @@ export function init(value) {
 
 ```
 
-You can choose to not return any value, then the property will not be modified. 
+你还可以选择不返回任何值，这样属性将不会被修改。

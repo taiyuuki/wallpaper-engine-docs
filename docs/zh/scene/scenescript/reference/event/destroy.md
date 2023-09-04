@@ -2,9 +2,9 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Event destroy
+# destroy事件
 
-This event function will be called just before the object it is attached to gets destroyed.
+此事件函数将在它所属的对象被销毁之前调用。
 
 ```js
 export function destroy() {

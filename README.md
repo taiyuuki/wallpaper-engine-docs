@@ -8,7 +8,7 @@ fork自官方文档：[wallpaper-engine-docs](https://github.com/Wallpaper-Engin
 
 需要翻译的文件位于[仓库](https://github.com/taiyuuki/wallpaper-engine-docs)的docs目录下的zh文件夹内。
 
-如果对已翻译部分有疑议，可以查看docs目录下的en文件夹，文件结构和zh是一样的。
+如果对已翻译部分有疑议，可以查看docs目录下的en文件夹，文件结构和zh是一样的，或者也可以在本地运行项目，用浏览器打开，在页面的右上角切换语言。
 
 如果你愿意贡献翻译：
 
@@ -128,11 +128,11 @@ zh
 │    │    ├─ introduction.md✅
 │    │    ├─ reference
 │    │    │    ├─ class
-│    │    │    │    ├─ AnimationEvent.md
-│    │    │    │    ├─ AudioBuffers.md
+│    │    │    │    ├─ AnimationEvent.md✅
+│    │    │    │    ├─ AudioBuffers.md✅
 │    │    │    │    ├─ CameraTransforms.md
-│    │    │    │    ├─ CursorEvent.md
-│    │    │    │    ├─ IAnimation.md
+│    │    │    │    ├─ CursorEvent.md✅
+│    │    │    │    ├─ IAnimation.md✅
 │    │    │    │    ├─ IAnimationLayer.md
 │    │    │    │    ├─ IAssetHandle.md
 │    │    │    │    ├─ IConsole.md
@@ -141,7 +141,7 @@ zh
 │    │    │    │    ├─ IEngine.md✅
 │    │    │    │    ├─ IImageLayer.md
 │    │    │    │    ├─ IInput.md✅
-│    │    │    │    ├─ ILayer.md
+│    │    │    │    ├─ ILayer.md✅
 │    │    │    │    ├─ IMaterial.md
 │    │    │    │    ├─ IParticleSystem.md
 │    │    │    │    ├─ IParticleSystemInstance.md
@@ -160,13 +160,13 @@ zh
 │    │    │    │    ├─ Vec2.md
 │    │    │    │    └─ Vec3.md
 │    │    │    ├─ event
-│    │    │    │    ├─ applyUserProperties.md
-│    │    │    │    ├─ cursor.md
-│    │    │    │    ├─ destroy.md
-│    │    │    │    ├─ init.md
-│    │    │    │    ├─ media.md
-│    │    │    │    ├─ resizeScreen.md
-│    │    │    │    └─ update.md
+│    │    │    │    ├─ applyUserProperties.md✅
+│    │    │    │    ├─ cursor.md✅
+│    │    │    │    ├─ destroy.md✅
+│    │    │    │    ├─ init.md✅
+│    │    │    │    ├─ media.md✅
+│    │    │    │    ├─ resizeScreen.md✅
+│    │    │    │    └─ update.md✅
 │    │    │    └─ module
 │    │    │           ├─ WEColor.md
 │    │    │           ├─ WEMath.md
@@ -220,3 +220,23 @@ zh
     └─ performance
               └─ fps.md
 ``
+
+# 项目运行
+
+安装依赖
+
+```bash
+yarn
+```
+
+开发模式运行
+
+```bash
+yarn docs:dev
+```
+
+打包
+
+```bash
+yarn docs:build
+```

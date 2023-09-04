@@ -40,8 +40,6 @@
   Your browser does not support the video tag.
 </video>
 
-You should now see the last blend texture as your wallpaper texture, since the last blend texture is overlapping all other textures right now.
-
 你现在可以看到最后一个混合纹理作为壁纸图像了，因为最后一个混合纹理覆盖了所有其他纹理。
 
 ### 混合量的 SceneScript 逻辑
@@ -71,8 +69,6 @@ export function update(value) {
     );
 }
 ```
-
-This snippet makes use of two Wallpaper Engine SceneScript features:
 
 此代码片段使用两个Wallpaper Engine SceneScript功能:
 

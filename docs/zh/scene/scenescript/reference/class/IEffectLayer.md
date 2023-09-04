@@ -4,28 +4,28 @@ prev: ../../reference.md
 
 # SceneScript Class IEffectLayer
 
-Base class for image and text layers.
+图像图层和文本图层的基础类。
 
-## Properties
+## 属性
 
 ### size: Vec2
 
-Resolution of the image layer in pixels. *Read-only.*
+图像图层的分辨率。 *只读*
 
 ### perspective: Boolean
 
-If set to `true`, the layer will use perspective rendering instead of flat rendering.
+如果设为`true`，图像图层将使用透视渲染而不是平面渲染。
 
 ### solid: Boolean
 
-If set to `true`, the layer will trigger [cursor events](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor).
+如果设置为 `true`，图像图层将能够触发 [鼠标事件](/wallpaper-engine-docs/scene/scenescript/reference/event/cursor)。
 
-## Functions
+## 函数
 
 ### getEffect(name: String|Number): IEffect
 
-Find a material effect by its name or index.
+通过名称或索引查找材质效果。
 
 ### getEffectCount(): Number
 
-Get number of effects used by this image layer.
+获取此图像图层的效果数量。

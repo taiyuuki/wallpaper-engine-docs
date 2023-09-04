@@ -4,50 +4,50 @@ prev: ../../reference.md
 
 ## SceneScript Class ITextureAnimation
 
-This class represents a texture animation. By default, all instances of an animated texture share an animation state. Calling any function here that changes the animation will disconnect it from the shared state. You can revert this and use the shared animation state again by calling join.
+该类表示纹理动画。默认情况下，所有纹理动画的实例都共享同一个动画状态。调用任意函数都会使动画断开与共享状态的连接。你可以通过调用 join 函数将其重新加入到共享的动画状态。
 
-Not to be confused with [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture).
+不要与 [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture) 混淆。
 
-## Properties
+## 属性
 
 ### frameCount: Number (readonly)
 
-The number of frames of this animation.
+动画的帧数。
 
 ### duration: Number (readonly)
 
-The duration in seconds of this animation.
+动画的持续时间。
 
 ### rate: Number
 
-Speed factor of the animation, default is 1.
+动画的速度系数，默认为1。
 
-## Functions
+## 函数
 
 ### play()
 
-Continues or starts playing the animation if it was paused or stopped.
+如果动画已暂停或停止，则继续播放动画。
 
 ### stop()
 
-Stops the animation and reverts to the beginning.
+停止动画并恢复到最开始的状态。
 
 ### pause()
 
-Pauses the animation at the current position.
+在当前位置暂停动画。
 
 ### isPlaying(): Boolean
 
-Returns whether the animation is currently playing or if it's paused/stopped.
+返回动画当前正在播放、暂停或停止的布尔值。
 
 ### getFrame(): Number
 
-Get the current frame of the animation.
+获取动画当前的帧数。
 
 ### setFrame(frame: Number)
 
-Set the animation to the specified frame.
+给动画设置为指定帧。
 
 ### join()
 
-Return to the global, shared animation between all objects. 
+回到全局状态，与其他所有对象共享动画状态。

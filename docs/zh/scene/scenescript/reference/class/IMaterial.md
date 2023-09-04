@@ -4,4 +4,6 @@ prev: ../../reference.md
 
 # SceneScript Class IMaterial
 
-This class holds no static properties you should use, but you can access dynamic properties from materials. To do this, bind a script to any shader property, like **Alpha** or **Color** and use the dynamic auto-completion in the SceneScript editor from `thisObject` to discover them. 
+该类不包含静态属性，但你可以在脚本中访问动态属性。为此，请将脚本绑定到任何着色器属性上，比如 **Alpha** 或 **Color** ，并在场景脚本编辑器中使用动态自动补全来查找它们。
+
+> 译注：这里的意思是，IMaterial包含的属性取决于绑定的属性类型，你应该利用编辑的自动补全功能来查看具体有哪些属性。

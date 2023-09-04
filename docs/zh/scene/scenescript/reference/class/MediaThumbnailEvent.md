@@ -4,30 +4,30 @@ prev: ../../reference.md
 
 # SceneScript Class MediaThumbnailEvent
 
-This object describes a media thumbnail event, which will be fired every time the thumbnail image changes, not between tracks using the same thumbnail image.
+该对象描述媒体缩略图事件（专辑封面），每次缩略图图像更改时都会触发。
 
-## Properties
+## 属性
 
 ### hasThumbnail: Boolean
 
-Whether a thumbnail image is available.
+缩略图是否可用。
 
 ### primaryColor: Vec3
 
-Primary color of the thumbnail image as normalized RGB vector.
+缩略图的主要RGB颜色。
 
 ### secondaryColor: Vec3
 
-Secondary color of the thumbnail image as normalized RGB vector.
+缩略图的次要RGB颜色。
 
 ### tertiaryColor: Vec3
 
-Tertiary color of the thumbnail image as normalized RGB vector.
+缩略图的第三次要RGB颜色。
 
 ### textColor: Vec3
 
-Text color guaranteed to have sufficient contrast with primary color. May be secondary or tertiary color when possible.
+可以与主要颜色形成对比的文本颜色。也许会是次要或第三次要颜色。
 
 ### highContrastColor: Vec3
 
-Black or white, depending on what has higher contrast with the primary color.
+黑色或白色，取决于与主要颜色对比度最高的颜色。

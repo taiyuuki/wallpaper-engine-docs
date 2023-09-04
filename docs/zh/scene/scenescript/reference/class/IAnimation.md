@@ -4,52 +4,52 @@ prev: ../../reference.md
 
 # SceneScript Class IAnimation
 
-This class represents a timeline property animation.
+这个类表示一个时间轴动画。
 
-## Properties
+## 属性
 
 ### fps: Number (readonly)
 
-The frames-per-second of the animation.
+动画的帧率。
 
 ### frameCount: Number (readonly)
 
-The total number of frames of this animation.
+动画的总帧数。
 
 ### duration: Number (readonly)
 
-The duration in seconds of this animation.
+动画的持续时间。
 
 ### name: String (readonly)
 
-The custom name of this animation.
+动画的自定义名称。
 
 ### rate: Number
 
-The speed factor of the animation.
+动画的速度系数。
 
 ## Functions
 
 ### play(): void
 
-Continues or starts playing the animation if it was paused or stopped.
+当动画暂停或停止时，继续或开始播放动画。 
 
 ### stop(): void
 
-Stops the animation and reverts to the beginning.
+停止动画并返回到初始状态。
 
 ### pause(): void
 
-Pauses the animation at the current position.
+在当前位置暂停动画。
 
 ### isPlaying(): Boolean
 
-Returns whether the animation is currently playing or if it is paused or stopped.
+返回动画是否正在播放或暂停、停止。
 
 ### getFrame(): Number
 
-Get the current frame of the animation.
+返回当前帧数。
 
 ### setFrame(frame: Number): void
 
-Set the animation to the specified frame.
+设置动画到指定帧。

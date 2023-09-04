@@ -2,12 +2,12 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Event applyUserProperties
+# applyUserProperties事件
 
-This event function will be called under two circumstances:
+这个事件函数将在两种情况下被调用:
 
-* It will be called once initially when the wallpaper is loaded.
-* It will be called each time the user adjusts a user property setting.
+* 当壁纸加载时，这个事件函数将被调用一次。
+* 每当用户调整用户属性设置时，这个事件函数将被调用。
 
 ```js
 export function applyUserProperties(changedUserProperties) {
@@ -15,11 +15,12 @@ export function applyUserProperties(changedUserProperties) {
 }
 ```
 
-The parameter `changedUserProperties` will contain the key names of the specific user properties that you created. You can access properties via `changedUserProperties.keyname`, where `keyname` is the key that was assigned to the property in the project settings. For example, if you have a `color` property, it would be accessible via `changedUserProperties.color`.
+参数`changedUserProperties`将包含你创建的特定用户属性的键名（关键字）。你可以通过`changedUserProperties.keyname`访问属性，其中`keyname`是在项目设置中分配给属性的关键字。例如，如果你有一个`color`属性，它将通过`changedUserProperties.color`来访问。
 
- ::: warning Important
-  After the initial wallpaper load event, the parameters will only contain property changes. For this reason, it is crucial that you check which value is being sent with the current event. We recommend using the `hasOwnProperty()` function for this.
+::: warning 重要
+  壁纸加载事件后，参数将只包含被更改的属性。因此，强烈建议你检查当前事件是否包含某个值，我们建议使用`hasOwnProperty()`函数来检查。
 :::
+
 ```js
 export function applyUserProperties(changedUserProperties) {
         if (changedUserProperties.hasOwnProperty('first_property')) {
@@ -35,22 +36,23 @@ export function applyUserProperties(changedUserProperties) {
 }
 ```
 
-## Example Usage
+## 使用示例
 
-In the following example, we use a checkbox property to conditionally turn off some code in our `update()` function.
+在下面的示例中，我们使用一个复选框属性选择性地在我们的`update()`函数中禁用一些代码。
 
-In this example, we have assigned our script to a **Color** property. The checkbox user property with the key `iscolorful` will be used to turn off our code that cycles the color in rainbow colors. To try this example, create a checkbox property named *"Is Colorful?"* (the user property key will be auto-generated to `iscolorful` in that case) and bind a SceneScript to a **Color** property of an asset.
+在这个例子中，我们为**颜色**属性绑定脚本，并创建键名为`iscolorful`的复选框用户属性，它将用来禁用我们在彩虹色中循环的代码。为了实现这一点，我们需要一个名为 *"Is Colorful?"* (在这种情况下，关键字将自动生成为`iscolorful`)复选框属性，并给组件的**颜色**属性绑定脚本。
 
-We created the `applyUserProperties` event function and to make sure that Wallpaper Engine has sent any changes for this property,
-we first check if our `iscolorful` user property is part of the event:
+我们在脚本中创建`applyUserProperties`事件函数以确保Wallpaper Engine发送属性的任何更改。
+
+我们先检查事件中是否包含`iscolorful`用户属性：
 
 ```js
  if (changedUserProperties.hasOwnProperty('iscolorful'))
  ```
- 
-We then assign the current value of our user property to a local variable named `isColorful`. We then continuously check if `isColorful` is true in the `update()` function of our element and turn off our rainbow color code if the value is not `true`.
 
-You can see the full example here:
+然后我们将用户属性保存在名为`isColorful`的局部变量中，并在`update()`函数中检查`isColorful`是否为true，以判断是否禁用彩虹色相关的代码。
+
+你可以在此查看完整的示例:
 
 ```js{8,14,27-30}
 'use strict';

@@ -4,28 +4,28 @@ prev: ../../reference.md
 
 # SceneScript Class ISoundLayer
 
-Class that provides access functions specific to sound layers.
+该类提供对特定声音层的访问。
 
-## Properties
+## 属性
 
 ### volume: float
 
-Playback volume.
+播放音量。
 
-## Functions
+## 函数
 
 ### isPlaying(): Boolean
 
-Checks if the sound is currently playing.
+检查是否正在播放。
 
 ### play(): void
 
-Starts audio playback if it is not already running.
+如果没有处于播放状态，则恢复或重新播放声音。
 
 ### stop(): void
 
-Stops the sound and resets the internal playback timer.
+停止声音并重置播放计时器。
 
 ### pause(): void
 
-Pauses the sound at the current playback time. 
+暂停正在播放的声音。

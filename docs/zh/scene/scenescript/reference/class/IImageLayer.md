@@ -4,84 +4,84 @@ prev: ../../reference.md
 
 # SceneScript Class IImageLayer
 
-This class provides access to functions specific to image layers.
+此类提供对特定图像图层的访问。
 
-## Properties
+## 属性
 
 ### size: Vec2
 
-Resolution of the base image.
+基础图像的分辨率。
 
 ### perspective: Boolean
 
-Controls the perspective rendering option.
+控制是否透视渲染的选项。
 
 ### solid: Boolean
 
-Controls whether the layer is solid. If set to true, the layer will react to click events.
+控制图层是否是实（solid），如果设置为 true，图层将能够触发鼠标事件。
 
-## Functions
+## 函数
 
 ### getEffect(name: String|Number): IEffect
 
-Retrieves an effect by index or custom name, if set.
+按名称或索引查找材质效果，如果设置了的话。
 
 ### getEffectCount(): Number
 
-Total number of effects used by this image layer.
+获取此图像图层使用的效果数量。
 
 ### getTextureAnimation(): ITextureAnimation
 
-Gets the texture animation if the albedo texture of this image layer is a sprite sheet/GIF.
+如果此图像图层的反照率纹理是或GIF图，则返回纹理动画。
 
 ### getVideoTexture(): IVideoTexture
 
-Gets the video texture if the albedo texture of this image layer is a video file.
+如果此图像图层的反照率纹理是视频，则返回视频纹理。
 
 ### playSingleAnimation(animation: String|Object): IAnimationLayer
 
-Create a new animation layer by animation name or JSON config. Only play the animation once, then remove it automatically.
+通过动画名称或 JSON 配置创建新的动画图层。动画仅播放一次，然后自动将其删除。
 
 ### getAnimationLayerCount(): Number
 
-Get the number of animation layers currently used on this layer.
+获取当前图层使用的动画图层的数量。
 
 ### getAnimationLayer(name: String|Number): IAnimationLayer
 
-Get an existing animation layer object by name or index.
+通过名称或索引获取现有的动画图层。
 
 ### createAnimationLayer(animation: String|Object): IAnimationLayer
 
-Create a new animation layer by animation name or JSON config.
+通过动画名称或 JSON 配置创建新的动画图层。
 
 ### destroyAnimationLayer(animationLayer: String|Object|IAnimationLayer): Boolean
 
-Remove an existing animation layer by name, index or IAnimationLayer object reference.
+通过名称、索引或 IAnimationLayer 对象的引用删除现有的动画图层。
 
 ### getBoneCount(): Number
 
-Get the number of skeletal bones.
+获取骨骼数量。
 
 ### getBoneTransform(bone: String|Number): Mat4
 
-Get world bone transform by name or index.
+按名称或索引获取骨骼的变换矩阵。
 
 ### setBoneTransform(bone: String|Number, transform: Mat4): void
 
-Set world bone transform by name or index.
+按名称或索引设置骨骼的变换矩阵。
 
 ### getBoneIndex(name: String): Number
 
-Get the index of a bone by name.
+按名称获取骨骼的索引。
 
 ### getBoneParentIndex(child: Number|String): Number
 
-Get the index of a bone by name.
+按名称获取骨骼的父骨骼索引。
 
 ### applyBonePhysicsImpulse(bone?: String|Number, directionalImpulse: Vec3, angularImpulse: Vec3): void
 
-Apply directional or angular impulse to a physics bone.
+将指定的方向或角度应用到骨骼。
 
 ### resetBonePhysicsSimulation(bone?: String|Number): void
 
-Resets physics forces and position. 
+重置骨骼的物理力度和位置。

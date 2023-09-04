@@ -4,50 +4,52 @@ prev: ../../reference.md
 
 # SceneScript Class IVideoTexture
 
-This class represents a video texture. Video textures are `.mp4` video files which are rendered similar to an image layer texture. Objects of this class allow you to control a video texture and read its current playback state. Using the `addEndedCallback` function, you can attach custom logic which is executed after the video has reached its end.
+该类表示视频纹理。视频纹理是 `.mp4` 视频文件，它们与图像图层的纹理类似。该类允许你控制视频纹理并读取其当前播放状态。使用 `addEndedCallback` 函数，你可以在视频播放完成以后附加自定义逻辑。
 
-Not to be confused with [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation).
+不要与 [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) 混淆。
 
-## Properties
+## 属性
 
 ### duration: Number
 
 The duration of the video in seconds. *Read-only* value.
 
+以秒为单位的视频持续时间。*只读值*。
+
 ### rate: Number
 
-The playback speed of the texture animation.
+视频纹理动画的播放速度。
 
 ### loop: Boolean
 
-Whether or not this animation should loop.
+动画是否应该循环播放。
 
-## Functions
+## 函数
 
 ### play(): void
 
-Start playing the animation if it's paused or stopped.
+如果动画已暂停或停止播放，则播放动画。
 
 ### pause(): void
 
-Pause the animation.
+暂停动画。
 
 ### stop(): void
 
-Stop the animation and reset the current time to zero.
+停止动画并将当前播放时间重置为零。
 
 ### isPlaying(): Boolean
 
-Checks if the animation is currently playing.
+检查当前动画是否正在播放。
 
 ### getCurrentTime(): Number
 
-Returns the current time of the video.
+返回视频的当前播放时间。
 
 ### setCurrentTime(frame: Number): void
 
-Changes the current time of the video.
+改变视频的当前播放时间。
 
 ### addEndedCallback(callback: Function): void
 
-Add a callback function which is fired every time the video reaches the end.
+添加在视频播放完成时触发的回调函数。

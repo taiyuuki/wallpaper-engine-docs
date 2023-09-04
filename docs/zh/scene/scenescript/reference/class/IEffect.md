@@ -4,24 +4,24 @@ prev: ../../reference.md
 
 # SceneScript Class IEffect
 
-Class that provides access to image effects used on image layers.
+该类提供对图层使用的图像效果的访问。
 
-## Properties
+## 属性
 
 ### visible: Boolean
 
-Whether the effect is currently visible.
+效果当前是否可见。
 
 ### name: String
 
-Custom name of the effect if any is specified.
+效果的自定义名称。
 
-## Functions
+## 函数
 
 ### getMaterial(index: Number): IMaterial
 
-Access a material used by this effects.
+访问此效果使用的材质。
 
 ### getMaterialCount(): Number
 
-Total number of materials used by this effect, every effect has at least one material. 
+获取此效果使用的材质数量，每一个效果至少有一个材质。

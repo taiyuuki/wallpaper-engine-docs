@@ -32,13 +32,9 @@ prev: ../../reference.md
 
 ### ambientcolor: Vec3
 
-The ambient color in 3D.
-
 3D的环境颜色。
 
 ### skylightcolor: Vec3
-
-The lower ambient color in 3D.
 
 3D的较低环境色。
 

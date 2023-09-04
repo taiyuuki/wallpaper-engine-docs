@@ -4,64 +4,64 @@ prev: ../../reference.md
 
 # SceneScript Class IAnimationLayer
 
-This class represents a puppet warp animation layer.
+此类表示操控变形动画（骨骼动画）图层。
 
 ## Properties
 
-### fps: Number (readonly)
+### fps: Number (readonly 只读)
 
-The speed of the animation layer.
+动画图层的帧速率
 
-### frameCount: Number (readonly)
+### frameCount: Number (readonly 只读)
 
-The number of frames of this animation.
+动画图层的帧数
 
-### duration: Number (readonly)
+### duration: Number (readonly 只读)
 
-The duration in seconds of this animation.
+动画图层的持续时间
 
-### name: String (readonly)
+### name: String (readonly 只读)
 
-The custom name of this animation layer.
+动画图层的自定义名称。
 
 ### rate: Number
 
-Speed factor of the animation layer.
+动画图层的速度系数。
 
 ### blend: Number
 
-The amount of blending on this animation layer.
+该动画图层的混合量。
 
 ### visible: Boolean
 
-Whether this animation layer is currently being applied.
+动画图层是否正在被应用（也就是是否可见）。
 
-## Functions
+## 函数
 
 ### play(): void
 
-Continues or starts playing the animation layer if it was paused or stopped.
+当处于暂停或停止状态时继续播放动画。
 
 ### stop(): void
 
-Stops the animation layer and reverts to the beginning.
+停止动画并恢复到初始状态。
 
 ### pause(): void
 
-Pauses the animation layer at the current position.
+在当前位置暂停动画。
 
 ### isPlaying(): Boolean
 
-Returns whether the animation layer is currently playing or if it's paused/stopped.
+返回动画图层是否正在播放或暂停的布尔值。
 
 ### getFrame(): Number
 
-Get the current frame of the animation layer.
+获取动画图层的当前帧。
 
 ### setFrame(frame: Number)
 
-Set the animation layer to the specified frame.
+给动画图层设置为指定帧。
 
 ### addEndedCallback(callback: Function)
 
-Add a callback to be fired every time the animation layer reaches the end.
+添加一个回调函数，每当动画到达终点时触发。

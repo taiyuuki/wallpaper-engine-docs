@@ -39,7 +39,7 @@ SceneScript 使用事件系统，该系统允许你在发生某些事件时运�
 | [mediaPlaybackChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当用户启动、停止或暂停媒体时，将调用此事件函数。 |
 | [mediaPropertiesChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当当前播放的媒体的属性发生更改时，将调用此事件函数。 |
 | [mediaThumbnailChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当当前播放的媒体的缩略图更改时，将调用此事件函数。 |
-| [mediaTimelineChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当播放媒体的当前时间发生变化时，将调用此事件函数，并且仅由某些应用程序提供。 |
+| [mediaTimelineChanged](/wallpaper-engine-docs/scene/scenescript/reference/event/media) | 当播放媒体的当前时间发生变化时，将调用此事件函数，只有某些特定的应用程序支持。 |
 
 ## Classes
 
@@ -57,14 +57,14 @@ Wallpaper Engine为所有组件都提供了一个适当的类，以便你可以�
 | [IEffect](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffect) | 提供对图像图层上使用的图像效果的访问。 |
 | [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | 图像图层和文本图层的基础类。 |
 | [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | 提供有关用户设备和正在运行的壁纸的通用信息。 |
-| [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | 此类提供对特定图像图层的函数的访问。 |
+| [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | 此类提供对特定图像图层的访问。 |
 | [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | 提供对输入相关数据（主要是鼠标）的访问。 |
 | [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | 提供对与图层相关的数据的访问。 |
 | [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | 提供对材质/着色器属性的动态属性的访问。 |
 | [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | 提供对粒子系统的访问，并允许你修改其播放状态。 |
 | [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) | 提供对粒子系统的实例修饰符的访问。你可以使用它来动态调整粒子系统的细节。 |
 | [IScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | 提供对当前加载场景的属性的访问。 |
-| [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) | 提供特定于声音层的访问功能。 |
+| [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) | 提供特定对声音层的访问功能。 |
 | [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) | 此类表示纹理动画。 |
 | [IVideoTexture](/wallpaper-engine-docs/scene/scenescript/reference/class/IVideoTexture) | 此类表示视频纹理动画。 |
 | [Mat4](/wallpaper-engine-docs/scene/scenescript/reference/class/Mat4) | 用于创建4维矩阵的类。 |

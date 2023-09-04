@@ -16,8 +16,6 @@ prev: ../../reference.md
 
 ### canvasSize: Vec2
 
-The size of the wallpaper project defined in the editor. Only for 2D scenes.
-
 编辑器中定义的壁纸尺寸，只适用于2D场景壁纸。
 
 ### userProperties: Object
@@ -69,8 +67,6 @@ runtime会保留有限的浮点精度。如果你想创建一个计时器，请�
 当壁纸被用作壁纸（而不是屏幕保护程序）时返回`true`。
 
 ### isScreensaver(): Boolean
-
-Returns `true` when the wallpaper is being used as a screensaver (as opposed to being used as a wallpaper).
 
 当壁纸被用作屏幕保护程序（而不是壁纸）时返回`true`。
 

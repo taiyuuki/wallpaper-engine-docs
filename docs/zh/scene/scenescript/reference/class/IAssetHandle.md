@@ -4,4 +4,4 @@ prev: ../../reference.md
 
 # SceneScript Class IAssetHandle
 
-Internal object. You get this from `engine.registerAsset()` and can use it as a parameter for [thisScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene)**.createLayer()**.
+内部对象。你可以通过 `engine.registerAsset()` 获得这个对象并将它作为 [thisScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene)**.createLayer()** 的参数。

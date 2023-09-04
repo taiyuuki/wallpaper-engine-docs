@@ -4,14 +4,14 @@ prev: ../../reference.md
 
 # SceneScript Class AnimationEvent
 
-This object describes an animation event that has been fired from a timeline or puppet warp animation.
+此对象描述从时间轴或骨骼变形动画触发的动画事件。
 
-## Properties
+## 属性
 
 ### name: String
 
-This is the custom name of the animation event.
+动画事件的自定义名称。
 
 ### frame: Number
 
-This is the frame number on which the animation event was triggered.
+触发的动画事件当前帧数。

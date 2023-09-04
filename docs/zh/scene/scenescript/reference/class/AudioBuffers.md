@@ -4,28 +4,28 @@ prev: ../../reference.md
 
 # SceneScript Class AudioBuffers
 
-Provides access to the left and right audio spectrum values and their combined average. The `left`, `right` and `average` arrays always have the same size as defined in the `resolution` parameter of [engine.registerAudioBuffers(resolution: Number)](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine). Their contents will be updated for every frame automatically, so you can continuously read the audio levels from this object.
+提供对左右音频频谱值及其平均值的访问。`left`、`right`以及`average`数组的大小始终与 [engine.registerAudioBuffers(resolution: Number)](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine)）参数定义的大小相同。它们会每一帧自动更新，因此你可以持续读取此对象的音频电平。
 
-If you have initialized this object with a resolution of `16` for example, then accessing either `left[0]`, `right[0]` or `average[0]` would return you the current audio levels of low bass frequencies which is useful for detecting beats and most commonly used in Wallpaper Engine. Accessing `left[15]`, `right[15]` or `average[15]` would be for high treble frequencies, while all values in between represent a specific audio frequency range.
+如果你已初始化此对象的频段，例如`16`，则访问`left[0]`、`right[0]`或`average[0]`，将得到低音频率的当前音频电平，这对于检测节拍很有用，这在Wallpaper Engine是很常用的。相应的，访问`left[15]`, `right[15]`或`average[15]`将用于获取高音频率，介于两者之间的则表示特定的频段的电平值。
 
-The volume levels typically range from `0.00` to `1.00`, though they may also in some cases reach higher values than `1.00`. If this is a problem for your use-case, you can utilize `Math.min()` to limit the values to `1.00`. For example:
+音量级别通常介于`0.00`到`1.00`之间，但在某些情况下它们也可能达到高于1。如果这对您的用例来说是个问题，您可以利用`Math.min()`对其进行限制.例如：
 
 ```js
 Math.min(1.00, audioBuffers.average[0]);
 ```
 
-## Properties
+## 属性
 
 ### average: Float32Array
 
-This is the arithmetic mean of both channels (`left` and `right`) divided by half.
+这是左右两个音频通道（`left`和`right`）的算术平均值。
 
-We recommend using this property unless you specifically want to work with the audio data from both channels independently.
+建议使用此属性，除非你需要单独处理自两个音频通道的音频数据。
 
 ### left: Float32Array
 
-Array that contains the audio volume levels of the left audio channel.
+左侧音频电平构成的数组。
 
 ### right: Float32Array
 
-Array that contains the audio volume levels of the left audio channel.
+右侧音频电平构成的数组。

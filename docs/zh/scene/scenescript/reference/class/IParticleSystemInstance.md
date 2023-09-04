@@ -4,70 +4,70 @@ prev: ../../reference.md
 
 # SceneScript Class IParticleSystemInstance
 
-Provides access to instance modifiers for particle systems. You can use this to adjust details of a particle system dynamically.
+提供可以修改粒子系统的实例。你可以使用这个来动态调整粒子系统的细节。
 
-All factors are multiplied with the initializers and operators of your particle system. A factor of `1.0` is the default value at which the particle system remains unchanged.
+粒子系统的所有系数都会被乘以初始化的值。默认值固定为 `1.0`。
 
 ## Properties
 
 ### alpha: Number
 
-Factor to control opacity.
+控制透明度的系数。
 
 ### size: Number
 
-Factor to control size.
+控制大小的系数。
 
 ### count: Number
 
-Factor to control emission rate.
+控制发射速数量的系数。
 
 ### speed: Number
 
-Factor to control initial velocity and forces.
+控制速度和力度的系数。
 
 ### lifetime: Number
 
-Factor to control lifetime.
+控制粒子生命周期的系数。
 
 ### rate: Number
 
-Factor to control simulation rate.
+控制模拟速率的系数。
 
 ### colorn: Number
 
-Modifies the color assigned to particles.
+调整粒子颜色。
 
-Note that the property name is indeed `colorn` with an `n` at the end. This exists for backward compatibility.
+注意，该属性的名称 `colorn` 有一个 `n` 后缀的。这是为了向后兼容。
 
 ### controlpoint0: Vec3
 
-Position of control point 0.
+控制点 0 的位置。
 
 ### controlpoint1: Vec3
 
-Position of control point 1.
+控制点 1 的位置。
 
 ### controlpoint2: Vec3
 
-Position of control point 2.
+控制点 2 的位置。
 
 ### controlpoint3: Vec3
 
-Position of control point 3.
+控制点 3 的位置。
 
 ### controlpoint4: Vec3
 
-Position of control point 4.
+控制点 4 的位置。
 
 ### controlpoint5: Vec3
 
-Position of control point 5.
+控制点 5 的位置。
 
 ### controlpoint6: Vec3
 
-Position of control point 6.
+控制点 6 的位置。
 
 ### controlpoint7: Vec3
 
-Position of control point 7. 
+控制点 7 的位置。

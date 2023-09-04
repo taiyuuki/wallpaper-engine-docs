@@ -4,86 +4,86 @@ prev: ../../reference.md
 
 # SceneScript Class Vec2
 
-Utility class which holds a 2 dimensional value pair: `x` and `y`.
+用于创建 2 维键值对的工具类，键值对为`x` 和 `y`。
 
-## Properties
+## 属性
 
 ### x: Number
 
-Value of first component.
+第一项的值。
 
 ### y: Number
 
-Value of second component.
+第二项的值。
 
-## Constructors
+## 构建函数
 
 ### constructor(x: Number, y: Number): Vec2
 
-Constructor that sets x and y respectively.
+分别设置 x 和 y 的构造函数。
 
 ### constructor(): Vec2
 
-Empty constructor sets all components to 0.
+将所有成员设置为 0 的构造函数。
 
 ### constructor(value: Number): Vec2
 
-Sets both x and y members to parameter value.
+将 x 和 y 设置为同一个值的构造函数。
 
 ### constructor(value: String): Vec2
 
-Will parse the first two numbers from the string and set x and y respectively.
+解析字符串中的前两个数字并设置 x 和 y的构造函数。
 
 ### constructor(value: Vec3): Vec2
 
-Will use x and y from value and set members respectively.
+从 Vec3 中设置 x 和 y的构造函数。
 
-## Functions
+## 函数
 
 ### length(): Number
 
-Returns length of the vector.
+返回向量的长度。
 
 ### lengthSqr(): Number
 
-Returns squared length of the vector. This is more efficient, so if you only need a binary comparison, use this.
+返回向量的平方长度。这更高效，如果你只需要进行二进制比较，请使用它。
 
 ### normalize(): Vec2
 
-Normalizes the vector and returns the result as a new object.
+规范化向量并将结果作为新对象返回。
 
 ### copy(): Vec2
 
-Makes a copy.
+返回一个副本。
 
 ### add(value: Number|Vec2): Vec2
 
-Adds parameter to both components and returns result as a new object.
+增加参数的数值并将结果作为新对象返回。
 
 ### subtract(value: Number|Vec2): Vec2
 
-Subtracts parameter to both components and returns result as a new object.
+减去参数的数值并将结果作为新对象返回。
 
 ### multiply(value: Number|Vec2): Vec2
 
-Multiplies both components with parameter and returns result as a new object.
+将两个分量相乘并将结果作为新对象返回。
 
 ### divide(value: Number|Vec2): Vec2
 
-Divides both components by parameter and returns result as a new object. Does not check for zero division.
+将两个分量相除并将结果作为新对象返回。
 
 ### dot(value: Vec2): Number
 
-Computes dot product with vector value.
+计算向量的点积。
 
 ### reflect(normal: Vec2): Vec2
 
-Returns reflection vector along normal. Make sure that normal is normalized.
+返回法线向量。
 
 ### perpendicular(): Vec2
 
-Returns perpendicular copy of the vector.
+返回垂直向量的副本。
 
 ### toString(): String
 
-Concatenates components with a space in-between so that it can also be parsed again. 
+将成员组合为字符串，用空格分隔，以便可以再次解析。

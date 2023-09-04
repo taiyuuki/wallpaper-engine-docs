@@ -4,94 +4,94 @@ prev: ../../reference.md
 
 # SceneScript Class Vec3
 
-Utility class which holds a 3 dimensional value pair: `x`, `y` and `z`.
+用于创建 3 维键值对的工具类，键值对为`x`, `y` 和 `z`。
 
-## Properties
+## 属性
 
 ### x: Number
 
-Value of first component.
+第一项的值。
 
 ### y: Number
 
-Value of second component.
+第二项的值。
 
 ### z: Number
 
-Value of third component. 
+第三项的值。
 
 ## Constructors
 
 ### constructor(x: Number, y: Number, z: Number): Vec3
 
-Constructor that sets x, y and z respectively.
+分别设置 x， y 和 z 的构造函数。
 
 ### constructor(): Vec3
 
-Empty constructor sets all components to 0.
+将所有成员设置为 0 的构造函数。
 
 ### constructor(value: Number): Vec3
 
-Sets x, y and z members to parameter value.
+将 x， y 和 z 设置为同一个值的构造函数。
 
 ### constructor(x: Number, y: Number): Vec3
 
-Constructor that sets x and y respectively and sets z to 0.
+设置 x 和 y，而 z 设置为 0 的构造函数。
 
 ### constructor(value: String): Vec3
 
-Will parse the first three numbers from the string and set x, y and z respectively.
+解析字符串中的前三个数字并设置 x， y 和 z 的构造函数。
 
 ### constructor(value: Vec2): Vec3
 
-Will use x and y from value and set z to 0.
+从 Vec2 中设置 x 和 y，而 z 设置为 0 的构造函数。
 
-## Functions
+## 杉树
 
 ### length(): Number
 
-Returns length of the vector.
+返回向量的长度。
 
 ### lengthSqr(): Number
 
-Returns squared length of the vector. This is more efficient, so if you only need a binary comparison, use this.
+返回向量的平方长度。这更高效，如果你只需要进行二进制比较，请使用它。
 
 ### normalize(): Vec3
 
-Normalizes the vector and returns the result as a new object.
+规范化向量并将结果作为新对象返回。
 
 ### copy(): Vec3
 
-Makes a copy.
+返回一个副本。
 
 ### add(value: Number|Vec3): Vec3
 
-Adds parameter to all three components and returns result as a new object.
+增加参数的数值并将结果作为新对象返回。
 
 ### subtract(value: Number|Vec3): Vec3
 
-Subtracts parameter to all three components and returns result as a new object.
+减去参数的数值并将结果作为新对象返回。
 
 ### multiply(value: Number|Vec3): Vec3
 
-Multiplies all three components with parameter and returns result as a new object.
+将三个分量相乘并将结果作为新对象返回。
 
 ### divide(value: Number|Vec3): Vec3
 
-Divides all three components by parameter and returns result as a new object. Does not check for zero division.
+将三个分量相除并将结果作为新对象返回。
 
 ### dot(value: Vec3): Number
 
-Computes dot product with vector value.
+计算向量的点积。
 
 ### reflect(normal: Vec3): Vec3
 
-Returns reflection vector along normal. Make sure that normal is normalized.
+返回法线向量。
 
 ### cross(value: Vec3): Vec3
 
-Returns cross product between this and value as a new object.
+返回向量的叉乘。
 
 ### toString(): String
 
-Concatenates components with a space in-between so that it can also be parsed again. 
+将成员组合为字符串，用空格分隔，以便可以再次解析。

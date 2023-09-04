@@ -2,17 +2,17 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Cursor Events
+# Cursor事件
 
-SceneScript offers multiple cursor event that allows you to interact with mouse movements and mouse clicks. The parameter for all cursor events is an [CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent) object with additional event data.
+SceneScript提供了多个鼠标事件，可以让你利用鼠标移动和鼠标点击交互。参数都是一个[CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent)对象，它还包含额外的事件数据。
 
-All mouse cursor events will only work on objects marked as **Solid** in the layer settings. 
+所有鼠标事件都只能在标记为 **实（Solid）** 的对象上工作。
 
 [[toc]]
 
 ## cursorEnter
 
-This event function will be called when the cursor enters the bounds of the object.
+这个事件函数将在鼠标进入对象的边界时被调用。
 
 ```js
 export function cursorEnter(event: CursorEvent) {
@@ -22,7 +22,7 @@ export function cursorEnter(event: CursorEvent) {
 
 ## cursorLeave
 
-This event function will be called when the cursor leaves the bounds of the object.
+这个事件函数将在鼠标离开对象的边界时被调用。
 
 ```js
 export function cursorLeave(event: CursorEvent) {
@@ -32,7 +32,7 @@ export function cursorLeave(event: CursorEvent) {
 
 ## cursorMove
 
-This event function will be called when the cursor has been moved.
+在对象上移动鼠标时会调用此事件函数。
 
 ```js
 export function cursorMove(event: CursorEvent) {
@@ -42,7 +42,7 @@ export function cursorMove(event: CursorEvent) {
 
 ## cursorDown
 
-This event function will be called when the cursor is being pressed down on an object.
+在对象上按下鼠标时会调用此事件函数。
 
 ```js
 export function cursorDown(event: CursorEvent) {
@@ -52,7 +52,7 @@ export function cursorDown(event: CursorEvent) {
 
 ## cursorUp
 
-This event function will be called when the cursor is being released over an object.
+在对象上释放鼠标时会调用此事件函数。
 
 ```js
 export function cursorUp(event: CursorEvent) {
@@ -62,7 +62,7 @@ export function cursorUp(event: CursorEvent) {
 
 ## cursorClick
 
-This event function will be called when the cursor has been pressed and released on the same object. The event is triggered after the `cursorUp` and `cursorDown` event have been executed.
+这个事件函数将在鼠标按下和释放时被调用。该事件触发在`cursorUp`和`cursorDown`事件之后。
 
 ```js
 export function cursorClick(event: CursorEvent) {

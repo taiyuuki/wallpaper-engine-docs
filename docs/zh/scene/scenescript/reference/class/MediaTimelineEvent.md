@@ -4,14 +4,14 @@ prev: ../../reference.md
 
 # SceneScript Class MediaTimelineEvent
 
-This object describes a media timeline event, which is an optional event that may be fired irregularly from applications supporting it.
+该事件描述了媒体时间轴事件，这是一个可选事件，只能由支持该事件的应用程序触发。
 
-## Properties
+## 属性
 
 ### position: Number
 
-The current position of the track in seconds.
+音轨的当前播放位置。
 
 ### duration: Number
 
-The total duration of the track in seconds.
+音轨的总持续时间。

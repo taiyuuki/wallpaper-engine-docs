@@ -4,14 +4,14 @@ prev: ../../reference.md
 
 # SceneScript Class IConsole
 
-You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log.
+你可以通过全局对象 `console` 在 SceneScript 代码的任何位置访问它。
 
-## Functions
+## 函数
 
 ### log(...args): void
 
-Converts all parameters to a string and concatenates them with a space, then prints them to the log as an info message.
+将所有参数转换为字符串并用空格连接它们，然后将它们作为信息消息打印到日志中。
 
 ### error(...args): void
 
-Converts all parameters to a string and concatenates them with a space, then prints them to the log as an error message. 
+将所有参数转换为字符串并用空格连接它们，然后将它们作为错误消息打印到日志中。

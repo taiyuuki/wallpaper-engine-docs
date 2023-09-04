@@ -2,19 +2,19 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Media Integration Events
+# 媒体相关的事件
+ 
+SceneScript 提供了多个媒体集成事件，允许您访问系统上当前播放的音乐或视频的信息。这仅适用于集成了全局 Windows 媒体系统的媒体播放器。某些媒体播放器可能需要你手动开启此功能。
 
-SceneScript offers multiple media integration events that allow you to access information about currently playing music or videos on the system. This will only be available for media players that integrate with the global Windows media system. Some media players require this feature to be turned on first.
-
-::: danger Please note
-Some media data is not available in certain audio players. Always build your wallpapers in a way that they do not break when the feature is disabled or if certain data points are unavailable.
+::: danger 请注意
+有些音频播放器中的音频数据无法被壁纸引擎访问。你构建的壁纸应该始终保证在禁用媒体功能或者某些数据不可用的情况下，仍然可以正常工作。
 :::
 
 [[toc]]
 
 ## mediaStatusChanged
 
-This event function will be called when the media integration is turned on or off by the user in the app settings. The event parameter is a [MediaStatusEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaStatusEvent). You can utilize this to adapt your wallpaper for users who choose not to use this feature at all.
+这个事件函数将在媒体功能被禁用或启用时被调用。事件参数是一个[MediaStatusEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaStatusEvent)对象，你可以利用它来适配那些不使用媒体功能的用户的壁纸。
 
 ```js
 export function mediaStatusChanged(event: MediaStatusEvent) {
@@ -24,7 +24,7 @@ export function mediaStatusChanged(event: MediaStatusEvent) {
 
 ## mediaPlaybackChanged
 
-This event function will be called when the users starts, stops or pauses media playback. The event parameter is a [MediaPlaybackEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPlaybackEvent). You can use the class constants to check for the appropriate state. For example: `event.state == MediaPlaybackEvent.PLAYBACK_PLAYING`, see the `MediaPlaybackEvent` class for more information.
+这个事件函数将在媒体开始播放、停止播放或暂停播放时被调用。事件参数是一个[MediaPlaybackEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPlaybackEvent)对象，你可以利用它检查媒体的播放状态。例如： `event.state == MediaPlaybackEvent.PLAYBACK_PLAYING`，更多信息请参阅[MediaPlaybackEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPlaybackEvent)。
 
 ```js
 export function mediaPlaybackChanged(event: MediaPlaybackEvent) {
@@ -34,7 +34,7 @@ export function mediaPlaybackChanged(event: MediaPlaybackEvent) {
 
 ## mediaPropertiesChanged
 
-This event function will be called when the properties of the currently playing media change. It contains text information such as the song title, artist name, album name and more. All information are supplied by the [MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent) parameter.
+这个事件函数将在当前播放的媒体属性发生变化时调用，包括歌曲标题、歌手名称、专辑名称等。所有信息都由[MediaPropertiesEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaPropertiesEvent)参数提供。
 
 ```js
 export function mediaPropertiesChanged(event: MediaPropertiesEvent) {
@@ -44,7 +44,7 @@ export function mediaPropertiesChanged(event: MediaPropertiesEvent) {
 
 ## mediaThumbnailChanged
 
-This event function will be called when the thumbnail of the currently playing media changes. The event parameter is a [MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent) and also contains additional information, such as primary, secondary and tertiary colors used in the album art which you can utilize in your wallpaper.
+这个事件函数将在当前播放的媒体缩略图（专辑封面）发生变化时调用，事件参数是[MediaThumbnailEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaThumbnailEvent)，并且还包含额外的信息，例如主要颜色、次要瑶瑟和第三次要颜色等，你可以在壁纸中利用这些信息。
 
 ```js
 export function mediaThumbnailChanged(event: MediaThumbnailEvent) {
@@ -54,7 +54,7 @@ export function mediaThumbnailChanged(event: MediaThumbnailEvent) {
 
 ## mediaTimelineChanged
 
-This event function will be called when the current time of the playing media changes. The event parameter is a [MediaTimelineEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaTimelineEvent). **Please note:** Not all media players support this feature, make sure your wallpaper also works fine when this function is never called.
+这个事件函数将在播放媒体的当前时间发生变化时被调用。事件参数是一个[MediaTimelineEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaTimelineEvent)对象。**请注意：** 并不是所有媒体播放器都支持此功能，请确保你的壁纸在没能调用此函数的情况下也能正常工作。
 
 ```js
 export function mediaTimelineChanged(event: MediaTimelineEvent) {

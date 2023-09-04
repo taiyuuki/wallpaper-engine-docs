@@ -4,16 +4,16 @@ prev: ../../reference.md
 
 # SceneScript Class Mat4
 
-Mat4 utility class used for creating a 4 dimensional identity matrix which can be used for matrix manipulations.
+Mat4 工具类，用于创建一个 4 维的单位矩阵，可以用于矩阵操作。
 
-## Constructors
+## 构造函数
 
 ### constructor(): Mat4
 
-Creates an identity matrix.
+创建一个单位矩阵。
 
-## Functions
+## 函数
 
 ### translation(position?: Vec2|Vec3): Vec3
 
-If position is specified, it will change the translation vector of the matrix and return nothing. If position is not specified, it will return the current translation vector.
+如果指定了 position 参数，它将改变矩阵的变换量且不会返回任何值。如果没有指定 position 参数，它将返回当前的变换量。
