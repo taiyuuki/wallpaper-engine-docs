@@ -18,7 +18,7 @@ fork自官方文档：[wallpaper-engine-docs](https://github.com/Wallpaper-Engin
 
 # 翻译进度
 
-✅表示已翻译，其余表示未翻译。
+✅表示已翻译，❎表示已翻译但有新增的未翻译内容，其余表示未翻译。
 
 ```list
 zh
@@ -77,7 +77,7 @@ zh
 │    │    ├─ introduction.md✅
 │    │    └─ overview.md✅
 │    ├─ first
-│    │    ├─ assets.md✅
+│    │    ├─ assets.md❎
 │    │    ├─ effects.md✅
 │    │    ├─ gettingstarted.md✅
 │    │    ├─ properties.md✅
@@ -196,7 +196,7 @@ zh
 │           ├─ checkbox.md✅
 │           ├─ color.md✅
 │           ├─ combo.md✅
-│           ├─ overview.md✅
+│           ├─ overview.md❎
 │           ├─ slider.md✅
 │           ├─ text.md✅
 │           └─ texture.md✅

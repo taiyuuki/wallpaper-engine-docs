@@ -14,9 +14,53 @@ This article discusses the following topics:
 
 [[toc]]
 
-## Pulsating Light
+## Light Types
 
-One thing you might want to do is to introduce a flickering effect for your light. This can be achieved either using SceneScript or Timeline animations.
+### Point Light
+
+The default light type is a simple point light source. Adjusting its radius will decide how far the light will travel while adjusting the intensity will adjust the brightness that the light has within its radius.
+
+### Spot Light
+
+The spot light will emit a cone-shaped light in a configurable direction. Make sure to place the spot light in the correct height using the **Height** setting and adjust its angles to face towards the object that you want to shine on.
+
+You can configure the inner and outer cone of the spot light using the editor gizmo as shown in the following video:
+
+<video width="100%" controls loop>
+  <source src="/videos/light_spot.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+In a more advanced scenario, you might want to control the angle at which the light shines onto your wallpaper. It is possible to rotate the spot light inwards and make it appear as if it is shining from the top of your wallpaper for example. Take a look at this example, so see how a spot light can be turned positioned:
+
+<video width="100%" controls loop>
+  <source src="/videos/light_spot_advanced.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Tube Light
+
+The tube light emits a light in a straight line from a predefined start and end point. Both points can be moved using *SceneScript* or a *timeline animation*.
+
+<video width="100%" controls loop>
+  <source src="/videos/light_tube.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Directional Light
+
+Unlike the spot light, the directional light does not actually have a position within the wallpaper, changing its position will not have any visible effect as it will always shine across the entire wallpaper. However, you can use the controls to turn the direction that it is facing, as indicated by the 3D arrow that is shown in the editor.
+
+In short, the directional light is best used when you want to shine a line evenly across your entire wallpaper from a specific angle.
+
+<video width="100%" controls loop>
+  <source src="/videos/light_directional.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## Light Animations
+
+One thing you might want to do is to animate your light, one example being a flickering animation for your light. This can be achieved either using SceneScript or Timeline animations.
 
 ### Timeline Pulse Animation
 
@@ -148,7 +192,7 @@ You can see this complete implementation in the following video:
 
 ## Attaching a Light to the Mouse Cursor
 
-Using **SceneScript**, you can also dynamically attach the light to the mouse cursor position which essentially turns the mouse into a kind of flash light that shines onto the scene.
+Using **SceneScript**, you can also dynamically attach the light to the mouse cursor position which essentially turns the mouse into a *flash light* that shines onto the scene.
 
 ![Real-time lighting and reflections](/wallpaper-engine-docs/img/pbr/pbr_mouse.gif)
 
