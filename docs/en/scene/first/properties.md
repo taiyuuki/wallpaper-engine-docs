@@ -24,7 +24,7 @@ That's it! If you now apply the wallpaper and select it in the "Installed" tab o
 </video>
 
 ## Creating sub-properties with display conditions
-In some cases, you may want to show additional properties under certain conditions. For example, take the example we have used in the previous section: You may have a clock and whenever the clock is enabled, you want to show users an additional option to switch between the 24 hour and 12 hour format. This helps declutter the properties list as you can selectively show properties whenever they are needed.
+In some cases, you may want to show additional properties under certain conditions. Take the example we have used in the previous section: You may have a clock and whenever the clock is enabled, you want to show users an additional option to switch between the 24 hour and 12 hour format. This helps declutter the properties list as you can selectively show properties whenever they are needed.
 
 In the case of the clock, you can find a *Use 24h format* property when selecting the clock. Create a new checkbox user property for this setting just like in the previous example. In this case, however, you need to take the **key** value we mentioned in that section and create a little bit of code in the **display condition** option. Don't worry, it's not very complicated. The identifier of the clock property we created is **show_clock** - you can always look the identifier of each property up by opening the clock property in the property list. We now want the display condition to be:
 

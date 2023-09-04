@@ -38,4 +38,19 @@ The clock will be added to the wallpaper immediately. Since it is a text layer, 
   Your browser does not support the video tag.
 </video>
 
-Keep in mind that since the clock relies on **SceneScript**, the clock will not actually run while in the editor, it will merely show a static preview (12:34 by default). You can *turn on* the clock by clicking the **Run Scripts** button at the top of the editor that will appear after the clock has been added or preview the wallpaper.
+Keep in mind that since the clock relies on **SceneScript**, the clock will not actually run while in the editor, it will merely show a static preview (12:34 by default). You can *turn on* the clock by clicking the **Run Preview** button at the top of the editor that will appear after the clock has been added or preview the wallpaper.
+
+## Asset Hierarchy
+
+Wallpaper Engine also allows you to create a hierarchy within your asset list. This allows you to attach assets to another parent asset. If the parent asset is moved, rotated or scaled, so will all its children. This can help to organize your wallpaper assets into groups that are tied together, though you should only use it when objects are firmly tied to each other.
+
+To create a hierarchy, simply drag and drop an asset onto another asset in the list and move to the right as shown in this video:
+
+<video width="100%" controls loop>
+  <source src="/videos/asset_hierarchy.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+As you can see in the video, when attaching the circling stars to the clock, they start moving, rotating and scaling along with the clock.
+
+We will not be utilizing this feature as part of this beginner tutorial but you may find it useful to organize your wallpaper better. It is especially useful in more advanced use-cases, for example if you want multiple assets to move in union as part of a *timeline animation* or a custom-coded *SceneScript* animation.
