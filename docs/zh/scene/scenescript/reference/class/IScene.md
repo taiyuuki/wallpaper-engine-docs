@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class IScene
 
-您可以在 SceneScript 代码中任意位置的全局对象`thisScene`访问此接口，以获取与当前加载的场景相关的属性和函数。
+你可以在 SceneScript 代码中任意位置的全局对象`thisScene`访问此接口，以获取与当前加载的场景相关的属性和函数。
 
 [[toc]]
 

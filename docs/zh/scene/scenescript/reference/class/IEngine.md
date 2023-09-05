@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript class IEngine
 
-您可以在全局脚本中的任何位置访问此接口，以获取有关用户系统和正在运行的壁纸的一些信息。
+你可以在全局脚本中的任何位置访问此接口，以获取有关用户系统和正在运行的壁纸的一些信息。
 
 [[toc]]
 
@@ -28,11 +28,11 @@ prev: ../../reference.md
 
 ### frametime: Number
 
-更新上一帧所花费的时间。此属性非常有用，因为它可以让你创建具有规范化速度的动画。如果使用 SceneScript 创建任何类型的动画，对于具有不同 FPS 限制的用户，它将具有不同的速度，除非您优先使用`engine.frametime`对速度进行平衡。
+更新上一帧所花费的时间。此属性非常有用，因为它可以让你创建具有规范化速度的动画。如果使用 SceneScript 创建任何类型的动画，对于具有不同 FPS 限制的用户，它将具有不同的速度，除非你优先使用`engine.frametime`对速度进行平衡。
 
 ### runtime: Number
 
-墙纸运行的总时间（以秒为单位）。
+壁纸运行的总时间（以秒为单位）。
 
 ::: danger Please Note
 runtime会保留有限的浮点精度。如果你想创建一个计时器，请考虑使用`setTimeout()`作为替代。
@@ -84,11 +84,11 @@ runtime会保留有限的浮点精度。如果你想创建一个计时器，请�
 
 ### registerAudioBuffers(resolution: Number): AudioBuffers
 
-注册您的脚本到音频响应系统中，并获得用户的当前音频电平。`resolution`参数是必需的，用于定义分割音频频段的数量。为了节省内存和性能，您应该尽量使用实际需要的最低数字。
+注册你的脚本到音频响应系统中，并获得用户的当前音频电平。`resolution`参数是必需的，用于定义分割音频频段的数量。为了节省内存和性能，你应该尽量使用实际需要的最低数字。
 
 有效的`resolution`参数是`engine.AUDIO_RESOLUTION_16`，`engine.AUDIO_RESOLUTION_32`和`engine.AUDIO_RESOLUTION_64`，它们分别将音频频段分割为16，32和64个频段。
 
-函数返回一个[AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers)对象，您可以将其存储到每帧渲染的音频电平中。
+函数返回一个[AudioBuffers](/wallpaper-engine-docs/scene/scenescript/reference/class/AudioBuffers)对象，你可以将其存储到每帧渲染的音频电平中。
 
 ### registerAsset(file: String): IAssetHandle
 

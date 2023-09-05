@@ -19,32 +19,39 @@ Wallpaper Engine支持以下几种用户属性类型。单击其中任何一个�
 
 你可以随时查看、编辑、创建新属性，方式是：在Wallpaper Engine编辑器中，点击顶部的**编辑**菜单并选择**更改项目设置**。
 
-## Creating sub-properties with display conditions
-In some cases, you may want to show additional properties only under certain conditions. For example, you may have a clock in your wallpaper and you want to give users the ability to hide the clock and change between a 24 hour and 12 hour format. In this case, you might create two checkbox properties:
+## 创建具有显示条件的子属性
 
-* *Show Clock*
-* *Use 24h format*
+在某些情况下，你可能希望在某些条件下显示或隐藏其他属性。例如，以我们在上一节中使用的示例为例：你有一个可见性的时钟，每当启用时钟时，你都希望向用户显示一个额外的选项，以便在 24 小时和 12 小时格式之间切换。这有助于整理属性列表，让你可以在需要时有选择地显示属性。这样的话，你就可以创建两个复选框属性:
 
-Since the *"Use 24h format"* user property does not make sense on its own, it's best that you hide it if the clock is disabled. This can significantly reduce clutter in your wallpaper settings, making it easier for users to configure your wallpaper.
+* *显示时钟*
+* *使用 24 小时格式*
 
-To implement this, first create the *Show Clock* checkbox property (or whatever user property name makes sense in your wallpaper). Take note of the *Key* that Wallpaper Engine automatically generates below your user property name. In the case of *"Show Clock"*, the key would be `show_clock`.
-
-Now, create your related user properties. During the creation, you can configure a *display condition* at the bottom of the creation form. All you need to do is to add the following code there (just replace `show_clock` with the key of your user property):
+对于时钟，你可以在时钟的属性中找到**使用24小时格式**的属性。类似于上一示例中的操作，为它创建新的复选框用户属性。然而在这种情况下，你需要获取该用户属性的**关键字**，并在**条件**输入框中写入一行代码。别担心，它不是很复杂。我们创建的时钟属性的关键字是**show_clock** —— 你可以在属性列表中查找每个属性的关键字。我们现在希望显示条件为：
 
 ```js
 show_clock.value == true
 ```
 
-You can see the entire process in this video:
+如果时钟不可见，**使用24小时格式**用户属性将没有意义，你最好将其隐藏。这可以显著减少壁纸设置的混乱，使用户更容易配置壁纸。
+
+为了实现这一点，首选创建一个复选框属性*Show Clock*(或者你想使用的任何属性名称)。在下面的代码中，Wallpaper Engine会自动生成 *关键字* `show_clock`。在这个例子中，*"Show Clock"*对应的关键字是`show_clock`。
+
+
+现在，创建你的相关用户属性。在创建时，你可以在底部配置*显示条件*，你只需要在这里添加以下代码(只需将`show_clock`替换为你的关键字):
+
+```js
+show_clock.value == true
+```
+
+你可以观看下面的视频了解整个过程：
 
 <video width="100%" controls>
-  <source src="/videos/display_condition.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/display_condition.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ::: tip
-You can also create display conditions for combo properties with a dropdown list of options. In that case, you would need to replace the `true` keyword with a value that you have created in the combo property. For example:
-
+你还可以使用组合框属性创建显示条件。在这种情况下，你需要将关键字替换为在组合框属性中创建的值。例如：
 ```
 yourproperty.value == "example123"
 ```

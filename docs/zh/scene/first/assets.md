@@ -41,17 +41,17 @@
 
 请注意，由于时钟依赖于 **SceneScript**，因此时钟在编辑器中不会直接运行，它只会显示静态预览（默认为 12：34）。你可以通过单击编辑器顶部的**运行预览**按钮来查看壁纸在添加时钟后的预览效果。
 
-## Asset Hierarchy
+## 组件的层级
 
-Wallpaper Engine also allows you to create a hierarchy within your asset list. This allows you to attach assets to another parent asset. If the parent asset is moved, rotated or scaled, so will all its children. This can help to organize your wallpaper assets into groups that are tied together, though you should only use it when objects are firmly tied to each other.
+WallPaper Engine还允许你在组件列表中创建层级结构。这允许你将组件添加到另一个父组件之下。如果移动、旋转或缩放父组件，则其所有子组件也会跟着移动、旋转或缩放。这有助于将壁纸资源组织、绑定在同一个组中，但仅当各个对象是牢固地绑定在一起时，你才应使用它。
 
-To create a hierarchy, simply drag and drop an asset onto another asset in the list and move to the right as shown in this video:
+要创建层级结构，只需将组件拖放到列表中的另一个组件上，然后向右移动，如以下视频所示：
 
 <video width="100%" controls loop>
-  <source src="/videos/asset_hierarchy.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/asset_hierarchy.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-As you can see in the video, when attaching the circling stars to the clock, they start moving, rotating and scaling along with the clock.
+如你在视频中所看到的，将光束组件添加到时钟组件上时，它们会一起移动、旋转和缩放。
 
-We will not be utilizing this feature as part of this beginner tutorial but you may find it useful to organize your wallpaper better. It is especially useful in more advanced use-cases, for example if you want multiple assets to move in union as part of a *timeline animation* or a custom-coded *SceneScript* animation.
+我们不打算将此功能作为本初学者教程的一部分，但以更好地方式组织壁纸是很有用的。它在更高级的用例中特别有用，例如，将多个组件作为**时间轴动画**或自定义的 **SceneScript** 动画一起移动。

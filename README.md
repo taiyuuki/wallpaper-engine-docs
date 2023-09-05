@@ -77,7 +77,7 @@ zh
 │    │    ├─ introduction.md✅
 │    │    └─ overview.md✅
 │    ├─ first
-│    │    ├─ assets.md❎
+│    │    ├─ assets.md✅
 │    │    ├─ effects.md✅
 │    │    ├─ gettingstarted.md✅
 │    │    ├─ properties.md✅
@@ -196,7 +196,7 @@ zh
 │           ├─ checkbox.md✅
 │           ├─ color.md✅
 │           ├─ combo.md✅
-│           ├─ overview.md❎
+│           ├─ overview.md✅
 │           ├─ slider.md✅
 │           ├─ text.md✅
 │           └─ texture.md✅

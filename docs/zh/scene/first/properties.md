@@ -33,7 +33,7 @@ Wallpaper Engine允许用户在**用户属性**的帮助下自定义你的壁纸
 show_clock.value == true
 ```
 
-这意味着每当我们的`show_clocktrue`属性的值为`true`（这意味着“已启用”）时，我们都希望此属性在用户属性列表中可见。这意味着当用户打开时钟时，他们可以看到一个新的“24小时制”选项。你可以观看下面的视频，了解如何进行设置和结果：
+这意味着每当我们的`show_clocktrue`属性的值为`true`（这意味着“已启用”）时，我们都希望此属性在用户属性列表中可见。当用户打开时钟时，他们可以看到一个新的“24小时制”选项。你可以观看下面的视频，了解如何进行设置和结果：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/display_condition.mp4')" type="video/mp4">

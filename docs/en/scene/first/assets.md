@@ -47,7 +47,7 @@ Wallpaper Engine also allows you to create a hierarchy within your asset list. T
 To create a hierarchy, simply drag and drop an asset onto another asset in the list and move to the right as shown in this video:
 
 <video width="100%" controls loop>
-  <source src="/videos/asset_hierarchy.mp4" type="video/mp4">
+  <source :src="$withBase('/videos/asset_hierarchy.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
