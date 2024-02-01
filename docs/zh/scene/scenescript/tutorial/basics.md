@@ -10,7 +10,7 @@ prev: ../tutorials.md
 
 在本指南中，我们将使用简单的**文本**图层作为示例。如果你想跟着操作，只需在壁纸中添加**文本**图层即可。
 
-:::tip 关于本指南
+::: tip 关于本指南
 以下教程显得非常冗长，因为我们会尝试逐步介绍。它同时照顾了绝对的初学者和高级程序员，但如果你是经验丰富的程序员，只需稍微浏览一下，然后阅读更高级的[SceneScript教程](/wallpaper-engine-docs/scene/scenescript/tutorials)或[SceneScrip语言参考](/wallpaper-engine-docs/scene/scenescript/reference)就足够了。
 
 我们邀请初学者与本指南一起操作并进行一些实验。如果你迷路了，请务必观看我们在每个部分下提供的视频。

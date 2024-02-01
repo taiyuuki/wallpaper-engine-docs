@@ -2,6 +2,6 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - Initalizers
+# 粒子系统 - 初始化器
 
-Sorry, this guide is still on our TODO list!
+对不起，此教程暂处于尚未建设状态！

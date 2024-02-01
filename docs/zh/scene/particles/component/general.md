@@ -2,47 +2,47 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - General
+# 粒子系统 - 常规
 
-The **General** component of a particle system defines how the particle is rendered to the screen and which texture is used. It consists of three sections:
+粒子系统的**常规**组件定义了粒子在屏幕上的渲染方式以及使用哪种纹理。它由三个部分组成：
 
 [[toc]]
 
-## Material Settings
+## 材质设置
 
-### Refract
+### 折射
 
-When enabled, you can add an additional normal map which Wallpaper Engine uses to add a refraction effect to your particles.
+启用后，你可以添加一个额外的法线贴图，Wallpaper Engine 使用该贴图为粒子添加折射效果。
 
-This refract particle stays in place and is animated with *Particle Operator Size Change* and *Particle Operator Alpha Fade*. The material is set to translucent blending using the white image for the albedo texture. 
+此折射粒子保持在原位，并使用 **粒子运算符大小更改** 和 **粒子运算符 Alpha 淡入淡出** 进行动画处理。使用反照率纹理的白色图像将材质设置为半透明混合。
 
-### Textures
+### 纹理
 
-#### Albedo Texture
+#### 反照率
 
-The main texture used by this particle system. You can also import a sprite sheet to create animated textures or spawn particles with individual textures. Be sure to read our [Particle System Sprite Sheet Tutorial](/wallpaper-engine-docs/scene/particles/tutorial/spritesheet) if you want to learn more about how to utilize sprite sheets in your particle systems.
+粒子系统使用的主纹理。你还可以导入精灵图以创建动画纹理或生成具有单个纹理的粒子。如果你想了解更多关于如何使用精灵图的信息，请务必阅读我们的 [粒子系统精灵图教程](/wallpaper-engine-docs/scene/particles/tutorial/spritesheet) 。
 
-#### Normal Map Texture
+#### 法线贴图纹理（编辑器里名为“标准”）
 
-**Optional.** This texture is only visible when you enable the **Refract** option. You can import a normal map here which Wallpaper Engine will use for a refraction effect.
+**可选项**，这一项仅在启用 **反射** 后可见，你可以在此处导入法线贴图，Wallpaper Engine 将使用该贴图来产生折射效果。
 
-### Shader Settings
+### 着色器
 
-#### Overbright
+#### 过亮
 
-Allows you to adjust the brightness of your particle system. If you intend to raise the brightness, try enabling the [Bloom Effect](/wallpaper-engine-docs/scene/effects/bloom) on your wallpaper instead, especially *HDR Bloom* can achieve higher quality results than increasing the *Overbright* value.
+允许你调整粒子系统的亮度。如果你打算提高亮度，请尝试启用[高光效果](/wallpaper-engine-docs/scene/effects/bloom)，尤其是 **HDR高光** 可以获得比增加**过亮**值更高质量的效果。
 
-#### Refract Amount
+#### 折射数量
 
-**Optional.** This option is only visible when you enable the **Refract** option. Controls the strength of the refraction effect.
+**可选项**，这一项仅在启用 **折射** 后可见，控制折射效果的强度。
 
-### Rendering Settings
+### 渲染
 
-#### Blending
+#### 混合
 
-Depending on what type of content your particle system holds, choosing the correct blend mode is important. You can choose between **Additive**, **Translucent** and **Normal** blending.
+根据你的粒子系统所容纳的内容类型，选择正确的混合模式非常重要。你可以在 **附加**、**半透明** 和 **标准** 中进行选择。
 
-::: details Click here to compare the three blend modes
+::: details 单击此处比较三种混合模式
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/particle_system_blending.mp4')" type="video/mp4">
@@ -51,32 +51,32 @@ Depending on what type of content your particle system holds, choosing the corre
 
 :::
 
-## System Settings
+## 系统
 
-### Max Count
+### 最大计数
 
-Controls the maximum number of particles allowed to be spawned. This directly controls how much memory is allocated by the particles. Always set this value as low as necessary for your particle system to function, this can greatly increase performance and reduce memory usage.
+控制允许生成的最大粒子数。这直接控制粒子分配的内存量。保持此值为粒子系统运行所需的较低值，可以大大提高性能并减少内存使用。
 
-### Start Time
+### 开始时间
 
-Will pre-simulate the particle system for a certain amount of time when it is created. This is helpful to avoid the screen from looking empty, it will kick off the system as if it has already been running for the configured time. The higher this number is, the longer it will take to simulate, since it is based on real-time simulation.
+在创建粒子系统时，将对粒子系统进行一定时间的预模拟。这有助于避免出现空白时间，它会在启动粒子系统时，看起来就像是已经运行了一段时间一样。这个数字越高，模拟所需的时间就越长，因为它是实时模拟的。
 
-### Worldspace
+### 世界空间
 
-If this is enabled, the particles will ignore the position, scale and rotation of the particle system after they have been created. This can be useful if you want to attach a particle to another or something else - the particles that were spawned are not going to be dragged along with the object they were created from.
+如果启用此功能，粒子在创建后将忽略粒子系统的位置、缩放和旋转。如果你想将一个粒子附加到另一个粒子或其他东西上，该项会很有用 —— 生成的粒子不会与创建它们的对象一起移动。
 
-## Viewport Settings
+## 视口
 
-**The viewport settings are only relevant for the preview screen that you see in the particle system editor.**
+**视口设置只会影响粒子系统编辑器中的预览。**
 
-### Show Stats
+### 显示统计信息
 
-Shows the number of particles in the upper right corner. Useful to determine the upper limit for the **Max Count** setting in the **System Settings** of your particle system.
+右上角显示粒子数。可用于确定粒子系统 **系统** 中 **最大计数** 设置的上限。
 
-### Show Axis
+### 显示坐标轴
 
-Renders a horizontal and vertical line in the preview screen to help you navigate the particle preview.
+在预览屏幕中渲染水平线和垂直线，方便查看粒子预览。
 
-### Color
+### 颜色
 
-Allows you to change the color of the preview screen to test your particles on different backgrounds.
+允许你更改预览屏幕的颜色以在不同背景上测试你的粒子。

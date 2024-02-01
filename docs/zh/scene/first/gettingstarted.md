@@ -12,8 +12,6 @@ Wallpaper Engine编辑器非常强大，适合休闲和高级用户。掌握基�
 
 如果你想跟随本教程进行操作，可以通过从以下链接下载示例图像（1920 x 1080 分辨率），我们将在后面的内容中使用的该示例图像：
 
-单击此处下载示例图像
-
 <a href="/wallpaper-engine-docs/img/tutorials/mountain.png" download="mountain.png">点击此处下载示例图像</a>
 
 ## 关于壁纸分辨率

@@ -2,6 +2,6 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - Control Points
+# 粒子系统 - 控制点
 
-Sorry, this guide is still on our TODO list!
+对不起，此教程暂处于尚未建设状态！

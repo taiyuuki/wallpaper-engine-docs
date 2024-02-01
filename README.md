@@ -18,7 +18,7 @@ fork自官方文档：[wallpaper-engine-docs](https://github.com/Wallpaper-Engin
 
 # 翻译进度
 
-✅表示已翻译，❎表示已翻译但有新增的未翻译内容，其余表示未翻译。
+✅表示已翻译，❎表示官方文档尚未创建的内容，其余表示未翻译。
 
 ```list
 zh
@@ -95,20 +95,20 @@ zh
 │    │    ├─ introduction.md
 │    │    └─ oversized.md
 │    ├─ particles
-│    │    ├─ component
-│    │    │    ├─ children.md
-│    │    │    ├─ control_point.md
-│    │    │    ├─ emitter.md
-│    │    │    ├─ general.md
-│    │    │    ├─ initializer.md
-│    │    │    ├─ operator.md
-│    │    │    └─ renderer.md
-│    │    ├─ introduction.md
+│    │    ├─ component✅
+│    │    │    ├─ children.md❎
+│    │    │    ├─ control_point.md❎
+│    │    │    ├─ emitter.md❎
+│    │    │    ├─ general.md✅
+│    │    │    ├─ initializer.md❎
+│    │    │    ├─ operator.md❎
+│    │    │    └─ renderer.md❎
+│    │    ├─ introduction.md✅
 │    │    └─ tutorial
-│    │           ├─ child_system.md
-│    │           ├─ control_point.md
-│    │           ├─ cursor.md
-│    │           └─ spritesheet.md
+│    │           ├─ child_system.md❎
+│    │           ├─ control_point.md❎
+│    │           ├─ cursor.md❎
+│    │           └─ spritesheet.md❎
 │    ├─ performance
 │    │    ├─ resolution.md
 │    │    └─ texture.md
