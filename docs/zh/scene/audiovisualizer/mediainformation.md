@@ -39,7 +39,7 @@
 
 将相应的 SceneScript 代码复制到图层，然后对所有文本图层重复此过程：
 
-::: 点击显示歌曲标题代码
+::: details 点击显示歌曲标题代码
 
 ```js
 'use strict';
@@ -63,7 +63,7 @@ export function mediaPropertiesChanged(event) {
 ```
 :::
 
-::: 单击以显示专辑名称代码
+::: details 点击显示专辑名称代码
 ```js
 'use strict';
 
@@ -86,7 +86,7 @@ export function mediaPropertiesChanged(event) {
 ```
 :::
 
-::: 点击显示艺术家姓名代码
+::: details 点击显示艺术家姓名代码
 ```js
 'use strict';
 
