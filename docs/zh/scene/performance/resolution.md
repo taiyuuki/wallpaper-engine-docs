@@ -1,44 +1,48 @@
-# Project Resolution
+# 项目分辨率
 
-It's best practice to prepare your main background image with a photo editor of your choice to **ensure that the wallpaper uses a resolution that exists on computer monitors**. Strictly speaking, this is not necessary and Wallpaper Engine will accept any image resolution, however, you will achieve the best performance if the wallpaper matches the resolution of your screen or at least the correct aspect ratio. 
+最佳做法是使用你所选择的照片编辑器来准备主背景图像， **确保壁纸采用计算机显示器上常见的分辨率**。严格来说，这并非必需，Wallpaper Engine 将接受任何图像分辨率，但如果你能让壁纸与屏幕分辨率完全匹配或至少保持正确的宽高比，则可以获得最佳性能。
 
-The most common resolutions are **1920x1080** ("Full HD") and **3840x2160** ("4K UHD"). If your wallpaper does not use a resolution from the supported resolution list, it will be marked as **Other Resolution** which may negatively affect its popularity.
+最常见的分辨率包括 **1920x1080**（“全高清”）和**3840x2160**（“4K 超高清”）。如果你的壁纸未使用支持的分辨率列表中的分辨率，则会被标记为“其他分辨率”，这可能对其受欢迎程度产生负面影响。
 
-::: details Click here to view all official resolutions
-*The following resolutions were selected based on the most common resolutions on the market:*
+:::点击此处查看所有官方分辨率
+*以下列出的分辨率基于市场上最常见的分辨率选取*
 
 **16:9**
+
 * 1280 x 720
 * 1366 x 768
 * 1920 x 1080
 * 2560 x 1440
 * 3840 x 2160 
 
-**Two screens or one ultrawide screen**
-* 2560 x 1080 (Ultrawide)
-* 3440 x 1440 (Ultrawide)
-* 3840 x 1080 (2x Full HD or 1x Ultrawide)
-* 5120 x 1440 (2x 1440p or 1x Ultrawide)
-* 7680 x 2160 (2x 4K UHD)
+**双屏或单个超宽屏**
 
-**Triple screens**
+* 2560 x 1080 (超宽屏)
+* 3440 x 1440 (超宽屏)
+* 3840 x 1080 (两倍全高清或单倍超宽屏)
+* 5120 x 1440 (两倍 1440p 或单倍超宽屏)
+* 7680 x 2160 (两倍 4K UHD)
+
+**三联屏**
+
 * 4096 x 768 (3x 768p)
-* 5760 x 1080 (3x Full HD)
+* 5760 x 1080 (3x 全高清)
 * 7680 x 1440 (3x 1440p)
 * 11520 x 2160 (3x 4K UHD)
 
-**Portrait aspect ratios (screen turned by 90°)**
-* 720 x 1280 (Portrait 9:16)
-* 1080 x 1920 (Portrait 9:16)
-* 1440 x 2560 (Portrait 9:16)
-* 2160 x 3840 (Portrait 9:16)
+**竖向显示比例（屏幕旋转90°）**
+
+* 720 x 1280 (竖向 9:16)
+* 1080 x 1920 (竖向 9:16)
+* 1440 x 2560 (竖向 9:16)
+* 2160 x 3840 (竖向 9:16)
 :::
 
-To exemplify why it's bad to use wallpapers that do not have a real aspect ratio: Let's say you have an image that is 2000x2000 pixels. No computer monitor on the market has this resolution, so when you import and animate an image with this resolution, Wallpaper Engine will cut off the sides of your wallpaper once you apply it to your desktop to make it fit to your screen. The following image showcases how much is cut off if you use a 2000x2000 image on a 1920x1080 monitor:
+现在举例说明为何不建议使用非真实宽高比的壁纸：假设你有一张2000x2000像素的图片，市面上并没有这种分辨率的电脑显示器。当你导入并以该分辨率进行动画制作时，一旦将壁纸应用到桌面，Wallpaper Engine 将会裁剪壁纸的两侧以适应你的屏幕。下图展示了在1920x1080显示器上使用2000x2000图像时会裁剪掉多少部分：
 
 ![Square image compares to 16:9 aspect ratio](/wallpaper-engine-docs/img/performance/Aspectratio.jpg)
-*Red areas are cut off if this square image was displayed on a 16:9 monitor.*
+*若此正方形图像在16:9显示器上显示，红色区域会被裁切。*
 
-The downsides of this are an increased graphics card usage, less control over what is actually visible on the screen and larger file sizes. This also applies to any image layers you use - they should all be as small as possible.
+这样做的缺点包括增加图形卡使用率、对实际屏幕上显示内容的控制减少以及文件尺寸增大。这也适用于你使用的任何图像层——它们应尽可能小。
 
-We generally recommend you scale down images to the closest real resolution and then manually crop off excess areas. You can use free image editing tools like Microsoft Paint, Paint.NET, GIMP or paid alternatives such as Adobe Photoshop to do this. Again, it's not necessary but we recommend preparing background images before importing them.
+我们通常建议你将图像缩小至最接近的实际分辨率，然后手动裁去多余的部分。你可以使用免费的图像编辑工具，如Microsoft Paint、Paint.NET、GIMP，或者付费的替代品如Adobe Photoshop来进行这项操作。再次强调，虽然这不是必须的步骤，但我们推荐在导入之前先准备好背景图像。
