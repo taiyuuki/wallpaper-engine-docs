@@ -1,8 +1,8 @@
 # Wallpaper Engine 设计人员文档中文版
 
-fork自官方文档：[wallpaper-engine-docs](https://github.com/Wallpaper-Engine-Team/wallpaper-engine-docs)
+fork自官方文档：<del>[wallpaper-engine-docs](https://github.com/Wallpaper-Engine-Team/wallpaper-engine-docs)</del> (目前该仓库已不再公开)
 
-查看地址：https://taiyuuki.github.io/wallpaper-engine-docs/
+查看地址：https://taiyuuki.github.io/wallpaper-engine-docs/zh/
 
 翻译远未完成，欢迎大家贡献翻译。
 
@@ -89,6 +89,15 @@ zh
 │    ├─ lighting
 │    │    ├─ introduction.md
 │    │    └─ lights.md
+│    ├─ models
+│    │    ├─ animation.md
+│    │    ├─ attachment.md
+│    │    ├─ camera.md
+│    │    ├─ fog.md
+│    │    ├─ introduction.md
+│    │    ├─ lighting.md
+│    │    ├─ shader.md
+│    │    └─ simulation.md
 │    ├─ overview.md
 │    ├─ parallax
 │    │    ├─ depthparallax.md
@@ -110,8 +119,8 @@ zh
 │    │           ├─ cursor.md❎
 │    │           └─ spritesheet.md❎
 │    ├─ performance
-│    │    ├─ resolution.md
-│    │    └─ texture.md
+│    │    ├─ resolution.md✅
+│    │    └─ texture.md✅
 │    ├─ puppet-warp
 │    │    ├─ animationmixing.md
 │    │    ├─ blendrules.md
