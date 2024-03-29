@@ -27,7 +27,7 @@ module.exports = {
 				label: en.language_name,
 				ariaLabel: en.language_name,
 				sidebar: {
-					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_properties, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_puppetwarp, en.sidebar_parallax, en.sidebar_rgb, en.sidebar_performance, en.sidebar_scenescript, en.sidebar_shaders, en.sidebar_imagepreparation, en.sidebar_lightingandreflections),
+					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_properties, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_puppetwarp, en.sidebar_parallax, en.sidebar_rgb, en.sidebar_performance, en.sidebar_scenescript,en.sidebar_models, en.sidebar_shaders, en.sidebar_imagepreparation, en.sidebar_lightingandreflections),
 					'/en/web/': getWebSidebar('/en/', en.sidebar_web_overview, en.sidebar_web_first, en.sidebar_web_customization, en.sidebar_web_audio, en.sidebar_web_performance, en.sidebar_web_rgb, en.sidebar_web_debug),
 					'/': []
 				},
@@ -42,7 +42,7 @@ module.exports = {
 				label: zh.language_name,
 				ariaLabel: zh.language_name,
 				sidebar: {
-					'/zh/scene/': getSceneSidebar('/zh/', zh.sidebar_overview, zh.sidebar_gettingstarted, zh.sidebar_effects, zh.sidebar_assets, zh.sidebar_properties, zh.sidebar_audio, zh.sidebar_particles, zh.sidebar_animations, zh.sidebar_puppetwarp, zh.sidebar_parallax, zh.sidebar_rgb, zh.sidebar_performance, zh.sidebar_scenescript, zh.sidebar_shaders, zh.sidebar_imagepreparation, zh.sidebar_lightingandreflections),
+					'/zh/scene/': getSceneSidebar('/zh/', zh.sidebar_overview, zh.sidebar_gettingstarted, zh.sidebar_effects, zh.sidebar_assets, zh.sidebar_properties, zh.sidebar_audio, zh.sidebar_particles, zh.sidebar_animations, zh.sidebar_puppetwarp, zh.sidebar_parallax, zh.sidebar_rgb, zh.sidebar_performance, zh.sidebar_scenescript, zh.sidebar_models, zh.sidebar_shaders, zh.sidebar_imagepreparation, zh.sidebar_lightingandreflections),
 					'/zh/web/': getWebSidebar('/zh/', zh.sidebar_web_overview, zh.sidebar_web_first, zh.sidebar_web_customization, zh.sidebar_web_audio, zh.sidebar_web_performance, zh.sidebar_web_rgb, zh.sidebar_web_debug),
 					'/': []
 				},
@@ -72,7 +72,7 @@ module.exports = {
 	]
 };
 
-function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, propertiesGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, shadersGroup, imagePreparationGroup, lightingGroup) {
+function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, propertiesGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, modelsGroup, shadersGroup, imagePreparationGroup, lightingGroup) {
 	return [
 		{
 			title: overviewGroup,
@@ -211,6 +211,20 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/scenescript/introduction',
 				locale + 'scene/scenescript/tutorials',
 				locale + 'scene/scenescript/reference',
+			]
+		},
+		{
+			title: modelsGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/models/introduction',
+				locale + 'scene/models/animation',
+				locale + 'scene/models/camera',
+				locale + 'scene/models/fog',
+				locale + 'scene/models/lighting',
+				locale + 'scene/models/shader',
+				locale + 'scene/models/attachment',
+				locale + 'scene/models/simulation',
 			]
 		},
 		{
