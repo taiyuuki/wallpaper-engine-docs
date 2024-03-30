@@ -1,99 +1,99 @@
-# Foreground Separation
+# 前景分离
 
-Foreground separation in Wallpaper Engine allows you to separate your image into multiple independent parts with relative ease and without the use of any third-party image editing tools. This can be especially useful when you have one or more characters or objects in the foreground of your base image and want to treat your foreground object as an independent layer. This can help with applying effects to a character and allows you to place assets in between your foreground object and your background image.
+Wallpaper Engine 中的前景分离功能可以让你相对轻松地将图像分成多个独立的部分，而无需使用任何第三方图像编辑工具。当你的基础图像的前景中有一个或多个角色、对象，并且希望将前景对象视为独立图层时，这特别有用。这有助于将效果应用于角色，还可以让你将组件放置在前景对象和背景图像之间。
 
-Foreground separation in Wallpaper Engine works well for most images but in some cases you may still want to manually tweak the final result or even fully rely on a third-party image editing tool.
+Wallpaper Engine 中的前景分离适用于大多数图像，但在某些情况下，你可能仍需要手动调整，甚至完全依靠第三方图像编辑工具。
 
-## Introduction to Foreground Separation
+## 前景分离介绍
 
-In this guide, we will showcase how to separate a character from an image and turn it into its own layer. In the following example, we are able to use foreground separation to turn our sample image into two layers: One layer for the character in the foreground of our image and another background layer for the scenery in the background of the image. In more complex scenarios, you can use foreground separation multiple times on the same base image, for example if you have multiple characters or objects on your image that you would like to turn into independent layers.
+在本指南中，我们将展示如何将角色与图像分离并将其转换为自己的图层。在下面的示例中，我们使用前景分离将示例图像转换为两层：一层用于图像前景中的人物，另一层用于图像背景中的风景。在更复杂的方案中，可以在同一基础图像上多次使用前景分隔，例如，如果图像上有多个角色或对象，则要将其各自转换为独立图层。
 
 ![Foreground Separation](/wallpaper-engine-docs/img/foreground-separation/foreground_separation.gif)
 
-As you can see, the character has been cut out through foreground separation. The background is left with a blurred area that is automatically filled in. While the blur might become visible under certain circumstances, it should be hardly noticeable in most cases, as the colors are determined by background image, allowing them to blend in well with the image.
+正如你所看到的，这个角色已经通过前景分离被剪掉了。背景留下了一个自动填充的模糊区域。虽然在某些情况下该区域可能会变得可见，但在大多数情况下是不明显的，因为颜色是由背景图像决定的，使它们能够很好地与图像融为一体。
 
-#### Benefits of foreground separation
+#### 前景分离的优点
 
-In its most basic form, this separating foreground objects into distinct layers allows you to apply effects to your foreground character without affecting your background (for example with the **Shake effect** which is often used for breathing and tends to spill over into the background). It also enables you you to place other assets in between your foreground layer and your background layer. We have showcased this in the following video where we placed a **Smoke** asset in between our character and the background by moving it in between the layers:
+在最基本的形式中，这种将前景对象分成不同层的做法允许你在不影响背景的情况下将效果应用于前景角色（例如，用于模拟呼吸的 **摇动** 效果往往会溢出到背景中）。它还使你能够将其他组件放置在前景图层和背景图层之间。我们在下面的视频中展示了这一点，我们通过在图层之间移动它来将 **烟** 组件放置在角色和背景之间：
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/foreground_layering.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Foreground separation can also be used as a starting point for a [puppet warp animation](/wallpaper-engine-docs/scene/puppet-warp/introduction).
+前景分离也可以作为你创建[骨骼动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)的第一步。
 
-## How to use Foreground Separation
+## 如何使用前景分离
 
-In order to get started, import your image into the Wallpaper Engine editor, then right-click on it and hover over **Image Editing** and select **Foreground Separation**. You will now see the foreground separation window within the editor.
+首先将图像导入 Wallpaper Engine 编辑器，然后右键它，将鼠标悬停在 **图像编辑** 上，然后选择 **前景分离**。这样，你将在编辑器中看到前景分隔窗口。
 
-## Paint Modes
+## 绘制模式
 
-There are two modes that you can use to define the outlines of your character. The first option we want to showcase is the **Paint Brush** mode. Both modes are viable tools to achieve foreground separation, be sure to read the following section and then decide on which mode to try.
+你可以使用两种模式来绘制角色的轮廓。我们要展示的第一个选项是 **画笔模式**。这两种模式都是实现前景分离的可行工具，请务必阅读后续内容，然后决定采用哪种模式。
 
-Get started by enabling **Paint Brush Mode** by clicking the brush symbol in the foreground separation window as shown in the following video:
+首先，通过单击前景分隔窗口中的 **画笔符号** 来使用画笔模式，如以下视频所示：
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/foreground_separation_mode.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Paint Brush Mode
+### 画笔模式
 
-When using the paint brush functionality, the two core functions are the **Mark Foreground** and **Mark Background** buttons on the left. Use them to mark different parts of the image as either your foreground character or the background areas that are not part of your character. Switch between marking parts of the background and foreground. Often just a single brush stroke suffices to mark whole areas as either foreground or background. The **Erase** functionality marks an area as essentially *neutral* and the app will decide whether or not it considers it part of the background or foreground.
+使用画笔模式时，两个核心功能是左侧的 **标记前景** 和 **标记背景** 按钮。在背景和前景之间切换，可以将图像的不同部分标记为前景角色或不属于角色的背景区域。通常，只需一种画笔就足以将整个区域标记为前景或背景。**擦除** 功能则可以将某个区域标记为**中性**，应用程序会自动判断应将其视为背景还是前景的一部分。
 
-::: danger Very important
-Do not try to accurately draw in tiny details unless absolutely necessary. Simply paint the rough areas of your character and the background. Wallpaper Engine will automatically attempt to detect the outline of your foreground object.
+::: danger 非常重要
+除非绝对必要，否则不要试图去精准地绘制轮廓边缘的微小细节。你只需绘制角色和背景的粗糙区域即可。Wallpaper Engine 会自动尝试检测前景对象的轮廓。
 
-To see this in practice, watch the video below.
+请观看下面的视频实践以了解这一点。
 :::
 
-See the following video for an example of how to extract a character. Notice how the first big paint brushes already select the character outline relatively well even though the foreground paint brush was only applied in the center of the character. Certain areas such as the tip of the sword and the background areas in the middle of the character and on the right-hand side need to be specifically marked as part of the background.
+以下是展示如何提取角色的示例视频。请注意，尽管前景画笔只绘制了角色的中间区域，但第一笔画的大圈已经相对很好地选择了角色轮廓。某些区域，例如剑尖到角色的中间区域以及右侧的背景区域，需要专门标记为背景的一部分。
 
-**Take note when the brush changes from "Mark Foreground" to "Mark Background".**
+**当画笔从“标记前景”切换为“标记背景”时，请一定要注意。**
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/foreground_separation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Using the controls in the **View** section, you can switch between viewing the **foreground** and **background** independently. Before finalizing the character separation, you should switch between the foreground and background view and make sure that both layers match your expectations as you cannot return to the foreground separation process without starting from scratch.
+使用顶部 **视图** 部分中的控件，可以单独查看**前景**和**背景**并来回切换。在完成角色分离之前，你应该确保这两个图层都符合你的期望，否则就无法撤销前景分离过程，只能从头开始。
 
-### Polygon Mode
+### 多边形模式
 
-As an alternative to the aforementioned *Paint Brush Mode*, you can also use the polygon drawing functionality to create the outlines of your character. You can enable it by clicking on the **Polygon** icon on the left-hand side.
+作为上述 **画笔模式** 的替代方法，你还可以使用多边形绘制功能来创建角色的轮廓。你可以通过单击左侧的 **多边形** 图标来启用它。
 
-With **Polygon Mode**, you can set points around your character to define its rough outline. Make sure to draw a full circle around your character, this means the last point you set needs to be connected to the first point that you created to complete a full loop around your character. Unlike the **Paint Brush Mode**, you should follow the outline of your character closely to get a good result.
+在 **多边形模式** 中，你可以在角色周围设置点，以定义其粗略轮廓。确保在你的角色周围画一个完整的圆圈，换句话说你设置的最后一个点需要连接到你创建的第一个点，以完成围绕你的角色一整圈。与 **画笔模式** 不同，你应该密切关注角色的轮廓以获得良好的效果。
 
-In order to get started, set a point anywhere at the outline of your character, then run points along the line of your character. You can delete points by clicking the middle mouse button on a point that you want to delete. You can insert new points by clicking on an already existing lines and you can move existing points around to adjust their position.
+首先，在角色轮廓的任意位置设置一个点，然后沿着角色的轮廓行点。你可以单击鼠标中键来删除点，也可以单击现有线来插入新点，还可以移动现有点以调整其位置。
 
-The following video shows the same image as in the previous section being extracted by using **Polygon Mode**:
+以下视频展示了使用 **多边形模式** 提取的与上一节中相同的图像：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/foreground_separation_polygon.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-::: tip Tip
-You can also draw multiple independent polygons if your character consists of multiple independent parts.
+::: tip
+如果你的角色由多个独立部分组成，你还可以绘制多个独立的多边形。
 :::
 
-### Additional Controls
+### 其他控制措施
 
-As mentioned in the previous section, it is helpful to frequently switch between the foreground-only and background-only view to ensure that the separation is aligning with your expectations, otherwise make sure to mark more areas as either background or foreground. You can also tweak the **Mask tolerance** and the **Smoothing** values to ensure the selection matches your character or object as closely as possible. Increasing the **Mask tolerance** will expand the selected foreground areas slightly while decreasing it will make the selection more closely tied to the object.
+如上一节所述，通常情况下，只需要在前景视图和背景视图之间切换，就足够帮助你确保分离符合你的预期，否则你可能需要将更多区域标记为背景或前景。你可以调整 **蒙版容差** 和 **平滑** 值，以确保所选内容尽可能与你的角色或对象匹配。增加蒙版容差将略微扩展选定的前景区域，而减小容差将使所选内容与对象更紧密地联系在一起。
 
-Additionally, you can also lower or raise the **Quality** setting at the bottom of the options. This can significantly alter the current selection, so it can be useful to do this early on in your process. Keep in mind that raising the quality will significantly raise the time it needs for Wallpaper Engine to recalculate the mask.
+此外，你还可以降低或提高选项底部的 **质量** 设置。这可以显著改变当前的选择，越早设置该项就对你越有帮助。但请记住，提高质量会显著增加 Wallpaper Engine 重新计算蒙版所需的时间。
 
-If the frequent recalculations after your brush strokes become bothersome or take a long time on your system, you can also turn off the **Auto recalculate** feature in the lower left corner and instead trigger manual recalculations by manually pressing the **Recalculate** button in the lower left corner.
+如果你觉得用画笔描边后的频繁触发重新计算很麻烦或者在系统花费了太长的时间，你也可以关闭左下角的 **自动重新计算** 功能，然后通过左下角的 **重新计算** 按钮来手动触发重新计算。
 
-#### Maximizing Accuracy
+#### 最大限度地提高准确性
 
-If you are dealing with very fine outlines on a character or an object, it may be necessary to tweak the settings for maximum precision. You can maximize the accuracy of the foreground separation algorithm by tweaking the following settings:
+如果你处理角色或对象有着非常精细的轮廓，则可能需要调整设置以获得最大精度。你可以通过以下调整来最大限度地提高前景分离算法的准确性：
 
-* **Mask tolerance:** 0
-* **Smoothing:** 0
-* **Quality level:** 2
+* **蒙版容差：** 0
+* **平滑：** 0
+* **质量：** 2
 
-Should you still notice issues with the foreground separation results, you can still make minor adjustments to the automatic foreground separation by connecting Wallpaper Engine with an external image editor. Afterwards, you can manually edit the **Albedo** texture of your image layer. See the following guide for more infos:
+如果你仍然发现前景分离的结果存在问题，你还可以通过将 Wallpaper Engine 连接的外部图像编辑器来对自动前景分离进行细微调整。之后，你可以手动编辑图像图层的 **反照率纹理**。有关详细信息，请参阅以下指南：
 
-* [External Image Editor Quick Access](/wallpaper-engine-docs/scene/image-preparation/external-editor)
+* [外部图像编辑器的快速访问](/wallpaper-engine-docs/scene/image-preparation/external-editor)

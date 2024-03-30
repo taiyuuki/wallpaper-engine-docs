@@ -1,14 +1,14 @@
-# Character Sheet Creation
+# 创建角色表
 
-Wallpaper Engine allows you to create a character sheet which you can use to create a high-quality [puppet warp animation](/wallpaper-engine-docs/scene/puppet-warp/introduction). As a prerequisite, you need a character that has been cut out and loaded into Wallpaper Engine as its own layer. You can use the [foreground separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation) feature of Wallpaper Engine to cut out a character from a base image or use a third-party image editing tool of your choice to manually create a character cut-out with a transparent area around your character.
+Wallpaper Engine 允许你创建角色表，你可以使用它来创建高质量的[骨骼动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)。作为先决条件，你需要一个已被裁剪并加载到 Wallpaper Engine 中的角色图层。你可以使用 Wallpaper Engine 的[前景分离](/wallpaper-engine-docs/scene/image-preparation/foreground-separation)功能从基础图像中裁剪出角色，或者使用第三方图像编辑工具手动创建周围具有透明区域的角色切片。
 
-## Character Sheet Introduction
+## 角色表介绍
 
-Character sheets cut up characters from an image into multiple independent parts and allow for layering of individual body parts for much more detailed animations using puppet warping. In our example, we use the same character that was used in the [foreground separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation) tutorial:
+角色表将图像中的角色切割成多个独立的部分，可以对单个身体部位进行分层，以便使用骨骼动画制作更详细的动画。在我们的示例中，我们使用[前景分离](/wallpaper-engine-docs/scene/image-preparation/foreground-separation)教程中使用的相同角色：
 
 ![Character Sheet](/wallpaper-engine-docs/img/character-sheet-creation/character_sheet_example.png)
 
-Most notably, the sword has been removed from the original character and the area it previously occupied is filled in with a color blur of the surrounding areas. For many animations, this blur will be hardly noticeable in later animations. Take a look at our sample puppet warp animation we created with the previous character sheet and notice how the sword, shield and head all move quite strongly without causing any distortions or unwanted side effects on the surrounding body parts, which is the main advantage of using puppet warp animations with character sheets:
+最值得注意的是，这把剑已经从原始角色中剪除，它之前占据的区域被周围区域的模糊颜色填充。对于大多数动画，这种模糊在后面的动画中是不明显的。看看我们用上述角色表创建的骨骼动画示例，并注意剑、盾牌和头部是如何大幅度移动，而不会对周围的躯体部位造成任何扭曲或不必要的副作用，这是将骨骼动画与角色表一起使用的最大优点：
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/character_sheet_puppet_warp.mp4')" type="video/mp4">
@@ -16,23 +16,23 @@ Most notably, the sword has been removed from the original character and the are
 </video>
 
 
-## Creating a Character Sheet
+## 创建角色表
 
-To get started, select the layer that holds your character cut-out in the editor. Right-click on it and hover over **Image Editing** and select **Character Sheet Creation**.
+首先，在编辑器中选择角色图层。右键单击并将鼠标悬停在 **图像编辑** 上，然后选择 **角色属性表创建**。
 
-### The Foremost Limb
+### 首要肢体
 
-The first thing you need to do is to create a new limb. Click on the **Add Limb** button to create the first limb which is part of your body. Notice how there is a **hierarchy** on the left. Each limb can be further subdivided into additional limbs for more complex character sheets. **You should always start with the foremost limb and work your way down.** In our case, we want to start with the arm and sword of our character as it is the foremost element. We name our limb **Arm** and it will appear as the first child of the **Body**.
+你需要做的第一件事是创建一个新肢体。单击 **添加肢体** 按钮创建第一个肢体，该肢体是躯体的一部分，请注意左侧的 **层次结构**。为了获得更复杂的角色表，每个肢体可以进一步细分为额外的肢体。**你应该始终从图层上最靠前的肢体开始**，然后一路向下。在我们的例子中，我们想从我们角色的手臂和剑开始，因为它是图层最前排的元素。我们将我们的肢体命名为 **Arm**（手臂），它将作为 **躯体** 的第一个子肢体。
 
-We start by painting the complete sword and arm as the foreground area and make sure that the rest of the body is properly selected as background. You will find two buttons towards the top of the sidebar: **Mark Foreground** and **Mark Background**. Start painting over the areas of your designated limb with the foreground brush. The area will appear with a light white color. It is not necessary to paint an absolutely perfect area, Wallpaper Engine will attempt to automatically detect the limb you are trying to paint. Use the background brush to specifically tell Wallpaper Engine which parts of the image are not part of your limb.
+我们首先将完整的剑和手臂绘制为前景区域，并确保正确的躯体其余部分作为背景。你会在侧边栏顶部找到两个按钮：**标记前景** 和 **标记背景**。先用前景画笔在指定肢体的区域上绘画。该区域将显示为浅白色。没有必要绘制一个绝对完美的区域，Wallpaper Engine 会尝试自动检测你绘制的肢体边缘。使用背景画笔则可以告诉 Wallpaper Engine 图像的哪些部分不属于肢体。
 
-#### Tips for Masking
+#### 蒙版遮罩技巧
 
-If you have an especially complex character, it may make sense to increase the **Quality** option at the bottom of the sidebar, though this will significantly increase the time it takes for Wallpaper Engine to recalculate the current limb selection. In this case, you can toggle off the **Auto Recalculate** option in the lower left corner, just be sure to manually use the **Recalculate** button to ensure you changes take effect!
+如果你有一个特别复杂的角色，增加侧边栏底部的 **质量** 选项可能会对你很有帮助，尽管这会大大增加 Wallpaper Engine 重新计算当前肢体所需的时间。此时，你可以关闭左下角的 **自动重新计算** 选项，只需手动使用 **重新计算** 按钮即可确保更改生效！
 
-Lowering the **Smoothing** option all the way to 0 will also give you a more accurate rendition of your object, though it may look a bit more jagged. However, don't worry if your mask is not perfect, smaller imperfections will become rather hard to notice in your finalized animated wallpaper. See our video for our approach to painting the mask for the arm of our character:
+将 **平滑** 选项降低到 0 也可以更准确地呈现对象，尽管它可能看起来锯齿感更严重。但是，如果你的蒙版遮罩不完美，请不要担心，在壁纸最终的动画中，较小的瑕疵是很难被注意到的。请观看我们的视频，了解我们为角色手臂绘制蒙版的方法：
 
-While painting the mask, make sure to regularly check the **Foreground** and **Background** views by pressing the buttons in the **View** section. You can also toggle the mask using the **Mask** button or by pressing **M** on your keyboard to get a unobstructed view at the original image.
+绘制蒙版时，请确保按 **视图** 部分中的按钮定期检查 **前景** 和 **背景** 视图。你还可以使用 **蒙版** 按钮或按键盘上的 M 来切换蒙版，以获得原始图像的全局视图。
 
 
 <video width="100%" controls>
@@ -40,41 +40,41 @@ While painting the mask, make sure to regularly check the **Foreground** and **B
   Your browser does not support the video tag.
 </video>
 
-::: tip Tip
-In this tutorial, we are showcasing the **Paint Brush Mode** for the character sheet creation. You can also use **Polygon Mode** to draw the outlines of your character's limbs. To learn more about the two paint modes, see the relevant section in the foreground separation tutorial where we showcase both options:
+::: tip
+在本教程中，我们展示了用画笔模式创建角色表。你还可以使用多边形模式来绘制角色肢体的轮廓。要了解有关这两种绘制模式的更多信息，请参阅前景分离教程中的相关部分，我们在其中展示了这两个选项：
 
-* [Foreground Separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation)
+* [前景分离](/wallpaper-engine-docs/scene/image-preparation/foreground-separation)
 :::
 
-### Further Separating a Limb
+### 进一步分离肢体
 
-Once the arm and sword have been properly masked, we continue by further separating the arm from the sword, this will give us some additional flexibility in the puppet warp animation. To do this, make sure the **Arm** is selected in the hierarchy, then click on the **Add Limb** button to create a child limb of the arm. In our case, we will name it **Sword**. Just like before, we mark the sword and hand as **foreground**, while we mark the upper arm as **background**. Since the sword has already been separated from the main body, we don't need to be very precise with our painting, as the arm is now presented in its cut-out state and the main body is completely ignored:
+一旦手臂和剑被正确遮罩，我们要进一步将手臂与剑分离，这可以为我们的骨骼动画提供更多的灵活性。为此，在左测的层次结构中选中 **Arm**，然后单击 **添加肢体** 按钮以创建手臂的子肢体。在我们的例子中，我们将它命名为 **Sword**（剑）。就像之前一样，我们将剑和手标记为 **前景**，而将上臂标记为 **背景**。由于剑已经与主体分离，因此我们的绘制不需要非常精确，因为手臂现在以镂空状态呈现，躯体完全可以忽略：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/cs_sword.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Additional Body Limbs
+### 其他躯体的肢体
 
-We continue with our character by creating another limb. Unlike last time, we move back to the **Body** in the hierarchy by selecting it first, then we create a new limb using the **Add Limb** button. We want to create a limb that represents the shield of our character. What is interesting to note here is that the sword that we have previously made a limb will now be ignored since it has been separated from the shield. Effectively, this means we can ignore the shield while drawing our foreground mask and you will notice that the area that was previously covered by the sword has now been filled with a blurred color that roughly represents the shield's overall color scheme:
+我们继续为角色创造另一个肢体。与前面不同的是，我们首先选中 **躯体**，然后使用 **添加肢体** 按钮创建一个新肢体。我们要创造一个肢体来表示角色的盾牌。这里需要注意的是，我们之前分离的肢体的剑现在可以被忽略，因为它已经与盾牌分离了。这实际上意味着我们可以在绘制盾牌前景蒙版时忽略它们，你会注意到盾牌上之前被剑覆盖的区域现在已被模糊的颜色填充，它是按盾牌整体的配色方案大致生成的：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/cs_shield.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Finalizing the Character Sheet
+### 完成角色表
 
-In the final step, we create yet another limb on the **Body**, representing our character's head. After properly masking it just like before, we are ready to finalize our character sheet. Be sure to check all limbs one more time and make sure that they look exactly as you expect. For our character, we now have the **Body** (which always exists), followed by the head, shield and arm. The arm has another child limb, namely the sword.
+最后一步，我们要在 **躯体** 上创建另一个肢体，表示角色的头部。像上述一样对其正确遮罩后，我们就可以完成我们的角色表了。请务必再次检查所有的肢体，并确保它们看起来与你预期的完全一样。对于我们的角色，我们现在有躯体（总是存在的），然后是头部、盾牌和手臂。手臂还有另一个子肢体，即剑。
 
-Since we are satisfied with our character sheet, we confirm by clicking on **OK** in the lower right corner. Wallpaper Engine will now generate a character sheet from all the limbs we have drawn. We can now use the character sheet layer to create a puppet warp animation. See the [puppet warp character sheet guide](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) in order to continue from this point on.
+当我们对角色表感到满意时，我们可以通过单击右下角的 **确定** 按钮进行确认。Wallpaper Engine 会从我们绘制的所有肢体中生成一个角色表。现在，我们可以使用角色表图层来创建骨骼动画。请参阅[骨骼动画角色表指南](/wallpaper-engine-docs/scene/puppet-warp/charactersheet)以从当前状态继续。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/cs_summary.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Should you notice smaller issues with the character sheet, keep in mind that you can still make minor adjustments to the character sheet by connecting Wallpaper Engine with an external image editor and then editing the **Albedo** texture, see the following guide for more infos:
+如果你仍然发现前景分离的结果存在问题，你还可以通过将 Wallpaper Engine 连接的外部图像编辑器来对自动前景分离进行细微调整。之后，你可以手动编辑图像图层的 **反照率纹理**。有关详细信息，请参阅以下指南：
 
-* [External Image Editor Quick Access](/wallpaper-engine-docs/scene/image-preparation/external-editor)
+* [外部图像编辑器的快速访问](/wallpaper-engine-docs/scene/image-preparation/external-editor)

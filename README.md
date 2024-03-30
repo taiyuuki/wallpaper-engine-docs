@@ -83,9 +83,9 @@ zh
 │    │    ├─ properties.md✅
 │    │    └─ publishing.md✅
 │    ├─ image-preparation
-│    │    ├─ character-sheet.md
-│    │    ├─ external-editor.md
-│    │    └─ foreground-separation.md
+│    │    ├─ character-sheet.md✅
+│    │    ├─ external-editor.md✅
+│    │    └─ foreground-separation.md✅
 │    ├─ lighting
 │    │    ├─ introduction.md
 │    │    └─ lights.md

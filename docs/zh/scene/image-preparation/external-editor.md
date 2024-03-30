@@ -1,14 +1,16 @@
-# External Image Editor Quick Access
+# 外部图像编辑器的快速访问
 
-Wallpaper Engine allows you to configure your favorite external image editor to be used as a supplementing image editing tool that you can quickly access throughout the editor. You can configure an image editor of your choice in the Wallpaper Engine editor by navigating to the **Edit** menu at the top, then selecting **Editor Settings**. Next to **Custom Image Editor Path**, click on the **Select** button to select the **.exe** of your editor of choice.
+Wallpaper Engine 允许你配置你喜欢的外部图像编辑器，让你可以在整个编辑器中快速访问它。你可以在 Wallpaper Engine 编辑器中配置你选择的图像编辑器，方法是，在编辑器顶部找到 **文件** 菜单，然后选择 **编辑器设置**。在 **自定义图像编辑器路径** 旁边，单击 **选择** 按钮选择对应编辑器的 **.exe** 可执行文件。
 
-This feature works with all image editing programs we have tested and you can easily connect Wallpaper Engine with tools like Adobe Photoshop or free alternatives such as Paint.NET or GIMP.
+> 译注：这里原文写的是选择 **编辑** 菜单，但正确的做法应该是选择 **文件** 菜单。
 
-## Quickly Accessing an External Editor
+此功能适用于我们测试过的所有图像编辑程序，你可以轻松地将 Wallpaper Engine 与 Adobe Photoshop 等工具或 Paint.NET、 GIMP 等免费替代品连接起来。
 
-Whenever you are dealing with a texture or a mask, you can quickly access your image editor of choice by hovering over the **Manual Editing** button next to the texture or mask and then selecting **Edit with External Image Editor**. Wallpaper Engine will load the editor with the image and will wait for you to use the **Quick Save** functionality of your image editor to reload the texture. This is especially handy whenever you want to use advanced image editing features when creating a mask or when you quickly to make some minor adjustments to the image you are working with.
+## 快速访问外部图像编辑器
 
-See the following video for a demonstration where we edit the texture of an image layer. We first select our image layer, then scroll down to the **Materials** section and select the advanced view for materials. Next to the **Albedo** texture, we click on **Manual Editing** followed by **Edit with External Image Editor** to add some eye brows to our jelly texture. After using the quick save functionality of our editor, Wallpaper Engine automatically re-imports the updated texture.
+当你在处理任何纹理或蒙版时，你都可以鼠标单击纹理或蒙版旁边的 **手动编辑** 按钮，然后选择 **使用外部图像编辑器进行编辑** 快速访问你选择的图像编辑器。Wallpaper Engine 会打开编辑器加载对应的图像，并等待你使用图像编辑器的快速保存，然后会重新加载纹理。当你想在创建蒙版时使用高级图像编辑功能或快速对正在处理的图像进行一些细微调整时，这尤其方便。
+
+请参阅以下视频，了解用外部编辑器编辑图像图层纹理的演示。我们首先选择图像图层，向下滚动到 **材质** 部分，选择材质的 **高级纹理设置**。然后单击反照率纹理旁边的 **手动编辑**，选择 **使用外部图像编辑器进行编辑**，为果冻纹理添加一些眉毛。使用编辑器快速保存后，Wallpaper Engine 会自动重新加载更新的纹理。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/external_editor.mp4')" type="video/mp4">

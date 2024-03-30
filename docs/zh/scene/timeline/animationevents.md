@@ -1,6 +1,6 @@
 # 时间轴动画中的 SceneScript 事件
 
-您可以将 **动画事件** 添加到任何[时间轴动画](/wallpaper-engine-docs/scene/timeline/introduction)或[骨骼动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)中，并在动画通过特定帧时使用它们来触发效果、播放声音或在壁纸中执行任何其他自定义 SceneScript 逻辑。在开始之前，请确保您已经熟悉 [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction) 的基础知识，它可以用于处理所有的动画事件。
+你可以将 **动画事件** 添加到任何[时间轴动画](/wallpaper-engine-docs/scene/timeline/introduction)或[骨骼动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)中，并在动画通过特定帧时使用它们来触发效果、播放声音或在壁纸中执行任何其他自定义 SceneScript 逻辑。在开始之前，请确保你已经熟悉 [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction) 的基础知识，它可以用于处理所有的动画事件。
 
 ## 创建事件
 
@@ -15,7 +15,7 @@
 
 在打开的新对话框中输入事件的名称，在本例中，我们将事件命名为 **sword**（剑）。帧会自动设置为当前这一帧，但你也可以根据需要在此处编辑帧。
 
-单击 **确定** 添加新事件并关闭对话框。您还可以通过单击新事件选项旁边的绿色 **加号** 按钮来一次添加多个事件。
+单击 **确定** 添加新事件并关闭对话框。你还可以通过单击新事件选项旁边的绿色 **加号** 按钮来一次添加多个事件。
 
 现在你可以在时间轴上看到，添加了事件的每一帧上都有一个点。
 
@@ -45,7 +45,7 @@
   Your browser does not support the video tag.
 </video>
 
-我们只关心动画事件，因此我们将首先删除默认添加的整个`update()`函数，因为在我们这个特定的示例不需要它。删除后，我们单击顶部的 **代码片段**，然后选择 **添加函数**，从列表中选择 **animationEvent**，将动画事件的回调函数添加到脚本中，这里就是我们需要对 **sword** 事件做出响应的内容。当然，您也可以直接手动输入该函数，这里展示的只是一种快捷方式。
+我们只关心动画事件，因此我们将首先删除默认添加的整个`update()`函数，因为在我们这个特定的示例不需要它。删除后，我们单击顶部的 **代码片段**，然后选择 **添加函数**，从列表中选择 **animationEvent**，将动画事件的回调函数添加到脚本中，这里就是我们需要对 **sword** 事件做出响应的内容。当然，你也可以直接手动输入该函数，这里展示的只是一种快捷方式。
 
 以下代码片段将检查触发的动画事件的名称，它将找到 **sword_sfx** 层并在其上调用 **play** 函数。这意味着每次触发 **sword** 事件时都会播放一次剑鸣声。
 
