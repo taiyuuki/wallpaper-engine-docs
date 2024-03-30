@@ -1,38 +1,38 @@
-# Single & Mirrored Timeline Animations
+# 单张和镜像时间轴动画
 
-In this guide we will showcase examples of how using the **Mirror** and **Single** mode for timeline animations can be used to change the behavior of effects or particle systems over time. The examples showcased here can also be applied to any other property though, you can also create single or mirrored movement or scaling animations, for instance.
+在本指南中，我们将展示如何使用 **镜像** 和 **单张** 模式进行时间轴动画的示例，以及随时间推移更改效果或粒子系统的行为。这里展示的示例也可以应用于任何其他属性，例如，你还可以创建单张或镜像的移动或缩放动画。
 
-## Wallpaper intro with a single timeline animation
+## 带有单张时间轴动画的壁纸介绍
 
-In this section, we will show you how you can use timeline animations to create intro animations to your wallpaper. We will be using the [Refraction effect](/wallpaper-engine-docs/scene/effects/effect/refraction) for this tutorial, but keep in mind that this is just an example and you can apply timeline animations with any effect or property of your choice, it's really up to your imagination what to do with them.
+在本节中，我们将向你展示如何使用时间轴动画为壁纸创建介绍动画。在本教程中，我们将使用[折射效果](/wallpaper-engine-docs/scene/effects/effect/refraction)，但请记住，这只是一个示例，你可以使用你选择的任何效果或属性应用时间轴动画，如何处理它们完全取决于你的想象力。
 
-To get started, we have prepared a window scene with multiple layers, one of them being a window texture. We select our window and then add the **Refraction** effect to it to get started. The effect has a property called **Strength** which we want to increase over time. We'll click on the cogwheel icon, select *Bind Timeline Animation* and configure it. For **Mode**, we select **Single** since we only want the animation to play once and then stay in its last state forever. This is essentially all we need to do to create intro animations. For this tutorial, we will change the duration to 3600 seconds (5 minutes) to slowly let the ice freeze over the window.
+首先，我们准备了一个具有多个图层的窗口场景，其中一个是窗口的纹理。我们选择窗口，然后向其添加 **折射** 效果。该效果有一个 **强度** 属性，我们希望它随着时间的推移而增加。我们单击齿轮图标，选择 **绑定时间轴动画** 并对其进行配置。对于 **模式**，我们选择 **单张**，因为我们只希望动画播放一次，之后永远保持其最后的状态。基本上这就是我们创建介绍动画所要做的全部工作。在本教程中，我们将持续时间设为 3600 秒（5 分钟），让冰慢慢冻结在窗口上。
 
-Once you have set up the animation, set the strength to 0 while on the first frame to let the window start without any ice refraction at all. Then move to the timeline slider to the last frame of the animation and afterwards, increase the **Strength** to a higher value that you want to retain for the rest of the wallpaper runtime. In our case, we have selected a value of **0.3**. You can immediately see the line in the graph form the shape of an upwards curve (click on the *magnifying glass* icon to reset the view). If you click the *Play* button now in the timeline panel, you will see the animation runs from the beginning to the end and halts at the last frame forever.
+设置动画后，在第一帧上将强度设置为 0，让窗口在没有任何冰折射的情况下启动。然后移动到时间轴滑块到动画的最后一帧，然后将 **强度** 增加到要在壁纸运行时的剩余时间中保持的最高值。在我们的例子中，我们选择**0.3**。你可以立即看到图表中的线条形成向上曲线的形状（单击 **放大镜** 图标可以重置视图）。如果你单击时间轴面板中的 **播放** 按钮，你将看到动画从头到尾运行，并永远停在最后一帧。
 
-You can see all the timeline-related steps of this section in the following video:
+你可以在以下视频中查看本节中与时间轴相关的所有步骤：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_effect_ice.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Mirrored timeline animation for recurring behavior
+## 重复行为的镜像时间轴动画
 
-Whenever you want your animation to cycle between its beginning and end, you can set the animation mode to **Mirrored**. This will loop the animation endlessly, but instead of abruptly jumping back to the beginning, the animation will run in reverse at the same speed it ran forwards. In this example, we will use this to alter the weather conditions of the wallpaper. For this purpose, we have added a **Snow** asset the wallpaper. This asset is really just a particle system with multiple properties, one of them being **Count**. The count property changes the number of snow particles that are spawned, which makes more snow flakes appear on the screen.
+当你希望动画在其开始和结束之间来回循环时，可以将动画模式设置为 **镜像**。它将无限循环动画，但动画不会突然跳回开头，而是以向前运行的相同速度反向运行。在此示例中，我们将使用它来改变壁纸的天气情况。为此，我们添加了一个 **飘雪** 组件到壁纸。这个组件实际上是一个具有多个属性的粒子系统，其中之一就是 **计数**。计数属性会更改生成的雪花数量，从而在屏幕上显示更多的雪花。
 
-To get started, we select our *Snow* asset and scroll down to the **Count** property on the right. We click on the cogwheel icon and select *Bind Timeline Animation* as with previous examples. In this case, we configure the timeline animation in **Mirror** mode and set a time of 120 seconds. That means that after 2 minutes (120 seconds), the animation will stat playing in reverse again for another 120 seconds and then restart once again.
+首先，我们选择 **飘雪** 组件并在右侧向下滚动到 **计数** 属性。我们单击齿轮图标并选择 **绑定时间轴动画**，如前面的示例所示。在这种情况下，我们在 **镜像** 模式下配置时间轴动画并设置 120 秒的时间。这意味着在 2 分钟（120 秒）后，动画将再次反向播放 120 秒，然后再次从头播放。
 
-Once the animation is set up, we decrease the starting amount of snow by setting the *Count* to something low like **0.2**. We then move the timeline slider to the last keyframe of the animation and set a high *Count* value such as 2. You can obviously do the exact opposite if you like and have the snow start strong at 2 and then decrease towards 0.2 the end of your animation - but this is all matter of taste.
+动画设置完成后，我们给 **计数** 设一个较低的值来减少起始降雪量，例如 **0.2**。然后，我们将时间轴滑块拉到动画的最后一个关键帧，并设置一个较高的 **计数** 值，例如 2。如果你愿意，你可以做完全相反的事情，让雪从 2 开始，然后在动画结束时减少到 0.2 —— 但这完全是风格问题。
 
-Your animation is now ready to play already, especially if you have set a very long runtime, it might be too inconvenient to wait for minutes to see how it plays out, so you can always manually move the timeline slider to a specific point of your timeline and see how it looks at that specific point in time of your animation. Keep in mind that Wallpaper Engine will not abruptly spawn a larger number of particles but rather slowly increase the newly created particles, so there is always a bit of a delay until changes to **Count** (and many other properties of particle systems) are visible, even inside the editor.
+现在可以准备播放你的动画了，但如果您设置了较长的运行时间，需要等待几分钟才能看到它的播放效果，这样就可能太不方便了，因此您可以手动将时间轴滑块移动到时间轴的特定点，并查看它在动画的特定时间点的样子。要知道，Wallpaper Engine 不会突然生成大量粒子，而是会缓慢增加新创建的粒子，因此更改 **计数** （以及粒子系统的许多其他属性）后，只有在一定的延迟时间后才能看到，即使在编辑器中也是如此。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_effect_count.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-We have created a timelapse of the end-result in the following video where you can see the amount of snow particles increase over time and then lower back down. This cycle will continue endlessly as long as the wallpaper is running:
+我们下面的视频中以延时摄影的方式展示最终结果，您可以看到雪花的数量随着时间的推移而增加，然后又降低。只要壁纸在运行，这个循环就会无休止地继续下去：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_effect_snow.mp4')" type="video/mp4">

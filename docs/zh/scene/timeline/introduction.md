@@ -1,40 +1,41 @@
-# Timeline Animation Introduction
+# 时间轴动画介绍
 
-Timeline animations allow you to create animations with a pre-defined length for all properties of your wallpaper components. If that sounds confusing, don't worry, this guide will introduce you to all steps needed to create timeline animations by providing a few sample use-cases with in-depth explanations.
+时间轴动画允许你为壁纸组件的所有属性创建具有预定长度的动画。如果这听起来令人困惑，别担心，本指南将通过示例和深入解释向你介绍创建时间轴动画所需的所有步骤。
 
 ::: tip
-Do not confuse timeline animations with animations that are created through [effects](/wallpaper-engine-docs/scene/effects/overview), they are entirely different concepts.
+不要将时间轴动画与通过[效果](/wallpaper-engine-docs/scene/effects/overview)创建的动画混淆，它们是完全不同的概念。
 :::
 
-## Creating a simple movement animation
+## 创建简单的运动动画
 
-In order to get started with timeline animations, let's say you want to repeatedly move an object - in our case a cloud - from one side of your image to the other side.
+为创建时间轴动画，假设你想将一个对象（本例中是云）从图像的一侧不停的移动到另一侧。
 
-The first step is to establish what you actually want to animate, so let's have a look what happens if you move an object from left to right in the editor:
+第一步是确定你想要的动画是什么样子，所以让我们先看一下如果你在编辑器中从左向右移动一个对象会发生什么：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_intro.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-You can see how the X axis on the *Origin* property increases as you move the object from left to right. So for this animation, we want to assign a timeline animation to the *Origin* property, specifically the *X axis*. We can do so by clicking on the cogwheel icon next to *Origin* and selecting *Bind Timeline Animation*.
+可以看到，当我们从左向右移动对象时，“*起点*”的X值会增加，因此，对于此动画，我们希望给 “*起点*” 属性分配时间轴动画，特别是 “*X轴*”。我们可以通过单击 “*起点*” 旁边的齿轮图标并选择 “*绑定时间轴动画*” 。
 
-Once you click on *Bind Timeline Animation*, you are presented with the basic options of the animation:
+单击“*绑定时间轴动画*”后，将显示动画的基本选项：
 
-* **Mode:** Changes the playback behavior of the animation:
-    * *Loop:* The animation will run to the end and then immediately jump back to the beginning once it is complete.
-    * *Mirror:* The animation will return to the beginning backwards once it reaches the end.
-    * *Single:* The animation will only play once and then stop at the last frame.
-* **Seconds:** The number of seconds that the animation runs from the first to the last frame.
-* **Frames:** The number of keyframes which are the individual steps of each animation.
-* **Name:** Optional name for the animation, especially useful when using an animation in combination with *SceneScript*.
-* **Start paused:** If the animation starts paused, you need to manually start it with *SceneScript*.
-* **Wrap loop frames:** Will automatically create a smoothly looped animation for you by creating a smooth transition to the first frame.
+* **模式：** 更改动画的播放行为：
+    * *循环：* 动画运行到结束位置，完成以后立即跳回开头的位置。
+    * *镜像：* 动画运行到结束位置，完成以后按相反方向回到开头的位置。
+    * *单张：* 动画只运行一次，完成后停止在最后一帧。
+* **秒：** 动画从第一帧到最后一帧的秒数。
+* **帧：** 关键帧的数量，即动画的步数。
+    * *帧率：* 如果切换到帧率，表示每秒关键帧的数量。
+* **名称：** 动画的可选名称，在将动画与 “*SceneScript*” 结合使用时特别有用。
+* **开始播放时暂停：** 如果勾选开始播放时暂停，你需要通过 “*SceneScript*” 手动启动动画。
+* **环绕循环帧：** 循环动画结束时，将创建最后一帧到第一帧的平滑过渡。
 
-For this example, we will keep **Mode** as **Loop** since we want the cloud to re-appear on the left once it has reached the end. The **Seconds** essentially decide how long the cloud takes to travel from left to right, for this tutorial we set it to **3 seconds** but usually you would likely want to make the cloud much slower by setting a really high time like 30 seconds - ultimately that's a matter of taste, however. The **frames** decide how many detailed steps there are in the animation. Generally you can leave this at 30 for most animations, but in order to achieve natural animations, you should ensure that there are enough empty frames between the keyframes you want to set. We set the name to *Cloud Movement* to recognize the animation later and the **Start paused** option stays **off** because we want the animation to just run the whole time. We also turn off the **Wrap loop frames** option in this case, since we do **not** want a smooth transition between the end and the beginning of the animation: We want the object to abruptly jump from the right side back to the left. This is somewhat of a special case, as in most cases you probably want to have a smooth transition between the first and last frame of your animation.
+在这个例子中，我们将 **模式** 设置为 **循环**，因为我们希望云在到达终点后重新回到左侧。**秒** 决定了云从左到右移动所需的时间，在本教程中，我们将其设置为 **3 秒**，但你可以设置一个较长的时间（如 30 秒）来使云移动得更慢 —— 这最终取决于你的风格。**帧** 决定了动画中有多少关键帧，即步数。通常情况下，对于大多数动画，你可以将其设置为 30，但为了动画更自然，你应该确保要设置的关键帧之间有足够的空帧。我们将 **名称** 设置为 “*Cloud Movement*”（云移动），以便于之后用来识别动画，然后不要勾选 “*开始播放时暂停*” ，因为我们希望动画一直运行。与此同时，我们还需要关闭 **循环帧** 选项，因为我们不希望动画的结尾和开头之间平滑过渡：我们希望对象直接从右侧跳回左侧。某种意义上，这是一个特例，因为在大多数情况下，你可能希望在动画的第一帧和最后一帧之间有一个平滑的过渡。
 
 ::: tip
-Make sure to have enough frames in your animation to create natural looking animations and try to have a couple of empty frames between your saved keyframes. If your keyframes are too close, the smooth ***curve*** will effectively be ignored by the animation and the animation will look more robotic.
+请确保有足够的帧来创建更自然的动画，并尽量在保证关键帧之间留出足够的空帧。如果关键帧太近，动画将忽略平滑 **曲线** 效果，动画看起来会更机械。
 :::
 
 <video width="100%" controls>
@@ -42,38 +43,38 @@ Make sure to have enough frames in your animation to create natural looking anim
   Your browser does not support the video tag.
 </video>
 
-Once you confirm the settings, you will immediately see the timeline animation panel on your screen. The timeline animation will show three lines that represent the three values of the *Origin* property: **X** (red), **Y** (green) and **Z** (blue). Since we really only care about moving the object on the **X** axis (left to right), we start by hiding the other values by right-clicking on the **Origin x** option on the left and selecting *Show single* to hide the other lines:
+确认设置后，你可以在屏幕上看到时间轴动画面板。时间轴动画将显示三条线，分别表示 **起点** 属性的三个值：**X**（红色）、**Y**（绿色）和 **Z**（蓝色）。由于我们实际上只关心对象在 **X** 轴上（从左到右）的移动，因此我们首先鼠标右键单击左侧的 **起点x** 选项，并选择 “*显示单个*” 以隐藏其他值：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_show_single.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-We can now start with the animation. First move the object to the desired starting position. You can see **keyframe 0** is selected by default at the bottom of the timeline and since the **Auto Keyframe** option is enabled by default, any changes you make will automatically become a keyframe in the animation.
+现在我们可以开始调节动画了。首先移动对象到起点位置，我们可以看到时间轴底部 **关键帧0** 的位置被选中，由于默认情况下 **自动关键帧** 选项被启用，你对动画对象的任何修改都会自动添加关键帧，并将修改的值作为当前关键帧中对应的值。
 
-Once the cloud is in its starting position, move the timeline marker in the graph to the last frame. Once you have placed it at the last frame, you can move the cloud to the desired end-position or manually type in a number into the **X** value of the origin property. You should now also try and readjust the zoom level of the timeline graph by clicking on the *magnifying glass* icon on the right, this will automatically re-adjust the timeline to give you a complete overview over your animation.
+当前的云在起点位置，然后将时间轴标记拉到最后一帧。这样云就处于最后一帧，然后将云移动到动画结束时所需的位置，或者在 **起点** 属性的 X 值中手动键入数字。你还可以尝试单击面板右侧的 **放大镜** 图标，它可以调整和缩放时间轴，它可以自动重新调整时间轴，让你概览整个动画。
 
-Once you have placed the keyframe at the end, you can already click on the *Play* button to start the animation preview loop. You can see this process and the outcome in the video below.
+移动到最后一帧，单击 “*播放*” 按钮可以预览循环。你可以在下面的视频中看到此过程。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_keyframe_placement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-By default, Wallpaper Engine will smoothen animations by easing the speed of the animation in and out. It uses **Bézier curves** for this: When you select one or more keyframes of a property (the boxes in the graph), you can also fine-tune the curves by grabbing the lines that appear around them.
+默认情况下，Wallpaper Engine 将通过降低动画的进出速度来平滑动画。它使用 **贝塞尔曲线** 来实现：当你选择属性的一个或多个关键帧（图形中的框）时，你也可以通过抓取曲线周围的线条来微调曲线。
 
-However, in this case, we want the cloud to move at a constant speed since clouds generally don't accelerate or slow down their movements. To ensure this, turn off the Bézier curves by selecting the keyframes of the *Origin x* line (the two red boxes) and then click on the *Toggle Bézier interpolation* button three times until it is turned off (it has four modes: *both, left, right, none* - these are represented by the coloring of the button) and the graph turns from a curve into a straight line. This means the cloud now moves at a constant speed across the screen. See the following video for a showcase of this:
+但是，在当前情况下，我们希望云以恒定的速度移动，因为云通常不会加速或减速。为确保这一点，请通过选择 **起点x**线的关键帧（两个红色框）来关闭贝塞尔曲线，然后单击 **切换关键帧的贝塞尔** 按钮三次（就是 **自动关键帧** 按钮的下面，左边第一个按钮），直到它被关闭（它有四种模式：*左，右，二者，无*，通过按钮的颜色来表示），图形从曲线变成直线。这意味着云现在在屏幕上以恒定的速度移动。请看下面的视频来了解这一点：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_interpolation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-That's it, we now have a cloud that moves from left to right in a permanent loop. Simple changes that you could add at this point would be to move the cloud much further off the screen to delay its re-appearance, for example. You can also rewatch all steps and the result in the following video.
+就是这样，我们现在有一朵云，它从左向右移动并无限循环。你可以在此时添加简单的变化，例如，将云移动到离屏幕更远的位置，以延迟它的重新出现。你可以在以下视频中重新观看所有步骤和结果。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/timeline_simple_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-In the next section, we will discuss how to combine multiple properties into one animation to achieve more complex timeline effects and talk about how to utilize additional keyframes for more complex animations.
+在下一节中，我们将讨论如何将多个属性组合到一个动画中以实现更复杂的时间轴动画，并讨论如何利用其他关键帧来制作更复杂的动画。
