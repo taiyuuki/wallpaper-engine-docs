@@ -30,6 +30,7 @@ All puppet warp animations consist of multiple steps which you can see in the pr
 
 Puppet warping requires a clean image cutout with transparency around the character model. We used *Adobe Photoshop* for this task but you can achieve similar results with free software such as *Paint.NET* and *GIMP* for example. We first cut out our samurai character from the [base image](/wallpaper-engine-docs/img/puppet-warp/samurai_4k.png). We then cleaned up the base image by painting over the existing samurai and removing him from the picture altogether, resulting in a [base image without the character](/wallpaper-engine-docs/img/puppet-warp/cyberpunkbg.png). You can see we did not necessarily do a perfect job with the removal but since we will place the samurai back to where it was, the imperfections are hardly noticeable in the final wallpaper as it will be mostly hidden by the same character again. You can obviously also use a character from one image and place it on an entirely separate background if you would like.
 
+
 The main character cutout we imported into Wallpaper Engine was the following image file:
 
 ![Samurai Cutout](/wallpaper-engine-docs/img/puppet-warp/samurai_simple.png)
@@ -41,24 +42,15 @@ If you would like, you can take the character file and the [base image without t
 
 Once your character cutout is ready, import it into your Wallpaper Engine project and select it. Scroll down on the right-hand side until you reach the **Puppet warp animation** section and click on **Edit Puppet Warp**. Wallpaper Engine will now present you with the steps necessary to create an animation with puppet warping. The first step is to create the geometry of your character. By clicking on the **Create** button below **Geometry**, Wallpaper Engine will establish a mesh of your wallpaper. You can increase the number of subdivisions on the mesh using the **Subdivision** slider. If you want to combine your puppet warp with the **Shake effect** or another effect that extends outside of the mesh, you should also increase the **Padding** so that the outline of the mesh increases. Any image effects that are later applied to a puppet are limited to the area that you configure here.
 
-For this tutorial, we leave all these settings as they are but you may want to experiment around with your specific object to see if changing the mesh subdivisions increases the accuracy of the generated mesh. The *3D Perspective Extrusion* settings are also reserved for a more advanced tutorial.
+For this tutorial, we leave all these settings as they are but you may want to experiment around with your specific object to see if changing the mesh subdivisions increases the accuracy of the generated mesh.
 
-### Adding slices to the geometry
+### Advanced geometry setup
 
-While viewing the *Geometry* section, you clicking anywhere with your mouse will add additional slices. These slices allow you to add additional lines to the geometry mesh to better differentiate between different parts of your character or object. Be sure to not accidentally add any unintended slices, you can always select and remove them using the *Remove Selected Slices* button at the bottom. For our Samurai model, we add a few slices below the hat of the samurai character to help Wallpaper Engine understand that the hat is one consistent object, this will make it a bit easier to animate the head later.
+It is worth noting that the geometry setup offers some advanced settings which allow you to fine-tune the geometry of your puppet warp. By clicking the **Lock geometry for vertex editing** button, you can lock the automatically generated geometry and make further changes to it yourself by re-arranging the geometry mesh via the **Edit Topology** functionality.
 
-Watch the following video to see how we create the geometry for our object and add the additional geometry slices to the hat:
+You can experiment around with it if you like, but generally you can skip this step if you are happy with the mesh that was generated. It is mainly relevant if you want to be extra precise, for example when creating [blend shape animations](/en/scene/puppet-warp/blendshapes).
 
-<video width="100%" controls>
-  <source :src="$withBase('/videos/puppet_warp_geometry.mp4')" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-#### Checking for geometry mesh problems
-
-When creating slices, you should check that the additional slices do not introduce any severe issues in the mesh generation, see the image below for good and a bad example. If you notice any odd patterns in the mesh as in the bad example, try moving the slices around slightly to fix any issues with the mesh generation.
-
-![Geometry Mesh Problems](/wallpaper-engine-docs/img/puppet-warp/geometry_errors.jpg)
+The *3D Perspective Extrusion* feature is also reserved for another tutorial that you can find in the puppet warp section. When the geometry is locked, you can use the advanced method of perspective extrusion in the **Deformation** menu.
 
 ## 3. Creating the character bone skeleton
 

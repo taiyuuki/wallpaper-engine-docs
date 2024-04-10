@@ -19,7 +19,7 @@ Each particle system consists of different components that control certain chara
 |----------------------|---------------|
 | [General](/wallpaper-engine-docs/scene/particles/component/general) | Defines how the particle is rendered to the screen, which texture is used and how many particles are spawning. |
 | [Renderers](/wallpaper-engine-docs/scene/particles/component/renderer) | Let's you define special renderers for your particles. For example, you may choose a special renderer which stretches your particles depending on their velocity. |
-| [Emitters](/wallpaper-engine-docs/scene/particles/component/emitters) | Defines how new particles are created. |
+| [Emitters](/wallpaper-engine-docs/scene/particles/component/emitter) | Defines how new particles are created. |
 | [Initializers](/wallpaper-engine-docs/scene/particles/component/initializer) | Defines properties of your particles at the time of your creation, for example their size, speed and color. |
 | [Operators](/wallpaper-engine-docs/scene/particles/component/operator) | Operators apply changes to properties of particles over time. Uses the **Initializer** values as a starting point. |
 | [Child Particle Systems](/wallpaper-engine-docs/scene/particles/component/children) | Child particle systems are completely separate particle systems that are attached to your current particle system. You can spawn these at different times. **Optional.** |
