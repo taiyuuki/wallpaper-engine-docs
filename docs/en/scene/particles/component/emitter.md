@@ -34,7 +34,7 @@ This setting allows you to force positive or negative values for the spawn locat
 For example: By setting `X` to `-1`, all `X` values will be negative, meaning the particles will spawn to the left of the particle system only. See the following visualization with different X / Y combinations in the upper left corner:
 
 <video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
-  <source src="/videos/particle_system_sign.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/particle_system_sign.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

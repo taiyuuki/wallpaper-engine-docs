@@ -3,7 +3,7 @@
 You can define attachment points for your puppet model which you can use to easily attach other editor assets to specific parts of your model. In this guide, we will showcase two different ways to utilize attachments.
 
 <video width="35%" style="margin:0 auto;display:block;" controls autoplay loop>
-  <source src="/videos/puppet_attach_sample.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_attach_sample.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -24,7 +24,7 @@ Once you have created this hierarchy, right-click on the attached element and ho
 Watch the entire process as a video here:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_attach_single.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_attach_single.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -43,6 +43,6 @@ Click on cogwheel icon next to the first point `p0` and select **Bind to Attachm
 Watch the entire process in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/puppet_attach_multiple.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_attach_multiple.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>

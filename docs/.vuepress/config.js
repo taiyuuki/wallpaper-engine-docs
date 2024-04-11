@@ -72,7 +72,7 @@ module.exports = {
 	]
 };
 
-function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, propertiesGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, modelsGroup, shadersGroup, imagePreparationGroup, lightingGroup) {
+function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, propertiesGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, modelGroup, shadersGroup, imagePreparationGroup, lightingGroup) {
 	return [
 		{
 			title: overviewGroup,
@@ -166,10 +166,12 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/puppet-warp/animationmixing',
 				locale + 'scene/puppet-warp/perspective',
 				locale + 'scene/puppet-warp/boneconstraints',
+				locale + 'scene/puppet-warp/blendshapes',
 				locale + 'scene/puppet-warp/interactive',
 				locale + 'scene/puppet-warp/inversekinematics',
 				locale + 'scene/puppet-warp/blendrules',
 				locale + 'scene/puppet-warp/texturechannels',
+				locale + 'scene/puppet-warp/attachments',
 			]
 		},
 		{
@@ -214,7 +216,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			]
 		},
 		{
-			title: modelsGroup,
+			title: modelGroup,
 			collapsable: true,
 			children: [
 				locale + 'scene/models/introduction',

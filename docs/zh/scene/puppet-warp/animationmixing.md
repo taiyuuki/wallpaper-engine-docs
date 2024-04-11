@@ -14,14 +14,14 @@
 我们将它们全部添加到同一个控制变形当中，您可以看到它们是如何无缝地合并在一起的：
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_multiple_animations.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_multiple_animations.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 我们仔细观察剑的动画。可以看到我们创建了一共 100帧、也就是 大约 4 秒时间的动画，然后我们只对动画的前几帧进行处理，其余帧则保持原始姿势。我们将动画添加到木偶上后选中它，并将动画速率降低到原始速度的三分之一左右，使动画持续时间略高于 12 秒。
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_multiple_animations_sword.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_multiple_animations_sword.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

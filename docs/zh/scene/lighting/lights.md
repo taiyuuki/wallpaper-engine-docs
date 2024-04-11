@@ -27,14 +27,14 @@ The spot light will emit a cone-shaped light in a configurable direction. Make s
 You can configure the inner and outer cone of the spot light using the editor gizmo as shown in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/light_spot.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/light_spot.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 In a more advanced scenario, you might want to control the angle at which the light shines onto your wallpaper. It is possible to rotate the spot light inwards and make it appear as if it is shining from the top of your wallpaper for example. Take a look at this example, so see how a spot light can be turned positioned:
 
 <video width="100%" controls loop>
-  <source src="/videos/light_spot_advanced.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/light_spot_advanced.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -43,7 +43,7 @@ In a more advanced scenario, you might want to control the angle at which the li
 The tube light emits a light in a straight line from a predefined start and end point. Both points can be moved using *SceneScript* or a *timeline animation*.
 
 <video width="100%" controls loop>
-  <source src="/videos/light_tube.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/light_tube.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -54,7 +54,7 @@ Unlike the spot light, the directional light does not actually have a position w
 In short, the directional light is best used when you want to shine a line evenly across your entire wallpaper from a specific angle.
 
 <video width="100%" controls loop>
-  <source src="/videos/light_directional.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/light_directional.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -69,7 +69,7 @@
 你可以在以下视频中看到完整的过程：
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_skeleton.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_skeleton.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -86,7 +86,7 @@ Wallpaper Engine 会自动为骨骼生成权重区域，你可以单击骨骼选
 你可以在以下视频中看到此过程，包括转动帽子：
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_weights.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_weights.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -107,7 +107,7 @@ Wallpaper Engine 会自动为骨骼生成权重区域，你可以单击骨骼选
 你可以在以下视频中看到此设置过程：
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_loopkeyframes.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_loopkeyframes.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -122,7 +122,7 @@ Wallpaper Engine 会自动为骨骼生成权重区域，你可以单击骨骼选
 你可以在以下视频中查看本节中描述的步骤，然后继续：
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_simple_animation.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_simple_animation.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

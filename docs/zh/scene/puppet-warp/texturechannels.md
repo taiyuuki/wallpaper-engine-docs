@@ -9,7 +9,7 @@ The tutorial showcases a [character sheet](/scene/puppet-warp/charactersheet), t
 :::
 
 <video width="100%" controls autoplay loop>
-  <source src="/videos/puppet_warp_eye_blinking.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_eye_blinking.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -24,7 +24,7 @@ Each channel must have the same resolution as the main puppet warp image, since 
 In our example, we have two versions of our image, one is a character sheet of a knight with open eyes, while the second version shows the same knight with closed eyes. We import the closed-eyed knight version as an additional channel and Wallpaper Engine will automatically mark all areas in which the original image differs from the imported image so that you can get an easy overview of which parts of the image have changed between layers:
 
 <video width="100%" controls loop>
-  <source src="/videos/puppet_warp_texture_channel_setup.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_texture_channel_setup.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -53,6 +53,6 @@ While no bones are selected, you will see the individual texture layers as optio
 In our case, we increase the opacity of the texture channel from `0.00` to `1.00` in two short bursts and leave the value at `0.00` for the remaining animation. The result is that the eyes appear to be blinking quickly, followed by remaining open for multiple seconds. You can see this example in the following video:
 
 <video width="100%" controls loop>
-  <source src="/videos/puppet_warp_texture_channel_animation.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/puppet_warp_texture_channel_animation.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>

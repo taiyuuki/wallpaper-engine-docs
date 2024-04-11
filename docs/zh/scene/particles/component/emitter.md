@@ -34,7 +34,7 @@ prev: ../introduction.md
 例如，设置 `X` 为 `-1`，所有 `X` 值都将为负值，这意味着粒子将在粒子系统的左侧生成。查看以下视频，注意左上角不同的 X / Y 组合下的不同效果：
 
 <video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
-  <source src="/videos/particle_system_sign.mp4" type="video/mp4">
+  <source :src="$withBase(/videos/particle_system_sign.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
