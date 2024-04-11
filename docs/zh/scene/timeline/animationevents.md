@@ -1,10 +1,10 @@
 # 时间轴动画中的 SceneScript 事件
 
-你可以将 **动画事件** 添加到任何[时间轴动画](/wallpaper-engine-docs/scene/timeline/introduction)或[骨骼动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)中，并在动画通过特定帧时使用它们来触发效果、播放声音或在壁纸中执行任何其他自定义 SceneScript 逻辑。在开始之前，请确保你已经熟悉 [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction) 的基础知识，它可以用于处理所有的动画事件。
+你可以将 **动画事件** 添加到任何[时间轴动画](/wallpaper-engine-docs/scene/timeline/introduction)或[操控变形动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)中，并在动画通过特定帧时使用它们来触发效果、播放声音或在壁纸中执行任何其他自定义 SceneScript 逻辑。在开始之前，请确保你已经熟悉 [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction) 的基础知识，它可以用于处理所有的动画事件。
 
 ## 创建事件
 
-首先打开要添加事件的时间轴或骨骼动画，在底部看到时间轴面板。然后，将时间轴拉到要触发事件的帧。确定了帧，单击时间轴面板右下角的闹钟按钮。
+首先打开要添加事件的时间轴或操控变形动画，在底部看到时间轴面板。然后，将时间轴拉到要触发事件的帧。确定了帧，单击时间轴面板右下角的闹钟按钮。
 
 在我们的示例中，当角色开始向上移动剑并旋转它时，我们让它立即触发剑鸣声。我们将时间轴拉到帧 2 的位置并单击闹钟按钮。
 

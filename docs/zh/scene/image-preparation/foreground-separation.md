@@ -21,7 +21,7 @@ Wallpaper Engine 中的前景分离适用于大多数图像，但在某些情况
   Your browser does not support the video tag.
 </video>
 
-前景分离也可以作为你创建[骨骼动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)的第一步。
+前景分离也可以作为你创建[操控变形动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)的第一步。
 
 ## 如何使用前景分离
 

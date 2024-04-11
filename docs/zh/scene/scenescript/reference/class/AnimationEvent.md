@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class AnimationEvent
 
-此对象描述从时间轴或骨骼变形动画触发的动画事件。
+此对象描述从时间轴或操控变形动画触发的动画事件。
 
 ## 属性
 

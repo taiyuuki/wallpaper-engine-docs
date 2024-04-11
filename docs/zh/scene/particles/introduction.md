@@ -19,7 +19,7 @@ Wallpaper Engine 让你可以在编辑器中预装的粒子系统上进行构建
 |----------------------|---------------|
 | [常规](/wallpaper-engine-docs/scene/particles/component/general) | 定义粒子在屏幕上的渲染方式、使用的纹理以及粒子的数量。 |
 | [渲染器](/wallpaper-engine-docs/scene/particles/component/renderer) | 让你为粒子定义特殊的渲染器。例如，根据粒子的速度拉伸的渲染器。 |
-| [发射器](/wallpaper-engine-docs/scene/particles/component/emitters) | 定义如何生成粒子。 |
+| [发射器](/wallpaper-engine-docs/scene/particles/component/emitter) | 定义如何生成粒子。 |
 | [初始化器](/wallpaper-engine-docs/scene/particles/component/initializer) | 定义在粒子的初始属性，例如大小、速度和颜色。 |
 | [运算符](/wallpaper-engine-docs/scene/particles/component/operator) | 运算符会随时间对例子状态进行更改，其初始值由**初始化器**决定。 |
 | [子项](/wallpaper-engine-docs/scene/particles/component/children) | 即子粒子系统，它是完全独立的粒子系统，你可以将它们连接到当前粒子系统，并在指定的时间生成。**这是一个可选项** |

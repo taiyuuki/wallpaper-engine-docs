@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class IAnimationLayer
 
-此类表示操控变形动画（骨骼动画）图层。
+此类表示操控变形动画（操控变形动画）图层。
 
 ## Properties
 

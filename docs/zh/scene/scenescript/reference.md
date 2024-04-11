@@ -52,7 +52,7 @@ Wallpaper Engine为所有组件都提供了一个适当的类，以便你可以�
 | [CameraTransforms](/wallpaper-engine-docs/scene/scenescript/reference/class/CameraTransforms) | 该类的对象描述相机方向和位置。 |
 | [CursorEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/CursorEvent) | 提供有关鼠标事件的位置信息。 |
 | [IAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimation) | 此类表示时间轴属性动画。 |
-| [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) | 此类表示骨骼动画图层。 |
+| [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) | 此类表示操控变形动画图层。 |
 | [IConsole](/wallpaper-engine-docs/scene/scenescript/reference/class/IConsole) | 你可以通过全局对象在 SceneScript 代码的任何位置访问此接口，以便与控制台日志进行交互。 |
 | [IEffect](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffect) | 提供对图像图层上使用的图像效果的访问。 |
 | [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | 图像图层和文本图层的基础类。 |

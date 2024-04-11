@@ -1,137 +1,129 @@
-# Puppet Warp Introduction
+# 操控变形动画介绍
 
-Puppet warping is an advanced way to create complex animations for characters and some objects with Wallpaper Engine. Puppet warping is a multi-step process that requires you to have a separate image layer with a cutout of the character or object you want to animate.
+> 译注：Puppet Warp 直译为“木偶变形”，作为一个专有名词经常被翻译为“操控变形”，这里主要沿用编辑器里的翻译，也就是后者。但是，骨骼动画、木偶动画、操控变形动画，这三者其实是类似的概念，因此后文在描述动画的对象时，有时称之为“骨骼”、“骨架”，有时称之为“木偶”，有时称之为“操控变形”。
 
-::: warning Before you get started
-Puppet warping relatively complex feature, you can also create character animations with just [image effects](/wallpaper-engine-docs/scene/effects/overview) such as the [Shake effect](/wallpaper-engine-docs/scene/effects/effect/shake) which is a much simpler process.
+操控变形动画是为角色和某些对象创建复杂动画的高级方式。它是一个多步骤的过程，首先需要一个单独的图像图层，其中包含要制作动画的角色或对象的抠图。
 
-Before you get started with puppet warping, you should have a basic understanding of [Timeline Animations](/wallpaper-engine-docs/scene/timeline/introduction) as the principles applied there are used to create the animations in puppet warping.
+::: warning 准备工作
+操控变形动画是相对复杂的功能，你也可以仅使用[图像效果](/wallpaper-engine-docs/scene/effects/overview)来创建角色动画，例如[摇动效果](/wallpaper-engine-docs/scene/effects/effect/shake)，这个过程要简单得多。
+
+在开始使用操控变形动画之前，你应该对[时间轴动画](/wallpaper-engine-docs/scene/timeline/introduction)有一个基本的了解，创建操控变形动画是基于对它应用。
 :::
 
-In this tutorial, we will create a simple puppet warp animation using a samurai character that we have cut out of an existing background image using Photoshop. We have then retouched the original image to hide the already existing character from the image. If you are unable to work with a cutout of a character, puppet warping is likely not the right tool for you and you should instead rely on character animations using image effects.
+在本教程中，我们将使用武士角色创建一个简单的操控变形动画，该武士角色已通过Photoshop从现有背景图像中抠出来，并且通过修图隐藏了原始图像上的角色。如果你不会抠图、修图、补图，那操控变形动画可能不适合你，你应该使用图像效果来完成角色动画。
 
-## Puppet Warp Process Summary
+## 操控变形动画流程概述
 
 <video width="100%" controls loop autoplay>
   <source :src="$withBase('/videos/puppet_warp_intro.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-All puppet warp animations consist of multiple steps which you can see in the preview video above. We will discuss all steps performed in Wallpaper Engine in this tutorial in detail:
+所有操控变形动画都由多个步骤组成，可以在上面的预览视频中看到这些步骤。在本教程中，我们将详细讨论在 Wallpaper Engine 中执行的所有步骤：
 
-1. Creating and importing a character cutout that is suitable for puppet warp.
-2. Establishing the geometry of the character.
-3. Creating the skeleton of the character.
-4. Improving the limbs of the character by changing their "weights".
-5. Animating the character.
-6. Placing the character in the scene.
+1. 创建并导入适合操控变形动画的角色抠图。
+2. 建立角色的几何形状。
+3. 创建角色的骨架。
+4. 通过改变角色的“权重”来调整角色的肢体。
+5. 为角色制作动画。
+6. 将角色放置在场景中。
 
-## 1. Creating and importing a character cutout
+## 1. 创建并导入角色抠图
 
-Puppet warping requires a clean image cutout with transparency around the character model. We used *Adobe Photoshop* for this task but you can achieve similar results with free software such as *Paint.NET* and *GIMP* for example. We first cut out our samurai character from the [base image](/wallpaper-engine-docs/img/puppet-warp/samurai_4k.png). We then cleaned up the base image by painting over the existing samurai and removing him from the picture altogether, resulting in a [base image without the character](/wallpaper-engine-docs/img/puppet-warp/cyberpunkbg.png). You can see we did not necessarily do a perfect job with the removal but since we will place the samurai back to where it was, the imperfections are hardly noticeable in the final wallpaper as it will be mostly hidden by the same character again. You can obviously also use a character from one image and place it on an entirely separate background if you would like.
+操控变形动画需要干净的抠图，角色周围必须是透明的。我们使用 Adobe Photoshop 完成这一步，但你也可以使用 Paint.NET 和 GIMP 等免费软件获得类似的结果。我们首先从基础图像中抠出武士角色。然后在原始图像上将角色从图片中完全删除，以此清理[基础图像](/wallpaper-engine-docs/img/puppet-warp/samurai_4k.png)，从而产生一个[没有角色的基础图像](/wallpaper-engine-docs/img/puppet-warp/cyberpunkbg.png)。你会发现，我们不一定能完美清理图像，但由于我们会将武士放回原来的位置，因此在最终的壁纸中是几乎看不到瑕疵的，因为它会再次被同一个角色遮挡。当然，只要你想，你完全可以将角色放置在完全独立的背景上。
 
-The main character cutout we imported into Wallpaper Engine was the following image file:
+我们导入到Wallpaper Engine中的主要角色抠图是以下图像文件：
 
 ![Samurai Cutout](/wallpaper-engine-docs/img/puppet-warp/samurai_simple.png)
 
-If you would like, you can take the character file and the [base image without the character](/wallpaper-engine-docs/img/puppet-warp/cyberpunkbg.png) and follow along with this tutorial.
+你可以保存该[角色文件](/wallpaper-engine-docs/img/puppet-warp/samurai_simple.png)和[没有角色的基础图像](/wallpaper-engine-docs/img/puppet-warp/cyberpunkbg.png)，并按照本教程进行操作。
 
+## 2. 为角色创建几何图形
 
-## 2. Establishing the geometry of the character
+角色抠图准备好以后，将其导入到 Wallpaper Engine 项目中并选中它。在右侧向下滚动，找到 **操控变形动画** 部分，然后单击 **编辑变形动画**。Wallpaper Engine 将展示创建操控变形动画的必要步骤。第一步是创建角色的 **几何图形**。通过单击几何图形下方的 **创建** 按钮，Wallpaper Engine 将自动为你的图像创建网格。可以使用 **细分** 滑块增加网格上的细分数量。如果你要将操控变形动画与 **摇动效果** 或其他会扩展至网格之外的效果相结合，则还应该增加 **填充**，以便增加网格的轮廓。之后应用于骨骼上的任何图像效果都不会超出此处配置的网格范围。
 
-Once your character cutout is ready, import it into your Wallpaper Engine project and select it. Scroll down on the right-hand side until you reach the **Puppet warp animation** section and click on **Edit Puppet Warp**. Wallpaper Engine will now present you with the steps necessary to create an animation with puppet warping. The first step is to create the geometry of your character. By clicking on the **Create** button below **Geometry**, Wallpaper Engine will establish a mesh of your wallpaper. You can increase the number of subdivisions on the mesh using the **Subdivision** slider. If you want to combine your puppet warp with the **Shake effect** or another effect that extends outside of the mesh, you should also increase the **Padding** so that the outline of the mesh increases. Any image effects that are later applied to a puppet are limited to the area that you configure here.
+在本教程中，我们将所有设置都保持现状，但你可以自己进行尝试，看看更改网格细分是否会提高特定对象上生成网格的精度。
 
-For this tutorial, we leave all these settings as they are but you may want to experiment around with your specific object to see if changing the mesh subdivisions increases the accuracy of the generated mesh. The *3D Perspective Extrusion* settings are also reserved for a more advanced tutorial.
+### 高级几何图形设置
 
-### Adding slices to the geometry
+值得注意的是，几何图形设置提供了一些高级设置，允许你微调操控变形的几何形状。通过单击 **锁定几何图形以进行顶点编辑** 按钮，你可以锁定自动生成的几何图形，并通过 **编辑拓扑** 功能重新排列几何网格对其进一步更改。
 
-While viewing the *Geometry* section, you clicking anywhere with your mouse will add additional slices. These slices allow you to add additional lines to the geometry mesh to better differentiate between different parts of your character or object. Be sure to not accidentally add any unintended slices, you can always select and remove them using the *Remove Selected Slices* button at the bottom. For our Samurai model, we add a few slices below the hat of the samurai character to help Wallpaper Engine understand that the hat is one consistent object, this will make it a bit easier to animate the head later.
+你可以按照你的喜好进行尝试，但一般来说，如果你对生成的网格感到满意，你可以跳过这一步。如果你想更加精确的网格，例如在创建[混合形状动画](/wallpaper-engine-docs/scene/puppet-warp/blendshapes)时，这一步与其密切相关。
 
-Watch the following video to see how we create the geometry for our object and add the additional geometry slices to the hat:
+**3D 透视挤压** 部分的介绍暂时保留，你可以在操控变形动画教程的其他部分中找到。当几何图形被锁定时，你可以使用 **编辑变形** 菜单中的高级方法进行透视和拉伸。
+
+## 3. 为角色创建骨骼和骨架
+
+在确定了角色的几何形状后，我们需要告诉 Wallpaper Engine 编辑器，角色模型可移动 **关节** 的位置，这些关节在编辑器中称为 **骨骼**。单击操控变形动画中骨架部分的 **创建** 按钮以开始。
+
+在这一步中，你可以定义多个骨骼以及一个或多个**主要骨骼**，这些骨骼稍后将作为动画的参考点。你可以通过单击角色上的特定点来创建骨骼，Wallpaper Engine 将在你选中的最后一个骨骼和当前骨骼之间绘制连接。先选中某个骨骼，然后点击任意位置创建新骨骼，这样会在这两点之间创建连接。骨骼的行为也可以通过高级设置进一步调整，但这些功能保留在更高级的教程中。
+
+**主要骨骼** 是用来定义角色的重心或几乎不需要移动的点。通常将其设置在角色或脚的中心位置。通常每个角色或对象只需要一个主要骨骼，但如果你要处理的图像包含多个单独的对象或角色，则应为每个对象或角色创建一个主要骨骼。
+
+### 在我们武士的例子中添加骨骼
+
+对于我们的武士角色，我们在脚的最底部创建主要骨骼，因为我们希望脚在动画过程中不要动。然后，我们依次在腿的上方、胸部的中心位置创建骨骼。这个位置也是主要骨骼很好的候选点，但由于我们不打算对腿部进行任何动画处理，因此我们决定将脚作为主要骨骼。
+
+从胸部区域的骨骼开始，我们向头部的位置创建骨骼，然后再选中胸部的骨骼，在右臂上创建骨骼。我们还想为披风制作动画，所以再次选中胸部区域的骨骼，然后在披风上创建三个骨骼。
+
+你可以在以下视频中看到完整的过程：
 
 <video width="100%" controls>
-  <source :src="$withBase('/videos/puppet_warp_geometry.mp4')" type="video/mp4">
+  <source src="/videos/puppet_warp_skeleton.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-#### Checking for geometry mesh problems
+## 4. 通过改变角色的“权重”来定义角色的肢体
 
-When creating slices, you should check that the additional slices do not introduce any severe issues in the mesh generation, see the image below for good and a bad example. If you notice any odd patterns in the mesh as in the bad example, try moving the slices around slightly to fix any issues with the mesh generation.
+下一步是定义我们角色的单个肢体/“区域”。设置好骨骼后，你可以单击操控变形界面 **权重** 部分中的 **编辑** 按钮。Wallpaper Engine 将尝试区分角色的不同肢体和区域，每个肢体和区域都由一种单独的颜色表示，该颜色与在上一步中创建的特定骨骼相关。“权重”定义了每块骨骼对角色每个点的影响程度。
 
-![Geometry Mesh Problems](/wallpaper-engine-docs/img/puppet-warp/geometry_errors.jpg)
+Wallpaper Engine 会自动为骨骼生成权重区域，你可以单击骨骼选择颜色，然后单击 **绘制权重** 按钮对有问题的区域进行绘制。例如，在我们的例子中，Wallpaper Engine 为武士的整个帽子分配了不同的颜色，但我们希望帽子作为一个整体一起移动。我们选中帽子区域的骨骼，然后为整个帽子绘制同一个颜色。你可以看到我们在几何图形那一步中添加的切片是如何让帽子与身体的其余部分进行切分的。
 
-## 3. Creating the character bone skeleton
+我们还稍微绘制了一下下面的区域，确保剑和手属于同一个骨骼，而剩余部分已经能够满足我们的需求。
 
-After establishing the general geometry of the character, we now need to tell Wallpaper Engine where the character model has movable *joints* which are referred to as *bones* in the editor. Click on the **Create** button in the **Skeleton** section of the puppet warp overview to get started.
+一定要测试并确保所有东西都涂上了正确的颜色，尤其是在具有空洞的位置附近，很容易因为绘制过度而出现问题，从而导致某些区域在不应该移动的时候发生移动。你可以随时选择一个骨骼并旋转它来预览动画动起来的样子。在绘制权重时，你所做的所有移动操作都只会是预览，你可以随时使用 **重置姿势** 按钮重置它们的位置。
 
-In this section, you can define multiples bones and one or more **root bones** which will later be used as reference points in your animation. You can create bones by clicking on specific points on the character and Wallpaper Engine will draw a connection between the last and the current bone. If you first select a bone and then create a new bone, the connection will be created between these two points. The behavior of bones can also be further tweaked with advanced settings, but these features are reserved for more advanced tutorials.
-
-**Root bones** serve as a way to define the center of mass or a point that is nearly immovable. Typically you would set it in the center of a character or the feet. You should typically only use one root bone per character or object but if the image you are working with contains multiple separate objects or characters, you should create a root bone for each of them.
-
-### Adding bones to our samurai example
-
-For our samurai character, we create the root bone at the lowest point of the feet since we want the feet to not move during our animation. We then place another bone above the legs and another bone centered in the chest area. This bone would have also been a good candidate to serve as a root bone, however, since we are not planning on animating any leg movement, we have decided to use the feet as the root bone.
-
-From the bone that is centered in the chest area, we place one bone towards the head, then we select the bone at the chest once again and create a bone on the right arm. Since we also want to animate the cape, we select the bone in the chest area once again and then create three bones across the cape.
-
-You can see the complete process in the following video:
+你可以在以下视频中看到此过程，包括转动帽子：
 
 <video width="100%" controls>
-  <source :src="$withBase('/videos/puppet_warp_skeleton.mp4')" type="video/mp4">
+  <source src="/videos/puppet_warp_weights.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## 4. Defining the limbs of the character by changing their "weights"
+## 5. 使用完成的骨骼创建动画
 
-The next step is to define individual limbs / "regions" of our character. Once the skeleton has been configured, you can click on the **Edit** button in the **Weights** section of the puppet warp overview. Wallpaper Engine will try to figure out the different limbs and regions of your wallpaper, each being represented by an individual color which relates to a specific bone that was created in the previous step. The "weights" define how much each bone influences each point of the character.
+操控变形动画流程的最后一步是实际创建动画。它是在我们创建的单个骨骼上使用[时间轴动画](/wallpaper-engine-docs/scene/timeline/introduction)完成的。首先，单击操控变形界面 **动画** 部分中的 **创建** 按钮，然后单击动画列表中的 **添加** 按钮。我们可以为同一个对象创建多个动画，因此动画将以列表的形式保存。
 
-You can click on a bone to select its color and then click on the **Paint Weights** button to paint over any issues with the areas that Wallpaper Engine generated for that specific bone. For example, in our case, Wallpaper Engine did not assign the complete hat of the samurai the same color but we want to make sure that the hat later moves as one coherent object. We select the bone in the hat area and start painting the complete hat in the color of the bone. You can see how the slices we added in the geometry step help here to sharply cut off the hat from the rest of the body.
+与 **时间轴动画** 类似，系统会要求你选择动画模式、秒和帧数。这里我们使用 **循环** 动画，本例中，重要的是所有骨骼动画的的结束位置应该和开始位置相同，以确保动画不会出现突然的跳跃。在某些情况下，**镜像** 动画是个更简便的选择，该动画会首先向前播放，然后反向播放，在呼吸等简单动画的情况下二者区别可能不明显。**单张** 动画可以用作介绍动画，也可以与更复杂的 SceneScript 逻辑结合使用。
 
-We also fix the bottom area little and make sure the sword and its hand belong to the same bone but the rest looks good for our purposes.
+对于我们这个动画，我们将长度设置为 5 秒，但这长度是高度主观的，你可能更喜欢创建更长或更短的动画。
 
-Be sure to always test if everything was painted correctly, especially near holes, it's easy to paint a little too much into the wrong area and suddenly far-away parts start moving when they should not. You can always select a bone and start turning it to preview what any animation movement would look like. The movements you do while painting the weights are just previews, you can always reset them with the **Reset Pose** button.
+### 创建和设置动画
 
-You can see this process including turning the hat in the following video:
+由于我们采用的是 **循环** 模式动画，因此我们将在每个骨骼的第一帧和最后一帧创建一个关键帧，确保动画始终从结束的地方开始，防止突然跳转到第一帧。
+
+如果你的动画不是使用 **循环** 模式，可以跳过这一步。你可以为每个动画的最后一帧加载存储的默认姿势以快速执行此操作。将时间轴滑块移动到最后一帧，然后只需单击右侧 **姿势** 部分中的 **加载** 按钮即可。起初看起来没有发生任何事，但是只要你选中任何骨骼，你就会看到第一帧和最后一帧的关键帧。使用 **加载** 按钮只是实现此目的的一种快速方法，你也可以单独遍历每个骨骼，然后点击最后一帧的 **切换关键帧** 以达到相同的结果。
+
+你可以在以下视频中看到此设置过程：
 
 <video width="100%" controls>
-  <source :src="$withBase('/videos/puppet_warp_weights.mp4')" type="video/mp4">
+  <source src="/videos/puppet_warp_loopkeyframes.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## 5. Creating animations with the finalized puppet
+### 给骨骼创建动画
 
-The final step in the puppet warp process is to actually create animations. This is done using [Timeline Animations](/wallpaper-engine-docs/scene/timeline/introduction) on the individual bones we created. You can get started by clicking on **Create** in the **Animation** section of the puppet warp overview and then clicking on the **Add** button in the list of animations. It's possible to create multiple animations for one object, which is why animations are stored as a list like that.
+现在是时候为我们想要在动画中移动的所有骨骼制作动画了。我们将从主要骨骼开始，一直到角色外侧的骨骼。对于操控变形动画，**在大多数情况下，你只需要对骨骼的角度进行动画处理，而不是进行缩放或移动**。记住，这一点非常重要，因为移动或缩放骨骼会导致对象扭曲，因此绝大多数基于操控变形的动画仅依赖于对角度进行动画处理。
 
-Similarly to **Timeline Animations**, you are asked to select an animation mode, a time in seconds and a number of frames. We will use a **Loop** animation, in that case it's important that all bones start the way the animation ends to ensure there are no sudden jumps. In some cases, it may also be easier to just create a **Mirror** animation which is first played forward and then played in reverse which may not be noticeable in simple cases such as a breathing animation. **Single** animations can be used as intro animations or in combination with more complex *SceneScript* logic.
+在我们的示例中，我们不会对主要骨骼进行动画处理，而是从大腿的骨骼开始。通过引入两个关键帧，在时间轴中间略微倾斜移动，我们设置动画让角色前倾。然后，向上移动到头部，稍微向后旋转帽子的角度创造一个点头的动作。然后，我们将右臂上的骨骼动画与帽子的运动对齐，使其看起来好像右臂移动了帽子。最后，我们将披风的所有骨骼随着角色的整体倾斜向后上方移动。
 
-For our animation, we set the length to 5 seconds but these lengths are highly subjective and you may prefer to create a longer or shorter animation.
+当我们完成动画的初步设置，我们就可以保存它，然后返回初始图像层并应用动画，然后在完整场景中预览它。你可以随时通过返回操控变形动画界面，编辑现有动画来进一步调整它。你可能需要一些时间来适应整个动画的制作过程，制作正确的动画总是伴随着多次迭代和反复试验。
 
-### Creating and setting up the animation
-
-Since we are working with a **Loop** mode animation, we will create a keyframe at the first and last frame of each bone just as we get started so that we can ensure that the animation always starts where it ends to prevent any sudden jumps to the first frame.
-
-You can skip this if you are not using **Loop** mode on the animation, otherwise you can quickly do this by loading the default pose that is stored for every animation on the last frame. Move the timeline slider to the last frame, then simply click on the **Load** button in the **Poses** section. Nothing will appear to happen at first, but once you select any of the bones, you should see keyframes at the first frame and keyframes at the last frame for each value. Using the **Load** button is simply a quick way to achieve this, you could also go through each bone individually and click on **Toggle Keyframe** at the last frame to achieve the same outcome.
-
-You can see this setup process in the following video:
+你可以在以下视频中查看本节中描述的步骤，然后继续：
 
 <video width="100%" controls>
-  <source :src="$withBase('/videos/puppet_warp_loopkeyframes.mp4')" type="video/mp4">
+  <source src="/videos/puppet_warp_simple_animation.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Animating the bones
-
-Now it's time to animate all bones that we want to move during our animation. We will start with the root bone and work our way up to the outer bones of the character. With puppet warp animations, **you generally only want to animate the angles of the bones and not the scaling or movement**. This is very important to keep in mind because moving or scaling bones will cause the object to distort, so the large majority of puppet warp-based animations only rely on animating the angles.
-
-In our example we will not animate the root bone at all but rather start at the bone in the upper legs. By introducing two keyframes with a slight angle movement towards the middle of the timeline, we set up a bit of forward leaning animation of the character. We then move up to the head and create a nodding motion by slightly pulling back the angles of the hat. We then also line up the bone animation on the right arm with the hat movement to make it appear as if the right arm moved the hat. Lastly we move all the bones of the cape a bit up and back down alongside the the overall leaning motion of the character.
-
-Once we're done with a first draft of our animation, we can save it and then go back to the initial image layer and apply the animation and look at it in our full scene. You can always tweak it further by going back to your puppet warp animations overview and editing the existing animation. It takes some getting used to the animation process and getting an animation right will likely always require a few iterations and just some trial and error.
-
-You can view the steps we described in this section in the following video and just try and work along:
-
-<video width="100%" controls>
-  <source :src="$withBase('/videos/puppet_warp_simple_animation.mp4')" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-This sums up the basics of puppet warp animations. The approach described in this guide is already great for creating complex animations and you can even combine it with the traditional effects that Wallpaper Engine offers. You can explore the additional tutorials on puppet warping to see some advanced features that can help to push the puppet warp animations even further but you should first be comfortable with the basics outlined in this tutorial before moving forward.
+本节总结了操控变形动画的基础知识。本指南中描述的方法已经足以用于创建复杂的动画，你甚至可以将其与 Wallpaper Engine 提供的效果相结合。接下来你可以浏览有关操控变形的其他教程，了解操控变形动画的高级功能，但你应该首先熟悉本教程中介绍的基础知识，然后再继续。

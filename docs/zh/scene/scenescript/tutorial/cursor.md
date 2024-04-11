@@ -76,7 +76,7 @@ export function cursorClick(event) {
 理论上，我们在此页面上介绍的内容适用于所有包含某种`play()`功能的壁纸元素：
 
 * [IAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimation) - 时间轴属性动画
-* [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) - 骨骼动画
+* [IAnimationLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IAnimationLayer) - 操控变形动画
 * [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) - 粒子系统
 * [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) - 声音文件
 * [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) - 纹理动画

@@ -1,47 +1,51 @@
-# 3D Perspective Extrusion
+# 3D 透视挤压
 
-With puppet warping, you can also simulate a 3D perspective of 2D images. We will use the samurai from our [Character Sheet Example](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) to showcase an example of this. However, it is not necessary to use a character sheet, you can also use a standard model for this purpose and achieve similar results.
+使用操控变形动画，你还可以模拟 2D 图像的 3D 透视。我们将使用角色表示例中的武士来展示这个示例。但是，使用角色表是非必要的，你也可以对普通模型使用以获得类似的结果。
 
-You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial.
+在尝试本教程之前，你应该已经阅读并理解了[操控变形动画介绍](/wallpaper-engine-docs/scene/puppet-warp/introduction)。
 
-## Puppet Warp Geometry Setup
+## 为操控变形设置几何图形
 
-Navigate to the **Geometry** step in your puppet warp and make sure you are satisfied with the parameters you have set up there. Changing the number of subdivisions and the padding option in the **Geometry** settings may require you to re-do some of the following steps, so it is important you finalize these options before you continue with the 3D perspective extrusion feature.
+进入操控变形动画的 **几何图形** 步骤，并确保各项参数的设置都符合你的需求。一旦在 **几何图形** 设置中更改细分数量和填充数量，那下一步操作很可能就得重做，因此在继续使用 3D 透视挤压功能之前，完成这些选项非常重要。
 
-It may be tempting to use a high subdivision value to have more fine-grained control over the mesh later, but this can make depth painting more difficult and reduces overall performance of the wallpaper. Alternatively, try using a subdivision value of 0 or 1, then click on the mesh to place subdivision slice points in places where you want to extrude later. This will give you better control over the mesh and keep things simpler, with less geometry to take care of.
+一个很诱人的做法是设置一个较高的细分值以便对网格进行更细粒度的控制，但这会使深度绘制更加困难，并降低壁纸的整体性能。或许你可以尝试将细分值设为 0 或 1，然后单击网格在稍后要拉伸的位置放置切片。这能令你更好地控制网格，并使事情更简单，需要处理的几何图形更少。
 
-Once you are satisfied with the basic geometry setup, enable the **3D Perspective Extrusion** in the **Geometry** step of the puppet warp.
+对几何图形的基本设置感到满意后，在操控变形的 **几何图形** 步骤中启用 **3D 透视挤压**。
 
-## Painting the Depth Map
+## 绘制深度地图
 
-Click on the **Paint Depth** button to bring up the depth painting options on the left-hand side. Select one of the paint options (**Raise**, **Lower**, **Flatten**, **Smooth**) to raise or lower the perceived depth at any given location that you are painting the depth mask. You do not need to be very accurate for a good result, but if you need perfect accuracy, you can export the depth map, edit it in a third-party image editor and then import it back into Wallpaper Engine.
+单击 **绘制深度** 按钮，在左侧会显示深度绘制的选项。选择一个绘画类型（**增加**、**降低**、**扁平化**、**平滑**），它们可以分别为深度蒙版增加或减少感知的深度。通常你不一定需要非常精确的绘制才能获得良好的效果，但如果你需要完美的精度，你可以导出深度蒙版图，在第三方图像编辑器中编辑它，然后将其导入回 Wallpaper Engine。
 
-While painting the depth mask, make sure to adjust the **Extrusion Preview** value to rotate your character or object. This will allow you to get an idea of what type of perceived 3D depth your object will have in your animation later. Keep in mind that the value of the **Extrusion Preview** does not change anything about your puppet warp, it is merely a preview functionality that is later discarded.
+绘制深度蒙版时，按住左 **Alt** 键并用鼠标单击拖动可以旋转和平移模型。这能让你看到对象在以后的动画中具有什么样的 3d 感知深度。
 
-Once you have finalized the depth mask, you can fine-tune the **Extrusion Scale** option to increase or decrease the perceived depth of the 3D effect. The **Culling** option is only relevant if you intend to rotate the object on its back. If you set this option to **Normal**, the backside of the layer will be transparent, while setting it to **No cull** will mirror the texture to the backside as well. In the vast majority of cases, you can ignore this option, it is only relevant if you rotate your object by more than 180° during your animation.
+完成深度蒙版后，可以微调 **挤压比例** 选项，增加或减少 3D 效果的感知深度。只有当你打算将对象旋转至背面时，**剔除** 选项才有意义。如果将此选项设置为**正常**，则图层的背面是透明的，而将其设置为 **没有剔除** 则会将纹理镜像到背面。在绝大多数情况下，你可以忽略此选项，只有当你在动画过程中需要将对象旋转超过 180° 时，它才有意义。
 
-You can see an exemplary video of this process here, where we paint a depth map for our character while reviewing the outcome using the **Extrusion Preview** functionality:
+::: tip
+单击 **锁定几何图形以进行顶点编辑**，你甚至可以在接下来的 **变形** 菜单中单独更改每个顶点的深度。
+:::
+
+你可以在示例视频看到这个过程，我为角色绘制了深度图：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/puppet_warp_extrusion_painting.mp4')" type="video/mp4">
-  Your browser does not support the video tag.
+  Your browser does not support the video tag.  
 </video>
 
-## Adding 3D perspective effect to an animation
+## 在动画中添加 3D 透视效果
 
-In order for the effects of a 3D extrusion to become visible, you will have to animate the **X** or **Y** axis of the *angles*. In our example, we only take the first bone with animations after the root bone and animate the **Y** axis of the angles up and down a few times during the animation, in order for the character to appear as if it is continuously turning left and right. Keep in mind that the order of bones matters, if you want the whole body of your character to turn, it's likely a good idea to add this to the first bone with animations.
+为了使 3D 效果变得可见，你需要对 **角度**的 **X** 轴或 **Y** 轴进行动画处理。在我们的示例中，我们只需要对连接在主要骨骼后面第一个骨骼的 **Y** 轴进行动画处理，使角色看起来像在不断地左右转动。请记住，骨骼的顺序很重要，如果你想让角色的整个身体转动，最好通过动画将其添加到第一个骨骼中。
 
 ::: tip
-Animating the **Y** axis will make the movement appear left / right and animating the **X** axis will make the movement appear up / down.
+对 **Y** 轴进行动画处理会使运动向左/向右显示，对 **X** 轴进行动画处理会使运动向上/向下显示。
 :::
 
-We select the bone and hide all properties except the *Angles Y* option. The angle Y keyframe starts at a value of 0, then transitions to *-15* a few frames later, followed by transition to an angle of **+15** before circling back to an angle of **-15** again. The animation ends where it started at a value of 0. This already suffices in our example to create the perception of left and right movement. You can see this process and the final result in the following video:
+我们选择骨骼并隐藏除 **角度Y** 之外的所有属性。角度Y 的关键帧值从 **0** 开始，然后在几帧后过渡到 **-15**，然后过渡到 **+15**，然后再次盘旋回 **-15**。最后在 **0** 处结束。在我们的示例中，这样足以创建左右运动的3d感知。你可以在以下视频中看到此过程和最终结果：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/puppet_warp_extrusion_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Alternative ways of utilizing perspective
+## 透视效果的替代方法
 
-Alternatively to actually animating the perspective, you may also find it useful to simply enable the **Perspective** option at the bottom of your layer, in the *Miscellaneous* section. This will enable the 3D extrusion at all times and might not fit your model very well, but you can experiment around and see if it works well in your specific case and tweak the **Extrusion scale** option of the 3D extrusion.
+除了实际对透视进行动画处理之外，你可能会发现，作为替代方法，只需在图层底部的 **杂项** 部分启用 **透视** 选项即可。这将始终启用 3D 拉伸，一开始可能不太合适，但你可以进行不断尝试，调整 3D 挤压的 **挤压比例** 选项，看看效果如何。

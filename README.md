@@ -1,6 +1,6 @@
 # Wallpaper Engine 设计人员文档中文版
 
-fork自官方文档：<del>[wallpaper-engine-docs](https://github.com/Wallpaper-Engine-Team/wallpaper-engine-docs)</del> (目前该仓库已不再公开)
+fork自官方文档：[wallpaper-engine-docs](https://github.com/Wallpaper-Engine-Team/wallpaper-engine-docs)
 
 查看地址：https://taiyuuki.github.io/wallpaper-engine-docs/zh/
 
@@ -14,6 +14,7 @@ fork自官方文档：<del>[wallpaper-engine-docs](https://github.com/Wallpaper-
 
 * 建议优先翻译scene下的文件，也就是场景壁纸相关的内容。
 * 建议优先翻译目录层级较低的文件。
+* 尽量使用中文版编辑器里现有的翻译，但编辑器翻译有严重错误的除外。
 * 请务必保留原文本的Markdown格式，例如标题（\#+空格+标题）、加粗(\*\*双星号\*\*)、斜体(\*单星号\*)、链接（\[abcdefg\](/abc/def/ghi)）、以及代码块、提示块等等。
 
 # 翻译进度
@@ -98,7 +99,7 @@ zh
 │    │    ├─ lighting.md
 │    │    ├─ shader.md
 │    │    └─ simulation.md
-│    ├─ overview.md
+│    ├─ overview.md✅
 │    ├─ parallax
 │    │    ├─ depthparallax.md
 │    │    ├─ introduction.md
@@ -107,11 +108,11 @@ zh
 │    │    ├─ component✅
 │    │    │    ├─ children.md❎
 │    │    │    ├─ control_point.md❎
-│    │    │    ├─ emitter.md❎
+│    │    │    ├─ emitter.md✅
 │    │    │    ├─ general.md✅
 │    │    │    ├─ initializer.md❎
 │    │    │    ├─ operator.md❎
-│    │    │    └─ renderer.md❎
+│    │    │    └─ renderer.md✅
 │    │    ├─ introduction.md✅
 │    │    └─ tutorial
 │    │           ├─ child_system.md❎
@@ -123,13 +124,15 @@ zh
 │    │    └─ texture.md✅
 │    ├─ puppet-warp
 │    │    ├─ animationmixing.md
+│    │    ├─ attachments.md
 │    │    ├─ blendrules.md
+│    │    ├─ blendshapes.md
 │    │    ├─ boneconstraints.md
-│    │    ├─ charactersheet.md
+│    │    ├─ charactersheet.md✅
 │    │    ├─ interactive.md
-│    │    ├─ introduction.md
+│    │    ├─ introduction.md✅
 │    │    ├─ inversekinematics.md
-│    │    ├─ perspective.md
+│    │    ├─ perspective.md✅
 │    │    └─ texturechannels.md
 │    ├─ rgb
 │    │    └─ introduction.md
