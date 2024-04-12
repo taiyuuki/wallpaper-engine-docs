@@ -1,6 +1,6 @@
 # 创建角色表
 
-Wallpaper Engine 允许你创建角色表，你可以使用它来创建高质量的[操控变形动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)。作为先决条件，你需要一个已被裁剪并加载到 Wallpaper Engine 中的角色图层。你可以使用 Wallpaper Engine 的[前景分离](/wallpaper-engine-docs/scene/image-preparation/foreground-separation)功能从基础图像中裁剪出角色，或者使用第三方图像编辑工具手动创建周围具有透明区域的角色切片。
+Wallpaper Engine 可以让你创建角色表，你可以使用它来创建高质量的[操控变形动画](/wallpaper-engine-docs/scene/puppet-warp/introduction)。作为先决条件，你需要一个已被裁剪并加载到 Wallpaper Engine 中的角色图层。你可以使用 Wallpaper Engine 的[前景分离](/wallpaper-engine-docs/scene/image-preparation/foreground-separation)功能从基础图像中裁剪出角色，或者使用第三方图像编辑工具手动创建周围具有透明区域的角色切片。
 
 ## 角色表介绍
 

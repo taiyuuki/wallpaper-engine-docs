@@ -1,43 +1,43 @@
-# Blend Rules for Bones
+# 骨骼混合规则
 
-Blend rules are an advanced feature of puppet warp animations. They allow you to solve a few specific animation cases where you want to attach a bone to another object. An example might be that a character holds an object in their left hand and then throws it over to the right hand. In that case, you would now want the object to follow all movements of the hand it is in automatically. Blend rules allow you to do this as you can essentially change the parent bone for an object during an animation.
+混合规则是操控变形动画的高级功能。它可以让你解决一些特定的动画情形，将骨骼连接到另一个对象上。例如，角色左手拿着一个物体，然后把它扔到右手。在这种情况下，你会希望物体能自动跟随所在手的所有动作。混合规则可以让你执行此操作，让你可以在动画期间更改对象的父骨骼。
 
-We will showcase blend rules with the following example animation. **Notice how the sword remains attached to the rock until the knight pulls on it.** After the sword is pulled, it continues to follow the hand movement as the knight is holding it. This was achieved through a blend rule that changed the parent bone of the sword from the rock to the hand of the knight.
+以下示例展示了混合规则。**注意剑是如何附着在岩石上的，直到骑士拉动它。** 拔剑后，它会跟随骑士握着的手部动作。这就是通过混合规则实现的，该规则将剑的父骨骼从岩石更改为骑士的手。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/blend_rule_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Setting Up a Blend Rule
+## 设置混合规则
 
-In order to configure a blend rule, we first need to configure this relationship between two bones in the bone setup of our puppet warp model. Open up step 2 of the puppet warp setup process (the **Skeleton setup**) and select the bone that you want to utilize for this purpose.
+为了设置混合规则，我们首先需要在人偶模型的骨骼设置中配置两个骨骼之间的关系。打开操控变形动画的第 2 步（**骨架设置**），然后选择你想使用的骨骼。
 
-For this specific example, we create a normal skeleton for our knight character and another separate root bone that floats above the rock. This second root bone serves no direct animation purposes, it is merely used as a reference point of the rock position for our animation. In your case, you should choose the bone that you want to attach your object to in your animation, for example a hand of your character.
+在这个具体的例子中，我们为骑士角色创建了一个普通的骨架，以及另一个浮在岩石上方的独立的主要骨骼。这第二个主要骨骼没有直接的动画用途，它只是用作我们动画中岩石位置的参考点。你应该根据你的情况选择要在动画中将对象附加的骨骼，例如角色的手。
 
-In the next step, we select the bone that represents the sword and click on the **Edit Constraints** button on the right-hand side to bring up the settings for the bone constraints. We navigate to the **Blend Rules** tab and select the bone that we want to attach the object to. In our case, we select the bone that represents the rock as a blend rule bone.
+下一步，我们选择剑的骨骼，然后单击右侧的 **编辑约束** 按钮调出骨骼约束的设置。我们选择 **混合规则** 选项卡，然后选择要将对象附加到的骨骼。在我们的例子中，我们选择代表岩石的骨骼作为混合规则骨骼。
 
 ::: tip
-You can give each bone a name, this helps with selecting bones in the blend rule setup as you will be able to easily identify them by name.
+你可以为每各骨骼命名，这有助于在混合规则设置中选择骨骼时，通过名称轻松识别它们。
 :::
 
-### Animating the Blend Rule
+### 对混合规则进行动画处理
 
-After creating the blend rule, you will notice that the bone is now attached to the bone you selected in the bone constraints settings.
+创建混合规则后，你会注意到骨骼现在已附着到你在骨骼约束设置中选择的骨骼上。
 
-In our example, we want the sword to become attached to the hand that it originally belongs to once the knight pulls out the sword from the stone. We have prepared all other parts of the animation and now only the sword remains stationary.
+在我们的例子中，我们希望一旦骑士从石头中拔出剑，剑就会附着在骑士的手上。我们已经事先准备好动画所需的所有其他部分，只有剑目前还保持静止。
 
-The sword starts with the blend rule at its default value of 1.00, which means it is fully attached to the bone that represents the position of the rock. We now want to lower the blend rule and turn it off by setting it to 0.00 at the right frame in the animation.
+这把剑的混合规则从默认值 1.00 开始，这意味着它完全附着在代表岩石位置的骨骼上。现在，我们通过动画，在正确的帧数中将混合规则的值降低至 0.00 来将剑从岩石分离。
 
-We select the hand bone and look for our blend rule in the timeline animation list, followed by right-clicking on it and selecting *Show single*. We now see the animation timeline for the blend rule. Now we need to find the exact frame at which we want the sword to move into the hand of the knight. We place a keyframe on that frame by navigating to the exact frame in the timeline, followed by clicking on **Toggle keyframe**. Then we move one frame to the right and place a second keyframe. You can find all blend rules of a bone by selecting the bone and scrolling to the bottom of the menu on the right-hand side. For the second keyframe, we lower the value of the blend rule to 0.0 which creates a smooth curve between the two frames in which the sword detaches from the rock.
+我们选中手的骨骼，在时间轴动画列表中找到混合规则，然后右键并选择 **显示单个**。现在，我们可以看到混合规则的动画时间轴。我们需要找到剑开始跟随骑士手的确切帧数。我们拉动时间轴找到确切的帧，然后单击 **切换关键帧**，将关键帧放置在该帧上。然后我们向右拉动一个帧并放置第二个关键帧。你可以选中骨骼并在右侧菜单中滚动到底部找到骨骼的所有混合规则。对于第二个关键帧，我们将混合规则的值降低到 0.0，这会在剑与岩石分离的两个帧之间创建一条平滑的曲线。
 
-The sword will now smoothly transition from the stationary rock position that we have placed it in from the start and will follow along the knight's hand. Watch the following video to see this entire section carried out:
+这把剑现在将从一开始静止的岩石位置平滑过渡到跟随骑士的手。观看以下视频，了解整个部分的执行情况：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/blend_rule_example.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-The example we show is a single animation that does not loop. If you want to create an animation that loops smoothly, you can simply return the blend rule value back to its starting value.
+我们展示的示例是一个不循环的动画。如果要创建平滑循环的动画，只需将混合规则值返回其起始值即可。
 
-In more complex animations, you may even have multiple blend rules for one bone. In that case, Wallpaper Engine will place your object in between the bones in accordance to their blend rule value. This would allow you to float an object in between certain bones.
+在更复杂的动画中，你甚至可能对一个骨骼设置多个混合规则。在这种情况下，Wallpaper Engine 会根据其混合规则的值将对象放置在骨骼之间。这允许你让物体浮动于某些骨骼之间。

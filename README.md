@@ -123,17 +123,17 @@ zh
 │    │    ├─ resolution.md✅
 │    │    └─ texture.md✅
 │    ├─ puppet-warp
-│    │    ├─ animationmixing.md
-│    │    ├─ attachments.md
-│    │    ├─ blendrules.md
-│    │    ├─ blendshapes.md
-│    │    ├─ boneconstraints.md
+│    │    ├─ animationmixing.md✅
+│    │    ├─ attachments.md✅
+│    │    ├─ blendrules.md✅
+│    │    ├─ blendshapes.md✅
+│    │    ├─ boneconstraints.md✅
 │    │    ├─ charactersheet.md✅
-│    │    ├─ interactive.md
+│    │    ├─ interactive.md✅
 │    │    ├─ introduction.md✅
-│    │    ├─ inversekinematics.md
+│    │    ├─ inversekinematics.md✅
 │    │    ├─ perspective.md✅
-│    │    └─ texturechannels.md
+│    │    └─ texturechannels.md✅
 │    ├─ rgb
 │    │    └─ introduction.md
 │    ├─ scenescript

@@ -1,58 +1,58 @@
-# Texture Channel Animations
+# 纹理通道动画
 
-Puppet warping allows you to utilize texture channels to blend between two or more different textures as part of your animation. In this tutorial, we will showcase how to implement a simple eye blinking animation with this approach.
+操控变形还能让你利用纹理通道在两个或多个不同的纹理之间混合，成为动画的一部分。在本教程中，我们将展示如何用这种方法实现简单的眨眼动画。
 
-::: warning Please note
-You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial since this guide expects you to have a basic puppet warp layer set up.
+::: warning 请注意
+在尝试本教程之前，你应该已经阅读并理解了[操控变形动画介绍](/wallpaper-engine-docs/scene/puppet-warp/introduction)，因为本指南要求你设置好基本的操控变形动画。
 
-The tutorial showcases a [character sheet](/scene/puppet-warp/charactersheet), though character sheets are not necessary for this feature to function.
+本指南展示的是一个[角色表](/scene/puppet-warp/charactersheet)的例子, 但角色表并非实现此功能所必需的。
 :::
 
 <video width="100%" controls autoplay loop>
-  <source :src="$withBase(/videos/puppet_warp_eye_blinking.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_eye_blinking.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Creating a Texture Channel
+## 创建纹理通道
 
-To add a texture channel, open the puppet warp menu of your image layer. Below the puppet warp steps, you will find a button labeled **Texture Channels** in the **Optional** section of the puppet warp properties. Click the **Texture Channels** button to open the texture channel configuration. You will start off with exactly one texture channel which is the base image of your puppet warp image layer. Click on the **Add Channel** button to import a new image as an additional channel.
+要添加纹理通道，请打开图像图层的操控变形菜单。在操控变形界面下方，你可以在属性的 **可选** 部分找到一个 **纹理通道** 按钮。单击 **纹理通道** 按钮打开纹理通道配置。你将从一个基础的纹理通道开始，该通道是操控变形图像图层的基础图像。单击 **添加通道** 按钮导入新图像作为附加通道。
 
-::: warning Important
-Each channel must have the same resolution as the main puppet warp image, since Wallpaper Engine will look for differences on a pixel-per-pixel basis. Make sure to always keep the resolution the same while you are preparing additional texture channels.
+::: warning 重要的提示
+每个通道必须具有与主操控变形图像具有相同的分辨率，因为 Wallpaper Engine 会对像素查找差异。请确保在准备其他纹理通道时始终维持相同的分辨率。
 :::
 
-In our example, we have two versions of our image, one is a character sheet of a knight with open eyes, while the second version shows the same knight with closed eyes. We import the closed-eyed knight version as an additional channel and Wallpaper Engine will automatically mark all areas in which the original image differs from the imported image so that you can get an easy overview of which parts of the image have changed between layers:
+在我们的示例中，我们有两个版本的图像，一个是睁开眼睛的骑士的角色表，第二个是闭着眼睛的同一个骑士。我们将闭眼版本导入为附加通道，Wallpaper Engine 将自动标记原始图像与导入图像不同的所有区域，便于你查看图像的哪些部分在图层之间发生了变化：
 
 <video width="100%" controls loop>
-  <source :src="$withBase(/videos/puppet_warp_texture_channel_setup.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_texture_channel_setup.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Alpha Writing
+### 写入不透明度
 
-The **Alpha writing** option for texture channels is mainly relevant if you add or remove transparent areas of the image, in other words, changing the shape or silhouette of the image. In our example, we have only changed the eyes, we did not modify any transparent areas outside of our character. For this reason, we turn off the **Alpha writing** option since it is not necessary in this case. If you have a more complex set of changes with overlapping changed areas, the **Alpha writing** option should be turned off as well. In contrary, if you change or replace the silhouette of the image, you want to turn this option on. When in doubt, try toggling the option and see if the behavior of the puppet model delivers your expected result.
+纹理通道的 **不透明度写入** 选项主要与添加或删除图像的透明区域相关，也就是更改图像的形状或轮廓。在本例中，我们只改变了眼睛，没有改变角色之外的任何透明区域。因此在本例中是不需要的，我们关闭了 **不透明度写入** 选项。如果你有一些更复杂的对重叠区域的更改，则也应关闭 **不透明度写入**。相反，如果你希望能更改或替换图像的轮廓，则应打开此选项。如果对此项有疑问，请尝试切换该选项，看看模型的行为是否得到了你预期的结果。
 
-### Creating Additional Channels
+### 创建额外的通道
 
-You can create multiple texture channels for more complex texture animations and you can configure the order in which all channels are drawn. However, keep in mind that this feature is not intended to control a large number of frames like a GIF.
+你可以创建多个纹理通道来完成更复杂的纹理动画，并且可以配置所有通道的绘制顺序。但是请记住，此功能并不推荐用来控制像 GIF 那样有大量帧的动画。
 
-::: warning Limits
-Depending on the texture resolution of your model and the combined changes of all texture channels, you may end up hitting the limit for texture channel data. Should you get an error when trying to finish texture channel editing, you either have to remove channels or change them, so that their affected area becomes smaller.
+::: warning 极限
+根据模型纹理的分辨率以及组合更改所有纹理通道，最终可能会达到纹理通道数据的极限。如果在编辑纹理通道时遇到错误，则需要删除通道或更改通道，以便其受影响的区域变小。
 :::
 
-## Texture Channel Animations
+## 纹理通道动画
 
-Once you have set up your texture channels, you can continue to the **Animation** section of your puppet warp. In our case, we create a new 4 second looped animation for the texture channel, though you can also incorporate texture channel animations into any existing animation.
+设置纹理通道后，你可以继续查看操控变形的 **动画** 部分。在我们的例子中，我们为纹理通道创建了一个新的 4 秒循环动画，但你也可以将纹理通道动画合并到任何现有的动画中。
 
-::: warning Important
-You can only see the texture channels when no bones are selected. If you have selected any bones in the **Animation** view, you can deselect them by clicking on the selected bone again.
+::: warning 重要
+只有在未选中骨骼时才能看到纹理通道。如果在 **动画** 视图中选择了任何骨骼，可以再次单击所选骨骼取消选中。
 :::
 
-While no bones are selected, you will see the individual texture layers as options on the left-hand side of the animation section. In our case, we have named the texture layer *"knight eyes closed"* so that we can immediately identify it here. On the right-hand side, you can select a value between `0.00` and `1.00` for the opacity of each texture layer channel. By increasing and decreasing this value in an animation, you can animate the texture of your puppet warp by transitioning between these different channels.
+如果未选中任何骨骼，你将在动画部分的左侧看到各个纹理层的选项。在本例中，我们将纹理层命名为 **knight eyes closed**（骑士眼睛闭着），以方便识别。在右侧，可以为每个纹理通道的不透明度设置一个介于 `0.00` 到 `1.00` 之间的值。通过在动画中增加和减少该值，可以在这些不同通道之间转换，以实现操控变形的纹理通道动画。
 
-In our case, we increase the opacity of the texture channel from `0.00` to `1.00` in two short bursts and leave the value at `0.00` for the remaining animation. The result is that the eyes appear to be blinking quickly, followed by remaining open for multiple seconds. You can see this example in the following video:
+在本例中，我们在两个间隔很短的时间内将纹理通道的不透明度从`0.00`增加到`1.00`，并在剩余的动画中维持值为`0.00`。其结果就是，眼睛会快速眨眼，然后保持睁开状态数秒钟。你可以在以下视频中看到此示例：
 
 <video width="100%" controls loop>
-  <source :src="$withBase(/videos/puppet_warp_texture_channel_animation.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_texture_channel_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

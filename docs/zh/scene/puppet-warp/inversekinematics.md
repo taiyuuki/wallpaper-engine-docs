@@ -1,72 +1,72 @@
-# Limb Animations with Inverse Kinematics
+# 逆运动学肢体动画
 
-Wallpaper Engine supports inverse kinematics animations for puppet warp models. This approach allows you to define sensible movement ranges for a character's joints and Wallpaper Engine will dynamically animate the movement of entire limbs.
+Wallpaper Engine 支持木偶模型的逆运动学动画。这种方法可以让你为角色的关节定义合理的运动范围，而 Wallpaper Engine 将动态地为整个肢体的运动制作动画。
 
-You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial.
+在尝试本教程之前，你应该已经阅读并理解了[操控变形动画介绍](/wallpaper-engine-docs/scene/puppet-warp/introduction)。
 
-## Basic Introduction to Inverse Kinematics
+## 逆运动学肢体基本介绍
 
-We generally recommend using [character sheets](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) when using inverse kinematics for the best visual result. However, you can also use inverse kinematics for simple puppet warp animations. For this introductory guide, we will use a simple stick figure to explain the core idea of inverse kinematics in its most basic form.
+我们通常建议对[角色表](/wallpaper-engine-docs/scene/puppet-warp/charactersheet)使用逆运动学肢体以获得最佳视觉效果。但是，你也可以将逆运动学肢体用于简单的操控变形动画。在本入门指南中，我们将使用一个简单的简笔画模型来解释逆运动学肢体的基本形式以及核心思想。
 
-### Creating Bones for Inverse Kinematics
+### 为骨骼创建逆运动学肢体
 
-In order to get started with inverse kinematics, start creating the geometry for your puppet warp layer as you would with any ordinary puppet warp animation. The first important part for inverse kinematics comes in the skeleton setup where you need to specify the bones of your model.
+要开始使用逆运动学肢体，请先为操控变形图层创建几何图形，就像创建任意普通变形动画一样。逆运动学的第一个重要步骤是骨架设置，你需要指定模型的骨架。
 
-In our example, we have a simple stickman figure that we use to showcase a basic inverse kinematics setup. We start by placing the **root bone** in the torso area. We now extend from the torso to the hip joints of our character at the top end of the legs. Make sure that each leg gets an individual bone, this is important because both legs need to be able to move independently. We follow this up by creating a bone at the knees and the feet.
+在我们的示例中，我们有一个简单的火柴人图形，我们用它来展示基本的逆向运动学设置。我们先将 **主要骨骼** 设置在躯干区域。从躯干延伸到角色腿部顶端的髋关节。确保每条腿都有一个单独的骨骼，这一点很重要，因为两条腿都需要能独立运动，为此我们在膝盖和脚上创建骨骼。
 
-Now repeat this by creating a bone in the upper chest area. Extend from this bone to the left and righter shoulder and extend to the arm joints and hand joints.
+然后重复类似的操作，在胸部区域创建骨骼。从这个骨骼延伸到左肩和右肩，进一步延伸到手臂关节和手关节。
 
-Add any additional bones that may be necessary for your character, such as a head bone.
+最后按你的需求为角色添加可能需要的任意其他骨骼，例如头部骨骼。
 
-### Enabling Inverse Kinematics
+### 启动逆向运动学肢体
 
-Inverse kinematics is typically only enabled for the last bone of each respective limb. For example, for an arm, you would select the last hand bone and for a leg, you would select the bone that represents the foot. Select these last bones and click on **Edit Constraints** on the right-hand side. From the **Simulation preset** option, select **Inverse kinematics arm / leg**. You may further tweak this by changing the **Mode** option to **Advanced**, though in many cases it should be fine to just use the simple version. You can further adjust this at a later time.
+逆运动学通常只需要对每个肢体的最后一个骨骼启用即可。例如，对于手臂来说，选择的是最后一个手部骨骼，对于腿来说，选择的是代表脚的骨骼。选择最后一个骨骼，然后单击右侧的 **编辑约束**。在 **简单** 预设选项卡下，选择 **逆运动学臂/腿**。你可以将 **模式** 选项更改为 **高级** 来进一步调整它，尽管在大多数情况下，使用简单版本就足够了。你可以在稍后进一步调整此设置。
 
-Watch the skeleton setup in the following video:
+在以下视频中观看骨架设置：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/ik_bones.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Adjusting the Forward Position
+### 调整朝向的位置
 
-After your inverse kinematics limbs have been configured, you need to make some additional tweaks to the inverse kinematics bones, otherwise you may experience unusual movements and flailing of individual limbs.
+配置好逆运动学肢体后，你需要对逆运动学骨骼进行一些额外的调整，否则可能会出现单个肢体异常运动和挥舞的情况。
 
-In the puppet warp skeleton settings, select the inverse kinematics bones of your character and move the **Angle** alignment so that the **red arrow faces the direction of the limb**. For example, in our case we turn the angle so that it faces the direction of the hands. Repeat this process for all relevant limbs as shown in the following video:
+在操控变形的骨架设置中，选中角色的逆运动骨骼，调整**角度**，**使红色箭头指向肢体的方向**。例如，在我们的例子中，我们转动角度，使其面向手的方向。对所有相关肢体重复此过程，如以下视频所示：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/ik_angle.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Basic Inverse Kinematics Animation Sample
+## 基本逆运动学肢体动画示例
 
-Now that we have finished our basic puppet warp setup, we can create an animation for our character model. Create a new animation and configure a desired animation length. Since we will showcase a looped animation, we also enable the **Wrap loop frames** option. This allows us to create complex animations and Wallpaper Engine will always let all parts of the animation finish where they started for a smooth animation loop.
+现在我们已经完成了基本的操控变形设置，接下来要为角色模型创建动画。创建一个新动画并配置所需的动画长度。我们需要动画能够循环，因此启用了 **环绕循环帧** 选项。这能让我们创建复杂动画，并且 Wallpaper Engine 将始终让动画结束在它们开始的地方，以实现流畅的动画循环。
 
-In our example, we grab the root bone of our character and drag it lower, this will cause our character to animate the legs and arms into a squatting position. We then move the timeline slider to the center of the animation timeline. Again, we do not move the slider to the end because we enabled the **Wrap loop frames** option, so Wallpaper Engine will finish the rest of the animation for us and we do not need to define the end position again. We now move the root bone of our character upwards and this will automatically move all inverse kinematics limbs according to their configuration. You will notice that the legs remain stationary until they are overstretched and only leave the ground once the entire chain of bones is stretched out fully. This results in a realistic jump motion that involves all limbs, you can watch the full process and the end result in this video:
+在我们的示例中，我们抓住角色的主要骨骼并将其向下拖动，使我们的角色将腿和手臂移动到蹲下的位置。然后，我们将时间轴滑块移动到动画时间轴的正中间。基于上述同样的理由，我们不需要将滑块拖动到末尾，因为我们启用了 **环绕循环帧**，Wallpaper Engine 会为我们自动完成动画的剩余部分，因此也不需要定义结束位置。然后，我们将角色的主要骨骼向上移动，这样会根据配置自动移动所有的逆向运动学肢体。你会注意到，双脚在肢体过度伸展之前是保持在原地的，并且只有在整个骨骼完全伸展后才离开地面。所有相关的肢体都产生了逼真的跳跃动作，你可以在以下视频中观看整个过程和最终结果：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/ik_simple_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Animations using Target Controllers
+### 使用目标控制器动画
 
-Our previous jumping animation example is a bit oversimplified to quickly showcase the limb movements of inverse kinematics. Generally, you do not animate the bones directly, but rather utilize the **target controllers** that appear in the animation overview.
+我们前面的跳跃动画示例有点过于简单了，无法快速展示逆向运动学的肢体运动。通常你无需直接对骨骼的动画进行处理，而是使用显示在动画概览中的 **目标控制器**。
 
-**Target controllers appear as square-shaped** rather than round points, so you can differentiate them easily. Target controllers affect the position of the entire limb they belong to, they allow you to easily animate an entire limb according to the inverse kinematic configuration for that limb. You can also overstretch the target controller and it will automatically align the limb as if you physically pulled on it.
+**目标控制器显示为方块而不是圆点**，因此你可以很容易的区分它们。目标控制器会影响它们所属的整个肢体的位置，它们可以让你根据该肢体的逆运动学配置轻松地对整个肢体进行动画处理。你还可以过度拉伸目标控制器，它会自动对齐肢体，就像手动拉动它一样。
 
-See a simple example of this in the following video and note how only the square-shaped target controller is animated and not the bones of the arm themselves:
+在以下视频展示了一个简单的示例，注意只对方块形状的目标控制器进行动画处理，而不是对手臂本身的骨骼进行动画处理：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/ik_target_controllers.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Adjusting Orientation Controllers
+### 调整方向控制器
 
-You may have noticed that Wallpaper Engine will show you additional points leading to the center of your limbs with inverse kinematics. These so-called orientation controllers decide what direction a limb will twist. You can reposition them to adjust at which point a limb will twist in the corresponding direction. You can do this before starting your animations but you can also move them during the animation itself. Watch the following video to get an idea of how orientation controllers change the behavior of the inverse kinematics animation:
+你可能已经注意到，Wallpaper Engine 会沿着逆运动学肢体显示通向四肢中心的其他点。这些就是所谓的定向控制器，它们决定了肢体的扭曲方向。你可以重新定位它们以调整肢体的扭转方向。你可以在动画开始之前这么做，也可以在动画期间移动它们。观看以下视频，了解方向控制器如何改变逆运动学肢体动画的行为：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/ik_orientation_controller.mp4')" type="video/mp4">

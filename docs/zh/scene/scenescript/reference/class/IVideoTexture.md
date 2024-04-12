@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class IVideoTexture
 
-该类表示视频纹理。视频纹理是 `.mp4` 视频文件，它们与图像图层的纹理类似。该类允许你控制视频纹理并读取其当前播放状态。使用 `addEndedCallback` 函数，你可以在视频播放完成以后附加自定义逻辑。
+该类表示视频纹理。视频纹理是 `.mp4` 视频文件，它们与图像图层的纹理类似。该类可以让你控制视频纹理并读取其当前播放状态。使用 `addEndedCallback` 函数，你可以在视频播放完成以后附加自定义逻辑。
 
 不要与 [ITextureAnimation](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextureAnimation) 混淆。
 

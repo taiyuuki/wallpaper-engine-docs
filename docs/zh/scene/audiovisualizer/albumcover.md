@@ -1,6 +1,6 @@
 # 集成专辑封面
 
-Wallpaper Engine允许你将Windows媒体数据（如专辑封面，歌曲标题，当前播放时间等）集成到壁纸中。本指南将主要说明如何在壁纸中集成专辑封面。你可以在以下指南中了解有关如何获取的详细信息：
+Wallpaper Engine可以让你将Windows媒体数据（如专辑封面，歌曲标题，当前播放时间等）集成到壁纸中。本指南将主要说明如何在壁纸中集成专辑封面。你可以在以下指南中了解有关如何获取的详细信息：
 
 * [媒体信息集成](/wallpaper-engine-docs/scene/audiovisualizer/mediainformation)
 

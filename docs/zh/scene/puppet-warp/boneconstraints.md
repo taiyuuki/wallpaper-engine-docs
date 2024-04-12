@@ -1,110 +1,110 @@
-# Bone Physics Simulation
+# 骨骼物理模拟
 
-Wallpaper Engine also allows you to configure certain physics simulations for the puppet warp bones. When selecting a bone, you click on **Bone Constraints** to configure these properties of your bones. In this guide, we will explain what each individual option does and show you an exemplary use-case.
+Wallpaper Engine 可以让你为操控变形的骨骼配置物理模拟。在选中骨骼时，单击 **编辑约束**（Bone Constraints 骨骼约束）可以配置骨骼属性。在本指南中，我们将解释每个选项的作用，并向你展示一个示例。
 
-**Scroll down to the bottom of this page to see a detailed explanation of all bone constraint options.**
+**向下滚动到本页最底部，可以查看所有骨骼约束选项的详细说明。**
 
 ::: warning
-Keep in mind that the physics simulations can slightly change their behavior depending on the max FPS settings of your users. The Wallpaper Engine editor will always render at a high frame rate. You can apply your wallpaper to the desktop and set a low FPS limit of 10-15 in the Wallpaper Engine settings to see how the wallpaper performs under stricter FPS rules.
+请记住，物理模拟的行为可能会因用户设置 FPS 限制的不同而不同。Wallpaper Engine编辑器始终以高帧速率渲染。你可以将壁纸应用到桌面，然后在Wallpaper Engine设置中将FPS设置为 10-15 的较低帧率，查看壁纸在更局限的 FPS 规则下的性能。
 :::
 
-## Bone Physics Examples
+## 骨骼物理模拟示例
 
-We will use the Samurai example from the [Puppet Warp Character Sheet Guide](/wallpaper-engine-docs/scene/puppet-warp/charactersheet) to showcase two different types of implementations of bone physics. If you would like to check out the examples from this guide in detail, [click here to download the sample project.](/samples/samurai_tutorial.zip)
+我们将使用从[角色表指南](/wallpaper-engine-docs/scene/puppet-warp/charactersheet)中武士的例子来展示两种不同类型的骨骼物理模拟实现。如果你想查看本指南的详细示例，可以[点击这里下载示例项目](/samples/samurai_tutorial.zip)。
 
-### Rope Physics
+### 绳子物理
 
-In our first example, we will add physics simulation to the rope attached to the sword of the samurai character that we have used in the other puppet warp guides:
+在第一个示例中，我们使用在其他操控变形指南中使用的武士角色，为他身上连接剑的绳子添加物理模拟：
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/puppet_warp_rope_gravity.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-To achieve this, we open up the **Skeleton** step of the puppet warp and select the bone which connects the samurai's hand and the root bone at the bottom of the rope:
+为此，我们打开操控变形动画的骨骼界面，选择连接在武士的手和绳索底部主要骨骼的骨骼：
 
 ![Puppet Warp - Rope Bone](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_gravity_bone_inactive.png)
 
-We then click on the **Edit Constraints** button on the right-hand side to open the **Bone Constraints** menu. In this case, we enable the **Rigid simulation** option and configure it as follows:
+然后，我们单击右侧的 **编辑约束** 按钮以打开 **骨骼约束** 菜单。在本例中，我们选择 **刚体物理模拟** 选项，并按如下方式进行配置：
 
-* **Physics rotation:** Enabled - *We want the bone to be able to rotate as visible in the preview video above.*
-* **Rotational friction:** 12
-* **Rotational inertia:** 20
-* **Physics translation:** Disabled - *We don't want the bone to move.*
-* **Gravity enabled:** Enabled - *We want gravity to pull the rope downwards.* 
-* **Tip mass:** 20
-* **Gravity direction:** 90 - *A value of 90 means the gravity is pulling downwards.*
-* **Tip forward angle:** 90 - *The tip angle determines how gravity and movement affects the bone. After configuring this, check the brown guideline with the circle ending that comes off your bone after changing this value to verify the direction.*
-* **Limit rotation:** Enabled - *Set it to -180 and +180 to ensure prevent any excessive rotations.*
+* **物理旋转：** 启用 - *我们希望骨骼能够旋转，如上面的预览视频中所示.*
+* **旋转摩擦：** 12
+* **旋转惯性：** 20
+* **物理平移：** 禁用 - *我们不希望骨骼移动。*
+* **启用重力：** 启用 - *我们希望重力能够下拉绳索。* 
+* **骨骼末端质量：** 20
+* **重力方向：** 90 - *90意味着重力方向朝下。*
+* **骨骼末端前倾角：** 90 - *前倾角度决定了重力和运动对骨骼的影响。配置完此项后，请检查圆圈末端的棕色参考线，验证它的方向。*
+* **限定旋转：** 启用 - *将其设置为 -180 和 +180 以防止旋转过度。*
 
-You will also notice that the forward angle becomes visible in the bone preview, visualized by the brown line with the circle at the end, make sure it points in the correct direction (in this case: the direction of gravity).
+你还会注意到，在骨骼预览中可以看到一个末端带有圆圈的棕色线，它是对前倾角度的可视化，你要确保它指向正确的方向（在本例中为重力方向）。
 
 ![Puppet Warp - Rope Bone with Gravity enabled](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_gravity_bone_active.png)
 
-This is all that it takes to enable the physics for the rope bone. You do not actually need to animate the bone itself, but rather you should animate a parent bone (in this case the hand) and the bone will dynamically follow along and simulate the physics. You may need to tweak the values from above for your example, it's not possible to provide you with values that will work in all cases but you can use the values from above as a baseline and then tweak them to your specific use-case.
+这就是绳索物理模拟所需做的全部内容。你实际上不需要对骨骼本身进行动画处理，而是应该对父骨骼（在本例中为手）进行动画处理，绳索的骨骼将动态地跟随并模拟物理特性。你可能还需要对你的示例对上面的值进一步调整，因为我们不可能为你提供一个适用于所有情况的值，但你可以用上面的值作为基础，然后根据你的具体需要调整它们。
 
-### Cape / Cloth Physics
+### 披风 / 布料物理
 
-Next up, we will animate a series of bones with a physics simulation. We will use the cape of the samurai as an example, as it spans across multiple bones which are all exclusively moving the cloth of the cape:
+接下来，我们将通过物理模拟对一系列骨骼进行动画处理。我们将以武士的披风为例，因为它横跨多个骨骼，这些骨骼都专门用于披风布料的运动：
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/puppet_warp_cape_gravity.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Specifically, we are dealing with the four bones which are present along the cape, as shown in the following screenshot where they have already been fully configured:
+具体来说，我们要处理的是沿披风方向的四个骨骼，如以下截图所示，它们已经事先配置好：
 
 ![Puppet Warp - Cape Bones](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_cape_gravity.png)
 
-The first three bones on the cape have been configured to use a **Spring simulation**, while the last bone on the left has been configured to use a **Rigid simulation**. This is not necessarily *the best* solution, but we felt that the outcome of this looked quite nice in this case and you can experiment with mixing bones with rigid and spring simulations and see how the behavior changes.
+披风上的前三个骨骼使用 **弹簧物理模拟**，而左侧的最后一个骨骼使用 **刚性物理模拟**。这不一定是最好的解决方案，但我们认为在当前情况下，从结果来看起来相当不错，你也可以尝试将刚性和弹簧模拟混合使用，看看运动如何变化。
 
 ::: tip
-Keep in mind that chaining multiple spring simulated bones will transfer their bouncy movement and can lead to erratic motions more easily.
+记住，链接多个弹簧模拟的骨骼会转移它们的弹性运动，更容易导致不稳定的运动。
 :::
 
-#### Configuring the bones
+#### 配置骨骼
 
-All bones have been kept at their default settings for the most part. We have enabled **Limit rotation** and configured it to *-20* for the minimum value and *+20* for the maximum value to ensure the cape movements are not too excessive. The second bone of the cape (on the right) also has **Gravity** enabled at its default settings to simulate a bit of a downwards draft. Gravity has been left disabled for the other elements as it looks better if all the motion comes from the animations of the samurai. You could experiment around with this further and set the **Gravity direction** to **180** (meaning to the left) as you may be able to simulate a strong sidewards wind with that, for example.
+大部分情况下，所有骨骼都维持默认设置。我们启用 **限定旋转**，将 *-20* 作为最小值，*+20* 作为最大值，以确保披风移动幅度不会过大。披风的第二个骨骼（右边）默认情况下启用了 **重力**，用来模拟向下的气流。其他元素的重力则被禁用，因为假如所有动作都来自武士自身的话，看起来会更自然。你可以进一步尝试，将 **重力方向** 设置为 **180**（表示向左），可以用来模拟强烈的侧方向的风。
 
-#### Configuring the forward angles
+#### 配置前倾角度
 
-In the example above, you can see that all the bones on the cape have a forward angle, represented by the **brown lines with the circle** at the end. It's important that the forward angle points towards the next bone, you can see that the brown circles are always around the next bone.
+在上面的例子中，你可以看到披风上的所有骨骼都有一个指向前方的角度，用末端有圆圈的棕色线表示，他就是前倾角的方向。重要的是，前倾角一般都指向下一个骨骼，你可以看到棕色圆圈总是在下一个骨骼的周围。
 
-However, there is one important exception and that's the very last bone on the cape. You can see that the brown circle ends towards the tip of the cape. This must be manually configured by changing the *Tip forward angle* value until the forward angle points in the correct direction. Due to how the forward angle works, this may be a bit tricky to set up. Just be sure to check that the last brown circle points towards the outside tip of your character or object. The value entered is essentially an *offset* to the default direction that Wallpaper Engine infers.
+然而，有一个重要的例外，那就是披风的最后一个骨骼。你可以看到棕色圆圈的末端指向披风的末端。它必须通过更改 **末端前倾角** 的值来手动配置，直到前倾角指向正确的方向。要详细解释前倾角的工作原理会有点困难，但请务必检查最后一个棕色圆圈是否指向角色或物体的外侧。它的值实质上是 Wallpaper Engine 推断的基于默认方向的 **偏移量**。
 
-### Animating the cape
+### 为披风制作动画
 
-Unlike the rope example, we also add slight movement animations to all the physics simulated cape bones and don't fully rely on pure physics for the cape. The motion from the cape animation and the physics simulation will be merged, this allows us to create a more realistic cape without having to create very precise animations, since we simply rely on the dynamic simulations to add any realistic details to the cape.
+与绳索示例不同的是，我们还需要为所有物理模拟的披风骨骼添加了轻微的运动动画，并且不完全依赖披风的纯物理效果。披风动画和物理模拟的运动将被合并，这使我们能够创建更逼真的披风，而无需创建非常精确的动画，因为我们只需依靠动态模拟即可为披风添加逼真的细节。
 
-## Bone Constraints 
+## 骨骼约束
 
-When you select a bone in your puppet warp skeleton, you can click on **Bone Constraints** to see advanced options for a particular bone.
+在操控变形动画的骨架中选择骨骼，单击 **编辑约束** 可以查看骨骼的高级选项。
 
-You have two main options that you can decide between at first:
+首先，你主要有两个选项：
 
-* **Spring simulation**: Enables bouncy simulation of the bone. The bone will act like a spring and always try to return to its default position.
-* **Rigid simulation**: Enables drag simulation of the bone. The bone will act as a body that can be dragged around and it will keep its last position.
+- **弹簧物理模拟：**启用骨骼的弹力模拟。骨骼将像弹簧一样运动，并不断返回其默认位置。
+- **刚体物理模拟：**启用骨骼的拖拽模拟。骨骼将像拖拽着躯体一样运动，并维持其最后的位置。
 
-You can use a combination of these, for example, the first bone of a physics-simulated object may use the spring simulation while the rest may use the rigid simulation. We suggest you simply play around with these settings until you get a feeling for how they influence the simulation, since it may be difficult to judge beforehand which exact values you need to get the result you're looking for.
+你可以将它们配合起来使用，例如，第一个骨骼使用弹簧模拟，而其余骨骼使用刚性模拟。我们建议你先做一些简单的尝试，直到你了解它们是如何影响模拟结果的，因为你可能很难事先判断用哪种方式才能获得需要的结果。
 
-### Bone Constraint Options
+### 骨骼约束选项
 
-* **Physics rotation**: Enables dynamic simulation for the rotation of the bone. This is useful for most cases.
-* **Rotational stiffness (spring only)**: How strongly the bone will attempt to return to its default rotation, think of the stiffness of a spring. Increasing this will make the spring stronger and less bouncy, decreasing this will make the spring loose and less reactive.
-* **Rotational friction**: How much rotational movement is reduced with every frame. You can increase this to reduce jittery movement.
-* **Rotational inertia**: This reduces how much of an effect animation movement has on the bone. Increasing this will make the bone less reactive to fast animations.
-* **Physics translation**: Enables dynamic simulation for the position of the bone. This is useful if distortion of the object is the goal of the animation or if the object is separated into different spaces.
-* **Translational stiffness (spring only)**: How strongly the bone will attempt to return to its default position, think of the stiffness of a spring. Increasing this will make the spring stronger and less bouncy, decreasing this will make the spring loose and less reactive.
-* **Translational friction**: How much translational movement is reduced with every frame. You can increase this to reduce jittery movement.
-* **Translational inertia**: This reduces how much of an effect animation movement has on the bone. Increasing this will make the bone less reactive to fast animations.
-* **Max distance (translation only)**: This limits the maximum distance the bone is allowed to move.
-* **Gravity enabled**: Enabling this will make the bone react to gravity. It will attempt to move towards the direction of gravity as if it was suspended in air.
-* **Tip mass**: A higher mass will make the bone react more strongly to gravity instead of movement from the animation.
-* **Gravity direction**: This is the direction of gravity.
-* **Tip size**: This lets you override the distance between the simulated weight of the bone and the center of the bone. A greater size will make the bone less reactive to certain animations, while a smaller size will make it more reactive. If you leave it at 0 and the bone has exactly one child bone, the size is dynamically set to match the distance to the child. Setting this value to anything other than 0 will override the size. You can see the size in the editor by looking at how far the orange circle is from the bone you just edited.
-* **Tip forward angle**: This lets you override the angle of the tip. By default the tip will face the direction towards the child bone, if there is one, otherwise it will face the default forward direction of the bone, along the **X** axis. You can change this direction in either case with this option. This option applies an offset to the current direction.
-* **Limit rotation**: Using this option allows you to limit the maximum rotation of the bone in either direction. This can be useful to *steer* the bone into the desired direction and prevent it from rotating 180 degrees.
-* **Min angle**: The minimal angle of the allowed rotation. By default this is -180 degrees.
-* **Max angle**: The maximum angle of the allowed rotation. By default this is 180 degrees.
-* **Limit torque**: Enabling this option allows you to limit the maximum rotational force applied to the bone. You can use this option to prevent the bone from spinning erratically due to very fast animations.
-* **Max torque**: The maximum allowed force, any forces greater than this will be limited to the maximum value.
+* **物理旋转：**启用骨骼旋转的动态模拟。多数情况下都有用。
+* **旋转刚度（仅限弹簧）：**骨骼恢复到默认旋转角度的强度，可以把它想象成弹簧的刚度。增加使弹簧更坚固，弹力更小，减少使弹簧更松动，反应性更低。
+* **旋转摩擦力：**在每一帧中减少一定的旋转量。你可以增加此值以减少抖动。
+* **旋转惯性：**减少运动对骨骼的影响。增加此值将使骨骼对快速动画的反应降低。
+* **物理平移：**启用骨骼位置的动态模拟。如果动画的目标是使对象失真，或者对象需要被分离到不同的空间，这一项会很有用。
+* **平移刚度（仅限弹簧）：**骨骼恢复到默认位置的强度，可以把它想象成弹簧的刚度。增加使弹簧更坚固，弹力更小，减少使弹簧更松动，反应性降低。
+* **平移摩擦：**在每一帧中减少平移运动。你可以增加此值以减少抖动。
+* **平移惯性：**减少运动对骨骼的影响。增加此值将使骨骼对快速动画的反应降低。
+* **最大距离（仅限平移）：**限制骨骼移动的最大距离。
+* **启用重力：**启用此项将使骨骼对重力做出反应。它将尝试向重力方向移动，就好像飘在空气中一样。
+* **骨骼末端质量：** 质量越大，骨骼就越倾向于对重力做出反应，而不是对动画做出反应。
+* **重力方向：** 重力的方向。
+* **骨骼末端大小：** 重置模拟的骨骼与重心之间的距离。较大会使骨骼对某些动画的反应性降低，而较小会使反应性更强。如果将其保持为 0，并且骨骼有子骨骼的情况下，会动态调整它的大小以匹配与子骨骼的距离。如果设置为 0 以外的任何值就会重置它的大小。你可以通过橙色的圆圈与骨骼的距离以在编辑器里查看它的大小。
+* **骨骼末端前倾角：** 重置末端的角度。默认情况下，末端是指向子骨骼的方向（如果有的话），否则它将沿 X 轴指向骨骼默认的方向。不管是哪一种，你都可以使用此选项更改其方向。此选项是将当前方向的偏移量应用到骨骼末端。
+* **限定旋转：**限制骨骼在任一方向上的最大旋转角度。这对于将骨骼引导到所需的方向并防止其旋转 180 度很有用。
+* **最小角度：**允许旋转的最小角度。默认是 -180 度。
+* **最大角度：**允许旋转的最大角度。默认是 180 度。
+* **限定扭矩：**启用此选项可以限制施加在骨骼上的最大旋转力。你可以使用此选项来防止骨骼由于动画太快而不规则地旋转。
+* **最大扭矩：**最大允许的旋转力，任何大于此值的力都将被限制在最大值。

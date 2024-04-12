@@ -1,6 +1,6 @@
 # 操控变形动画介绍
 
-> 译注：Puppet Warp 直译为“木偶变形”，作为一个专有名词经常被翻译为“操控变形”，这里主要沿用编辑器里的翻译，也就是后者。但是，骨骼动画、木偶动画、操控变形动画，这三者其实是类似的概念，因此后文在描述动画的对象时，有时称之为“骨骼”、“骨架”，有时称之为“木偶”，有时称之为“操控变形”。
+> 译注：Puppet Warp， 直译为“木偶变形”，作为一个专有名词经常被翻译为“操控变形”，这里主要沿用编辑器里的翻译，也就是后者。但是，骨骼动画、木偶动画、操控变形动画，这三者其实是类似的概念，因此后文在指代、描述动画的对象时，有时是“骨骼”、“骨架”，有时是“木偶”、“木偶模型”，有时是“操控变形”。
 
 操控变形动画是为角色和某些对象创建复杂动画的高级方式。它是一个多步骤的过程，首先需要一个单独的图像图层，其中包含要制作动画的角色或对象的抠图。
 
@@ -46,9 +46,9 @@
 
 ### 高级几何图形设置
 
-值得注意的是，几何图形设置提供了一些高级设置，允许你微调操控变形的几何形状。通过单击 **锁定几何图形以进行顶点编辑** 按钮，你可以锁定自动生成的几何图形，并通过 **编辑拓扑** 功能重新排列几何网格对其进一步更改。
+值得注意的是，几何图形设置提供了一些高级设置，可以让你微调操控变形的几何形状。通过单击 **锁定几何图形以进行顶点编辑** 按钮，你可以锁定自动生成的几何图形，并通过 **编辑拓扑** 功能重新排列几何网格对其进一步更改。
 
-你可以按照你的喜好进行尝试，但一般来说，如果你对生成的网格感到满意，你可以跳过这一步。如果你想更加精确的网格，例如在创建[混合形状动画](/wallpaper-engine-docs/scene/puppet-warp/blendshapes)时，这一步与其密切相关。
+你可以按照你的喜好进行尝试，但一般来说，如果你对生成的网格感到满意，你可以跳过这一步。如果你想获得更加精确的网格，例如在创建[混合形状动画](/wallpaper-engine-docs/scene/puppet-warp/blendshapes)时，这一步与其密切相关。
 
 **3D 透视挤压** 部分的介绍暂时保留，你可以在操控变形动画教程的其他部分中找到。当几何图形被锁定时，你可以使用 **编辑变形** 菜单中的高级方法进行透视和拉伸。
 
@@ -69,7 +69,7 @@
 你可以在以下视频中看到完整的过程：
 
 <video width="100%" controls>
-  <source :src="$withBase(/videos/puppet_warp_skeleton.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_skeleton.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -86,7 +86,7 @@ Wallpaper Engine 会自动为骨骼生成权重区域，你可以单击骨骼选
 你可以在以下视频中看到此过程，包括转动帽子：
 
 <video width="100%" controls>
-  <source :src="$withBase(/videos/puppet_warp_weights.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_weights.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -107,7 +107,7 @@ Wallpaper Engine 会自动为骨骼生成权重区域，你可以单击骨骼选
 你可以在以下视频中看到此设置过程：
 
 <video width="100%" controls>
-  <source :src="$withBase(/videos/puppet_warp_loopkeyframes.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_loopkeyframes.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -122,7 +122,7 @@ Wallpaper Engine 会自动为骨骼生成权重区域，你可以单击骨骼选
 你可以在以下视频中查看本节中描述的步骤，然后继续：
 
 <video width="100%" controls>
-  <source :src="$withBase(/videos/puppet_warp_simple_animation.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_warp_simple_animation.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

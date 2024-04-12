@@ -1,49 +1,49 @@
-# Interactive Puppet Warps
+# 可交互的操控变形动画
 
-Puppet Warping in combination with *SceneScript* can also be used to create interactive wallpaper elements. In this tutorial, we will discuss how to allow users to grab and drag around individual bones.
+操控变形动画与 *SceneScript* 结合使用可用于创建交互式的壁纸元素。在本教程中，我们将讨论如何能让用户抓取和拖动单个骨骼。
 
-You should have read and understood the [Puppet Warp Introduction Guide](/wallpaper-engine-docs/scene/puppet-warp/introduction) before attempting this tutorial.
+在尝试本教程之前，你应该已经阅读并理解了[操控变形动画介绍](/wallpaper-engine-docs/scene/puppet-warp/introduction)。
 
-## Interactive bones
+## 可交互骨骼
 
-In this guide, we will go into how to create an interactive wallpaper element that users can drag and release.
+在本指南中，我们将介绍如何创建用户可以拖动和释放的交互式壁纸元素。
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/puppet_warp_interactive.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-If you would like to follow along or see the full sample project, you can download it here:
+如果你想跟随本教程或查看完整的示例项目，请点击这里下载：
 
-* [Click here to download the simple jelly project.](/samples/jelly_simple.zip)
+* [点击这里下载简单的果冻项目示例](/samples/jelly_simple.zip)
 
-### Setting up the puppet warp.
+### 设置操控变形动画
 
-In order to achieve this, we need to utilize puppet warping in combination with SceneScript. We start by creating a puppet warp on our *jelly* object. The geometry does not require any special attention. For the bone setup, our basic example only includes two bones: One static root bone which represents the outer areas of our jelly object and another bone in the center of the jelly object that has been configured to use **Spring simulation** in the **Bone Constraints**:
+为此，我们需要将操控变形与 SceneScript 结合使用。我们首先在 **果冻** 对象上创建一个操控变形。几何图形没有任何需要特别注意的地方。对于骨骼设置，我们的基本示例仅包含两个骨骼：一个静态的主要骨骼，表示果冻对象的外部区域，一个位于果冻对象中心的骨骼，为其设置 **骨骼约束** 并使用 **弹簧物理模拟** ：
 
 ![Puppet Warp - Interactive Bone Setup](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_interactive_bones.png)
 
-For the bone constraints of the center bone, we have enabled **Spring simulation** and then **Physics translation** and left everything else in its default state. This means that we are able to move the bone around (this is what enabling **physics translation** does) and since it's a **spring simulation**, it will automatically return to its original position when the mouse cursor is released.
+对于中间骨骼的骨骼约束，我们使用 **弹簧物理模拟**，然后开启 **物理平移**，并将其他所有设置维持为默认状态。这意味着我们能够四处移动骨骼（这就是 **物理平移** 的作用），由于是弹簧模拟，因此当鼠标释放时，它将自动恢复为原始状态。
 
-Also, it's important to set a **Name** for the bone that we can later reference in our code. In our example, we will set the name **MouseBone** to the bone when selecting it in the editor.
+此外，为骨骼设置一个名称也很重要，我们稍后可以在代码中引用它。在我们的示例中，在编辑器中选中它时，将骨骼命名为 MouseBone。
 
-For the bone weights, the center bone gets a small area in the middle of the object. In our case, the green area represents the area that will be dragged by the mouse cursor, while the red area represents the immovable area that belongs to the root bone:
+对于骨骼权重，中间骨骼包括物体中间的一小块区域。本例中，绿色区域表示鼠标光标可以拖动的区域，而红色区域表示主要骨骼的不可移动区域：
 
 ![Puppet Warp - Interactive Weight Setup](/wallpaper-engine-docs/img/puppet-warp/puppet_warp_interactive_weights.png)
 
-We do not need to create any animations for this example, as the mouse interactions are completely separate from this.
+我们不需要为这个例子创建任何动画，因为鼠标交互和它是完全独立的。
 
-### SceneScript code for the mouse drag
+### 鼠标拖动的 SceneScript 代码
 
-Next up, we need to assign a *SceneScript* code snippet to the jelly image layer. Select the layer and click on the cogwheel icon in the upper right corner, next to the visibility and lock icon. You can copy-paste the code from below and inspect the code comments for some additional details:
+接下来，我们需要将 SceneScript 代码片段分配给果冻图像层。选择图层，然后单击右上角的齿轮图标，在可见性和锁定图标旁边。你可以复制粘贴下面的代码，通过代码注释可以查看详细信息：
 
 ```js
 'use strict';
 
-// Set the maximum distance that the bone can be dragged away 
+// 设置骨骼可以拖动的最大距离
 const DRAG_MAX_DISTANCE = 100;
 
-// Set the "Name" of the bone that can be dragged as defined in puppet warp setup
+// 设置可拖动骨骼的名称
 const MOUSE_BONE_NAME = 'MouseBone';
  
 var activeDragBone;
@@ -57,13 +57,13 @@ var dragStart;
  */
 export function update(value) {
 	if (isDragging) {
-		// Use the mouse cursor position to calculate the drag distance
+		// 使用鼠标位置计算拖动距离
 		var drag = input.cursorWorldPosition.subtract(dragStart);
 		var dragDist = drag.length();
 		drag = drag.divide(dragDist);
-		// Limit the distance to the max distance that was configured in the DRAG_MAX_DISTANCE constant at the top
+		// 拖动距离不能超过最大距离
 		drag = dragStart.add(drag.multiply(Math.min(DRAG_MAX_DISTANCE, dragDist)));
-		// Move the bone to the newly calculated drag distance
+		// 移动骨骼到新计算的拖动距离
 		thisLayer.setBoneTransform(activeDragBone, thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta)));
 	}
 }
@@ -75,7 +75,7 @@ export function cursorDown(event) {
 	var bonePos = thisLayer.getBoneTransform(1).translation();
 	var delta = bonePos.copy().subtract(input.cursorWorldPosition);
 	var len = delta.length();
-	// Update the drag position if it's not further away than the maximum distance
+	// 如果鼠标距离骨骼位置不超过最大距离，更新拖动位置
 	if (len < DRAG_MAX_DISTANCE) {
 		dragStart = bonePos;
 		dragDelta = delta;
@@ -87,7 +87,7 @@ export function cursorDown(event) {
  * @param {CursorEvent} event
  */
 export function cursorUp(event) {
-	// Release the drag animation in the next update() call
+	// 鼠标拖动结束，释放拖动动画
 	isDragging = false;
 }
  
@@ -95,38 +95,40 @@ export function cursorUp(event) {
  * Get bone for mouse movement
  */
 export function init() {
-	// Get the numeric index of the bone that can be dragged and store it for later use
+	// 获取鼠标可以拖动的骨骼的数字索引，并将其存储在变量中，以便稍后可以使用
 	activeDragBone = thisLayer.getBoneIndex(MOUSE_BONE_NAME);
 }
 ```
-First, the code loads the bone that can be dragged by its name and stores it in a variable. You can change value of `MOUSE_BONE_NAME` at the top of the code if you have given your bone a different name during the puppet warp setup:
+
+首先，该代码将鼠标可以拖动的骨骼名称加载到变量中。如果你在设置过程中为骨骼指定了不同的名称，则可以在代码中更改 `MOUSE_BONE_NAME` 的值。
 
 ```js
 thisLayer.getBoneIndex(MOUSE_BONE_NAME);
 ```
-The main movement of the bone occurs in the `update()` function. The bone is constantly moved towards mouse cursor position, specifically this line in the code handles all of the movement:
+
+骨骼的主要动作是在 `update()` 函数中发生的。骨骼在鼠标的位置移动，里面的代码处理所有的动作。
 
 ```js
 thisLayer.setBoneTransform(activeDragBone, thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta)));
 ```
 
-By using `thisLayer.setBoneTransform`, we can alter any bone on the current layer by accessing it through its index. The second parameter `thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta))` may look a bit confusing at first glance, but it's really not that complex. Basically, it just means we take the position of the bone and then move it according to the mouse cursor position on the wallpaper with the `.translation()` function.
+通过使用 `thisLayer.setBoneTransform`，我们可以通过索引访问当前图层的任何骨骼，第二个参数 `thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta))` 可能看起来有点混乱，但实际上并没有那么复杂。它基本上只是在获取骨骼的位置，然后根据鼠标在壁纸上的位置使用 `.translation()` 函数移动骨骼到新的位置。
 
-When the mouse cursor is released, the bone will return to its original position, since the bone has been configured to use **Spring simulation** in the puppet warp. This means the bone will return to its original position automatically and without the need for extra code.
+当鼠标被释放时，骨骼将返回其原始位置，因为骨骼在操控变形动画中被配置为 **弹簧物理模拟**。这意味着骨骼将自动恢复到其原始位置，而无需额外的代码处理。
 
 ::: tip
-You can use SceneScript to override all puppet warp animations reliably. Wallpaper Engine will execute all animations on all layers before it will execute any scripts on a frame before displaying a layer.
+你可以使用 SceneScript 显示的覆盖所有操控变形动画。Wallpaper Engine 在显示图层前会先在所有图层上执行所有动画，然后再执行每一帧上的任意脚本。
 :::
 
-Once you have applied this code snippet to the jelly layer, you can click on **Run Preview** at the top or apply the wallpaper and it should already be functional like in the preview video above. Keep in mind that this will only work for one
+将此代码片段应用于果冻图层后，你可以单击顶部的 **运行预览** 或者应用壁纸，它应该会像上面的预览视频中一样正常工作。请记住，它仅适用了一个。
 
-## Advanced interactions puppet warp
+## 高级可交互操控变形动画
 
-We have also created a much more complex example of this in a separate project. In this case, the jelly has a large number of bones which can all be dragged around. Additionally, it includes a timeline animation which is triggered by SceneScript whenever the mouse is released to simulate the physical impact of the bone returning to its original state (see the impact jiggling in the video below). The jelly texture has also been made into a sprite sheet with multiple facial expressions which are switched around when the dragging animation starts. The example also includes sounds and is overall a little more complex, but if you would like to see how we achieved this, you can check out the sample project at the following link:
+我们还在一个单独的项目中创建了一个更复杂的示例。本例中，果冻有大量的骨骼，这些骨骼都可以拖来拖去。此外，它还包括一个时间轴动画，每当释放鼠标时，SceneScript 都会触发该动画，以模拟骨骼恢复到其原始状态的物理冲击（请参阅下面的视频）。果冻纹理也被制作成具有多种表情的精灵表，这些表情在拖动动画开始时会切换。该示例还包含声音，总体上有点复杂，但如果你想了解我们是如何实现这一点的，可以在以下链接中查看示例项目：
 
 * [Click here to download the advanced jelly project.](/samples/jelly_advanced.zip)
 
-You can see the advanced example in action in the following video:
+你可以在以下视频中看到高级示例的实际效果：
 
 <video width="100%" controls loop>
   <source :src="$withBase('/videos/puppet_warp_interactive_advanced.mp4')" type="video/mp4">

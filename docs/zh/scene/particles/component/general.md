@@ -30,7 +30,7 @@ prev: ../introduction.md
 
 #### 过亮
 
-允许你调整粒子系统的亮度。如果你打算提高亮度，请尝试启用[高光效果](/wallpaper-engine-docs/scene/effects/bloom)，尤其是 **HDR高光** 可以获得比增加**过亮**值更高质量的效果。
+可以让你调整粒子系统的亮度。如果你打算提高亮度，请尝试启用[高光效果](/wallpaper-engine-docs/scene/effects/bloom)，尤其是 **HDR高光** 可以获得比增加**过亮**值更高质量的效果。
 
 #### 折射数量
 
@@ -79,4 +79,4 @@ prev: ../introduction.md
 
 ### 颜色
 
-允许你更改预览屏幕的颜色以在不同背景上测试你的粒子。
+可以让你更改预览屏幕的颜色以在不同背景上测试你的粒子。

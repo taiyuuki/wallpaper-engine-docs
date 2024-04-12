@@ -1,48 +1,48 @@
-# Attachment Points
+# 附着点
 
-You can define attachment points for your puppet model which you can use to easily attach other editor assets to specific parts of your model. In this guide, we will showcase two different ways to utilize attachments.
+你可以为木偶模型定义附着点，这些附着点可以轻松地将其他组件附加到模型的特定部分。在本指南中，我们将展示两种不同的使用附着点的。
 
 <video width="35%" style="margin:0 auto;display:block;" controls autoplay loop>
-  <source :src="$withBase(/videos/puppet_attach_sample.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_attach_sample.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Hierarchy Attachment: Attaching Particle System to Puppet
+## 层级附件: 将粒子系统添加到木偶
 
-If you simply want to attach a single object to a specific point of your puppet model, this is the most straight-forward approach to achieve this. In our example, we will attach a particle system to the sword of our sample character but this could really be any other editor asset.
+如果你只是想将单个对象附加到木偶模型特定的点上，这是最直接的方法。在我们的示例中，我们将一个粒子系统附加到示例角色的剑上，但附件实际上可以是编辑器里的任意其他组件。
 
-First, select your existing puppet warp model. In the puppet overview, scroll down to the *Optional* section and click on the **Attachments** button. Wallpaper Engine will now present all the bones of your puppet model.
+首先，选择你现有的操控变形的模型。在操控变形界面，向下滚动到 **可选** 部分，然后单击 **附件** 按钮。Wallpaper Engine 会展示模型的所有骨骼。
 
-To create an attachment, select one bone and then click anywhere on the exact part of the model that you want to place the attachment point. A new attachment point is created automatically. We strongly recommend that you give your attachment points a clear name so that you can easily recognize them in the next steps. After having named your attachment point, click on the **Confirm** button to save the attachment setup.
+要创建附着点，需要选中一个骨骼，然后点击要放置附件的任意位置。这样会自动创建一个新的连接点。我们强烈建议你为连接点指定一个明确的名称，以便你在接下来的步骤中识别它们。命名连接点后，单击 **确认** 按钮保存设置。
 
-Next, select any layer that you want to attach to your model. In our example, we want to attach one of the default particle systems to the sword of our puppet model. First, move the layer in the asset list on the left onto your puppet layer and swerve to the right to make it a child element of your puppet layer:
+接下来，选择要附加到模型的任何图层。在我们的示例中，我们想将一个默认粒子系统附加到木偶模型的剑上。首先，将左侧组件列表中的图层移动到木偶图层上，然后拖动到右侧，使其成为木偶图层的子元素：
 
 ![Puppet Hierarchy](/img/puppet-warp/puppet_attach_hierarchy.png)
 
-Once you have created this hierarchy, right-click on the attached element and hover over the **Hierarchy** menu item. Select **Set Parent Attachment** and choose the attachment from the list that is shown. In our example, we have created the attachment point on the sword of our character and named it "*Sword Start*". The particle system immediately jumps to the attachment point and will follow it along all animations.
+创建此层次结构后，右键附加元素并将鼠标悬停在 **层次结构** 菜单项上。选择 **设置父项附件**，然后从展示的列表中选择附件。在我们的示例中，我们在角色的剑上创建了附着点，并将其命名为 **“Sword Start”**。粒子系统会立即跳到附着点的位置，并跟随其所有动画的运动。
 
-Watch the entire process as a video here:
+以视频形式观看整个过程：
 
 <video width="100%" controls>
-  <source :src="$withBase(/videos/puppet_attach_single.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_attach_single.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Binding Point Properties to Attachments
+## 为附件绑定点属性
 
-Some assets and effects allow you to bind specific points to puppet warp attachments. We will showcase this with the [**Advanced Fluid Simulation**](/en/scene/effects/effect/advancedfluidsimulation.html) effect.
+某些组件和效果可以让你将特定的点绑定到操控变形的附件上。我们将通过 **高级流体模拟** 效果来展示这一点。
 
-First, we create two attachment points along the sword that we have also used in our previous example (see the previous section for a more detailed step-by-step guide on how to create attachment points). We give them clearly identifiable names: *Sword Start* and *Sword End*.
+首先，我们沿着剑创建两个附着点，我们在前面的示例中也使用了附着点（有关如何创建附着点的更详细步骤，请参阅上一节）。我们给它们起个名字：*Sword Start* 和 *Sword End*。
 
-Next, we create an Adjustable Composition Layer. This is only relevant for image effects and can be skipped for other assets, like particles. The Adjustable Composition Layer needs to span the area that the animation will be visible in, in our case we'll create an 850x850 pixel square and place it roughly in the area that the sword is visible in.
+接下来，我们创建一个可调整组合层。它会忽略其他组件仅应用图像效果，如粒子系统。可调整合成图层需要覆盖动画的可见区域，在本例中，我们创建一个 850x850 像素的正方形，并将其大致放置在剑的可见区域。
 
-We now select the Adjustable Composition Layer and add the **Advanced Fluid Simulation** effect to it. We want to showcase the **Line emitter** functionality here, so we first set the **Line emitter count** to `1` and change the **Point emitter count** to `0`. We now scroll down to the settings of the line emitter. You will find their two points there: `p0` and `p1` which are the start and end point of the line emitter.
+然后，我们选中可调合成图层，向其添加 **高级流体模拟** 效果。我们想在这里展示 **线发射器** 功能，因此我们首先将 **线发射器计数** 设置为`1`，并将 **点发射器计数** 更改为`0`。然后，我们向下滚动到 **线发射器** 。你在那里会找到两个点：分别是线发射器的起点`p0`和终点`p1`。
 
-Click on cogwheel icon next to the first point `p0` and select **Bind to Attachment**. We select the **Sword Start** attachment that we have created previously and confirm our selection. Next, we repeat the same for `p1` but here we select the **Sword End** attachment instead. To verify these changes, click on the **Run Preview** button, as these bindings are only active when the wallpaper is actually running. In our preview, we can now see a line of fire across the entire sword that follows the animation.
+单击第一个点`p0`旁边的齿轮图标，然后选择 **绑定到附件**。我们选择之前创建的 **Sword Start** 附件并确认。接下来，我们对`p1`重复相同的操作，但在这里我们选择 **Sword End** 附件。要验证这些更改，请单击 **运行预览** 按钮，因为这些绑定仅在壁纸实际运行时有效。在预览中，我们可以看到动画后面的整把剑上有一条火线。
 
-Watch the entire process in the following video:
+在以下视频中观看整个过程：
 
 <video width="100%" controls>
-  <source :src="$withBase(/videos/puppet_attach_multiple.mp4)" type="video/mp4">
+  <source :src="$withBase('/videos/puppet_attach_multiple.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>

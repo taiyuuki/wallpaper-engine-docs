@@ -20,7 +20,7 @@ SceneScript 引入了一些全局变量，你可以在任何代码的位置访�
 
 ## 事件
 
-SceneScript 使用事件系统，该系统允许你在发生某些事件时运行特定代码。最值得注意的是，`update`事件是最常用于在Wallpaper Engine中每一帧中执行的SceneScript代码。`init`事件适用于首次加载壁纸时运行一次的代码，`applyUserProperties`事件允许你对壁纸的用户属性更改做出反应。此外，还有一些与鼠标移动和鼠标输入相关的`cursor`事件，你可以将这些事件添加到壁纸中。
+SceneScript 使用事件系统，该系统可以让你在发生某些事件时运行特定代码。最值得注意的是，`update`事件是最常用于在Wallpaper Engine中每一帧中执行的SceneScript代码。`init`事件适用于首次加载壁纸时运行一次的代码，`applyUserProperties`事件允许你对壁纸的用户属性更改做出反应。此外，还有一些与鼠标移动和鼠标输入相关的`cursor`事件，你可以将这些事件添加到壁纸中。
 
 | Event                | Description   |
 |----------------------|---------------|
@@ -61,7 +61,7 @@ Wallpaper Engine为所有组件都提供了一个适当的类，以便你可以�
 | [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | 提供对输入相关数据（主要是鼠标）的访问。 |
 | [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | 提供对与图层相关的数据的访问。 |
 | [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | 提供对材质/着色器属性的动态属性的访问。 |
-| [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | 提供对粒子系统的访问，并允许你修改其播放状态。 |
+| [IParticleSystem](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystem) | 提供对粒子系统的访问，并可以让你修改其播放状态。 |
 | [IParticleSystemInstance](/wallpaper-engine-docs/scene/scenescript/reference/class/IParticleSystemInstance) | 提供对粒子系统的实例修饰符的访问。你可以使用它来动态调整粒子系统的细节。 |
 | [IScene](/wallpaper-engine-docs/scene/scenescript/reference/class/IScene) | 提供对当前加载场景的属性的访问。 |
 | [ISoundLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ISoundLayer) | 提供特定对声音层的访问功能。 |
