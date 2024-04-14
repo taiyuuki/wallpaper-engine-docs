@@ -54,7 +54,7 @@ export function mediaThumbnailChanged(event: MediaThumbnailEvent) {
 
 ## mediaTimelineChanged
 
-这个事件函数将在播放媒体的当前时间发生变化时被调用。事件参数是一个[MediaTimelineEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaTimelineEvent)对象。**请注意：** 并不是所有媒体播放器都支持此功能，请确保你的壁纸在没能调用此函数的情况下也能正常工作。
+这个事件函数将在播放媒体的当前时间发生变化时被调用。事件参数是一个[MediaTimelineEvent](/wallpaper-engine-docs/scene/scenescript/reference/class/MediaTimelineEvent)对象。**请注意**： 并不是所有媒体播放器都支持此功能，请确保你的壁纸在没能调用此函数的情况下也能正常工作。
 
 ```js
 export function mediaTimelineChanged(event: MediaTimelineEvent) {

@@ -1,44 +1,48 @@
-# Parallax Effect in Wallpaper Engine
+# Wallpaper Engine里的视差效果
 
-The parallax options in Wallpaper Engine allow you to configure your wallpaper to move dynamically based on the movement of your mouse cursor. The parallax effect can be configured to have different levels of strength for each layer of your wallpaper or can be turned off altogether for individual layers. This allows for a way to create a sense of depth and distance of objects and is a relatively simple way to make your wallpaper more interactive.
+Wallpaper Engine 中的视差选项可以让你将壁纸配置为跟随鼠标的移动。你可以为壁纸的每一层配置不同的视差强度，也可以完全关闭某个图层的视差。这是一种创建物体深度感和距离感的方法，是使壁纸更具交互性的相对简单的方法。
 
-You can enable the **Camera Parallax** effect by navigating to the **scene options** on the left-hand side of the editor. The parallax effect has three main options shared by all elements:
+你可以通过编辑器左侧的 **场景选项** 来启用 **镜头视差** 效果。视差效果有三个通用选项：
 
-* **Amount**: The overall strength of the effect.
-* **Delay**: The delay between the user's mouse movement and the movement of layers.
-* **Mouse influence**: The influence of the mouse movement. **You should change this value to be not zero**, as a value of 0 means that the mouse does not influence the effect which essentially disables it for 2D scenes.
+* **数量**：效果的整体强度。
+* **延迟**：用户鼠标移动与图层移动之间的延迟。
+* **鼠标影响**：鼠标移动的影响。**应设为非0值**，因为 0 表示鼠标不会影响效果，相当于在 2D 场景中禁用了它。
 
-Additionally, each layer receives a **parallax depth** option once you enable **Camera Parallax**. This allows you to fine-tune each layer's parallax or turn it off altogether by setting it to 0 for that specific layer.
+此外，启用 **镜头视差** 后，每个图层都会增加一个 视差深度 选项。可以让你微调每个图层的视差效果，或者通过设置为 0 来完全关闭特定图层的视差效果。
 
-## Basic Parallax Example
+## 基本视差示例
 
 We have created a sample project with a space background and a separate space ship layer. In order to enable the parallax effect on this project, we first navigate to the **Scene options** (above the list of layers) and then enable the **Camera Parallax** option towards the bottom of the scene options.
 
 Afterwards, we select our background image and slightly adjust the **parallax depth** setting to our liking. The same process can be repeated for any other layer. Again, keep in mind you can turn of the parallax setting for any layer by setting the **parallax depth** to 0.
+
+我们创建了一个具有太空背景和独立太空飞船图层的示例项目。为了启用视差效果，我们首先找到 **场景** 选项（在图层列表上方），然后在场景选项底部启用 **镜头视差** 选项。
+
+接下来，我们选中背景图像，根据你自己的喜好稍微调整 **视差深度**。可以对任何其他层重复相同的过程。同样的，你也可以将 **视差深度** 设置为 0 以关闭任何图层的视差效果。
 
 <video width="100%" controls loop autoplay>
   <source :src="$withBase('/videos/parallax_depth.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-#### Double-Checking the Background Size
+#### 仔细检查背景大小
 
-In our example, the background image will move outside of the visible area due to the parallax effect now which will make the gray background color visible. This is something you should always avoid. To compensate for this we can either import a slightly larger background image or we need to increase the scale of the background layer, otherwise the wallpaper will have visible border whenever the user moves the mouse towards the outer edge of the screen. In this example, we slightly increase the scale of the image:
+在我们的示例中，背景图像由于视差效果而超过了可见区域，导致灰色背景颜色暴露出来。这是应该避免的事情。为了修正这个问题，我们可以导入稍大一点的背景图像，或者我们需要调高一点背景层的 **比例**，否则每当用户将鼠标移向屏幕的外边缘时，就会看见壁纸的外边界。在本例中，我们略微增加图像的比例：
 
 <video width="100%" controls loop autoplay>
   <source :src="$withBase('/videos/parallax_depth_fix_borders.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Limit Parallax Directions
+## 限制视差方向
 
-You can also limit the direction of the parallax scrolling effect to only allow for vertical or horizontal movement. In order to do this, you have to click the chain icon of the **parallax depth** property and then set the **X** or **Y** axis to 0 respectively.
+你还可以将视差效果的方向限制为仅垂直移动或水平移动。为此，你需要单击视差深度属性旁边的链条图标，然后将 **X** 轴或 **Y** 轴设置为 0。
 
-We will limit movement of the background layer of the wallpaper we just created to the horizontal axis by setting the **Y** property to 0, as shown in the following video:
+通过将 **Y** 属性设置为 0，壁纸背景层的视差移动会被限制在水平轴上，如以下视频所示：
 
 <video width="100%" controls loop autoplay>
   <source :src="$withBase('/videos/parallax_depth_limit_movement.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Now the background will only move horizontally, along the **X** axis, while any upwards and downwards movement of the mouse is ignored.
+现在，背景只会沿 **X** 轴水平移动，而鼠标的任何上下方向的移动都将被忽略。

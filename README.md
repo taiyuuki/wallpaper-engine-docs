@@ -88,8 +88,8 @@ zh
 │    │    ├─ external-editor.md✅
 │    │    └─ foreground-separation.md✅
 │    ├─ lighting
-│    │    ├─ introduction.md
-│    │    └─ lights.md
+│    │    ├─ introduction.md✅
+│    │    └─ lights.md✅
 │    ├─ models
 │    │    ├─ animation.md
 │    │    ├─ attachment.md
@@ -101,9 +101,9 @@ zh
 │    │    └─ simulation.md
 │    ├─ overview.md✅
 │    ├─ parallax
-│    │    ├─ depthparallax.md
-│    │    ├─ introduction.md
-│    │    └─ oversized.md
+│    │    ├─ depthparallax.md✅
+│    │    ├─ introduction.md✅
+│    │    └─ oversized.md✅
 │    ├─ particles
 │    │    ├─ component✅
 │    │    │    ├─ children.md❎
@@ -203,7 +203,7 @@ zh
 │    │    ├─ animationevents.md✅
 │    │    ├─ combined.md✅
 │    │    ├─ introduction.md✅
-│    │    └─ modes.md
+│    │    └─ modes.md✅
 │    └─ userproperties
 │           ├─ checkbox.md✅
 │           ├─ color.md✅

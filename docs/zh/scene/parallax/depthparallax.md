@@ -1,76 +1,78 @@
-# Depth Parallax
+# 深度视差
 
-The **Depth Parallax** effect in Wallpaper Engine allows you to create a perceived 3D effect on your image. This effect requires a few extra steps to set up, so we recommend following along if you are using the effect for the first time.
+Wallpaper Engine中的 **深度视差** 效果可以让你在图像上创建 3D 效果。此效果需要一些额外的配置，因此如果你是第一次使用该效果，建议你遵循我们的步骤。
 
 <video width="100%" controls loop autoplay>
   <source :src="$withBase('/videos/depth_parallax.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Installing the Depth Map Generator DLC
-
-In order to make the most out of the Depth Parallax effect, you must first install the free Editor Extensions DLC. This is necessary to generate a high-quality *depth map* that this effect uses. Wallpaper Engine will ask you to install the DLC if you are trying to use it in the editor for the first time. Alternatively, you can also directly install it through the Steam website:
+## 安装深度贴图生成器 DLC
 
 * [Free Editor Extensions DLC](https://store.steampowered.com/app/1790230/)
 
-The DLC downloads a complex **neural network** which handles the generation of the depth map. **The neural network requires multiple gigabytes of disk space**, which is why we decided to make this feature an optional DLC to keep the base size of Wallpaper Engine as small as possible.
+为了最大限度的支持制作深度视差效果，你首先必须安装免费的编辑器扩展 DLC。这是生成高质量深度贴图所必需的。如果你是第一次尝试在编辑器中使用该功能，Wallpaper Engine 会要求你安装 DLC。或者，你也可以直接通过Steam网站安装它：
 
-Users of your wallpaper do **not** need this DLC in order to use your wallpaper to the full extent, the DLC is only required to generate the high-quality depth map for this effect.
+* [免费的编辑器扩展DLC](https://store.steampowered.com/app/1790230/)
 
-## Preparing Your Wallpaper
+DLC 会下载一个复杂的 **神经网络**，用于处理深度贴图的生成。**神经网络需要数 GB 的磁盘空间**，这也是为什么我们将此功能作为可选 DLC，尽可能减少 Wallpaper Engine 占用的磁盘空间。
 
-The **Depth Parallax** effect requires you to enable the **Camera Parallax** option in your wallpaper settings. This should be done before you apply the effect for the first time:
+最终的壁纸用户**不需要**下载这个 DLC 也能使用你的壁纸，DLC 只是用来生成高质量的深度贴图，用来做出这种效果。
 
-Click on **Scene options** on the left-hand side and set **Camera Parallax** to **Enabled** at the bottom of the options list. Next, select the **Layers** tab again and select your image layer, then navigate to the right-hand side and change the **Parallax Depth** option to `0` for both the `X` and `Y` axis. You may need to repeat this step for all layers in your wallpaper to disable the general parallax effect first.
+## 准备壁纸
 
-You can see the full process up until here in the following video:
+深度视差效果要求你在壁纸设置中启用 **相机视差** 选项。在应用效果之前，首先这样操作：
+
+单击左侧的 **场景** 选项卡，然后在选项列表底部将 **镜头视差** 勾选启用。接下来，再次选择 **图层** 选项卡并选中图像图层，然后在右侧找到 **视差深度** 选项，将 **X**轴 和 **Y** 轴都设置为 `0`。你可能需要对壁纸中的所有图层重复此步骤，目的是为了禁用常规视差效果。
+
+你可以在以下视频中看到完整的过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/depth_parallax_scene_settings.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Generating a Depth Map
+## 生成深度贴图
 
-Once you have configured the general parallax settings for your wallpaper, select your image layer and click on the **Add** button on the right-hand side in the **Effects** list. Navigate to the **Depth Parallax** effect and apply it to your layer.
+禁止壁纸的常规视差后，选中图像图层，然后单击右侧效果列表的 **添加** 按钮。找到到 **深度视差** 效果并将其应用于图层。
 
-After you have added the effect, it will be non-functional until you generate a **depth map**. You will need to install the **Free Editor Extensions DLC** for this, Wallpaper Engine will ask you to install the DLC if it is not installed. Alternatively, you can also import a custom depth map that you generated outside of Wallpaper Engine. Click on the **Generate** button to open the *depth map generator*.
+添加效果后，在生成深度贴图之前，该效果将不起作用。为此，你需要安装**免费编辑器扩展 DLC**，如果未安装 DLC，Wallpaper Engine 会提示你安装该 DLC。或者，你也可以导入在 Wallpaper Engine 外部生成的自定义深度贴图。单击 **生成** 按钮以打开深度贴图生成器。
 
-The depth map generator will analyze the depth of the image and will generate a depth map which essentially describes how far away individual parts of your image are, this can then be used to create a 3D perspective out of your 2D image. Depending on the resolution of your image and the performance of your computer, generating the depth map can take a few minutes since the underlying process is rather complex.
+深度贴图生成器将分析图像的深度，并生成对于的深度贴图，该深度贴图描述了图像各个部分的距离，然后从 2D 图像中创建 3D 透视。根据图像的分辨率和计算机的性能，生成深度贴图可能需要几分钟时间，因为其底层过程相当复杂。
 
-The depth map generator has a few settings that you can tweak:
+深度贴图生成器有一些可以调整的设置：
 
-* **Blur:** Will apply a blur to individual areas in the depth map to soften the transition between them.
-* **Auto contrast:** Will ensure that the depth map uses the full color range from pure white to pure black, increases the effect strength.
-* **Invert:** Inverts the depth map for special edge cases where this might be desirable.
-* **Outline compensation:** Tries to account for outlines of characters and small objects in your image, high values can lead to inaccuracies. **Tip:** See the next section on how to manually fix minor problems with your depth map.
+* **模糊**：对深度贴图中的各个区域应用模糊，柔化它们之间的过渡区域。
+* **自动对比度**：确保深度贴图使用从纯白色到纯黑色的全色彩范围，增加效果强度。
+* **反转**：对于可能需要特殊处理的边界情况，反转深度贴图。
+* **边缘补偿**：尝试识别图像中角色和小物体的轮廓，值太高可能会导致不准确。提示：请参阅下一节，了解如何手动修复深度贴图上的小瑕疵。
 
-In a lot of cases, you can simply use the default values for the depth map generator as a starting point. Confirm your depth map by clicking **OK**. The depth map will now be applied and the effect will now be functional.
+在很多情况下，你可以简单地使用默认值作为起点。单击 **确定** 深度贴图。这样深度贴图效果会应用并生效。
 
-See this process in the following video:
+在以下视频中查看此过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/depth_parallax_create.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Fine-Tuning and Improving the Depth Map
+## 微调和改进深度贴图
 
-Once you have applied the depth map, you can already see the **Depth Parallax** effect in action. You can further tweak the **Depth** option on the **X** and **Y** axis to fine-tune the strength on the horizontal and vertical axis. Changing the **Perspective** value will influence how much the perceived **3D effect** is. The **Center** option controls the pivot point of the depth effect.
+应用深度贴图后，就可以看到深度视差的实际效果。你可以进一步调整 **X** 轴和 **Y** 轴上的深度选项，以微调水平轴和垂直轴上的强度。更改 **透视** 值将影响感知的 3D 效果。**中心** 选项控制深度效果的枢轴点。
 
-You may have also noticed the **Quality** option at the top. For most cases, the **Occlusion Performance** option works best. If you use very high values for the **Depth** and **Perspective** options, try and see if the **Occlusion Quality** option improves the visual fidelity of the effect significantly on your wallpaper, though this comes at the cost of requiring additional performance.
+你可能还注意到顶部的 **质量** 选项。在大多数情况下，**遮蔽-性能** 选项效果最佳。如果对 **深度** 和 **透视** 选项使用了非常高的值，请尝试 **遮挡质量** 选项，看否能显著提高壁纸视觉效果的保真度，但这需要额外性能作为代价。
 
-### Improving the Depth Map
+### 改进深度贴图
 
-If the depth map generator has missed or misinterpreted individual parts of your image, you can manually fix the depth map. Watch the following video to see a specific example where the depth map is missing some tree tops, causing them to be severely skewed when the effect is active. These issues are easily fixable by painting over the auto-generated depth map. To do this, first click on **Manual Editing** next to the **Depth Map** when viewing the effect, then select **Paint**.
+如果深度贴图生成器遗漏或误解了图像的各个部分，你可以手动修复它。观看以下视频，展示了一个示例，其中深度贴图缺少一部分树梢，导致它们在效果应用时时严重歪斜。这些问题可以通过在深度贴图上手动绘制来解决。为此，点击 **深度贴图** 旁边的 **手动编辑**，然后选择 **绘制**。
 
 ::: tip
-Temporarily set the **Depth** to `0.01` while painting, otherwise the image will continue to move significantly along with your mouse while you are painting over the depth map which can be confusing.
+在绘制深度贴图时，可以暂时将 **深度** 设置为`0.01`，以避免绘制时图像随着鼠标移动，扰乱了绘制过程。
 :::
 
-Wallpaper Engine will now present you with the paint overview on the left. You can click on **Show Mask** to hide or show the auto-generated mask. Use the color picker tool next to **Amount** to select the area that the object belongs to. In our case, we select the shade of gray on the depth map that belongs to the tree line on our picture. Now we simply extend the depth map so that it includes the tree tops in the gray area of the depth map. After saving our updated depth map by clicking **OK**, the tree line is now properly rendered and not severely skewed anymore like before.
+Wallpaper Engine 将在左侧展示整体情况。你可以单击 **显示蒙版** 显示或隐藏自动生成的蒙版。用 **数量** 旁边的颜色选取器工具选取对象所属的区域。在我们的例子中，我们在深度贴图上选取属于树梢所在的灰色阴影区域。然后我们只需扩展它，使深度贴图的灰色区域中包含树梢。单击 **确定** 保存更新的深度贴图后，这样树梢就能够正确渲染了，不再像之前那样出现严重歪斜。
 
-See this depth map improvement process in the following video:
+在以下视频中查看此深度贴图的调整过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/depth_parallax_fix.mp4')" type="video/mp4">
