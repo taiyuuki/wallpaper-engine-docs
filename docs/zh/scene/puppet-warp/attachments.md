@@ -1,6 +1,6 @@
 # 附着点
 
-你可以为木偶模型定义附着点，这些附着点可以轻松地将其他组件附加到模型的特定部分。在本指南中，我们将展示两种不同的使用附着点的。
+你可以为木偶模型定义附着点，这些附着点可以轻松地将其他组件附加到模型的特定部分。在本指南中，我们将展示两种不同的使用附着点的方式。
 
 <video width="35%" style="margin:0 auto;display:block;" controls autoplay loop>
   <source :src="$withBase('/videos/puppet_attach_sample.mp4')" type="video/mp4">
