@@ -58,6 +58,31 @@ In short, the directional light is best used when you want to shine a line evenl
   Your browser does not support the video tag.
 </video>
 
+## Texture Projection
+
+**Spot lights** have the ability to project a texture instead of a single solid color of light. This allows you to use **images**, **video files** and even **layers including all effects** as a projected texture to create more complex lighting scenarios.
+
+To project a texture, first set your light type to **Spot Light**, then enable the **Project texture** option. After **Project texture** has been enabled, a new option to import a projection texture appears. Either click on the **Browse** button to import a video or image file or drag and drop an existing layer into the projection texture field. Especially the latter option allows you to create complex lighting setups in 2D and 3D wallpapers.
+
+### Example: Layer as Texture Projection
+
+In the following example, we will showcase how to combine layers and effects to quickly create an advanced lighting scenario. While this example was created in a 3D wallpaper, you can perform all these steps in a 2D wallpaper as well, simply turn the projected layer invisible.
+
+To get started, we create a new **Text layer** and change its text to multiple `_` characters to form a straight line: `_________` and set the padding to `0`. Alternatively, you an also import a new image as a layer with your own pattern that you want to further animated with Wallpaper Engine, the text layer is just an example showcase on how versatile you can approach this type of animation.
+
+Afterwards, we add the **Scroll** effect to our layer and turn off the horizontal scrolling by setting `X` scroll speed to `0`. The line of text should now scroll from the bottom to the top of the layer.
+
+Next, we enable the **Project texture** option on our spot light. Instead of importing a texture, we drag and drop our text-layer from the left-hand side into the projection texture. The light will now project the scrolling effect of the text layer.
+
+See the entire process here:
+
+<video width="100%" controls loop>
+  <source :src="$withBase('/videos/light_texture_projection.mp4')" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Please note: To achieve the exact visual outcome in the sample video above, we have enabled **Ultra HDR** in the **Scene Settings** and volumetric lighting, though these steps are not necessary for this general functionality to work.
+
 ## Light Animations
 
 One thing you might want to do is to animate your light, one example being a flickering animation for your light. This can be achieved either using SceneScript or Timeline animations.

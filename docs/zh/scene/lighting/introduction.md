@@ -1,116 +1,120 @@
-# Real-Time Lighting & Reflections
+# 实时照明和反射
 
-Wallpaper Engine supports real-time lighting and reflections on 2D scenes. This requires you to enable either the **Lighting** or **Reflection** options in the material settings of an image layer. These two functionalities work well together but, as always, try to not enable both of them if you do not really need them to keep the performance impact as low as possible.
+Wallpaper Engine 支持 2D 场景的实时照明和反射。这需要在图像图层的材质设置中启用 **光照** 或 **反射** 选项。这两个功能可以很好地协同工作，但通常来说，如果你希望它们尽可能少的影响性能，那就尽量不要同时启用它们。
 
 ![Real-time lighting and reflections](/wallpaper-engine-docs/img/pbr/pbr_mouse.gif)
 
-## Generating a Normal Map
+## 生成法线贴图
 
-In order for 2D images to get a perception of depth that is used for lighting and reflections, we need to make use of a normal map. Normal mapping is a common approach in video games to give flat textures a perception of being three-dimensional. Wallpaper Engine comes with a normal map generator that you can use to easily generate a normal map for your image layers.
+为了使 2D 图像获得带有深度感的照明和反射，我们需要使用法线贴图。法线贴图是游戏开发中的一种常用方案，它可以使平面纹理具有三维感。Wallpaper Engine 附带一个法线贴图生成器，可以让你轻松为图像图层生成法线贴图。
 
-In order to get started, select your image layer that you want to apply real-time lighting and / or reflections onto. This works best if your specific character or object is its own layer, we highly recommend using [foreground separation](/wallpaper-engine-docs/scene/image-preparation/foreground-separation) to first separate any character or object from the background before you continue, if you have not done so already.
+首先，选择要应用实时照明或反射的图像图层。如果角色或对象具有自己独立的图层，效果会最好，我们强烈建议你使用 [前景分隔](/wallpaper-engine-docs/scene/image-preparation/foreground-separation) 将角色或对象与背景分离，然后再继续。
 
-After selecting the layer that you want to create the normal map for, scroll down on the right-hand side and click on the **Configure Lighting & Reflections** in the **Materials** section towards the bottom. Now, enable the **Lighting** or **Reflection** option (or both) to reveal additional options, including the normal map generator.
+选择要为其创建法线贴图的图层后，在右侧向下滚动，然后单击底部 **材质** 部分中的 **照明和反射** 。然后，启用 **照明** 或 **反射** 选项（或两者都启动），这样就会显示额外的选项，包括法线贴图生成器。
 
-Click on the **Generate** button in the **Normal map** section to open up the normal map generator. You can now tweak the normal map to match your specific object better, though the default options should already work well for most cases. You can find a detailed description of all the options below.
+单击 **法线贴图** 部分中的 **生成** 按钮打开法线贴图生成器。默认选项在大多数情况下就已经足够好用，但你可以根据自己的需求进行调整以更好的匹配特定对象。下面是所有选项的详细说明。
 
-#### Shape
-* **Blur:** Blurs the overall shape of the normal map, we generally recommend to leave this on a higher blur in most to avoid jagged edges.
-* **Depth:** Controls the perceived strength of the 3D effect on the outer edges of an object. In most cases, you can leave this at its maximum value.
-* **Exponent:** The exponent controls how pointed the surface area of an object appears. For something like a body, a higher exponent makes sense as it will appear more round. For something like an inanimate pyramid-shaped object, an exponent of 1 makes the most sense. For most cases, the default value is a good solution.
-* **Threshold:** Controls how far the shape reaches into the center of the object, for most cases you can leave this at its maximum value but you can reduce the threshold to make the outer areas of shape more pronounced as they will be more abrupt.
-#### Details
-* **Blur:** Blurs the surface details of an object. Generally you want to keep this at a lower value to retain the surface structure but often it makes sense to apply a little bit of blurring to make details appear less jagged.
-* **Depth:** Controls the strength of the surface details of an object, setting it to 0 will cause all surface details to disappear. For most cases, it can be left at its maximum value.
-* **Invert:** Inverts the direction of details of an object to flip what is in the perceived foreground and background of an object.
+#### 形状
 
- **Watch the video below to see all the steps up until this point:**
+* **模糊：** 模糊法线贴图的整体形状，我们建议在大多数情况下将其保持在较高的模糊值，以避免产生锯齿状边缘。
+* **深度：** 控制 3D 效果在对象外边缘的感知强度。在大多数情况下，你可以将其保持为最大值。
+* **指数：** 指数控制对象表面积的指向程度。对于像身体之类的，最好设置较高的指数，看起来更圆润。对于无生命的例如金字塔形之类的物体，指数设为 1 就足够了。在大多数情况下，使用默认值就是一个很好的解决方案。
+* **阈值：** 控制形状到对象中心的距离，在大多数情况下，你可以将其保持为最大值，但你也可以降低阈值以使形状的外部区域更加明显和突兀。
+
+#### 细节
+
+* **模糊：** 通常，你可能会希望设一个较低的值以保留表面结构，但应用一点模糊以减少锯齿感也是有意义的。
+* **深度：** 控制对象表面细节的强度，将其设置为 0 会导致所有表面细节消失。在大多数情况下，它可以保持其最大值。
+* **反转：** 反转对象细节的方向，即反转对象感知的前景和背景内容。
+
+ **观看以下视频了解目前为止的所有步骤：**
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/pbr_generate.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Lighting
+## 照明
 
-After enabling the **Lighting** option for your layer, you will have noticed that it immediately turned dark. This is because your scene, by default, is lacking any significant light source. You will need add the appropriate light sources to your scene and adjust them accordingly. To do this, click on **Edit** at the top of the browser and then **Add Light**. You can move the light sources around just like any other object in the editor.
+为你的图层启用 **照明** 选项后，你会注意到图像立即变暗了。这是因为默认情况下，你的场景没有任何光源。你需要将适当的光源添加到场景中并相应地进行调整。为此，请单击编辑器顶部的 **编辑**，然后选择 **添加光源**。你可以像移动编辑器中的任何其他对象一样四处移动光源。
 
 ::: tip
-Keep in mind that light sources will only have an effect on image layers with the **Lighting** option enabled, as we have done in the previous section.
+请记住，光源只会对启用了 **照明** 选项的图像图层产生影响，就是我们在上一节中所做的事情。
 :::
 
-For now, we simply add two light sources to our scene and use the color picker to select colors directly from our wallpaper so that the light color matches the contents of the image. You can see this process in the following video:
+现在，我们只需将两个光源添加到场景中，并使用颜色选择器直接从壁纸中选取颜色，以便灯光颜色与图像内容相匹配。你可以在以下视频中看到此过程：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/pbr_light.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Keep in mind that Wallpaper Engine limits the maximum number of lights per scene to **four light sources** for performance reasons. You should use individual light sources only as needed. Instead of lighting your scene with many individual lights, you should adjust the ambient lighting of your scene, see the next section for more information.
+请记住，出于性能原因，Wallpaper Engine 将每个场景的最大光源数限制为 **四个**。你应该仅在需要时使用独立的光源。你应该调整场景的环境照明，而不是使用许多单独的灯光来照亮场景，有关详细信息，请参阅下一节。
 
-### Adjusting Ambient Lighting
+### 调整环境照明
 
-You will also need to take ambient lighting into account that Wallpaper Engine adds to your scene. This ambient lighting that Wallpaper Engine adds to your scene can be configured in the **Scene options** on the left-hand side. Open the scene options and adjust the ambient illumination to your needs, we change the **Ambient Color** to a slightly whiter tone to make it a little brighter but you can choose any color you want here to give your whole scene a certain type of glow.
+你还需要考虑 Wallpaper Engine 添加到场景中的环境照明。Wallpaper Engine 添加到场景中的环境照明可以在左侧的 **场景** 选项中进行配置。打开场景选项并根据需要调整环境照明，我们将环境色更改为稍白的色调以使其更亮一点，但你可以在此处选择任何你想要的颜色，为你的整个场景提供某种类型的光照。
 
-**Another important thing to consider:** By default, Wallpaper Engine will have a gray background color behind and around your scene. Under normal circumstances, this does not matter, but with reflectivity and lighting enabled, the background color can influence the lighting of your scene in the editor and when users choose a wallpaper alignment option where the background color becomes visible.
+**你要考虑的另一件重要事情是：** 默认情况下，Wallpaper Engine 的场景后面以及周围的背景色是灰色的。通常这无关紧要，但是启用反射率和照明后，当用户选择壁纸对齐选项时，背景颜色可能会变得可见，这样背景颜色就会影响编辑器中场景的照明。
 
-Be sure to always adjust the **Background Color** option in the **Scene options** to match your image or to set it to black (color code **#000000**) when working with light and reflections.
+在处理照明和反射时，请务必调整 **场景** 选项中的 **背景颜色** 选项以匹配你的图像或直接将其设置为黑色（颜色代码 #000000）。
 
-You can see these two steps in the following video:
+你可以在以下视频中看到这两个步骤：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/pbr_ambient_light.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Surface Materials
+## 表面材质
 
-Now that we have added lighting to our scene, it becomes noticeable that the light is reflected excessively in some places, for example on the face of our sample character:
+现在我们已经在场景中添加了光照，但很明显，光线在某些地方被过度反射了，例如示例角色的脸上：
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/pbr_skin_reflection.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-This can be addressed by adding a **Metallic map** to the image layer of our character, just below the **Normal map** that we added in the beginning of this tutorial. Simply press the **Paint** button in the **Metallic map** section that we have seen before. 
+这可以通过在角色的图像图层中添加 **金属贴图** 来解决，就在我们在本教程最开始添加的 **法线贴图** 下方。点击 **金属贴图** 部分的 **绘制** 按钮即可。
 
-The **Metallic map** allows us to paint which areas are *shiny like metal* and which areas are not. Since our example character is wearing a shiny armor, we start by painting the whole mask with a value of around 120 - 150 to give it an overall shine. We then continue by painting the face and all cloth areas of our character with a value of 0. This removes any metallic look from these particular areas.
+**金属贴图** 可以让我们绘制哪些区域有 **金属一样的光泽**，哪些区域没有。由于我们的示例角色穿着闪亮的盔甲，我们首先将整个面具的值绘制在 120 - 150 左右，以使其整体闪耀。然后，我们继续绘制角色的脸部和所有的布料区域，值为 0。这样可以消除这些区域的任何金属外观。
 
-We then move on and paint areas that we want to highlight with a very high value of 255, such as the sword and shield of our character. These elements will now appear very shiny and metallic while the face now will be much less reflective.
+然后，我们用一个很高的值 255 绘制我们想要突出闪耀的区域，例如角色的剑和盾牌。这些元素看起来非常闪亮而有金属感，而脸部的反射则要小得多。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/pbr_metallic.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-**Please note:** If you leave the metallic map empty, you will also find an additional **Metallic** slider below the list of maps. If your character or object is very metallic or not metallic at all, you can also just adjust this slider value accordingly instead of taking the time to paint the complete map.
+**请注意：** 如果将金属贴图留空，你会在贴图列表下方找到一个额外的 **金属** 滑块。如果你的角色或物体整体都是金属或不是金属，你可以相应地调整这个滑块值，而不是花时间绘制整个贴图。
 
-## Roughness Map
+## 粗糙度贴图
 
-After having added the metallic map in the previous step, the result is already pretty good. We can further improve the look of the surfaces by also creating a **Roughness map**. The roughness map affects the scattering of the reflected light, **essentially it defines how blurry the reflection is**. You can use lower values in the range of 10 - 50 for metallic surfaces, something less reflective such as cloth and skin can be set to values from 200 and up. For the roughness map, we do **not** recommend using very low values around 0 or very high values around 255 as these tend to not look very realistic, though they might be useful in more abstract concepts.
+在上一步添加了金属贴图后，结果已经相当不错了。我们还可以创建 **粗糙度贴图** 进一步改善曲面的外观。粗糙度贴图会影响光的散射，**本质上它定义了反射的模糊程度**。你可以对金属表面使用 10 - 50 范围内的较低值，对反射性较低的内容（例如布料和皮肤）设置为 200 及以上的较高值。对于粗糙度贴图，我们 **不建议** 使用 0 附近的非常低的值或 255 附近的非常高的值，因为这些值往往会导致失真，虽然它们也许在非常抽象的概念上很有用。
 
-In our case, the roughness map looks rather similar to the metallic map but it lets us further emphasize certain parts of the image by tweaking the reflection further. We started by painting the entire mask with a value of around 70 followed by values around 200 for the skin and cloth elements and values from around 10 - 50 for areas where we wanted to add a strong shine to the image, such as the helmet of our character and the sword. See the following video of the mask we have drawn for our character as we show you the mask overlayed to the image layer, followed by the end result.
+在我们的例子中，粗糙度贴图看起来与金属贴图非常相似，但它能让我们进一步调整图像局部的反射效果。我们首先给面具绘制70左右的值，给皮肤和布料元素绘制200左右的值，对于我们想要有强烈光泽的区域，我们给其绘制10-50范围内的值，例如角色的头盔和剑。请参阅以下视频，了解我们是如何为角色绘制蒙版的，我们将向你展示添加到图像层的蒙版，以及最终结果。
 
-<video width="100%" controls>
+<video width="100%" controls> 
   <source :src="$withBase('/videos/pbr_roughness.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-**Please note:** If you leave the roughness map empty, you will also find an additional **Roughness** slider below the list of maps. You can also just adjust this slider value accordingly instead of taking the time to paint the complete map.
+**请注意：** 如果将粗糙度贴图留空，你会在贴图列表下方找到一个额外的 **粗糙度** 滑块。你也可以调整这个滑块的值，而不是花时间绘制整个贴图。
 
-## Reflection Map for Final Tweaks
+## 反射贴图最后的调整
 
-Additionally to the previous maps, you can also add a **Reflection map**. A reflection map is often really not necessary and you can leave it out altogether but it can be helpful in certain edge cases to tweak individual parts of the reflections. You can also reduce the overall reflections by lowering the **Reflectivity** slider below the list of masks.
+除了前面的贴图之外，你还可以添加 **反射贴图**。反射贴图通常不是必需的，你可以完全忽略它，但在某些边界情况下，调整某些部分的反射会很有用。你也可以通过降低蒙版列表下方的 **反射率** 滑块来减少整体的反射。
 
-In our example, we noticed a slight glow at the top of the helmet decorations. We add a **Reflection map**, and as a very first step, we paint the whole map in white (at a value of 255) to ensure the reflections we have created previously stay as they are. We then set the value to 0 and paint the helmet decorations in black and save the reflection map. Looking at the helmet decorations now, the minor glow that was previously present has now disappeared entirely.
+在我们的示例中，你会注意到头盔顶部的装饰有轻微的反光。我们来给它添加一个反射贴图，首先我们将整个贴图绘制为白色（值为 255），以确保之前创建的反射保持原样。然后，我们将该值设置为 0，并将头盔装饰涂成黑色，保存反射贴图，此时再观察头盔的装饰会发现，之前存在的轻微光芒现在已经完全消失了。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/pbr_reflection.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Next Steps
+## 后续步骤
 
-If you have created a normal map and painted the other material maps as needed, the lighting on your wallpaper should already look pretty good. However, at this point, all the light in the scene is static, be sure to check out our guide on advanced lighting tips to learn about different ways you can make the lighting a bit more complex and interactive:
+如果你已创建好法线贴图并根据需要绘制了其他材质贴图，那么壁纸上的照明应该已经看起来相当不错了。但是，此时场景中的所有光线都是静态的，请务必查看我们的高级照明技巧指南，了解照明更加复杂的用法以及交互方式：
 
-* [Tips for Advanced Lighting](/wallpaper-engine-docs/scene/lighting/lights)
+* [高级照明指南](/wallpaper-engine-docs/scene/lighting/lights)
+
