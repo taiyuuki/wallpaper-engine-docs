@@ -135,7 +135,7 @@ zh
 │    │    ├─ perspective.md✅
 │    │    └─ texturechannels.md✅
 │    ├─ rgb
-│    │    └─ introduction.md
+│    │    └─ introduction.md✅
 │    ├─ scenescript
 │    │    ├─ introduction.md✅
 │    │    ├─ reference

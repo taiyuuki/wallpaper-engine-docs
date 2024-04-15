@@ -12,10 +12,6 @@ Wallpaper Engine 中的视差选项可以让你将壁纸配置为跟随鼠标的
 
 ## 基本视差示例
 
-We have created a sample project with a space background and a separate space ship layer. In order to enable the parallax effect on this project, we first navigate to the **Scene options** (above the list of layers) and then enable the **Camera Parallax** option towards the bottom of the scene options.
-
-Afterwards, we select our background image and slightly adjust the **parallax depth** setting to our liking. The same process can be repeated for any other layer. Again, keep in mind you can turn of the parallax setting for any layer by setting the **parallax depth** to 0.
-
 我们创建了一个具有太空背景和独立太空飞船图层的示例项目。为了启用视差效果，我们首先找到 **场景** 选项（在图层列表上方），然后在场景选项底部启用 **镜头视差** 选项。
 
 接下来，我们选中背景图像，根据你自己的喜好稍微调整 **视差深度**。可以对任何其他层重复相同的过程。同样的，你也可以将 **视差深度** 设置为 0 以关闭任何图层的视差效果。
