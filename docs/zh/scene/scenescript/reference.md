@@ -58,8 +58,8 @@ Wallpaper Engine为所有组件都提供了一个适当的类，以便你可以�
 | [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | 图像图层和文本图层的基础类。 |
 | [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | 提供有关用户设备和正在运行的壁纸的通用信息。 |
 | [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | 此类提供对特定图像图层的访问。 |
-| [ITextLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextLayer.html) | 此类提供对文本图层的访问。 |
-| [IModelLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IModelLayer.html) | 此类提供对3D模型图层的访问。 |
+| [ITextLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextLayer) | 此类提供对文本图层的访问。 |
+| [IModelLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IModelLayer) | 此类提供对3D模型图层的访问。 |
 | [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | 提供对输入相关数据（主要是鼠标）的访问。 |
 | [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | 提供对与图层相关的数据的访问。 |
 | [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | 提供对材质/着色器属性的动态属性的访问。 |

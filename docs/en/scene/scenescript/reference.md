@@ -58,8 +58,8 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 | [IEffectLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IEffectLayer) | Base class for image and text layers. |
 | [IEngine](/wallpaper-engine-docs/scene/scenescript/reference/class/IEngine) | Provides general information about the user device and the running wallpaper. |
 | [IImageLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IImageLayer) | This class provides access to functions specific to image layers. |
-| [ITextLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextLayer.html) | This class provides access to functions specific to text layers. |
-| [IModelLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IModelLayer.html) | This class provides access to functions specific to 3D model layers. |
+| [ITextLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ITextLayer) | This class provides access to functions specific to text layers. |
+| [IModelLayer](/wallpaper-engine-docs/scene/scenescript/reference/class/IModelLayer) | This class provides access to functions specific to 3D model layers. |
 | [IInput](/wallpaper-engine-docs/scene/scenescript/reference/class/IInput) | Provides access to input related data, mainly the mouse cursor. |
 | [ILayer](/wallpaper-engine-docs/scene/scenescript/reference/class/ILayer) | Provides access to data related to a layer. |
 | [IMaterial](/wallpaper-engine-docs/scene/scenescript/reference/class/IMaterial) | Provides access to dynamic properties of materials / shader properties. |
