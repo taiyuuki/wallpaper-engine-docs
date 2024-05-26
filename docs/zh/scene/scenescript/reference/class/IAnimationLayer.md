@@ -4,7 +4,12 @@ prev: ../../reference.md
 
 # SceneScript Class IAnimationLayer
 
-此类表示操控变形动画（操控变形动画）图层。
+此类代表操控变形动画或 3D 模型动画图层。可以使用如下配置属性创建新的动画图层:
+
+* **config.blendin**: Boolean - 自动平滑混合动画的开始。
+* **config.blendout**: Boolean - 自动平滑混合动画的结束。
+* **config.blendtime**: Number - 动画混合的时间（以秒为单位）。
+* **config.autosort**: Boolean - 在所有不透明图层之后插入图层，但在任何其他图层之前。
 
 ## Properties
 

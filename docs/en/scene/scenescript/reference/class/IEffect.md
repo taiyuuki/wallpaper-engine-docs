@@ -25,3 +25,11 @@ Access a material used by this effects.
 ### getMaterialCount(): Number
 
 Total number of materials used by this effect, every effect has at least one material. 
+
+### setMaterialProperty(propertyName: String, value: Number|Vec2|Vec3|Vec4)
+
+Set a property value on all materials used by this effect that have a matching property.
+
+### executeMaterialFunction(propertyName: String): void
+
+Execute a custom render function defined by the effect.

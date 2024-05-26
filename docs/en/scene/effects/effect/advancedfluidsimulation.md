@@ -45,6 +45,12 @@ You can add multiple emitters of each type within the same effect. Read the exam
 * **Gravity Direction:** Direction of gravity, makes the fluid flow in the given direction.
 * **Gravity Strength:** Strength of gravity, set to `0.00` to turn gravity off.
 
+#### Script Function Overview
+
+This effect supports the following custom rendering functions that can be called from SceneScript via **executeMaterialFunction**:
+
+* **clearVelocity**: Clear velocity buffers (resets the fluid motion).
+* **clearDye**: Clear dye buffers (reset the color buffers of the fluid).
 
 ## Advanced Fluid Simulation Effect Samples
 

@@ -25,3 +25,11 @@ prev: ../../reference.md
 ### getMaterialCount(): Number
 
 获取此效果使用的材质数量，每一个效果至少有一个材质。
+
+### setMaterialProperty(propertyName: String, value: Number|Vec2|Vec3|Vec4)
+
+为此效果使用的所有材质设置一个属性值。
+
+### executeMaterialFunction(propertyName: String): void
+
+执行此效果定义的自定义渲染函数。

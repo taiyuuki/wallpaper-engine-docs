@@ -38,9 +38,9 @@ prev: ../../reference.md
 
 如果此图像图层的反照率纹理是视频，则返回视频纹理。
 
-### playSingleAnimation(animation: String|Object): IAnimationLayer
+### playSingleAnimation(animation: String|Object, config?: Object): IAnimationLayer
 
-通过动画名称或 JSON 配置创建新的动画图层。动画仅播放一次，然后自动将其删除。
+通过动画名称或 JSON 配置创建新的动画图层。动画仅播放一次，然后自动将其删除。请在 IAnimationLayer 中查看 config 的配置选项。
 
 ### getAnimationLayerCount(): Number
 
@@ -66,6 +66,30 @@ prev: ../../reference.md
 
 按名称或索引获取骨骼的变换矩阵。
 
+### getLocalBoneTransform(bone: String|Number): Mat4
+
+通过名称或索引获取当前骨骼的变换矩阵。
+
+### setLocalBoneTransform(bone: String|Number, transform: Mat4): void
+
+通过名称或索引设置当前骨骼的变换矩阵。
+
+### getLocalBoneAngles(bone: String|Number): Vec3
+
+通过名称或索引获取当前骨骼的角度。
+
+### setLocalBoneAngles(bone: String|Number, angles: Vec3): void
+
+通过名称或索引设置当前骨骼的角度。
+
+### getLocalBoneOrigin(bone: String|Number): Vec3
+
+通过名称或索引获取当前骨骼的原点。
+
+### setLocalBoneOrigin(bone: String|Number, origin: Vec3): void
+
+通过名称或索引设置当前骨骼的原点。
+
 ### setBoneTransform(bone: String|Number, transform: Mat4): void
 
 按名称或索引设置骨骼的变换矩阵。
@@ -85,3 +109,15 @@ prev: ../../reference.md
 ### resetBonePhysicsSimulation(bone?: String|Number): void
 
 重置骨骼的物理力度和位置。
+
+### getBlendShapeIndex(name: String): Number
+
+通过名称获取混合形状的索引。
+
+### getBlendShapeWeight(blendShape: String|Number): Number
+
+通过名称或索引获取混合形状的权重。
+
+### setBlendShapeWeight(blendShape: String|Number, weight: Number): void
+
+通过名称或索引设置混合形状的权重。

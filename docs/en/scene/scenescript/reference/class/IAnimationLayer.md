@@ -4,7 +4,11 @@ prev: ../../reference.md
 
 # SceneScript Class IAnimationLayer
 
-This class represents a puppet warp animation layer.
+This class represents a puppet warp or 3D model animation layer. New animation layers can be created with the following config properties:
+* **config.blendin**: Boolean - Automatically blend the start of the animation smoothly.
+* **config.blendout**: Boolean - Automatically blend the end of the animation smoothly.
+* **config.blendtime**: Number - Time in seconds how long blending in and out will take.
+* **config.autosort**: Boolean - Insert layer after all opaque layers, but before any additive layers.
 
 ## Properties
 

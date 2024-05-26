@@ -1,41 +1,43 @@
 ---
 prev: ../overview.md
 ---
-# Foliage Sway Effect
+# 树叶摇摆效果
 
-The **Foliage Sway** effect can be used to simulate wind movements, especially for trees and plants. The effect has two different modes which have slightly different use-cases.
+**树叶摇摆** 效果可用于模拟风的运动，尤其是树木和植物。该效果有两种不同的模式，它们的适用场景略有不同。
 
 ![Foliage Sway](/wallpaper-engine-docs/img/effects/Sway.gif)
 
-## Effect settings
+## 效果设置
 
-* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to.
+* **不透明度蒙版**：你可以绘制此蒙版来确定将效果应用于图像的哪些区域。
 
-### Modes
+### 模式
 
 #### UV
-The **UV** mode is recommended for most use-cases as it can be applied on any image layer with good results. It applies the sway effect per pixel, which makes it versatile. In this mode, it has the following settings that you can tweak to fit your image:
 
-* **Phase:** Strength of offset in time to make effect look more varying.
-* **Power:** The exponent of the effect which can make it appear more smoothly.
-* **Ratio:** The aspect ratio of the sway effect. Lower than 1 means more horizontal sway and larger than 1 means more vertical sway.
-* **Scale:** Can be used to make the effect match the size of the foliage on the image. For example you can increase the scale if you want more detail applied and i.e. make singular leaves move.
-* **Direction:**: The orientation of the foliage on the image
-* **Speed:** The sway speed.
-* **Strength:** The maximal distortion of the sway.
+对于大多数情况下，建议使用 **UV** 模式，因为它可以应用于任何图像层并获得良好的效果。它会对每个像素应用摇摆效果，用途广泛。在此模式下，它具有以下设置，你可以调整这些设置以适配你的图像：
+
+* **相位**：时间偏移量，使效果看起来更加不同。
+* **功率**：使效果看起来更平滑的指数。
+* **比率**：摇摆效果的纵横比。小于 1 表示水平摆动幅度更大，大于 1 表示垂直摆动幅度更大。
+* **比例**：使效果与图像上树叶的大小相匹配。例如，如果你想应用更多细节，例如让叶子移动得更引人注意，你可以增加比例。
+* **方向**：：图像上树叶的方向
+* **速度**：摇摆速度。
+* **强度**：摇摆的最大扭曲程度。
 
 #### Vertex
-In **Vertex** mode, the complete image layer is swayed, making it only useful in cases where the swayed object has been cut out with transparency. In this mode, the effect has the following settings that can be tweaked:
 
-* **Corner weights:** Controls how much each corner is animated by the sway (top left, top right, bottom right, bottom left)
-* **Direction weights:** Controls how much the animation moves the image along the X and Y axis.
-* **Phase:** The time offset. If you have a lot of images with this effect, use a different time offset here so they don't all animate in unison.
-* **Power:** The exponent of the effect which can make it appear more smoothly.
-* **Speed:** The sway speed.
-* **Strength:** The total amount of sway, this is basically multiplied with the corner weights.
+在 **Vertex** 模式下，整个图像图层都会摇动，因此它仅在摆动对象被透明剪切的情况下有用。在此模式下，效果具有以下可以调整的设置：
 
-## Sample usage
+* **角权重**：控制每个角的摇摆动画量（左上角、右上角、右下角、左下角）
+* **方向权重**：控制动画沿 X 轴和 Y 轴移动图像的程度。
+* **相位**：时间偏移量。如果你有多个相同效果的图像，请在此处设置不同的时间偏移量，这样它们就不会同步运动。
+* **功能**：使效果看起来更平滑的指数。
+* **速度**：摇摆速度。
+* **强度**：摇摆的总量，基本上是乘以角权重。
 
-The effect is used in the introductory tutorial of the Wallpaper Engine to effects, read relevant sections on the following page to see it in use:
+## 示例用法
 
-* [Adding your first effects](/wallpaper-engine-docs/scene/first/effects)
+该效果在 Wallpaper Engine 的介绍教程中有被提到，请阅读以下页面查看：
+
+* [添加你的第一个效果](/wallpaper-engine-docs/scene/first/effects)
