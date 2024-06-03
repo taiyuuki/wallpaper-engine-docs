@@ -1,10 +1,10 @@
 # Wallpaper Engine编辑器
 
-这是Wallpaper Engine编辑器设计文档，本文档将指导你基于图像文件创建壁纸。Wallpaper Engine编辑器迎合了休闲用户和更高级的用户，你可以为壁纸添加各种元素和效果。
+这是Wallpaper Engine编辑器设计人员文档，本文档将指导你基于图像文件创建壁纸。Wallpaper Engine编辑器迎合了休闲用户和更高级的用户，你可以为壁纸添加各种元素和效果。
 
 ### 入门指南
 
-如果你想创建你的第一张动态壁纸，我们建议你按照我们的[入门指南](/wallpaper-engine-docs/scene/first/gettingstarted)进行操作。它将教你编辑器的所有基础知识，但它会省略一些高级的功能，当你开始尝试并学完了基础知识，你应该去看看那些高级功能。
+如果你想创建你的第一张动态壁纸，我们建议你按照我们的[入门指南](/wallpaper-engine-docs/scene/first/gettingstarted)进行操作。它将教你编辑器所有的基础知识，但它会略过一些高级的功能，当你开始尝试并学完了基础知识，你应该去看看那些高级功能。
 
 ### 下一步是什么?
 
