@@ -4,20 +4,9 @@ fork自官方文档：[wallpaper-engine-docs](https://github.com/Wallpaper-Engin
 
 查看地址：https://taiyuuki.github.io/wallpaper-engine-docs/zh/
 
-翻译远未完成，欢迎大家贡献翻译。
-
-需要翻译的文件位于[仓库](https://github.com/taiyuuki/wallpaper-engine-docs)的docs目录下的zh文件夹内。
-
-如果对已翻译部分有疑议，可以查看docs目录下的en文件夹，文件结构和zh是一样的，或者也可以在本地运行项目，用浏览器打开，在页面的右上角切换语言。
-
-如果你愿意贡献翻译：
-
-* 建议优先翻译scene下的文件，也就是场景壁纸相关的内容。
-* 建议优先翻译目录层级较低的文件。
-* 尽量使用中文版编辑器里现有的翻译，但编辑器翻译有严重错误的除外。
-* 请务必保留原文本的Markdown格式，例如标题（\#+空格+标题）、加粗(\*\*双星号\*\*)、斜体(\*单星号\*)、链接（\[abcdefg\](/abc/def/ghi)）、以及代码块、提示块等等。
-
 # 翻译进度
+
+翻译工作暂时告一段落，目前已经基本完成场景壁纸的翻译，3D模型和着色器编程部分我个人不打算翻译，剩下的就是等待官方文档的更新了。
 
 ✅表示已翻译，❎表示官方文档尚未创建的内容，其余表示未翻译。
 
@@ -35,46 +24,46 @@ zh
 │    ├─ effects
 │    │    ├─ bloom.md✅
 │    │    ├─ effect
-│    │    │    ├─ advancedfluidsimulation.md
-│    │    │    ├─ blend.md
-│    │    │    ├─ blendgradient.md
-│    │    │    ├─ blur.md
-│    │    │    ├─ blurprecise.md
-│    │    │    ├─ chromaticaberration.md
-│    │    │    ├─ clouds.md
-│    │    │    ├─ colorkey.md
-│    │    │    ├─ cursorripple.md
-│    │    │    ├─ depthparallax.md
-│    │    │    ├─ edgedetection.md
-│    │    │    ├─ filmgrain.md
-│    │    │    ├─ fire.md
-│    │    │    ├─ fisheye.md
-│    │    │    ├─ godrays.md
-│    │    │    ├─ iris.md
-│    │    │    ├─ localcontrast.md
-│    │    │    ├─ motionblur.md
-│    │    │    ├─ nitro.md
-│    │    │    ├─ opacity.md
-│    │    │    ├─ perspective.md
-│    │    │    ├─ pulse.md
-│    │    │    ├─ radialblur.md
-│    │    │    ├─ reflection.md
-│    │    │    ├─ refraction.md
-│    │    │    ├─ scroll.md
-│    │    │    ├─ shake.md
-│    │    │    ├─ shine.md
-│    │    │    ├─ skew.md
-│    │    │    ├─ spin.md
-│    │    │    ├─ sway.md
-│    │    │    ├─ swing.md
-│    │    │    ├─ tint.md
-│    │    │    ├─ transform.md
-│    │    │    ├─ twirl.md
-│    │    │    ├─ vhs.md
-│    │    │    ├─ waterflow.md
-│    │    │    ├─ waterripple.md
-│    │    │    ├─ waterwaves.md
-│    │    │    └─ xray.md
+│    │    │    ├─ advancedfluidsimulation.md✅
+│    │    │    ├─ blend.md✅
+│    │    │    ├─ blendgradient.md✅
+│    │    │    ├─ blur.md✅
+│    │    │    ├─ blurprecise.md✅
+│    │    │    ├─ chromaticaberration.md✅
+│    │    │    ├─ clouds.md✅
+│    │    │    ├─ colorkey.md✅
+│    │    │    ├─ cursorripple.md✅
+│    │    │    ├─ depthparallax.md✅
+│    │    │    ├─ edgedetection.md✅
+│    │    │    ├─ filmgrain.md✅
+│    │    │    ├─ fire.md✅
+│    │    │    ├─ fisheye.md✅
+│    │    │    ├─ godrays.md✅
+│    │    │    ├─ iris.md✅
+│    │    │    ├─ localcontrast.md✅
+│    │    │    ├─ motionblur.md✅
+│    │    │    ├─ nitro.md✅
+│    │    │    ├─ opacity.md✅
+│    │    │    ├─ perspective.md✅
+│    │    │    ├─ pulse.md✅
+│    │    │    ├─ radialblur.md✅
+│    │    │    ├─ reflection.md✅
+│    │    │    ├─ refraction.md✅
+│    │    │    ├─ scroll.md✅
+│    │    │    ├─ shake.md✅
+│    │    │    ├─ shine.md✅
+│    │    │    ├─ skew.md✅
+│    │    │    ├─ spin.md✅
+│    │    │    ├─ sway.md✅
+│    │    │    ├─ swing.md✅
+│    │    │    ├─ tint.md✅
+│    │    │    ├─ transform.md✅
+│    │    │    ├─ twirl.md✅
+│    │    │    ├─ vhs.md✅
+│    │    │    ├─ waterflow.md✅
+│    │    │    ├─ waterripple.md✅
+│    │    │    ├─ waterwaves.md✅
+│    │    │    └─ xray.md✅
 │    │    ├─ introduction.md✅
 │    │    └─ overview.md✅
 │    ├─ first
@@ -180,9 +169,9 @@ zh
 │    │    │    │    ├─ resizeScreen.md✅
 │    │    │    │    └─ update.md✅
 │    │    │    └─ module
-│    │    │           ├─ WEColor.md
-│    │    │           ├─ WEMath.md
-│    │    │           └─ WEVector.md
+│    │    │           ├─ WEColor.md✅
+│    │    │           ├─ WEMath.md✅
+│    │    │           └─ WEVector.md✅
 │    │    ├─ reference.md✅
 │    │    ├─ tutorial
 │    │    │    ├─ audio.md✅

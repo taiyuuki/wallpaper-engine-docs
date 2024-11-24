@@ -1,16 +1,17 @@
 ---
 prev: ../overview.md
 ---
-# Reflection Effect
 
-The **Reflection** effect allows you to reflect a part of the image on a given axis. This allows you to even reflect underlying animations. Make sure to start with painting the opacity mask in order to see the effect.
+# 反射效果
+
+**反射效果**可以沿着给定的轴反射图像的一部分。这使得可以反射底层动画。需要先在画布上绘制不透明蒙版，才能看到效果。
 
 ![Reflection](/wallpaper-engine-docs/img/effects/Reflection.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Blend mode:** How the reflection is blended with the image.
-* **Opacity mask:** This mask controls where the reflection is visible. You have to paint this first in order to see any reflection at all.
-* **Alpha:** How strongly the reflection is visible.
-* **Direction:** This allows you to change the axis of the reflection. By default the image is reflected horizontally.
-* **Offset:** This allows you to shift the center of the reflection, along the direction you have set.
+* **混合模式:** 反射与图像的混合模式。
+* **不透明蒙版:** 控制反射的可见性。你需要先在画布上绘制蒙版，才能看到反射。
+* **透明度:** 反射的强度。
+* **方向:** 更改反射的轴。默认情况下，图像沿水平方向反射。
+* **偏移:** 沿着设置的方向移动反射的中心点。

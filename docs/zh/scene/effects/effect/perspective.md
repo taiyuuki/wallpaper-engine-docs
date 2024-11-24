@@ -1,20 +1,21 @@
 ---
 prev: ../overview.md
 ---
-# Perspective Effect
 
-The **Perspective** effect allows you to apply a perspective transformation to the image. This can be useful in combination with [**Texture User Properties**](/wallpaper-engine-docs/scene/userproperties/texture) to create surfaces with user-replaceable textures or to apply certain effects to the sky, the floor or any other surface with an angled perspective.
+# 透视效果
+
+**透视**效果可以对图像进行透视变换。这在与[**纹理用户属性**](/wallpaper-engine-docs/scene/userproperties/texture)结合使用时可以创建具有可替换纹理的表面，或者应用特定效果到天空、地板等具有倾斜透视的表面。
 
 ::: tip
-You should apply this effect only on top of other existing effects or when using a texture user property. If you apply this effect merely to a static image, consider modifying your image in an image editor instead to improve the performance of the wallpaper, since there is no need to use a live effect for that.
+应当仅在与其他效果结合使用或使用纹理用户属性时才应用此效果。如果只是应用于静态图像，不需要实时效果，则应考虑使用图像编辑器进行处理，以提高壁纸的性能。
 :::
 
-![Perspective](/wallpaper-engine-docs/img/effects/Perspective.gif)
+![透视效果](/wallpaper-engine-docs/img/effects/Perspective.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Repeat:** Whether the image should repeat until the edges or be clamped.
-* **p0:** Distortion of the bottom edge. Negative values will stretch the edge, positive values will compress it.
-* **p1:** Distortion of the left edge. Negative values will stretch the edge, positive values will compress it.
-* **p2:** Distortion of the right edge. Negative values will stretch the edge, positive values will compress it.
-* **p3:** Distortion of the top edge. Negative values will stretch the edge, positive values will compress it.
+* **重复：** 图像是平铺还是被拉伸到边缘。
+* **p0：** 底部边缘的扭曲程度。负值将拉伸边缘，正值将压缩边缘。
+* **p1：** 左边缘的扭曲程度。负值将拉伸边缘，正值将压缩边缘。
+* **p2：** 右边缘的扭曲程度。负值将拉伸边缘，正值将压缩边缘。
+* **p3：** 顶部边缘的扭曲程度。负值将拉伸边缘，正值将压缩边缘。

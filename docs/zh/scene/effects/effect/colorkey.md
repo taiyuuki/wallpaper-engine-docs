@@ -1,17 +1,17 @@
 ---
 prev: ../overview.md
 ---
-# Color Key Effect
+# 色键效果
 
-The **Color Key** effect allows you to remove parts of the image that match a certain color. This kind of effect is used by *green screens* in video editing software.
+**色键**效果可以让你消除图像中与特定颜色匹配的部分。 这种效果常被用于视频编辑软件中的绿幕。
 
 ![Color Key](/wallpaper-engine-docs/img/effects/Color_key.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Color:** The color that will be used as a reference for what should be made transparent. You can use the picking tool in the color picker to easily take a color from the image.
-* **Flatten:** Whether you want to pre-multiply the resulting image with the alpha value. This can be useful to reduce border artifacts of the color.
-* **Invert:** Whether you want to change the transparency so that everything else becomes transparent except for your selected color.
-* **Write alpha:** The opacity value that will be applied to your color key.
-* **Tolerance:** This allows you to increase the threshold used to determine whether a given color is similar enough to your color key or not.
-* **Fuzziness:** This allows you to have a smooth transition between for the tolerance threshold.
+* **颜色：** 确定应该变成透明的颜色。 你可以使用取色工具轻松获取图像中的颜色。
+* **扁平化：** 是否要预乘以透明度的结果图像。 可以减少颜色边缘的锯齿。
+* **反转：** 是否要将透明度更改为使所有内容都变成透明，除了所选颜色。
+* **写入透明度：** 应用于色键的不透明度值。
+* **容差：** 增加用于确定给定颜色是否类似于色键的阈值。
+* **模糊性：** 允许在容差阈值之间具有平滑的过渡。

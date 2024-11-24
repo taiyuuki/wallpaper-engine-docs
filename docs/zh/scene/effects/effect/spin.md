@@ -1,22 +1,25 @@
 ---
 prev: ../overview.md
 ---
-# Spin Effect
 
-The **Spin** effect can be used to continuously rotate parts of an image around its center or a specified point.
+# 旋转效果
+
+**旋转** 效果可以用来在图像的中心或指定点持续旋转图像的一部分。
 
 ![Spin](/wallpaper-engine-docs/img/effects/Spin.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Elliptical:** If you want to skew the animated object and rotate it like an ellipse.
-* **Mode:** UV animates the selected pixels while Vertex will always rotate the entire image.
-* **Perspective:** Make the rotation independent from the aspect ratio of the image.
-* **Repeat:** Repeat the image around the borders, otherwise clamp it.
-* **Opacity mask:** Allows you to draw a mask which determines which pixels will be affected.
-* **Center:** The point to rotate around. Use the picker to easily select it by clicking somewhere on the image.
-* **Feather:** Adds a smooth transition at the outer edges of the spin effect.
-* **Time offset:** Adds a small delayed start to the effect, this can be useful if you are using the effect multiple times throughout your wallpaper and want to ensure they are not synchronized.
-* **Speed:** Determines how fast the rotation is.
-* **Angle (Elliptical only):** The angle/orientation of the ellipsis.
-* **Ratio (Elliptical only):** How much the ellipsis is compressed/stretched.
+* **椭圆：** 如果你想扭曲并使图像像椭圆一样旋转，请勾选此选项。
+* **模式：** UV模式会动画选择的像素，而Vertex模式则始终旋转整个图像。
+* **透视：** 使旋转与图像的纵横比无关。
+* **重复：** 重复图像的边缘，否则将图像限制在边缘。
+* **不透明蒙版：** 绘制蒙版，确定哪些像素会受到影响。
+* **中心：** 旋转的中心点。使用选取器轻松选择它，只需单击图像上的某个位置即可。
+* **羽化：** 在旋转效果的外缘添加平滑过渡。
+* **时间偏差：** 给旋转效果添加一个微妙的延迟，这有助于在壁纸中使用多个效果时，确保它们不是同步的。
+* **速度：** 确定旋转的速度。
+* **角度 (椭圆)：** 椭圆的角度/方向。
+* **比率 (椭圆)：** 椭圆的压缩/拉伸程度。
+
+> 译注：最新版的编辑器中，“模式”、“透视”选项已经不存在。

@@ -2,30 +2,30 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Module WEMath
+# WEMath 模块
 
-Module which provides utility functions related to general mathematical functions.
+提供与一般数学函数相关的实用函数的模块。
 
 ```js
 import * as WEMath from 'WEMath';
 ```
 
-## Properties
+## 属性
 
 ### deg2rad: Number
 
-Factor to convert degrees to radians.
+度数转弧度的转换因子。
 
 ### rad2deg: Number
 
-Factor to convert radians to degrees.
+弧度转度数的转换因子。
 
-## Functions
+## 函数
 
 ### smoothStep(min: Number, max: Number, value: Number): Number
 
-Remaps value based on min and max into [0, 1] range. Useful for generating smooth transitions.
+将值基于最小值和最大值在[0, 1]范围内进行线性插值。用于生成平滑过渡。
 
 ### mix(a: Number, b: Number, value: Number): Number
 
-Interpolates from a to b based on value. a + (b - a) * value 
+根据值从 a 到 b 进行线性插值。a + (b - a) * value

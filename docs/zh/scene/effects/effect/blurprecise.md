@@ -1,19 +1,20 @@
 ---
 prev: ../overview.md
 ---
-# Blur Precise Effect
+# 精确模糊效果
 
-The **Blur Precise** effect applies a precise gaussian blur to the image. Try and see if the [normal Blur effect](/wallpaper-engine-docs/scene/effects/effect/blur) might suffice for your use-case, as it performs better than Blur Precise. Blur Precise is especially useful to achieve better results with god rays, outlines and similar effects.
+**精确模糊** 效果对图像应用精确的高斯模糊。你应该先尝试一下[普通模糊效果](/wallpaper-engine-docs/scene/effects/effect/blur)，看看它是否能满足你的需求，因为它比精确模糊效果的性能更好。精确模糊效果更适用于产生光线、轮廓等。
 
-If you just want to add a static blur to your image, you should rather do this in an image editor before importing your image into Wallpaper Engine.
+如果只是想在图像上添加一个静态模糊，最好在导入图像到 Wallpaper Engine 之前在图像编辑器中进行处理。
+
+## 使用
 
 ![Blur](/wallpaper-engine-docs/img/effects/Blur_precise.gif)
 
-### Effect Settings
+### 效果设置
 
-This effect always affects the complete layer. You can configure its kernel size and scale for each axis:
+该效果会影响整个图层。你可以为每个轴配置它的核大小和比例：
 
-* **Kernel size:** The size of the filter kernel. A larger kernel makes the image more blurry but also requires more system performance.
-* **Scale:** Controls the amount of blur on the X and Y axis.
-
+* **核大小：** 滤镜的核大小。较大的核会使图像更模糊，但也会消耗更多的系统性能。
+* **比例：** 控制 X 和 Y 轴上的模糊程度。
 

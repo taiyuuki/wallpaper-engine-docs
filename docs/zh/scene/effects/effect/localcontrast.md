@@ -1,16 +1,17 @@
 ---
 prev: ../overview.md
 ---
-# Local Contrast Effect
 
-The **Local Contrast** effect can be used for high quality contrast enhancement. Instead of just boosting the contrast of the entire image, this effect uses a method to specifically increase the contrast in areas where it matters.
+# 局部对比度效果
+
+**局部对比度**效果可以用于提高图像对比度。与仅对整张图像增强对比度的方法不同，该效果使用一种特定的方法来增强图像中的重要区域的对比度。
 
 ![Local Contrast](/wallpaper-engine-docs/img/effects/Local_contrast.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Opacity mask:** You can paint this mask to limit the effect only to specific parts of the image.
-* **Kernel size:** This controls the quality and size of the contrast enhancement.
-* **Grayscale:** Enabling this will make the contrast enhancement black and white only.
-* **Scale:** The size of the kernel used to find areas for contrast enhancement.
-* **Strength:** How strong the contrast enhancement will be.
+* **不透明蒙版：** 绘制蒙版以仅对图像的特定部分应用效果。
+* **核大小：** 对比度增强的质量和大小。
+* **灰度：** 启用此选项将使对比度增强变为黑白。
+* **比例：** 用于查找对比度增强区域的核大小。
+* **强度：** 对比度增强的强度。

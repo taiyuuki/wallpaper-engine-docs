@@ -1,30 +1,31 @@
 ---
 prev: ../overview.md
 ---
-# Chromatic Aberration Effect
 
-The **Chromatic Aberration** effect creates a multi-colored outlined similar to artifacts you might find on photographs. The effect itself is static but you can utilize [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction) to create animations for it.
+# 色差效果
+
+**色差** 效果可以模拟照片上常见的色彩偏移效果。效果本身是静态的，但你可以利用[SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction)来制作动画。
 
 ![Blur](/wallpaper-engine-docs/img/effects/Chromatic_Aberration.gif)
 
-### Effect Settings
+## 效果设置
 
-* **Mode:** Change the overall mode of the chromatic aberration effect:
-* *Expansion:* Will apply the effect from a certain center point. You can determine the center point below.
-* *Directional:* Will apply the effect into a certain direction, you can determine the direction below.
-* *Radial:* Will apply the effect in a circular manner around a given point.
-* *Barrel:* Will apply the effect in a rounded rectangle around the entire layer.
-* **Chroma:** The color pair used for the chromatic aberration artifacts.
-* **Opacity mask:** Allows you to draw a mask to reduce or entirely disable the effect in parts of your image.
-* **Strength:** The strength of the effect, this option is best coupled with SceneScript to animate this effect. See more information below.
+* **模式：** 改变色差效果的整体模式:
+    * *扩散：* 将效果从一个中心点开始应用。你可以在下面设置中心点。
+    * *方向：* 将效果应用到一个方向，你可以在下面设置方向。
+    * *径向：* 将效果以圆形的方式应用于一个给定的点。
+    * *桶形：* 将效果应用于整个图层的桶状矩形。
+* **色度：** 色差效果的色彩对。
+* **透明度蒙版：** 绘制蒙版减少或完全禁用部分区域的效果。
+* **强度：** 效果的强度，这个选项最好与SceneScript配合使用，以动画化这个效果。更多信息请见下文。
 
-## Animated Chromatic Aberration
+## 动画化色差效果
 
-The *Chromatic Aberration* effect itself is static but you can animate it with the help of SceneScript. We recommend using the **Strength** property for this, though other properties may also be used.
+色差效果本身是静态的，但你可以利用SceneScript来制作动画。我们建议使用**强度**属性来实现这个效果，但其他属性也可以使用。
 
-To get started, scroll to the **Strength** property of the effect and click on the cogwheel icon next to it. Then select **Bind SceneScript**. Wallpaper Engine comes with multiple sample code snippets here that you can access. Click on **Snippets** at the top of the code window, then select **Replace Script**. Select one of the two relevant scripts and confirm with **OK**:
+为此，点击**强度**属性旁边的齿轮图标，然后选择**绑定脚本**。Wallpaper Engine提供了多个示例代码片段，如下所示。点击代码窗口顶部的**代码段**，然后选择**替换脚本**。选择其中一个相关的脚本，点击**确定**。
 
-* **Flicker**: Will permanently increase and lower the intensity of the effect in an erratic way. New settings will appear once you add this snippet, allowing you to further tweak this.
-* **Audio Factor**: Will make the effect audio responsive. Try setting the **Min** value to `0.0` to disable the effect when no audio is being played and set the **Max** value to `3.0` to have a strong effect when the beat of music is playing. You may tweak these values to your liking.
+* **闪烁:** 持续不断地增加和降低强度，以一种不规则的方式运动。在添加这个代码片段后，将出现新的设置项，你可以进一步微调这个效果。
+* **音频因子:** 使效果对音频响应。尝试将**最小**值设置为`0.0`以禁用没有音乐播放时的效果，将**最大**值设置为`3.0`以在音乐节奏响起时产生强烈的效果。你可以根据自己的喜好微调这些值。
 
-Do note that the SceneScript logic is only executed in the editor when you click the **Run Preview** button at the top of the editor. Of course you can also custom-program your own logic here, these two sample snippets are just for convenience.
+请注意，SceneScript的逻辑仅在你点击编辑器顶部的**运行预览**按钮时才会在编辑器中被执行。当然，你也可以自定义逻辑，这里的两个示例代码片段只是便于演示。

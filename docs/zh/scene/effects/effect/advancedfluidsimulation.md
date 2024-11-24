@@ -1,124 +1,123 @@
 ---
 prev: ../overview.md
 ---
-# Advanced Fluid Simulation Effect
+# 高级流体模拟效果
 
-The **Advanced Fluid Simulation** effect can be used to create different types of interactive smoke, fire and liquid simulations. The effect is relatively complex due to its numerous settings that can be tweaked for the desired behavior. See the bottom of this page for some usage samples.
+**高级流体模拟** 效果可用于创建不同的交互式烟雾、火焰和液体。该效果相对复杂，因为它具有许多可调节的设置，可以对交互行为进行调整。请参阅本页底部的一些用法示例。
 
 ![Advanced Fluid Simulation](/wallpaper-engine-docs/img/effects/Advanced_Fluid_Simulation.gif)
 
-### Effect Settings
+### 效果设置
 
-Before continuing, it is important to understand that effect allows you to emit matter in three main different ways:
+在开始之前，重要的是要理解该效果可以让你以三种不同的方式释放物质：
 
-* **Line emitters:** Creates a line in which your matter is emitted into a certain direction.
-* **Point emitters:** Creates a point from which your matter is emitted into a certain direction.
-* **Dye emitters:** Allows you to paint static points in a color of your choosing from which matter is emitted.
+* **线发射器：** 在某一方向上发射物质的线。
+* **点发射器：** 在某一方向上发射物质的点。
+* **染料发射器：** 从某一特定颜色的点发射物质。
 
-You can add multiple emitters of each type within the same effect. Read the examples towards the bottom of this page to see some examples.
-#### Settings Overview
+你可以在同一效果中添加多个发射器类型。请阅读本页底部的一些用法示例。
 
-* **Line emitter count:** The number of separate line emitters.
-* **Point emitter count:** The number of separate point emitters.
-* **Rendering:** The rendering mode, there are four different modes:
+#### 设置概述
 
-1. *Gradient*: Allows to you choose or import a gradient map.
-2. *Emitter Color*: Allows you to pick a color for each emitter.
-3. *Background Color*: Will use the color of the background for the color of the simulation.
-4. *Distortion*: Instead of emitting colored fluid matter, the effect will cause a visual distortion. Often useful in combination with *Perspective* enabled.
+* **线发射器计数：** 单独的线发射器数量。
+* **点发射器计数：** 单独的点发射器数量。
+* **渲染：** 渲染模式，有四种不同的模式：
 
-* **Blend mode:** The way the effect mixes with the rest of the layer. In most cases, it makes sense to set this value to `Normal` or `Add` but you can experiment with this.
-* **Perspective:** When enabled, you can use the four on-screen perspective controls to shift the perspective of the effect. and limit it to certain parts of the layer. Especially useful when using the **Distortion** rendering type.
-* **Opaque background:** When enabled, the background layer will become opaque.
-* **Collision mask:** Allows you to draw "walls" that the simulation with collide with. See tutorial below for an example.
-* **Dye emitter:** Allows you to paint custom emitter locations. These emitters will only be affected by gravity and mouse input and otherwise stay static. **Tip:** You can drag and drop compatible layers into the *dye emitter* and Wallpaper Engine will use them as a map in real time.
-* **Brightness:** The brightness of the simulation.
-* **Feather:** The speed in which the outline of the simulation fades away.
-* **Opacity:** The opacity of the simulation.
-* **Curling:** The level of curls in the simulation.
-* **Cursor influence:** How much the mouse cursor affects the simulation. Set to 0 to turn this feature off.
-* **Pressure:** Increases the bounciness of the simulation. Note: We do not recommend using a value of `1.00` in combination with using gravity.
-* **High pass filter:** When the remaining lifetime of the fluid reaches this value, it immediately fades away. Higher values mean that the simulation disappears more quickly.
-* **Viscosity:** Higher values slow the simulation speed down.
-* **Dissipation:** The speed at which the simulation fades away, higher values result in a shorter lifetime.
-* **Saturation:** The saturation of any simulation colors. Lower values can sometimes increase the amount of colors, as large amounts of fluid on one spot will appear white.
-* **Gravity Direction:** Direction of gravity, makes the fluid flow in the given direction.
-* **Gravity Strength:** Strength of gravity, set to `0.00` to turn gravity off.
+1. *渐变：* 选择或导入一个渐变图。
+2. *发射器颜色：* 为每个发射器选择一种颜色。
+3. *背景颜色：* 使用背景的颜色来设置模拟的颜色。
+4. *失真：* 不再发射彩色流体物质，而是产生视觉上的失真。启用 *透视* 对它很有用。
 
-#### Script Function Overview
+* **混合模式：** 该效果与其他图层的混合方式。在大多数情况下，可以将此值设置为 `Normal` 或 `Add`，但你也可以去尝试不同的设置。
+* **透视：** 启用此选项后，你可以使用四个屏幕上的透视控制点来调整效果的透视。特别适用于 **失真** 渲染类型。
+* **不透明背景：** 启用此选项后，背景层将变得不透明。
+* **碰撞蒙版：** 绘制“墙”用以模拟碰撞。请参阅下面的教程示例。
+* **染料发射器：** 绘制自定义发射器位置。这些发射器仅受重力和鼠标输入的影响，并且不会随时间变化。**提示：** 你可以将图层拖放到 *染料发射器* 中，Wallpaper Engine 将实时使用它作为贴图。
+* **亮度：** 模拟的亮度。
+* **羽化：** 模拟的轮廓渐隐速度。
+* **不透明度：** 模拟的不透明度。
+* **曲卷：** 模拟的卷曲程度。
+* **光标影响：** 鼠标光标对模拟的影响程度。设置为 `0` 关闭此功能。
+* **压力：** 增加模拟的弹性。注意：我们不建议在使用重力时将压力值设为 `1.00`。
+* **高通滤波器：** 当剩余生命周期低于此值时，模拟会立即消失。较高的值意味着模拟会更快地消失。
+* **粘度：** 模拟的粘性度。较高的值会导致模拟变慢。
+* **饱和度：** 模拟颜色的饱和度。较低的值可以增加颜色的数量，因为在同一点上释放的大量流体会出现白色。
+* **重力方向：** 重力方向，使流体沿着给定方向流动。
+* **重力强度：** 重力强度，设置为 `0.00` 关闭重力。
 
-This effect supports the following custom rendering functions that can be called from SceneScript via **executeMaterialFunction**:
+#### 脚本函数简介
 
-* **clearVelocity**: Clear velocity buffers (resets the fluid motion).
-* **clearDye**: Clear dye buffers (reset the color buffers of the fluid).
+该效果支持以下自定义渲染函数，可以通过 **executeMaterialFunction** 在 SceneScript 中调用：
 
-## Advanced Fluid Simulation Effect Samples
+* **clearVelocity**：清除速度缓冲区（重置流体运动）。
+* **clearDye**：清除染色缓冲区（重置流体颜色缓冲区）。
 
-### Line Emitter: Ice Vapor Example
+## 高级流体模拟效果示例
 
-In this example, we will showcase the line emitter and make use of the collision mask to create an interactive ice vapor effect as shown in the video below.
+### 线发射器：冰蒸汽示例
+
+在这个示例中，我们将展示线发射器的用法，并使用碰撞蒙版来创建交互式冰蒸汽效果。
 
 <video width="100%" controls autoplay loop>
   <source :src="$withBase('/videos/line_emitter_sample.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-In order to get started, we first add the effect to our image layer. Since we will be working with a single line emitter, we set the **Point emitter count** to `0` and change the **Line emitter count** to `1`. In this case, we change the **Rendering** mode to *Emitter color* since we want to set a simple color for our ice vapor.
+按顺序，我们首先将效果添加到图层。我们将使用单个线发射器，将 **点发射器计数** 设置为 `0`，并将 **线发射器计数** 设为 `1`，将 **渲染** 模式设为 *发射器颜色*，我们只想为冰蒸汽设置一种简单的颜色。
 
-#### Positioning the Line Emitter
+#### 定位线发射器
 
-Once you set the *line emitter count* to `1`, you will find the line emitter on your wallpaper. We now place it on the top of our glass and extend it slightly over the sides. Using the editor controls, we position the angle upwards and slightly to the left so that the emitted vapor appears to be flowing upwards out of the glass towards the ice cubes on our image. By increasing the size of the emitter, we also increase the amount of matter that is emitted.
+当你设置 *线发射器计数* 为 `1` 时，你会在壁纸上看到一个线发射器。我们现在把它放在玻璃杯的顶部，并在两侧稍微延伸一点。使用编辑器的控制面板，我们将角度向上放置并稍微向左移动，这样发射出的蒸汽看起来就像是从冰块的顶部流出玻璃杯。通过增加发射器的大小，还可以增加发射出的物质的数量。
 
-#### Configuring the Collision Mask
+#### 配置碰撞蒙版
 
-One important aspect of this example is the collision mask. We want our ice vapor to collide with the sides of the glass and the ice cubes on our image. To accomplish this, we can draw a custom collision mask. Click on the **Paint** button next to the *collision mask*. We draw a line on the outline of the glass, then fully paint over the ice cubes.
+这里一个很重要的点就是碰撞蒙版。我们希望冰蒸汽与玻璃杯的边缘以及冰块相碰撞。为此，我们可以绘制自定义碰撞蒙版。点击 *碰撞蒙版* 旁边的 **绘制** 按钮，在玻璃杯的轮廓线上绘制一条线，然后完全涂抹冰块。
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/fluid_collision.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-We now further tweak all settings of the effect before continuing. We used the following settings, though we recommend experimenting around with them until you get a better feeling for what each value does:
+在进一步调整效果设置之前，我们可以微调一些设置。我们使用以下设置，但我们也建议你自己去尝试调整它们，直到你对每个值的作用都有一个更好的把握：
 
-* **Brightness:** 1.0 - We just leave this at its default.
-* **Feather:** 1.0 - We set the *Feather* value to 1.0 since it results in a smooth vapor looking fluid.
-* **Opacity:** 0.9 - We reduce the *Opacity* value slightly, this helps to reduce some overly bright parts of the simulation, especially since we also enabled HDR Bloom on our wallpaper.
-* **Curling:** 13.0 - We set a medium to low value for the *Curling* value, since this results in a smoke-like simulation.
-* **Cursor influence:** 1.00 - We want our simulation to react to the user's mouse cursor.
-* **Pressure:** 0.5 - We use a medium value here to make the simulation a bit bouncy - not too little and not too much.
-* **High pass filter:** 0.1 - The *high pass filter* should only start removing the simulation towards a very late stage in its lifetime, so we set a very low value. We want our animation to live relatively long because the vapor moves slowly.
-* **Viscosity:** 0.5 - We set a very low *Viscosity* since it fits the smoke-like appearance of the ice vapor best.
-* **Dissipation:** 0.3 - The *Dissipation* of the simulation is set to a very low value because the simulation moves slowly and needs to live relatively long for the desired outcome.
-* **Saturation:** 0.4 - The *Saturation* is set to 0.4 since the simulation would otherwise turn too white as the color tends to overlap and turn overly bright quickly.
-* **Gravity direction:** -144 - The **Gravity Direction** points to the lower left corner for us, since we want the vapor to fall towards the direction of the ice cubes on our image.
-* **Gravity strength:** 6.00 - The *Gravity Strength is set to a value of *6.00*, this required some trial attempts since we want the vapor too fall slowly without hindering the vapor from first flying upwards over the glass.
+* **亮度:** 1.0 - 我们只需将亮度保持为默认值。
+* **羽化:** 1.0 - 我们将 *羽化* 值设置为 1.0，这样可以产生平滑的蒸汽模拟。
+* **不透明度:** 0.9 - 我们稍微降低了 *不透明度* 值，这有助于减少模拟中过亮的部分，尤其是当我们还启用了 HDR高光 的情况下。
+* **曲卷:** 13.0 - 我们将 *曲卷* 值设置为中等到低的值，产生一个类似烟雾的模拟。
+* **光标影响:** 1.00 - 我们希望模拟对用户的鼠标光标有反应。
+* **压力:** 0.5 - 我们使用中等值来使模拟弹性 - 不要太少也不要太多。
+* **高通滤波器:** 0.1 - *高通滤波器* 值应该只在生命周期较低时才开始删除模拟，因此我们设置了一个非常低的值。我们希望动画的长度相对较长，因为蒸汽运动比较缓慢。
+* **粘度:** 0.5 - 我们设置了一个非常低的 *粘度* 值，避免模拟的颜色过快变得太白，因为颜色会相互重叠而导致过亮。
+* **饱和度:** 0.4 - *饱和度* 值设置为 0.4，因为模拟的颜色数量会随着时间的推移而增加导致过亮。
+* **重力方向:** -144 - 将 **重力方向** 指向玻璃杯的左下角，因为我们希望蒸汽沿着冰块的方向流动。
+* **重力强度:** 6.00 - 将 *重力强度* 值设置为 *6.00*，这需要一些调试，因为我们希望蒸汽的速度慢一些，而又不会妨碍蒸汽的飞行。
 
-The line emitter was given a **dark** blue color, all other values were configured by using the mouse controls in the editor.
+该线发射器的颜色设置为 **深蓝色**，其他所有值都通过编辑器的鼠标控制进行配置。
 
 ::: tip
-These type of simulations tend to look even better in combination with [HDR Bloom](/wallpaper-engine-docs/scene/effects/bloom), give it a try!
+这些类型的模拟效果往往与 [HDR 高光](/wallpaper-engine-docs/scene/effects/bloom) 结合使用效果更好，可以试试看！
 :::
 
-### Working with Gradient Maps
+### 使用渐变贴图
 
-By default, the effect will use a gradient map for its coloring. You can create your own gradient maps and import them into the editor, we recommend a size of 128x8 pixels. The colors towards the right are the primary colors at the point at which fluids are emitted while the colors towards the left make up the colors used at the outline of the simulation.
+默认情况下，该效果使用渐变贴图进行着色。你可以创建自己的渐变图并将它们导入编辑器，我们建议将大小设置为 128x8 像素。右侧的颜色是发射出的流体物质的主要颜色，左侧的颜色则是模拟的轮廓颜色。
 
-Wallpaper Engine comes with several ready-to-use gradient maps that you can utilize for your wallpapers. Simply click on the **Browse** button next to the **Gradient map** option and select one of the gradient maps. Additionally, you can tweak the settings just below the gradient map to change the way colors are rendered. For example, by lowering the value of the **Feather** property, you can increase the intensity of the colors at the outer edges of the simulation.
+Wallpaper Engine 提供了一些预设的渐变图，你可以在壁纸中使用。只需点击 **渐变图** 选项旁边的 **浏览** 按钮，选择一个渐变图。此外，你可以在渐变图下方微调设置，以更改颜色渲染方式。例如，通过降低 **羽化** 属性的值，可以增加模拟边缘的颜色强度。
 
-See the following video for a quick example:
+下面是一个简要的示例：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/fluid_gradients.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### SceneScript: Attaching Emitters to Mouse Cursor & Audio-Responsiveness
+### SceneScript: 将发射器绑定到鼠标光标 & 音频响应
 
-As always, you can custom-program behavior into most properties of the simulation with the help of [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction). In this example, we will showcase how to utilize SceneScript to attach a point emitter to your mouse cursor and how to make it audio-responsive.
+和往常一样，你可以通过 [SceneScript](/wallpaper-engine-docs/scene/scenescript/introduction) 来自定义模拟效果的行为。在这个示例中，我们将展示如何使用 SceneScript 将点发射器附加到你的鼠标光标，并如何使它具有音频响应。
 
-#### Attaching Emitter to Mouse Cursor
+#### 绑定发射器到鼠标光标
 
-First, set up a point emitter to your liking. Scroll down to the point emitter settings and next to the **Position** values of the emitter, click on the cogwheel icon and select **Bind SceneScript**. This works best in cases where the effect is applied to a layer that stretches across the full screen, as the cursor position can only determined across the entire canvas:
+首先，设置一个你喜欢的点发射器。在发射器的设置面板往下滚动，在发射器的 **位置** 值旁边，点击齿轮图标，选择 **绑定脚本**。在应用效果的图层是全屏的情况下，最好选择这种绑定方式，因为光标的位置只能在整张画布上确定：
 
 ```js
 'use strict';
@@ -133,13 +132,13 @@ export function update(value) {
 }
 ```
 
-You can see a video of the end result in the next section, though with an additional feature where a mouse click is required to actually emit any fluids.
+你可以在下一节的视频中查看最终结果，不过现在需要一个额外的功能，那就是通过鼠标点击释放流体。
 
-#### Emitting a Fluid when Mouse is Clicked
+#### 鼠标点击释放流体
 
-In this example, we want to showcase how emitters can be changed by mouse inputs of the user, specifically when the user holds down the mouse button. In this case, we want to only emit matter while the left mouse button is held down. Emitters cannot be disabled on the fly, however, you can simply change their size to a value of `0.00`, which is essentially the same as disabling them.
+在这个示例中，我们将展示发射器如何通过用户的鼠标输入来改变。在这种情况下，我们只希望在鼠标左键长按时释放物质。发射器不能即时禁用，但你可以通过将其大小设置为 `0.00` 来禁用它。
 
-You can attach the following snippet to the **Size** value of your emitter. Click on the cogwheel icon next to the **Size** value and select **Bind SceneScript**, then copy paste the following code snippet:
+你可以将以下代码段绑定到发射器的 **大小** 值。点击 **大小** 值旁边的齿轮图标，选择 **绑定绑定**，然后复制粘贴以下代码段：
 
 ```js
 'use strict';
@@ -172,28 +171,28 @@ export function cursorUp(event) {
 }
 ```
 
-You can adjust the `IDLE_SIZE` and `CLICK_SIZE` values at the top of the script to adjust the size when the mouse button is clicked or not. For example, you could adjust the `IDLE_SIZE` value to `0.01` if you always want to have a slight fluid emission even when the mouse button is not held down. We recommend sticking to values below `0.1` as the size values are relatively small.
+你可以调整脚本顶部的 `IDLE_SIZE` 和 `CLICK_SIZE` 值，以调整鼠标点击时发射器的大小。例如，如果你希望不按鼠标时也能有轻微的流体释放，你可以将 `IDLE_SIZE` 值改为 `0.01`。我们建议将大小值保持在 `0.1` 以下，让它保持相对较小的值。
 
-See the following video for an example of this solution. In the video, the emitter is also attached to the mouse cursor as explained in the previous section of this guide:
+下面是一个示例视频，展示了这个方案。在视频中，发射器也被绑定到了鼠标光标，如前一节所述：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/fluid_onclick.mp4')" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-#### Enabling Audio-Responsiveness of Emitter
+#### 使发射器具有音频响应
 
-You can also make the emitters audio-responsive through SceneScript. In this example, we will increase the size of the emitter with the beat of music that is being played on the user's system.
+你可以通过 SceneScript 来使发射器具有音频响应。在这个示例中，我们将使发射器随着用户系统上正在播放的音乐节奏而改变大小。
 
-To do this, click on the cogwheel icon next to the **Size** property of the emitter and select **Bind SceneScript**. Now navigate to the **Snippets** section at the top and select **Replace Script**, followed by **Audio Factor**. Confirm the script changes by pressing OK.
+首先，点击发射器的 **大小** 旁边的齿轮图标，选择 **绑定绑定**，然后选择 **代码段** → **替换脚本** → **音频因子**，确认脚本更改后，点击 **确定** 按钮。
 
-You will now see new options for the audio-responsiveness below the **Size** option. You can leave the **Audio frequency** at `0` and set the **Audio response** to `15`.
+现在，你会在 **大小** 选项下看到新的音频响应选项。将 **音频频率** 设置为 `0`，将 **音频响应** 设置为 `15`。
 
-The **Min** property represents the size which the emitter has when no audio is being played. We set this to `0.00` which means the emitter is turned off when no audio is playing.Alternatively you can also try low values like `0.01` if you would like the emitter to always appear with a reduced size. Try to stick to values below `0.01` as the **Size** is very susceptible to larger numbers.
+**最小** 值代表发射器在没有音乐播放时大小。我们将其设置为 `0.00`，这意味着当没有音乐播放时，发射器将关闭。或者，你也可以尝试使用较低的值，如 `0.01`，请务必将 **大小** 值保持在 `0.01` 以下，因为它非常容易受到较大值的影响。
 
-For the **Max** value, you can type in a relatively high number such as `5`, since the value will only be active momentarily while the beat of your music is playing.
+**最大** 值可以输入一个相对较高的数字，如 `5`，这样只会在音乐节奏播放时才会生效。
 
-The result of this example can be viewed in the following video. Note that the video has no audio but we added an audio visualizer to show you when we start and stopped the background music:
+整个示例可以在下面的视频中查看。注意，视频没有声音，但我们添加了一个音频可视化器，以显示我们何时开始和停止背景音乐：
 
 <video width="100%" controls>
   <source :src="$withBase('/videos/fluid_audioresponse.mp4')" type="video/mp4">

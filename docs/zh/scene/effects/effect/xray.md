@@ -1,17 +1,18 @@
 ---
 prev: ../overview.md
 ---
-# X-Ray Effect
 
-The **X-Ray** effect allows you to blend two images together through a shape that follows the cursor. By default this shape is a simple circle, but you can change it by replacing its texture. This effect allows you to easily blend two different version of an image together and to hide content that is only revealed by moving the cursor over it.
+# X 射线效果
+
+**X 射线**效果可以让你通过跟随光标的形状将两个图像混合在一起。 默认情况下，形状是一个简单的圆形，但你可以通过替换其纹理来更改它。 这个效果可以让你轻松地将两个不同的图像混合在一起，并隐藏除了通过移动光标才能看到的以外的内容。
 
 ![X-Ray](/wallpaper-engine-docs/img/effects/Xray.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Blend texture:** This is the hidden texture that will be revealed by the X-Ray effect.
-* **Opacity mask:** You can paint this mask to limit the effect only to specific parts of the image.
-* **Sprite:** This is the shape image that will be used to define how the background and blend texture are blended together. Make sure that the borders of the image are fully black.
-* **Blend mode:** This controls how the effect is blended with your image.
-* **Multiply:** This is the strength of the X-Ray blend effect.
-* **Size:** This controls the size of the shape.
+* **混合纹理：** 被隐藏的图像纹理，它将通过X射线效果展现出来。
+* **不透明蒙版：** 绘制蒙版来限制效果在图像中的范围。
+* **精灵：** 定义背景和混合纹理如何混合在一起的形状图像。 请确保图像的边界是全黑的。
+* **混合模式：** X射线效果与图像的混合方式。
+* **镶嵌：** X射线混合效果的强度。
+* **大小：** 控制形状的大小。

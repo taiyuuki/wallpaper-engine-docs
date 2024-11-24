@@ -1,31 +1,36 @@
 ---
 prev: ../overview.md
 ---
-# VHS Effect
 
-The **VHS** effect can add an old-school retro effect to your image. It consists of several components: a scrolling distortion line, a noise overlay, random artifacts and chromatic aberration. The distortion line will shift the image from side to side and scroll from top to bottom by default. The noise overlay will add a faint random pattern over the entire image in combination with small, thin artifacts that randomly appear. Chromatic aberration will separate the colors of the image diagonally.
+# 家用录像系统效果
+
+**家用录像系统** 效果可以给图片添加一个老式的复古特效。它由多个部分组成：滚动失真线、噪声蒙版、随机斑点和色差失真。滚动失真线会将图片从左到右、从上到下滚动。噪声蒙版会在整张图片上添加微弱的随机图案，并与小小的随机斑点混合在一起。色差失真会将图片的颜色分离成斜线。
 
 ![VHS](/wallpaper-engine-docs/img/effects/VHS.gif)
 
-::: warning Please note
-If you only want to utilize the chromatic aberration of this effect, we recommend using the [Chromatic Aberration effect](/wallpaper-engine-docs/scene/effects/effect/chromaticaberration) directly as it offers more customization options and better performance.
+::: warning
+如果只想使用这个效果中的色差失真效果，建议直接使用 [色差](/wallpaper-engine-docs/scene/effects/effect/chromaticaberration) 效果，因为它提供了更多的自定义选项和更好的性能。
 :::
 
-### Effect Settings
+### 效果设置
 
-* **Opacity mask:** This option allows you to limit the effect to a certain part of the image.
-* **Noise:** This texture is used to generate the noise overlay and artifacts.
-* **Blend mode:** This controls how the VHS effect is blended with the background image.
-* **Grayscale:** By enabling this option, the noise overlay will not change the color, only the luminosity of the image.
-* **Alpha:** How much the effect is visible.
+* **不透明蒙版：** 限制效果只在部分图片上生效。
+* **噪声：** 用来生成噪声和斑点的纹理。
+* **混合模式：** 效果与背景图片的混合模式。
+* **灰度：** 启用这个选项后，噪声不会改变图片的颜色，只会改变其亮度。
+* **透明度：** 效果的可见度。
 
-#### Distortion
-* **Distortion speed:** This controls the speed of the distortion line.
-* **Distortion strength:** This controls how much the image is distorted from left to right.
-* **Distortion width:** This controls the width of the distortion line.
+#### 失真
 
-#### Artifacts
-* **Artifacts:** This controls the number of visible artifacts.
-* **Scale:** You can adjust this option to change the size of the noise overlay and artifacts.
-* **Invert artifacts:** By enabling this option, the color is inverted where the artifacts are, otherwise the artifacts will be white dots.
-* **Chromatic aberration:** You can adjust this option to change the distance of the color separation effect.
+* **失真速度：** 这个选项可以控制滚动失真线的速度。
+* **失真强度：** 这个选项可以控制图片从左到右被失真的程度。
+* **失真宽度：** 这个选项可以控制滚动失真线的宽度。
+
+#### 斑点（Artifacts）
+
+* **斑点（工艺品）：** 这个选项可以控制可见的斑点数量。
+* **比例：** 你可以调整这个选项来调整噪声遮罩和斑点的大小。
+* **反转斑点（反转工艺品）：** 启用这个选项后，斑点的颜色会反转，否则斑点会是白点。
+* **色差：** 调整色差失真的距离。
+
+> 译注：Artifacts这个词在现版本的编辑器（v2.5.28）中被翻译为“工艺品”，为避免误导读者，这里还是翻译为更为准确的“斑点”。

@@ -1,36 +1,36 @@
 ---
 prev: ../overview.md
 ---
-# Shine Effect
 
-The **Shine** effect is similar to the [Godrays effect](/wallpaper-engine-docs/scene/effects/effect/godrays) but instead of just adding a single ray, it adds multiple rays in various directions. This can be used to create certain light scenarios but also works well in combination with particle systems if this effect is applied to a full screen or composition layer. The effect can be extensively customized and you might need to tweak a little depending on your use-case.
+# 光照效果
+
+**Shine** 效果类似于 [体积光效果](/wallpaper-engine-docs/scene/effects/effect/godrays)，但是它会在多个方向上发射光线。这可以用来创造某些光照效果，也可以与粒子系统结合使用，如果将该效果应用到全屏或合成层，效果会更好。该效果可以高度自定义，具体效果还需要根据具体需求微调。
 
 ![Shine](/wallpaper-engine-docs/img/effects/Shine.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Edges:** This controls how many rays will be emitted by the shine effect.
-* **Quality:** This allows you to configure how precise the rays will be. Higher values can have a severe impact on performance.
-* **Kernel size:** This allows you to configure how blurry the rays will be. When less quality is used, you generally need more blur to hide artifacts.
-* **Blend mode:** This controls how the shine effect will be blended with the background image.
-* **Noise:** Enabling this option adds natural looking shimmer to the shine effect, it's highly recommended to keep this enabled in most cases to have the shine effect animated.
-* **Copy background:** Enabling this option is useful for transparent images. If you apply the shine effect to a transparent image or text, for example, they will blend incorrectly and you will get a poor result. Enable this option to improve blending over transparent pixels and fix that.
-* **Opacity mask:** You can paint this mask to limit casting of the rays into a certain area, like the sky or sun.
-* **Albedo:** This texture will be scrolled to generate the noise animation.
-* **Color:** This allows you to change the color of the rays.
-* **Blur scale:** This allows you to further reduce or increase the blur that is applied to the shine effect.
+* **边缘：** 光线的数量。
+* **品质：** 光线的精度。较高的值会对性能产生较大影响。
+* **核大小：** 配置光线的模糊程度。当使用较低的品质时，你可能需要更多的模糊来隐藏锯齿。
+* **混合模式：** 配置光线与背景图像的混合模式。
+* **噪声：** 启用这个选项可以让光线产生自然的闪烁效果，建议在大多数情况下都启用噪声。
+* **复制背景：** 启用这个选项对于透明图像很有用。如果应用光线到一个透明的图像或文字上，光线会混合错误，你会得到一个不理想的结果。启用这个选项可以改善透明像素的混合，修复这个问题。
+* **不透明蒙版：** 限制光线的投射范围，比如天空或太阳。
+* **颜色：** 光线的颜色。
+* **模糊缩放比例：** 进一步缩小或放大光线的模糊程度。
 
-#### Noise
-* **Noise amount:** This option controls how much noise variance will be added to the rays.
-* **Noise scale:** This allows you to change the size of the noise variance. A high scale will result in more rapid, flickering changes while a lower scale will make the noise appear more uniform.
-* **Noise smoothness:** This allows you to control the smoothness of the noise texture.
-* **Noise speed:** This option controls how rapidly the noise texture is scrolled and applied to the rays.
+#### 噪声
 
-#### Ray Casting
-* **Direction:** This changes the initial direction of the rays.
-* **Speed:** This controls the speeds that the rays will rotate with.
-* **Ray threshold:** This controls how bright the background image must be before rays are added to the image at any given point.
-* **Ray intensity:** This allows you to change how bright rays will appear.
-* **Ray length:** This allows you to adjust the length of the rays. Keep in mind that longer rays may produce artifacts and you may have to increase the quality option to get a nice looking effect.
+* **噪声量：** 光线的噪声方差。
+* **噪声比例：** 噪声方差的大小。较高的比例会导致光线变化更快，较低的比例会使噪声看起来更加均匀。
+* **噪声平滑：** 噪声纹理的平滑度。
+* **噪声速度：** 噪声纹理滚动速度。
 
+#### 光线投射
+* **方向：** 光线的初始方向。
+* **速度：** 光线的旋转速度。
+* **光线阈值：** 控制背景图像必须足够亮才能在任何给定位置添加光线。
+* **光线强度：** 改变光线的亮度。
+* **光线长度：** 调整光线的长度。长光线可能产生锯齿状的效果，因此需要增加品质选项以获得清晰的效果。
 

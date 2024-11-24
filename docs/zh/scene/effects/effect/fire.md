@@ -1,25 +1,25 @@
 ---
 prev: ../overview.md
 ---
-# Fire Effect
 
-The **Fire** effect allows you to animate existing flames on an image. You can use this effect to colorize and add motion to existing, static flames. If you want to add fire to an image that doesn't include any flames yet, then you may instead want to use the fire particle presets.
+# 火焰效果
+
+**火焰**效果可以对图像上的现有烟火进行动画处理。你可以使用此效果将图像上的火焰进行着色并添加动画效果。如果你想向图像添加火焰，但图像上没有任何烟火，则你可能需要使用预设的火焰粒子。
 
 ![Fire](/wallpaper-engine-docs/img/effects/Fire.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Blend mode:** Controls how the fire blends with the background image.
-* **Refract:** This allows you to choose whether you also want to refract/distort the background image.
-* **Flow map:** This texture needs to be painted by you in order to add fire to the image. You need to draw into the direction the fire should move.
-* **Albedo:** This texture is used to blend color over the background image.
-* **Alpha:** This allows you to adjust the opacity of the effect.
-* **Color start:** This color is blended with the albedo texture where the albedo texture is bright.
-* **Color end:** This color is blended with the albedo texture where the albedo texture is dark.
-* **Distortion:** How much refraction / distortion will be applied.
-* **Feather:** This controls whether there is a smooth transition or hard fall off on the edge of the fire.
-* **Scale:** The size of the albedo and refraction textures.
-* **Smoothness:** How much the albedo texture will be smoothed.
-* **Speed:** How fast the fire moves.
-* **Threshold:** This allows you to adjust the edge of the fire. A higher value will reduce the amount of fire that will be added where you painted.
-
+* **混合模式：** 火焰与背景图像的混合方式。
+* **折射：** 选择是否要对背景图像进行折射/扭曲。
+* **流量图：** 绘制纹理以便向图像添加火焰。你需要沿着火焰移动的方向进行绘制。
+* **反照率：** 反照率纹理用于调整火焰的颜色。
+* **透明度：** 调整效果的透明度。
+* **起点色：** 该颜色与反照率纹理的亮度混合。
+* **末端色：** 该颜色与反照率纹理的暗度混合。
+* **失真：** 应用折射/扭曲的程度。
+* **羽化：** 控制火焰边缘的平滑过渡。
+* **比例：** 反射率纹理和反照率纹理的大小。
+* **光滑：** 反照率纹理的平滑度。
+* **速度：** 火焰移动的速度。
+* **阈值：** 调整火焰边缘。较高的值将减少你绘制的区域中的火焰数量。

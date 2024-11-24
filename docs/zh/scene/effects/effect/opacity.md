@@ -1,13 +1,14 @@
 ---
 prev: ../overview.md
 ---
-# Opacity Effect
 
-The **Opacity** effect allows you to make parts of the image transparent. In general this effect should only be used in combination with any animations. If you can simply edit your image and make it transparent beforehand, then you should definitely opt for that, because that would be better for performance than using an unnecessary effect.
+# 不透明度效果
+
+**不透明度** 效果可以使图像的某些部分透明。通常，此效果应当仅与动态效果结合使用。如果你只是想简单地使图像透明，那么你应该尽量手动编辑图像，而不是使用这个不必要的效果，这样可以节省性能。
 
 ![Opacity](/wallpaper-engine-docs/img/effects/Opacity.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Opacity mask:** This is the opacity mask that will be applied to the image.
-* **Alpha:** This allows you to easily scale the opacity of the entire mask at once.
+* **不透明蒙版：** 此蒙版应用于图像的区域。
+* **透明度：** 一次性调整整个蒙版的不透明度。

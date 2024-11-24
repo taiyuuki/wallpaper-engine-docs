@@ -1,26 +1,29 @@
 ---
 prev: ../overview.md
 ---
-# Cursor Ripple Effect
 
-The **Cursor Ripple** effect allows you to apply a liquid ripple effect to an image layer that only becomes visible when the mouse cursor of a user hovers over it. The effect uses a collision mask so that you can limit it precisely to certain parts of your images.
+# 光标波纹效果
+
+**光标波纹效果**可以将液体涟漪效果应用于图层，它仅在用户鼠标光标悬浮在图层上时可见。 该效果使用碰撞蒙版，因此你可以精确地将其应用于图像的局部区域。
 
 ![Cursor Ripple Effect](/wallpaper-engine-docs/img/effects/Cursor_Ripple.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Perspective:** When enabled, you can re-adjust four points on your image to adjust the perspective of the effect. This makes sense whenever your image is **not** a top-down view. This allows Wallpaper Engine to adjust the effect to the angle of your image, see an example below.
-* **Reflection:** When enabled, the ripple effect will reflect other surfaces of your image.
-* **Shading:** Adds a high and low colored tint to the ripple effect, you can further configure the shading colors down below in the property list when this option is enabled.
-* **Collision mask:** The collision mask determines all areas in which the effect is **not** active. If you only want to apply the effect to some parts of your image, you need to paint all areas in which the effect is disabled. Note that the painted collision mask does not support smooth transitions, so changing the **Hardness** does not have an effect.
-* **Ripple decay:** Determines how fast the water ripples fade away.
-* **Ripple speed:** Determines the speed of the water ripples.
-* **Ripple strength:** Determines the strength of the water ripples. If you see artifacts and outlines of other objects around your desired area, try decreasing the ripple strength.
+* **透视:** 启用此选项后，你可以重新调整图像上的四个点，以调整光标波纹效果的透视。 当图像不是俯视图视角时，这很有用。 这使得wallpaper Engine 可以调整光标波纹效果的角度，参考下方的示例。
+* **反射:** 启用此选项后，光标波纹效果将反射图像上的其他表面。
+* **着色:** 启用此选项后，光标波纹效果将添加高亮和低亮颜色效果，你可以在属性列表中进一步配置颜色。
+* **碰撞蒙版:** 碰撞蒙版确定了光标波纹效果**不**活动的区域。 如果你只想将光标波纹效果应用于图像的局部区域，你需要在禁用光标波效果* 的区域上绘制。 注意，绘制的碰撞蒙版不支持平滑过渡，因此更改**硬度**没有效果。
+* **波纹衰减:** 确定水波渐隐的速度。
+* **波纹速度:** 确定水波的速度。
+* **波纹强度:** 确定水波的强度。 如果你看到其他对象周围的锯齿和轮廓，请尝试降低光标波纹强度。
 
-### Perspective Example
+![Cursor Ripple Perspective](/wallpaper-engine-docs/img/effects/Cursor_Ripple_Perspective.png)
 
-We recommend enabling the **Perspective** option and adjusting the perspective points for this effect whenever the image is not a straight top-down view of the water surface that you want to animate. Depending on the image, this can significantly improve the effect as it removes unintended reflections and will ensure that the water effect moves in a proper angle.
+### 透视示例
 
-Setting this up is rather simple, first enable the **Perspective** option, then re-adjust the four points on the screen so that they move along the surface on your image. Take the following example where we adjusted the perspective points to roughly match the angle of the ground floor:
+无论图像是否是你制作动画想要的水平面视图，我们都建议启用**透视**选项并调整光标波纹效果的透视点。 根据图像的不同，这可以显著提高效果的真实性，因为它会消除意外的反射并确保效果的角度正确。
+
+设置透视效果非常简单，首先启用**透视**选项，然后重新调整屏幕上的四个点，使其沿着图像的表面移动。 以下示例中，我们调整透视点以匹配地面的角度：
 
 ![Cursor Ripple Perspective](/wallpaper-engine-docs/img/effects/Cursor_Ripple_Perspective.png)

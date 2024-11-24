@@ -1,17 +1,20 @@
 ---
 prev: ../overview.md
 ---
-# Refraction Effect
 
-The **Refraction** effect allows you to distort the image based on a normal map. The refraction effect is especially well suited for creating frozen ice effects on windows or any similar distortion.
+# 折射效果
 
-You can also fine-tune the effect by painting an opacity mask. For example: Frozen windows tend to have more ice towards the outer parts of the window, so you could paint a reduced **value** with the opacity mask in the center of the window to make the effect appear less strong towards the middle.
+**折射**效果可以根据法线贴图扭曲图像。折射效果尤其适用于创建冰冻冰层效果的窗口或类似的扭曲。
+
+还可以通过绘制透明度掩码来微调效果。例如：冰冻窗口往往有更多的冰层在外围，所以你可以在窗口中心绘制较低的**值**来降低效果强度。
 
 ![Refraction Effect](/wallpaper-engine-docs/img/effects/Refract.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to. You can also paint lower values at certain parts of the opacity map to lower the effect strength for certain parts of the image.
-* **Normal map:** Allows you to import a custom normal map to alter how the image is distorted.
-* **Scale:** The scale of the distortion details.
-* **Strength:** How much distortion is applied to the image.
+* **不透明蒙版：** 确定图像中哪些区域应用效果。你还可以用透明度图层在特定区域降低效果强度。
+* **法线贴图（标准）：** 导入自定义法线贴图来改变图像的扭曲方式。
+* **比例：** 扭曲细节的大小。
+* **强度：** 图像的扭曲程度。
+
+> 译注：法线贴图（Normal map）在编辑器中被翻译了为“标准”。

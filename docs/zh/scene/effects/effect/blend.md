@@ -1,30 +1,30 @@
 ---
 prev: ../overview.md
 ---
-# Blend Effect
 
-The **Blend** effect allows you to blend multiple images or even animated image layers into one layer.
+# 混合效果
+
+**混合** 效果可以让你将多个图像或甚至动画图像层混合在一起。
 
 ![Blend](/wallpaper-engine-docs/img/effects/Blend.gif)
 
 ::: tip
-You can drag and drop an image layer into the **Blend texture** to dynamically use another image layer as a blend texture.
+你可以将图层拖放到 **混合纹理** 中，以动态地使用另一个图层作为混合纹理。
 :::
 
-### Effect Settings
+### 效果设置
 
-* **Blend mode:** This determines how the images will be blended together. The default option is *multiply* which will multiply the colors, if you want to, for example, fully blend over to a different image, you would set this option to *normal*.
-* **Number of textures:** This allows you to choose between how many textures you want to blend in this effect, you can choose up to 6 textures to be blended at once.
-* **Blend texture 1 - 6:** These are the different input textures that you want to overlay over the current image. You can import a different, static texture here or even drag & drop another image layer into these options. That way you can blend different animated layers together.
-* **Blend amount 1 - 6:** This allows you to control how strongly each individual blend texture will be blended on top of the previous texture.
-* **Opacity mask:** The opacity mask will determine which region of the image is affected by the blend effect at all. By default the entire image will be blended.
+* **混合模式：** 这决定了图像将如何融合在一起。默认选项是*Multiply*，这将使颜色相乘，如果想完全混合图像到另一个图像，您可以设置此选项为*Normal*。    
+* **纹理数量：** 要混合的纹理数量，你最多可以对6个纹理进行混合。    
+* **混合纹理 1-6：** 这些是将在当前图像上叠加的不同输入纹理。你可以导入不同的静态纹理或甚至将另一个图层拖放到这些选项中。这样，你就可以将不同的动画层混合在一起。    
+* **混合量 1-6：** 控制每个单独的混合纹理对前一个纹理的混合强度。    
+* **不透明蒙版：** 不透明蒙版将确定图像中哪些区域受到混合效果的影响。默认情况下，整个图像都将被混合。    
+* **写入透明度：** 修改底层图像的不透明度。默认情况下，仅颜色会被混合，但是启用此选项还会根据混合纹理的不透明度修改图层的不透明度。
 
-#### Blend Transform
+#### 混合变化
 
-* **Transform:** If you only want to show the blend effect in a smaller region of the image, you can enable the transform option and you will get access to a few more settings to control and shrink the textures that will be blended on top. Enabling this option will also ensure that the aspect ratio of the blended textures will not be changed anymore.
-* **Transform repeat:** This settings control how blending is performed outside of the blended images. If you choose to make them smaller, you can use this option to *clip* (cut off the effect outside of the blended textures) or *repeat* (repeat the whole blended texture, like a tiled image) or *clamp* (only repeat the outer pixels of the blended texture).
-* **Angle:** This is the transform angle of the blended textures, if transform is enabled.
-* **Offset:** This is the position offset of the blended textures, if transform is enabled.
-* **Scale:** This allows you to resize the blended textures, if transform is enabled.
-
-* **Write alpha:** This option allows you to also modify the opacity of the underlying image. By default, only colors will be blended, but enabling this option will also modify the opacity of the layer based on the opacity of the blended textures.
+* **变化：** 如果你只想对部分图像添加混合效果，你可以启用**变化**选项，以获得更多设置来控制和缩小混合的纹理。启用此选项需要确保混合纹理的纵横比例不会更改。
+* **重复变化：** 此设置控制在混合图像之外的混合方式。如果你想让它们只作用于局部，你可以设置为*裁剪*（将效果截断到混合纹理之外）、*重复*（重复整个混合纹理，就像平铺图像一样）或*固定 UV*（仅重复混合纹理边缘的像素）。
+* **角度：** 这是混合纹理的变化角度，启用变化时有效。
+* **偏移：** 这是混合纹理的位置偏移，启用变化时有效。
+* **缩放：** 调整混合纹理的大小，启用变化时有效。

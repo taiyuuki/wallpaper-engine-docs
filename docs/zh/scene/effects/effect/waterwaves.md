@@ -1,17 +1,18 @@
 ---
 prev: ../overview.md
 ---
-# Water Waves Effect
 
-The **Water Waves** applies a wave animation to the image that works well for water, clothes and hair animations. 
+# 水波效果
+
+**水波**效果可以为水、衣服和头发动画提供良好的波动动画。
 
 ![Water Ripple](/wallpaper-engine-docs/img/effects/Water_Waves_Complete.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to.
-* **Direction:** The direction of the waves.
-* **Perspective:** Scales the waves towards the center of the image to simulate a perspective distortion.
-* **Scale:** Sets the frequency of the waves.
-* **Speed:** Defines how fast the waves animate.
-* **Strength:** Control how much the image is distorted by the wave.
+* **不透明蒙版：** 绘制蒙版，确定应用效果的图像区域。
+* **方向：** 水波的方向。
+* **透视：** 缩放水波到图像中心模拟透视。
+* **比例：** 设置水波起伏的频率。
+* **速度：** 设置水波动画的速度。
+* **强度：** 控制图像被水波扭曲的程度。

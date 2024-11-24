@@ -1,38 +1,39 @@
 ---
 prev: ../overview.md
 ---
-# Water Ripple Effect
 
-The **Water Ripple** distorts the image to add a ripple effect. The effect can optionally be scrolled along a specified direction. The effect can be used to animate still waters, hot air and to some extent clothing and hair.
+# 水波纹效果
+
+**水波纹**可以给图像添加涟漪效果。该效果可以选择沿指定方向滚动。该效果可用于水、热气、局部衣物和头发。
 
 ![Water Ripple](/wallpaper-engine-docs/img/effects/Water_ripple.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to.
-* **Animation speed:** How fast the ripple is animated.
-* **Ratio:** Increases the effect horizontally or vertically.
-* **Ripple scale:** The scale of the ripple details.
-* **Ripple strength:** How much distortion is applied to the image.
-* **Scroll direction:** In which direction to scroll the effect.
-* **Scroll speed:** How fast the ripples move the image.
+* **不透明蒙版：** 绘制蒙版，以确定图像上应用效果的区域。
+* **动画速度：** 波纹动画的速度。
+* **比率：** 水平或垂直放大效果。
+* **涟漪比例：** 波纹细节的大小。
+* **涟漪强度：** 应用于图像的扭曲程度。
+* **滚动方向：** 效果滚动的方向。
+* **滚动速度：** 波纹移动图像的速度。
 
-## Sample Usage
+## 使用示例
 
-### Desert Heat
+### 沙漠热浪
 
-By tweaking the properties of the effect, the water ripple effect can also be used to create a rising heat effect. In the following video we showcase how to do this:
+通过调整效果的属性，水波纹效果可用于创建上升的热浪效果。在下面的视频中，我们将展示如何做到这一点：
 
-First, paint the opacity mask that covers the area of the image that you want the heat to be visible. In most cases, you mainly want the background to showcase this heat effect in the distance. In our example below, we paint an opacity mask with a full *Amount* of 255 around the horizon of the image while leaving the car and the foreground at a very low value or 0. We then change the properties of the animation:
+首先，绘制一个不透明蒙版，以确定图像上应用效果的区域。在大多数情况下，你主要希望背景展示这种热量效果。在我们的示例中，我们用一个*数量*为255的不透明蒙版覆盖图像的天空区域，同时将车和前景的不透明度设为很低的值或0。然后，我们调整动画的属性：
 
-* **Animation speed:** 0.15
-* **Ratio:** 10
-* **Ripple strength:** 0.1
-* **Ripple scale:** 0.1
-* **Scroll direction:** 0 *(meaning upwards)*
-* **Scroll speed:** 0.15
+* **动画速度：** 0.15
+* **比率：** 10
+* **涟漪强度：** 0.1
+* **涟漪比例：** 0.1
+* **滚动方向：** 0 *(表示向上滚动)*
+* **滚动速度：** 0.15
 
-Keep in mind that there are no right or wrong values, you can experiment around and tweak these values to your liking and to match the scene of your image! After you have set these values, you can fix any details in your opacity mask that you might have missed while painting for the first time. Have a look at the following video to get an idea of how we did it:
+请记住，没有正确或错误的值，你可以随意调整这些值以匹配你的图像场景！在设置这些值之后，请检查不透明蒙版是否有任何细节遗漏。看下面的视频，了解我们是如何做到的！
 
 <video width="100%" controls loop autoplay>
   <source :src="$withBase('/videos/water_ripple_heat.mp4')" type="video/mp4">

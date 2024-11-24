@@ -1,22 +1,23 @@
 ---
 prev: ../overview.md
 ---
-# Nitro Effect
 
-The **Nitro** effect allows you to add lightning flashes to an image. Two scrolling textures are blended on top of one another and then filtered to achieve this effect.
+# 电气效果
+
+**电气** 效果可以闪电闪烁添加到图像中。两个滚动的纹理相互混合，然后进行过滤实现此效果。
 
 ![Nitro](/wallpaper-engine-docs/img/effects/Nitro.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Blend mode:** How the nitro effect is blended with the background. In HDR mode the option *add* can be used to get the best HDR glow effects.
-* **Write alpha:** Enabling this option will make the background image transparent where there is no nitro effect overlayed.
-* **Albedo:** The texture used to generate the nitro effect.
-* **Opacity mask:** The opacity mask can be used to limit the effect to certain parts of the image.
-* **Bounds:** This controls the width of the nitro effect. Increase the interval between these values to make the lines of the effect wider.
-* **Color start:** The first color that is used for the nitro lines. This color is dominant where the effect is strongly visible.
-* **Color end:** The second color that is used for the nitro lines. This color is dominant where the effect is just barely visible.
-* **Multiply:** How strong the effect is visible.
-* **Scale:** The size of the effect along the X and Y axes.
-* **Smoothness:** You can use this to smoothen the lines of the effect.
-* **Speed:** The scrolling speed of the texture used to generate the effect. X and Y are used for the first sample and Z and W are used for the second sample.
+* **混合模式：** 电气效果如何与背景图像混合。在开启 HDR 高光的情况下，可以使用 *Add* 模式以获得最佳 HDR 高光效果。
+* **写入透明度：** 启用此选项将使背景图像透明，其中没有电气效果覆盖。
+* **反照率：** 用于生成电气效果的纹理。
+* **不透明蒙版：** 限制电气效果只在特定区域生效。
+* **界限：** 控制电气效果的宽度。增加两个值之间的间隔可以使电气效果的线条变宽。
+* **起点色：** 用于电气线条的第一个颜色。在电气效果强烈可见的地方，此颜色占主导地位。
+* **末端色：** 用于电气线条的第二个颜色。在电气效果仅可见的边缘区域，此颜色占主导地位。
+* **镶嵌：** 电气效果的强度。
+* **比例：** 电气效果的大小，沿 X 和 Y 轴。
+* **光滑：** 平滑电气效果的线条。
+* **速度：** 用于生成电气效果的纹理的滚动速度。X 和 Y 用于第一个样本，Z 和 W 用于第二个样本。

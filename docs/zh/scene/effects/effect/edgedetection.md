@@ -1,19 +1,20 @@
 ---
 prev: ../overview.md
 ---
-# Edge Detection Effect
 
-The **Edge Detection** effect applies a filter to the image that separates edges and surfaces by color. By default, edges will become black and surfaces will be white.
+# 边缘检测效果
+
+**边缘检测**效果通过颜色滤镜将图像中的边缘与表面分离。默认情况下，边缘将变黑，表面将变白。
 
 ![Edge Detection](/wallpaper-engine-docs/img/effects/Edge_detection.png)
 
-### Effect Settings
+### 效果设置
 
-* **Blend mode:** How the effect blends with the background.
-* **Alpha:** The opacity of this effect.
-* **Brightness:** How bright the colors of this effect are.
-* **Detection multiply:** This allows you to increase the brightness of detected edges.
-* **Detection threshold:** This allows you to control the minimal threshold before an edge is detected.
-* **Outline color:** This is the color of the edges.
-* **Outline background:** This is the color of the background.
-* **Detection size:** This option controls the size/width of the edges.
+* **混合模式：** 与背景的效果混合方式。
+* **透明度：** 效果的不透明度。
+* **亮度：** 效果的颜色亮度。
+* **检测乘数：** 增加检测到的边缘的亮度。
+* **检测阈值：** 控制边缘检测的最小阈值。
+* **轮廓颜色：** 边缘的颜色。
+* **轮廓背景：** 背景的颜色。
+* **检测尺寸：** 边缘的大小/宽度。

@@ -1,23 +1,24 @@
 ---
 prev: ../overview.md
 ---
-# Twirl Effect
 
-The **Twirl** effect allows you to create a spiral animation around a point in your image. The spiral can be round or have an elliptical shape, the shape can be easily configured with the editor controls.
+# 旋扭效果
+
+**旋扭** 效果允许您在图像中创建以某个点为中心的旋转动画。旋转可以是圆形的，也可以是椭圆形的，可以通过编辑器控件轻松配置形状。
 
 ![Twirl](/wallpaper-engine-docs/img/effects/Twirl.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Elliptical:** If enabled, the twirl effect can be turned into an elliptical shape instead of being perfectly round.
-* **Inner:** If enabled, the effect will apply to the inside area of the effect rather than the borders.
-* **Noise:** Allows you to add random movements to the effect animation.
-* **Repeat:** Will repeat the texture if the distortion exceeds the size of the image.
-* **Amount:** The overall strength of the effect.
-* **Angle:** Only visible when **Elliptical** option is enabled. Changes the **angle** of the ellipsis, can also be configured through editor controls.
-* **Center:** The point around which the effect applies the spiral effect.
-* **Feather:** Strength in which the effect is smoothed into surrounding areas of the image.
-* **Time offset:** Adds a small delayed start to the effect, this can be useful if you are using the effect multiple times throughout your wallpaper and want to ensure they are not synchronized.
-* **Ratio:** Only visible when **Elliptical** option is enabled. Changes the **width** of the ellipsis, can also be configured through editor controls.
-* **Size:** Changes the overall area of the effect.
-* **Speed:** The speed of the effect motion.
+* **椭圆：** 如果启用，则旋转效果可以变成椭圆形状，而不是完美的圆形。
+* **内：** 如果启用，则效果将应用于效果内部区域，而不是边界。
+* **噪声：** 添加随机运动到效果动画中。
+* **重复：** 如果扭曲超过图像大小，则会重复纹理。
+* **数量：** 效果的整体强度。
+* **角度：** 仅当 **椭圆** 选项启用时才可见。更改 **椭圆** 的角度，也可以通过编辑控件进行设置。
+* **中心：** 效果应用旋转效果的中心点。
+* **羽化：** 效果在图像周围的平滑程度。
+* **时间偏移：** 向效果添加一个小的延迟，这有助于在壁纸中使用多个效果时，确保它们不是同步的。
+* **比率：** 仅当 **椭圆** 选项启用时才可见。更改 **椭圆** 的宽度，也可以通过编辑控件进行设置。
+* **大小：** 改变效果的大小。
+* **速度：** 效果运动的速度。

@@ -1,26 +1,27 @@
 ---
 prev: ../overview.md
 ---
-# Blend Gradient Effect
 
-The **Blend Gradient** effect allows you to blend two images into one another using a *gradient mask*.
+# 混合渐变效果
 
-Create blend animations it with **SceneScript** or a **Timeline Animation** by modifying the **Blend amount** value from `0.00` until `1.00` over time.
+**混合渐变** 效果可以让你使用渐变蒙版将两个图像混合在一起。
+
+通过使用 **SceneScript** 或 **时间轴动画** 修改 **混合量** 的值，可以创建混合动画。
 
 ![Blend](/wallpaper-engine-docs/img/effects/Blend_Gradient.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Blend mode:** This determines how the images will be blended together.
-* **Edge Glow:** When enabled, a colored outline is added to the blend animation. You can choose the **Edge color** and **Edge brightness** down in the settings.
-* **Transform:** When enabled, allows you to transform the gradient map by changing its angle, scale and offset down below in the settings.
-* **Write alpha:** When enabled, allows you to modify the transparency by modifying the *Alpha* value down below in the settings.
-* **Blend texture:** The texture that you want to blend to when the **Blend amount** value reaches `1.00`.
-* **Gradient mask:** The mask used for the blend animation. Darker areas will reveal the blend texture first.
-* **Opacity mask:** Allows you to draw a mask to conditionally enable, disable or lower the intensity of the effect.
-* **Gradient scale:** Allows you to smoothen the gradient by increasing the scale of the effect.
-* **Blend amount:** The blend amount value is crucial for the effect. Modify it with **SceneScript** or a **Timeline Animation** to create a blend animation. Use values from `0.00` until `1.00`.
+* **混合模式：** 图像如何混合在一起。
+* **边缘发光：** 当启用时，将添加彩色边框以增强混合动画。启用后可以在下方设置 **边缘颜色** 和 **边缘亮度**。
+* **变化：** 当启用时，可以通过更改角度、缩放和偏移来变换渐变图。
+* **写入透明度：** 当启用时，可以通过修改 *透明度* 值来修改效果的透明度。
+* **混合纹理：** 要在 *混合量** 为 `1.00` 时混合的纹理。
+* **渐变蒙版：** 用于混合动画的蒙版。暗区域将首先显示混合纹理。
+* **不透明蒙版：** 绘制蒙版以在部分区域启用、禁用或降低效果的强度。
+* **渐变缩放：** 使渐变效果更平滑，通过增加效果的缩放来实现。
+* **混合量：** 影响混合效果的关键参数。使用 **SceneScript** 或 **时间轴动画** 修改 **混合量** 来创建混合动画。取值范围为 `0.00` 到 `1.00`。
 
 ::: tip
-You can drag and drop an image layer into the **Blend texture** to dynamically use another image layer as a blend texture.
+你可以将图层拖放到 **混合纹理** 中，以动态地使用另一个图层作为混合纹理。
 :::

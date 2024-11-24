@@ -1,39 +1,40 @@
 ---
 prev: ../overview.md
 ---
-# God Rays Effect
 
-The **God Rays** effect adds shimmering god rays to the image which are emitted from bright spots and can also be masked to ensure only light sources emit them.
+# 体积光效果
+
+**体积光**效果可以让图像产生一种光泽感，从亮点发射出光线。它可以被遮罩，以确保只有光源才会发射光线。
 
 ::: tip
-This effect can be heavy on performance and you may want to consider adding a user property to allow users to turn this off.
+体积光效果对性能有很大的影响，你应该考虑添加一个用户属性，让用户可以关闭这个效果。
 :::
 
 ![Godrays](/wallpaper-engine-docs/img/effects/Godrays.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Cast type:** The *radial* cast type will create rays in a circular fashion, centered around a specific point that you can change with the *center* option. The *directional* cast type will create rays that go into a fixed direction, that you can change with the *direction* option.
-* **Quality:** This allows you to configure how precise the rays will be. Higher values can have a severe impact on performance.
-* **Kernel size:** This allows you to configure how blurry the god rays will be. When less quality is used, you generally need more blur to hide artifacts.
-* **Blend mode:** This controls how god rays will be blended with the background image.
-* **Noise:** Enabling this option adds natural looking shimmer to the rays, it's highly recommended to keep this enabled in most cases to have the god rays animated.
-* **Copy background:** Enabling this option is useful for transparent images. If you apply the god rays to a transparent image or text, for example, they will blend incorrectly and you will get a poor result. Enable this option to improve blending over transparent pixels and fix that.
+* **转换类型（投射类型）：** Radial投射（径向投射）会在一个圆上产生光线，中心点可以用“中心”选项进行调整。Directional投射（方向投射）会产生一个固定方向的光线，方向可以用“方向”选项进行调整。
+* **品质：** 配置光线的精度。较高的值会对性能有很大的影响。
+* **核大小：** 配置光线的模糊程度。当使用较低的品质时，你可能需要更多的模糊来隐藏锯齿。
+* **混合模式：** 配置光线与背景图像的混合模式。
+* **噪声：** 启用这个选项可以让光线产生自然的闪烁效果，建议在大多数情况下都启用噪声。
+* **复制背景：** 启用这个选项对于透明图像很有用。如果应用光线到一个透明的图像或文字上，光线会混合错误，你会得到一个不理想的结果。启用这个选项可以改善透明像素的混合，修复这个问题。
+* **不透明蒙版：** 限制光线的投射范围，比如天空或太阳。
+* **颜色：** 光线的颜色。
+* **模糊缩放比例：** 进一步缩小或放大光线的模糊程度。
 
-* **Opacity mask:** You can paint this mask to limit casting of the god rays into a certain area, like the sky or sun.
-* **Albedo:** This texture will be scrolled to generate the noise animation.
-* **Color:** This allows you to change the color of the rays.
-* **Blur scale:** This allows you to further reduce or increase the blur that is applied to the god rays.
+#### 噪声
 
-#### Noise
-* **Noise amount:** This option controls how much noise variance will be added to the rays.
-* **Noise scale:** This allows you to change the size of the noise variance. A high scale will result in more rapid, flickering changes while a lower scale will make the noise appear more uniform.
-* **Noise smoothness:** This allows you to control the smoothness of the noise texture.
-* **Noise speed:** This option controls how rapidly the noise texture is scrolled and applied to the rays.
+* **噪声量：** 光线的噪声方差。
+* **噪声比例：** 噪声方差的大小。较高的比例会导致光线变化更快，较低的比例会使噪声看起来更加均匀。
+* **噪声平滑：** 噪声纹理的平滑度。
+* **噪声速度：** 噪声纹理滚动速度。
 
-#### Ray Casting
-* **Center:** Only for *radial* casting. This changes the center from where the rays are emitted.
-* **Direction:** Only for *directional* casting. This changes the direction of the rays.
-* **Ray threshold:** This controls how bright the background image must be before rays are added to the image at any given point.
-* **Ray intensity:** This allows you to change how bright rays will appear.
-* **Ray length:** This allows you to adjust the length of the rays. Keep in mind that longer rays may produce artifacts and you may have to increase the quality option to get a nice looking effect.
+#### 光线投射
+
+* **中心：** 仅用于径向投射。改变光线的发射中心。
+* **方向：** 仅用于方向投射。改变光线的方向。
+* **阈值：** 背景图像的亮度，只有当背景图像足够亮时，光线才会被添加到图像的任何位置。
+* **光线强度：** 光线的亮度。
+* **光线长度：** 光线的长度。长的光线可能产生锯齿状的效果，你可能需要增加品质选项以获得清晰的效果。

@@ -1,40 +1,41 @@
 ---
 prev: ../overview.md
 ---
-# Pulse Effect
+# 脉动效果
 
-The **Pulse** effect can is useful for animating any type of lighting. It can either pulsate a light in set intervals or react to any audio being played on the system.
+**脉动**效果可以用于对任何类型的光照进行动画化。它可以以固定间隔脉动光照，也可以响应系统上正在播放的音频。
 
 ![Pulse](/wallpaper-engine-docs/img/effects/Pulse.gif)
 
-### Effect Settings
+### 效果设置
 
-The effect has two different modes, a standard one and an audio response mode. The following settings are shared across both modes:
+该效果有两种不同的模式，一种是标准模式，另一种是音频响应模式。以下设置在两种模式下都适用：
 
-* **Opacity mask:** A paintable mask to determine which area of the image is affected. By default the entire image will pulse, so in most cases you want to paint the opacity mask to limit the effect of the pulse to certain areas of the image (mainly areas you want to light up).
-* **Blend mode:** How the pulse color is blended with the background image.
-* **Pulse alpha:** Make the pulse animation affect the opacity of the image.
-* **Pulse color:** Make the pulse animation affect the color of the image.
-* **Tint high:** Color applied to the bright state of the pulse when the **Pulse color** setting is enabled.
-* **Tint low:** Color applied to the dark state of the pulse when the **Pulse color** setting is enabled.
+* **不透明度蒙版**： 可绘制的蒙版，用于确定图像受到影响的区域。 默认情况下，整个图像都会脉动，因此在大多数情况下，你需要绘制不透明度蒙版，以限制脉动的影响范围（你想要照亮的主要区域）。
+* **混合模式**： 脉动颜色与背景图像的混合模式。
+* **脉动透明度**： 使脉动动画影响图像的不透明度。
+* **脉动颜色**： 使脉动动画影响图像的颜色。
+* **色高**： 当启用 **脉动颜色** 设置时，脉动高亮状态下应用的颜色。
+* **色低**： 当启用 **脉动颜色** 设置时，脉动低亮状态下应用的颜色。
 
-#### Default Mode
-When the option **Audio response** at the top of the effect settings is set to **None**, the pulse effect will pulsate light in a regular interval. The following settings are available:
+#### 默认模式
 
-* **Noise amount:** How much you want the animation to flicker.
-* **Noise speed:** How fast it should flicker.
-* **Power:** Exponent for the pulse animation.
-* **Pulse amount:** A multiplier for the pulse output value.
-* **Pulse bounds:** This maps how much time the pulse is bright and dark. For example, set to 0.8, 1 for a short pulse.
-* **Time offset:** Adds a small delayed start to the effect, this can be useful if you are using the effect multiple times throughout your wallpaper and want to ensure they are not synchronized.
-* **Pulse speed:** The speed of the pulse animation.
+当 **音频响应** 选项在效果设置的顶部设置为 **无** 时，脉动效果将以固定间隔脉动光照。以下设置可用：
 
-#### Audio response mode
+* **噪声量：** 动画抖动的程度。
+* **噪声速度：** 动画抖动的速度。
+* **功率：** 脉动动画的强度指数。
+* **脉冲量：** 脉动输出值的乘数。
+* **脉冲范围：** 脉动高亮和低亮的持续时间。例如，设置为 0.8，1 代表短脉冲。
+* **脉冲相位：** 效果的周期性延迟，当你在壁纸中应用了多个相同的效果时，这一项可以确保它们不是同步的。
+* **脉冲速度：** 脉动动画的速度。
 
-By changing the **Audio response** option from **None** to any other option will cause the pulse effect to react to audio playing on the computer. In most cases, you want to set this value to **Center**, this will cause the pulse to appear for audio played on both the left or right audio channel. When set to **Left** or **Right**, the effect will only listen to either the left or right audio channel, which can be useful if you want to only light up an element when audio is played on a specific side.
+#### 音频响应模式
 
-* **Audio amount:** The strength of the pulse effect in relation to the audio levels being played.
-* **Audio bounds:** The bounds control at what points the audio response starts and stops. If the audio bounds are configured to be 0 and 1, then the audio effect will slowly fade. A more sudden effect can be achieved by making the bounds more narrow. For example, if you set the audio bounds to 0.8 and 1, the audio responsiveness will only take effect for volume levels between 0.8 and 1 which makes the audio effect more sudden and limits it to the upper range of volume levels.
-* **Audio exponent:** Exponential power of the audio response to bias the response towards lower or higher values. By increasing this value, you will reduce how strongly low audio volume will affect the pulse effect.
-* **Frequency max:** The **highest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 1 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
-* **Frequency min:** The **lowest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 0 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
+通过将 **音频响应** 选项从 **无** 切换到其他选项，可以使脉动效果响应计算机上正在播放的音频。在大多数情况下，你需要将此值设置为 **中心**，这可以让脉动效果响应在左、右音频通道上播放的音频。当设置为 **左** 或 **右** 时，效果将只监听左或右音频通道，当你只想在特定侧播放音频时有用。
+
+* **音频总量：** 对播放音频进行响应的脉动效果强度。
+* **音频界限：** 音频响应何时开始和停止的边界控制。如果音频界限配置为 0 和 1，则音频效果将淡入淡出。设置更窄的界限，可以实现更突然的效果。例如，如果将音频边界设置为 0.8 和 1，则音频响应只会在音量级别介于 0.8 和 1 之间起作用，这使音频效果更突然，同时也起到了限制音量级别上限的作用。
+* **音频指数：** 音频响应的指数。通过增加此值，可以减少低音量对脉动效果的影响。
+* **最大频率：** 效果响应的**最高**音频频率。值从 0 到 15，其中 0 是低音频，15 是高音频。例如，如果你想让脉动效果只响应音乐节拍的节奏（因为节拍通常反映了低音频频率），则可以将此值设置为 1。
+* **最小频率：** 效果响应的**最低**音频频率。值从 0 到 15，其中 0 是低音频，15 是高音频。例如，如果你想让脉动效果只响应音乐节拍的节奏（因为节拍通常反映了低音频频率），则可以将此值设置为 0。

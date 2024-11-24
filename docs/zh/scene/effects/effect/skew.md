@@ -1,21 +1,22 @@
 ---
 prev: ../overview.md
 ---
-# Skew Effect
 
-The **Skew** effect allows you to shift an edge of the image horizontally or vertically.
+# 歪斜效果
+
+**歪斜效果**可以沿水平或垂直方向移动图像的边缘。
 
 ::: tip
-You should apply this effect only on top of other existing effects. If you apply this effect merely to a static image, consider modifying your image in an image editor instead to improve the performance of the wallpaper, since there is no need to use a live effect for that.
+应当仅在其他效果之上应用此效果。如果你只是想将此效果用于静态图像，不需要实时效果，则你应该考虑使用图像编辑器进行处理，以改进图像的性能。
 :::
 
 ![Skew](/wallpaper-engine-docs/img/effects/Skew.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Mode:** Whether you want to distort the pixels or the edges of the layer. If you choose *UV* then you will distort the pixels which allows you to add additional effects after this effect and is usually what you want to use. If you choose *vertex* you will distort the edges of the layer and it will only work correctly if this effect is the last one that will be displayed.
-* **Repeat:** Whether the image should repeat until the edges or be clamped. This is only relevant for the UV option.
-* **Bottom:** Shifting along the bottom edge.
-* **Left:** Shifting along the left edge.
-* **Right:** Shifting along the right edge.
-* **Top:** Shifting along the top edge.
+* **模式：** 取决于你想扭曲“像素”还是“边缘”。如果选择“UV”，则会扭曲像素，你可以在此效果之后添加其他效果，通常这是最常使用的选项。如果选择“Vertex”，则会扭曲边缘，并且仅当此效果是效果列表中最后一个效果时才会生效。
+* **重复：** 决定图像是平铺还是拉伸到边缘。此选项仅适用于“UV”选项。
+* **底部：** 向下偏移。
+* **左边：** 向左偏移。
+* **右边：** 向右偏移。
+* **顶部：** 向上偏移。

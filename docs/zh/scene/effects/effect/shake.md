@@ -1,37 +1,38 @@
 ---
 prev: ../overview.md
 ---
-# Shake Effect
 
-The **Shake** effect can be used to continuously shake parts of an image back and forth. This effect can be used to shake natural objects but also to create **breathing** animations of any characters that are part of your scene.
+# 摇动效果
+
+**摇动**效果可以用来使图像中的部分持续摇晃。这个效果可以用来抖动自然物体，也可以用来创建角色的呼吸动画。
 
 ![Shake](/wallpaper-engine-docs/img/effects/Shake.gif)
 
-### Effect Settings
+### 效果设置
 
-The effect has two different modes, a standard one and an audio response mode. The following settings are shared across both modes:
+该效果有两种模式，一种是标准模式，另一种是音频响应模式。以下设置适用于两种模式：
 
-* **Direction:** Allows you limit the movement of the shake. By default, the shake will go *left* and *right* which means it will extend in both directions of the image you are animating. In special situations this may be unwanted and you can use this option to limit the shake effect so it will only distort the image along one direction and not both.
-* **Noise:** Allows you to add a bit of randomized movement to the shake animation. By default the shake animation is very periodic and uniform, with *noise* enabled, it will vary in strength and position over time.
-* **Shake Direction:** Allows you to pain the direction of the shake effect in a so-called *flow mask*. The shake will follow the direction of your cursor.
-* **Time offset:** Allows you to paint different areas of the image that will have a delay in the animation, where the *Amount* of the painted area represents the delay. This is useful if you want to use one shake effect on multiple characters or elements on the image. Without different time delays, all elements would shake in sync which can often look odd, especially when you are animating multiple breathing characters.
-* **Opacity:** Allows you to draw certain areas of the image that will not be included in the effect (by setting the *Amount* to 0 while drawing) or where the effect is reduced (any *Amount* below 255).
-* **Bounds:** Allows you to change the timing of the animation. By default the animation will cover the full time range from 0 to 1. If you want to, for example, increase the amount of time that the animation will show the maximum amount of shake, you can change the bounds to *0* and *0.5*. This means that the full animation completes early at *0.5* and will stay there for a while. This is useful for making simple eye blinking animations where you want the shake to be disabled for a long time and only show up for a very short moment.
-* **Strength:** How much distance the shake animation will cover.
+* **方向：** 限制摇晃的方向。默认情况下，摇晃将依次向左和向右两个方向移动，这意味着它将扩展到你正在动画化的图像的两个方向。在特殊情况下，这可能不是你希望的，你可以使用此选项来限制摇晃效果，使其仅沿着一个方向扭曲图像，而不是两个方向。
+* **噪声：** 添加一些随机移动到摇晃动画中。默认情况下，摇晃动画是周期性且均匀的，启用*噪声*选项后，它会随时间变化强度和位置。
+* **摇动方向：** 一种被称为*流式蒙版*的摇动方式。摇晃将遵循你鼠标光标绘制的方向。
+* **时间偏移：** 绘制图像的不同区域，这些区域将在动画中具有延迟，其中绘制的区域的*数量*表示延迟程度。这对于想在图像上多个角色或元素使用多个摇晃效果时很有用。如果没有不同的时间延迟，所有元素将同步摇晃，这通常会看起来很不自然，尤其是存在多个角色的呼吸动画时。
+* **不透明度：** 绘制图像的某些区域，这些区域将不包含在效果中（通过设置*数量*为0并进行绘制）或效果减弱（设置*数量*为任意低于255的值并进行绘制）。
+* **界限：** 更改动画在整个动画时段中的起始时间。默认情况下，0至1表示动画将覆盖整个动画时段。例如，如果你将界限更改为*0*和*0.5*，这意味着动画会在整个持续时间的*50%*时刻全部完成，剩余时间将保持动画结束时的状态直至整个动画时段结束。这可以用于创建简单的眨眼动画，只在眨眼的瞬间展现摇动效果，而在剩余动画时段内保持静止。
+* **强度：** 摇动动画的距离。
 
-#### Default Mode
-When the option **Audio response** at the top of the effect settings is set to **None**, the shake effect will shake the selected parts of the image in a regular interval. The following settings are available:
+#### 默认模式
 
-* **Friction:** Biases towards the inner or outer part of the animation. For example, if you have shaking grass in the wind, you usually want a bit more erratic movement, you can use this option to achieve that.
-* **Speed:** How fast the shake plays.
+当**音频响应**选项在效果设置的顶部设置为**无**时，摇动效果将以固定间隔摇晃选定的图像部分。以下设置可用：
 
-#### Audio response mode
+* **摩擦：** 使得动画偏向内部或外部。例如，如果你要制作在风中摇晃的草，通常需要更加不规则的运动，可以使用此选项来实现。
+* **速度：** 摇动的速度。
 
-By changing the **Audio response** option from **None** to any other option will cause the shake effect to react to audio playing on the computer. In most cases, you want to set this value to **Center**, this will cause the shake to appear for audio played on both the left or right audio channel. When set to **Left** or **Right**, the effect will only listen to either the left or right audio channel, which can be useful if you want to only shake an element when audio is played on a specific side.
+#### 音频响应模式
 
-* **Audio amount:** The strength of the shake effect in relation to the audio levels being played.
-* **Audio bounds:** Allows you to determine how the minimum and maximum value of the audio response will cause the shake animation to change. With the default bounds of *0* and *1* it will map the whole shake movement to the minimum and maximum of the audio response volume. If you change this to *0* and *0.1*, for example, then the shake animation will be very responsive and shake with to the strongest movement even with only a little amount of audio being registered.
-* **Audio exponent:** Allows you to change the audio response curve or power. By increasing this value, you will reduce how strongly low audio volume will affect the animation.
-* **Frequency max:** The **highest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 1 if you want the shake effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
-* **Frequency min:** The **lowest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 0 if you want the shake effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
+通过将**音频响应**选项从**无**更改为其他选项，摇动效果将对计算机上正在播放的音频做出反应。在大多数情况下，你希望将此值设置为**中心**，这将导致摇晃出现在左或右音频通道上的音频。如果设置为**左**或**右**，则效果将只监听左或右音频通道，这在你只希望在特定侧播放音频时很有用。
 
+* **音频强度：** 对播放音频进行响应的摇动效果强度。
+* **音频界限：** 音频响应的最小值和最大值如何导致摇动动画发生变化。默认界限*0*和*1*，它将整个摇动运动映射到音频响应音量的最小和最大值。例如，如果将其更改为*0*和*0.1*，则摇动动画将非常灵敏，即使只有很少的音频，也会发生摇动。
+* **音频指数：** 更改音频响应曲线或功率。增加此值，可以减少低音量对动画的影响。
+* **最大频率：** 效果响应的**最高**音频频率。值从0到15，其中0是低音频，15是高音频。例如，如果你想让摇动效果只响应音乐节拍（因为节拍通常反映了低音频频率），请将其设置为1。
+* **最小频率：** 效果响应的**最低**音频频率。值从0到15，其中0是低音频，15是高音频。例如，如果你想让摇动效果只响应音乐节拍（因为节拍通常反映了低音频频率），请将其设置为0。

@@ -1,16 +1,17 @@
 ---
 prev: ../overview.md
 ---
-# Radial Blur Effect
 
-The radial blur effect allows you to generate a circular motion blur effect around a specific point of a given layer.
+# 径向模糊效果
+
+径向模糊效果允许您生成一个圆形运动模糊效果，该效果围绕特定图层上的特定点。
 
 ![Radial Blur](/wallpaper-engine-docs/img/effects/Radial_Blur.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Kernel size:** The size of the filter kernel. A larger kernel makes the image more blurry but also requires more system performance.
-* **Blur alpha:** Will also consider the alpha channel for the blur operation.
-* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to.
-* **Center:** The center point around which the blur is applied. You can use the crosshair symbol to manually place the center point with the left mouse button.
-* **Scale:** Controls the amount of the circular blur.
+* **核大小：** 滤镜的核大小。较大的核使图像更模糊，但也需要更多的系统性能。
+* **模糊透明度：** 将考虑透明度通道的模糊操作。
+* **不透明蒙版：** 绘制蒙版，确定图像上应用效果的区域。  
+* **中心：** 应用模糊的圆心。你可以使用单击旁边的十字图标手动设置中心点。
+* **比例：** 控制圆形模糊的大小。

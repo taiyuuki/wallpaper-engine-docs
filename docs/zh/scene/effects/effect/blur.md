@@ -1,44 +1,45 @@
 ---
 prev: ../overview.md
 ---
-# Blur Effect
 
-The **Blur** effect applies a coarse gaussian blur to the image. This effect is relatively performance-intensive, it's mainly useful in combination with other effects or if you want to add dynamic blurs to your image.
+# 模糊效果
 
-If you just want to add a static blur to your image, you should rather do this in an image editor before importing your image into Wallpaper Engine.
+**模糊** 效果将图像应用粗糙的高斯模糊。这个效果相对来说是性能敏感的，主要用于组合其他效果或是给图像添加动态模糊。
+
+如果你只是想给图像添加一个静态模糊，你应该在导入图像到 Wallpaper Engine 之前在图像编辑器中进行处理。
 
 ![Blur](/wallpaper-engine-docs/img/effects/Blur.png)
 
-### Effect Settings
+### 效果设置
 
-* **Kernel size:** The size of the filter kernel. A larger kernel makes the image more blurry but also requires more system performance.
-* **Monochrome:** Turns the area affected by the effect into a monochrome image (black and white).
-* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to.
-* **Scale:** Controls the amount of blur on the X and Y axis.
+* **核大小：** 滤镜的核大小。较大的核使图像更模糊，但也需要更多的系统性能。
+* **单色：** 将受到效果影响的区域变成单色图像（黑白）。
+* **不透明蒙版：** 绘制蒙版，确定图像上应用效果的区域。
+* **比例：** 控制 X 和 Y 轴上的模糊程度。
 
-The effect has four different **Composite** modes:
+该效果有四种不同的 **复合** 模式：
 
 ![Composite mode](/wallpaper-engine-docs/img/effects/blur_composite_blend.png)
 
-#### Composite: Normal
+#### 复合：标准
 
-This is the default mode that does not come with any additional options. It applies the blur according to the kernel size and scale that you have configured.
+这是默认模式，没有额外选项。它根据配置的核大小和比例来应用模糊。
 
-#### Composite: Blend
+#### 复合：混合
 
-This will take the **Blend mode** into account. In addition to the blur, you can select a different blend mode which will alter the colors of the image. This mode will also add two additional shader options:
+此模式为 **混合模式**。除了模糊，还可以选择不同的混合模式，该模式将改变图像的颜色。此模式添加了两个额外的着色器选项：
 
-* **Alpha:** Determines the opacity of the blend effect, higher values mean the effect is less transparent and appears stronger.
-* **Offset:** Allows you to create an offset for the effect which will apply the blend effect with an offset on the X and Y axis.
+* **模糊阿尔法：** 确定混合效果的不透明度，较高的值意味着效果不透明度较低，强度更强。
+* **偏移：** 为效果创建 X 和 Y 轴上的偏移，这将应用混合效果并将其偏移。
 
 ::: tip
-Using the composite blend option in combination with the blend modes *add* or *linear dodge* will for example all you to add glow to images and text.
+复合：混合 与混合模式 *add* 或 *linear dodge* 结合使用可以实现图像和文本的发光效果。
 :::
 
-#### Composite: Under
+#### 复合：下
 
-This mode will add the blurred image below the unblurred image. This can be useful to add a glowing outline to text or transparent images.
+此模式将模糊图像放在未模糊图像下方。这对于添加文本或透明图像的发光轮廓很有用。
 
-#### Composite: Cutout
+#### 复合：切口
 
-This will show the outline that you can generate with the composite mode *under* but it will completely erase the unblurred image. So using this, you can make glowing text that has been cut out, for example.
+此模式将显式**复合：下**模式下的轮廓，但它将完全擦除未模糊图像。使用此模式，可以制作带有切割效果的发光文本。

@@ -1,18 +1,18 @@
 ---
 prev: ../overview.md
 ---
-# Film Grain Effect
+# 胶片颗粒效果
 
-The **Film Grain** effect adds a noisy grain overlay to your image.
+**胶片颗粒**效果将添加噪声到你的图像上。
 
-![Film Grain](/wallpaper-engine-docs/img/effects/Film_grain.gif)
+![胶片颗粒效果](/wallpaper-engine-docs/img/effects/Film_grain.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Blend mode:** The blend mode controls how the film grain effect is blended with the image.
-* **Grayscale:** This option allows you to turn the effect black and white only.
-* **Noise:** This texture is used to produce the effect.
-* **Opacity mask:** The opacity mask allows you to limit the film grain effect to certain parts of the image.
-* **Power:** This option allows you to bias the effect towards dark or light depending on the blend mode.
-* **Scale:** Controls the size of the grain artifacts.
-* **Strength:** How strongly the effect is applied.
+* **混合模式：** 控制图像与胶片颗粒效果的混合方式。
+* **灰度：** 让胶片颗粒效果变成黑白的。
+* **噪声：** 用来产生胶片颗粒效果的纹理。
+* **不透明度蒙版：** 让胶片颗粒效果只在特定区域生效。
+* **功率：** 这个选项可以让胶片颗粒效果偏暗或偏亮，具体取决于混合模式。
+* **比例：** 控制胶片颗粒效果的大小。
+* **强度：** 胶片颗粒效果的强度。

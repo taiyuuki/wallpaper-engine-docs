@@ -1,50 +1,53 @@
 ---
 prev: ../overview.md
 ---
-# Iris Movement Effect
+# 眼动追踪效果
 
-The **Iris Movement** effect allows you to add motion to the eyes of a character. This effect will make your character gaze around realistically in a random manner. In order for this to work, you should start by adding an opacity mask to the eyes of your character. Depending on your specific image, try to make a soft transition from the iris/center to the border of the eyes to improve the results of the effect.
+> 译注：Iris Movement，字面意思为“虹膜移动”，事实上本效果并没有“追踪”的效果，只是可以让眼睛随机游走，但编辑器里翻译为“眼动追踪”，因此本文档也沿用此翻译。
+如果你想要真正有“追踪”效果的眼动，可以在创意工坊搜索“Iris Movement”。
+
+**眼动追踪** 效果可以让你为角色添加移动的效果。这个效果会让你的角色眼睛以逼真的方式随机游走。为此，你需要先为角色的眼睛添加透明度蒙版。根据你图片的具体情况，你可以试着从眼睛的中心到眼睛边缘之间做一个平滑过渡，以获得更好的效果。
 
 ![Iris](/wallpaper-engine-docs/img/effects/Iris.gif)
 
-### Effect Settings
+### 效果设置
 
-* **Background:** Enabling this option will make the effect use the **background color** for parts of the eye that are invisible on the picture, but become visible when the eye moves. Disabling this option will make the effect distort the eye at the borders instead of using a solid color. Having this option enabled can be useful for animating eye movements, disabling it is especially useful for animating more overall movement such as head movements.
-* **Background color:** The color to be used for invisible parts of the eye that become visible when it moves.
-* **Opacity mask:** Use the opacity mask to limit the motion to the eyes.
-* **Speed:** The speed of the iris movement.
-* **Scale:** How much the iris moves horizontally and vertically. In many cases you may want to reduce the vertical movement only since eyes are typically much wider than they are high.
-* **Noise amount:** The amount of constant motion that is added on top of the erratic gaze movement. This adds a little bit more randomness to the erratic motion to make it look less robotic.
-* **Phase:** The offset in time of the movement. You can use this if you want to apply the motion effect twice, to the eyes and the entire head. The head typically moves a bit slower, so you can reduce the phase of the effect on the head to make the character look around realistically.
-* **Smoothness:** How smoothly the gaze changes every couple of moments.
+* **背景：**启用此选项将使效果使用 **背景颜色** 为眼睛的部分区域提供移动效果，而这些区域在图片中不可见。禁用此选项将使效果在边缘处扭曲眼睛，而不是使用单一颜色。启用此选项对于动画化眼动效果很有用，禁用它则更适合动画化整体运动，如头部运动。
+* **背景颜色：**用于眼睛的部分区域变得可见时使用的颜色。
+* **不透明蒙版：**使用不透明蒙版可以限制眼动效果的范围。
+* **速度：**眼动效果的速度。
+* **比例：**眼睛水平和垂直方向上移动的程度。在多数情况下，你可能需要减少垂直方向的移动，因为眼睛的宽度通常要比高度要宽。
+* **噪声量：**额外的不规则运动量，可以使眼动效果看起来不那么机械化。
+* **相位：**运动效果的时间偏移。你可以使用此选项来应用运动效果两次，一次给眼睛，一次给整个头部。头部通常运动的速度稍慢，所以你可以减少头部运动效果的相位，使角色看起来更真实。
+* **光滑：**眼动变化的平滑度。
 
-## Sample Usage
-### Synchronized Eye and Head Movement
+## 示例用法
+### 同步眼动和头部运动
 
-Just as shown in the preview image above, this effect can be used to create random eye movement and random head movements. In this guide we will showcase how to use two iris movement effects to create a synchronized eye and head movement of a character.
+如上面的预览图所示，这个效果可以用来创造角色的随机眼动和随机头部运动。在本指南中，我们将展示如何使用两个眼动运动效果来创造角色的眼动和头部同步运动。
 
-#### Eye Animation
+#### 眼部动画
 
-First, we have to create the eye animation. Add an **Iris Movement** effect to your image, then create an **Opacity Mask** around the eyes of your character (notice how the eyes are painted in white):
+首先，我们需要创建眼部动画。在你的角色图片中添加一个 **眼动追踪** 效果，然后在角色的眼睛周围创建 **不透明度蒙版** (将眼睛部分涂成白色)。
 
 ![Iris Eyes Mask](/wallpaper-engine-docs/img/effects/iris_eyes_mask.png)
 
-In the next step, we slightly adjust the settings of the effect. Enable the **Background** option for the layer and choose a **Background Color** that matches the eyes of your character.
+下一步，我们稍微调整一下效果的设置。启用 **背景** 选项，并选择一个与角色眼睛颜色相匹配的 **背景颜色**。
 
-Since our character's eyes are not aligned perfectly horizontally, we change the **Scale** to **1.5** for the X axis and reduce it to **0.45** for the Y axis. You will need to adjust these values for your specific image, try setting lower values first and slightly increase them until the eye movement is strong enough to reach the corner of the eye without being excessive.
+由于我们的角色眼睛并非水平对齐，因此我们将 **比例** 的 X 轴值设为 **1.5**，Y 轴值设为 **0.45**。你可能需要根据你的图片具体情况调整这些值，你可以先试着设置较低的值，然后慢慢增加，直到眼动效果能到达眼睛的边缘而又不显得过于剧烈。
 
-We also increase the **Speed** to **0.6** to increase the eye movement slightly in our example.
+我们还可以增加 **速度** 至 **0.6** 来稍微增加眼动效果。
 
-#### Head Animation
+#### 头部动画
 
-In the second step, we create a new **Iris Movement** effect on the same layer. Be sure to give it an appropriate name such as *Head Movement* so that you can differentiate the two effects at first glance in the future. Paint the opacity mask for this version of the effect around the head of your character:
+第二步，我们在同一图层上创建一个新的 **眼动追踪** 效果，并给它一个适当的名称，如 *Head Movement*，便于之后区分这两个效果。在角色的头部周围涂上 **不透明度蒙版**。
 
 ![Head Eyes Mask](/wallpaper-engine-docs/img/effects/iris_head_mask.png)
 
-You will have to adjust the settings a bit as well. First of all, it's important that the **Speed** setting matches the **Speed** setting value of the iris movement exactly to ensure that the head and eye movement stay synchronized. 
+你还需要进一步调整。首先，最重要的是 **速度** 必须与 **眼动** 效果的 **速度** 值完全匹配，以确保头部和眼部动画同步进行。
 
-Additionally, we increase the **Smoothness** and reduce the **Phase** option a little. Since the head should not move as abruptly as the eyes, so we increase the **Smoothness** option for the head. Setting the **Phase** a small negative number will make the head lag behind the eye movement slightly, which makes the movement appear more natural.
+另外，我们可以增加 **光滑** 选项，并稍微减少 **相位** 选项。由于头部的运动应该比眼部的运动慢一些，因此我们可以增加 **光滑** 选项来使头部运动更平滑。设置 **相位** 为一个较小的负数会使头部略微滞后于眼部运动，使运动看起来更自然。
 
-The two effects then combine into a result that looks something like this:
+这里的两个效果结合在一起，看起来效果如下：
 
 ![Iris](/wallpaper-engine-docs/img/effects/Iris.gif)

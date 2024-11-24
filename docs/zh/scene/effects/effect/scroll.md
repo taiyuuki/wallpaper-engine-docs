@@ -1,18 +1,18 @@
 ---
 prev: ../overview.md
 ---
-# Scroll Effect
+# 滚动效果
 
-The **Scroll** effect can be used to continuously scroll an image in a specified direction. It's useful for textures that loop seamlessly and can be used to create special effects in combination with other effects.
+**滚动效果** 可以用来以指定的方向持续滚动图像。对于循环无缝的纹理来说，它非常有用，可以与其他效果组合使用来创造特殊效果。
 
 ![Scroll](/wallpaper-engine-docs/img/effects/Scroll.gif)
 
-## Effect settings
+## 效果设置
 
-The effect has two basic types of settings: A *Repeat* option for each axis and a *Speed* option for each axis. The repeat option can be used to scale the image and determines how often your texture is "repeated" on its given space. The *Speed* option determines how fast the image scrolls into a direction. For example, setting *Speed X* to **1** and *Speed Y* to **0** will cause the image scroll from right to left.
+该效果有两种基本类型的设置：每个轴的 *重复* 选项和每个轴的 *速度* 选项。 *重复* 选项可用于缩放图像，并确定纹理在给定空间中重复的频率。 *速度* 选项决定图像滚动的速度。例如，将 *速度 X* 设置为 **1** 且 *速度 Y* 设置为 **0** 可以让图像从右到左滚动。
 
-* **Repeat X:** How often the image is repeated horizontally within its area.
-* **Repeat Y:** How often the image is repeated vertically within its area.
+* **重复 X:** 纹理在其区域内水平方向重复的次数。
+* **重复 Y:** 纹理在其区域内垂直方向重复的次数。
 
-* **Speed X:** Speed in horizontal direction.
-* **Speed Y:** Speed in vertical direction.
+* **速度 X:** 水平方向的速度。
+* **速度 Y:** 垂直方向的速度。

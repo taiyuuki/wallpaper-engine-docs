@@ -2,20 +2,18 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Module WEVector
-
-Module which provides utility functions related to working with vectors.
+2D 向量相关的实用函数。
 
 ```js
 import * as WEVector from 'WEVector';
 ```
 
-## Functions
+## 函数
 
 ### angleVector2(angle: Number): Vec2
 
-Creates a 2D directional vector from an angle in degrees.
+根据角度（以度为单位）创建 2D 方向向量。
 
 ### vectorAngle2(direction: Vec2): Number
 
-Returns an angle in degrees from a 2D directional vector. 
+从 2D 方向向量中获取角度（以度为单位）。
