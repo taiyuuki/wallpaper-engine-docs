@@ -4,9 +4,13 @@ fork自官方文档：[wallpaper-engine-docs](https://github.com/Wallpaper-Engin
 
 查看地址：https://taiyuuki.github.io/wallpaper-engine-docs/zh/
 
+在线地址访问不了的，可以下载本地版：[Github下载地址](../../releases) ，[度盘下载](https://pan.baidu.com/s/1Mb6EHdVV1GOQAT27CqpKuQ?pwd=de80)
+
+提取码：de80
+
 # 翻译进度
 
-翻译工作暂时告一段落，目前已经基本完成场景壁纸的翻译，3D模型和着色器编程部分我个人不打算翻译，剩下的就是等待官方文档的更新了。
+翻译暂时告一段落，目前已经基本完成场景壁纸的翻译，3D模型和着色器编程部分我个人不打算翻译，剩下的就是等待官方文档的更新了。
 
 ✅表示已翻译，❎表示官方文档尚未创建的内容，其余表示未翻译。
 
