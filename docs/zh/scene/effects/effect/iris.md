@@ -28,7 +28,7 @@ prev: ../overview.md
 
 #### 眼部动画
 
-首先，我们需要创建眼部动画。在你的角色图片中添加一个 **眼动追踪** 效果，然后在角色的眼睛周围创建 **不透明度蒙版** (将眼睛部分涂成白色)。
+首先，我们需要创建眼部动画。在你的角色图片中添加一个 **眼动追踪** 效果，然后在角色的眼睛周围创建 **不透明蒙版** (将眼睛部分涂成白色)。
 
 ![Iris Eyes Mask](/wallpaper-engine-docs/img/effects/iris_eyes_mask.png)
 
@@ -40,7 +40,7 @@ prev: ../overview.md
 
 #### 头部动画
 
-第二步，我们在同一图层上创建一个新的 **眼动追踪** 效果，并给它一个适当的名称，如 *Head Movement*，便于之后区分这两个效果。在角色的头部周围涂上 **不透明度蒙版**。
+第二步，我们在同一图层上创建一个新的 **眼动追踪** 效果，并给它一个适当的名称，如 *Head Movement*，便于之后区分这两个效果。在角色的头部周围涂上 **不透明蒙版**。
 
 ![Head Eyes Mask](/wallpaper-engine-docs/img/effects/iris_head_mask.png)
 

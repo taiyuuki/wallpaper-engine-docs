@@ -13,7 +13,7 @@
   Your browser does not support the video tag.
 </video>
 
-在这个例子中，我们需要在壁纸上添加遮盖苹果的效果，单击**不透明度蒙版**旁的**绘制**开始绘制。默认情况下，蒙版是代表清除的全**黑色**，这意味着效果是不可见的。使用绘制工具的画笔在苹果所在的位置绘制一个**白色**的区域。完成后单击确定：
+在这个例子中，我们需要在壁纸上添加遮盖苹果的效果，单击**不透明蒙版**旁的**绘制**开始绘制。默认情况下，蒙版是代表清除的全**黑色**，这意味着效果是不可见的。使用绘制工具的画笔在苹果所在的位置绘制一个**白色**的区域。完成后单击确定：
 
 <video width="100%" controls loop autoplay>
   <source :src="$withBase('/videos/property_color_paint_mask.mp4')" type="video/mp4">
