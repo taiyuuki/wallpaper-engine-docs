@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Sitemap: https://taiyuuki.github.io/wallpaper-engine-docs/sitemap.xml
+Host: https://taiyuuki.github.io
